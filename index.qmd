@@ -1,0 +1,59 @@
+---
+title: "All of Us Workshop"
+---
+
+## Overview
+
+This workshop is designed for SHAMP students who are interested in conducting research projects using the [*All of Us* Research Program](https://researchallofus.org) data but do not have programming experience. Participants will gain skills in basic R programming and familiarity with *All of Us* data and Workbench so that they can complete research projects independently.
+
+The workshop is intentionally short, consisting of four 2-hr sessions, and participants are expected to spend time outside of workshop sessions to prepare ahead and practice after sessions. 
+
+## Prerequisites
+
+- Before participating in this workshop, you must read through [Getting Started with *All of Us* Projects](https://yesols.github.io/projects/all-of-us/) and complete all the numbered steps prior to attending the workshop. 
+  - WWAMI students: Draft a proposal even if your *All of Us* project is not for Triple-I. It will serve as a blueprint of how you prepare data and plan analysis.
+  - SHAMP students: Depending on the scope of your project, you may or may not need to identify a formal PI. Discuss with your program director and IOURMR before committing to a project. Also, do prepare a proposal as well.
+  - Students from other academic units: You do not have to identify an advisor for your project if you already have a PI. You also do not have to meet with IOURMR Research Core since your research is not under IOURMR supervision. But do prepare a proposal to help your data preparation and project planning.
+
+- This is a **hands-on** workshop. Bring your laptop to all sessions.
+- Basic statistics knowledge is expected. We will learn how to perform common statistical tasks in R but will not discuss the theory or interpretation of results in detail.
+
+::: {.callout-warning}
+You must be a registered user of the *All of Us* Workbench and have created your own Project Workspace in order to participate in the workshop.
+:::
+
+## Registration
+
+- WWAMI students: no formal registration necessary
+- Students from other SHAMP programs or other academic units: email yesols@uidaho.edu and ncoombs@uidaho.edu
+
+
+## Schedule
+
+::: {.callout-note}
+2026 workshop dates are TBD
+:::
+
+| Session | Date and Time | Topics Covered |
+| :--- | :--- | :--- |
+| **Session 1** | [Date], [Time] | • Introduction to cloud computing and Researcher Workbench<br>• Super-brief introduction to relational database structures and queries<br>• Selecting cohorts and building your dataset |
+| **Session 2** | [Date], [Time] | • Introduction to R<br>• Working with dataframes in R<br>• Obtaining query results and data wrangling |
+| **Session 3** | [Date], [Time] | • More data wrangling<br>• Exploratory data analysis<br>• Data visualization |
+| **Session 4** | [Date], [Time] | • Performing statistical tests<br>• Fitting regression models |
+: {tbl-colwidths="[15,25,60]"}
+
+* **Location:** IOURMR Conference Room (D. A. Huckabay Bldg, Rm 122)
+
+
+## Instructor
+
+[Yesol Sapozhnikov](https://yesols.github.io) is a postdoctoral fellow in the School of Health and Medical Professions. She has experience in teaching programming, genomics, and statistics. She is a member of the *All of Us* Biomedical Researchers Scholars Program by Baylor College of Medicine, and conducting several projects using the database.
+
+## Contact Us
+
+For any questions and inquiries about the workshop, contact Yesol Sapozhnikov (email: yesols@uidaho.edu). For general inquiries regarding student-led projects in SHAMP, contact Nicholas Coombs (email: ncoombs@uidaho.edu). 
+
+
+
+
+

@@ -1,0 +1,101 @@
+person_id,year_of_birth,race,sex_at_birth
+1,1987,Skip,Male
+2,1987,Asian,Female
+3,2004,Asian,Male
+4,1944,Black or African American,Male
+5,1941,Asian,Male
+6,2006,More than one population,Male
+7,1945,More than one population,Female
+8,1967,Other,Male
+9,1949,Black or African American,Female
+10,1954,White,Female
+11,2007,Black or African American,Female
+12,1980,White,Male
+13,1943,White,Female
+14,1994,More than one population,Male
+15,2005,White,Female
+16,1970,White,Male
+17,1961,White,Skip
+18,1963,White,Skip
+19,1973,Asian,Female
+20,1943,More than one population,Male
+21,1952,Black or African American,Male
+22,1987,White,Female
+23,1962,White,Male
+24,1970,White,Female
+25,1989,White,Female
+26,1940,Black or African American,Male
+27,1982,White,Male
+28,1974,Black or African American,Female
+29,1993,White,Female
+30,1977,Black or African American,Intersex
+31,1961,White,Female
+32,2002,Asian,Female
+33,1963,White,Skip
+34,1960,White,Female
+35,1977,Black or African American,Female
+36,1983,Asian,Male
+37,2000,White,Male
+38,1944,Black or African American,Male
+39,1989,White,Female
+40,1957,Asian,Female
+41,1946,White,Male
+42,1973,Skip,Male
+43,1958,Asian,Male
+44,1981,Asian,Female
+45,2006,Asian,Female
+46,2003,White,Prefer not to answer
+47,1965,Black or African American,Female
+48,1953,Skip,Male
+49,2004,Black or African American,Female
+50,1985,More than one population,Female
+51,1992,White,Male
+52,1991,Asian,Male
+53,1992,White,Male
+54,1988,Black or African American,Male
+55,1981,Black or African American,Male
+56,1959,White,Male
+57,1973,Black or African American,Male
+58,1936,None of these,Male
+59,1975,None of these,Female
+60,2004,White,Male
+61,1956,White,Male
+62,1999,Other,Male
+63,1955,Asian,Female
+64,1979,None of these,Female
+65,1966,Black or African American,Female
+66,1987,Black or African American,Prefer not to answer
+67,1954,Asian,Male
+68,2006,White,Male
+69,2005,Black or African American,Female
+70,1967,White,Female
+71,1959,Other,Male
+72,1963,Asian,Female
+73,1997,Black or African American,Female
+74,1964,Black or African American,Female
+75,1993,Skip,Female
+76,1969,White,Male
+77,1986,White,Male
+78,1952,White,Female
+79,1938,White,Female
+80,1953,Black or African American,Male
+81,1995,White,Female
+82,2006,White,Female
+83,1955,Asian,Male
+84,1962,White,Male
+85,1990,Asian,Female
+86,1946,White,Female
+87,1975,Black or African American,Male
+88,1961,More than one population,Male
+89,1944,None of these,Female
+90,1951,White,Female
+91,1962,Other,Male
+92,1993,Asian,Male
+93,1991,Asian,Female
+94,1975,White,Male
+95,2002,White,Male
+96,1963,Black or African American,Prefer not to answer
+97,1952,Black or African American,Male
+98,1961,Asian,Male
+99,1970,None of these,Intersex
+100,1957,Asian,Female

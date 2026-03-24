@@ -1,0 +1,36 @@
+---
+title: "Additional Resources"
+---
+
+## R Programming and Statistics
+
+- [R for Health Data Science](https://argoshare.is.ed.ac.uk/healthyr_book/)
+  - R tutorials for medical statistics
+- [R Recipes](https://posit.cloud/learn/recipes)
+  - Quickly find code snippets by tasks
+- [R Tutorials & Resources](https://agstats.io/tutorials/r/)
+  - Collection of tutorials by University of Idaho Statistical Programs, CALS
+
+## Useful R Packages
+
+- [janitor](https://sfirke.github.io/janitor/index.html)
+  - Useful functions for cleaning data
+  - has `tabyl()` function which is particularly useful for cross-tabulation
+- [broom](https://broom.tidymodels.org)
+  - Useful functions for displaying model components as a neat dataframe
+- [gtsummary](https://www.danieldsjoberg.com/gtsummary/)
+  - Convenient package to create publication-ready tables to describe data and more
+- [allofus](https://roux-ohdsi.github.io/allofus/)
+  - Provides convenient functions for working with *All of Us* data 
+- [MatchIt](https://kosukeimai.github.io/MatchIt/index.html)
+  - Useful package for creating matched datasets (can do exact matching or propensity score matching)
+  - Check out this very approachable tutorial: [Introduction to Propensity Score Matching with MatchIt](https://dlab.berkeley.edu/news/introduction-propensity-score-matching-matchit)
+- `survival` package is widely used for **survival analysis** including Kaplan-Meier plots and Cox proportional hazards models. Here are a few tutorial pages you can check out:
+  - [Survival Analysis in R - Emily C. Zabor](https://www.emilyzabor.com/survival-analysis-in-r.html)
+  - [Survival Analysis in R - The Miller Lab](https://www.themillerlab.io/posts/survival_analysis/)
+  - [Introduction to Survival Analysis in R - UCLA](https://stats.oarc.ucla.edu/wp-content/uploads/2025/02/survival_r_full.html)
+
+## All of Us Workbench
+
+- [Support Hub](https://support.researchallofus.org/hc/)
+- [All of Us YouTube Channel](https://www.youtube.com/@AllOfUsResearcherWorkbench)

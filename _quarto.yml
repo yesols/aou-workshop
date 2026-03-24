@@ -1,0 +1,38 @@
+project:
+  type: website
+
+website:
+  title: "AoU Workshop"
+  
+  sidebar:
+    logo: "hex-logo.png"       # Embeds the image
+    logo-href: index.qmd       # Makes the image a clickable link to the homepage
+    style: docked
+    search: true
+    contents:
+      - text: "Workshop Information"
+        file: index.qmd
+      - section: "Lessons"
+        contents:
+          - text: "Session 1: Intro to Cloud Computing and AoU Workbench"
+            file: session-1.qmd
+          - text: "Session 2: R Programming and Data Wrangling"
+            file: session-2.qmd
+          - text: "Session 3: Exploratory Data Analysis and Visualization"
+            file: session-3.qmd
+          - text: "Session 4: Statistical Analysis"
+            file: session-4.qmd
+      - text: "Additional Resources"
+        file: resources.qmd
+
+format:
+  html:
+    theme: flatly
+    css: styles.css
+    toc: true
+    toc-location: right
+    toc-title: "On this page"
+    toc-depth: 3
+    code-copy: true
+    lightbox: true      # Enables click-to-enlarge for all images
+    

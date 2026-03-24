@@ -1,0 +1,215 @@
+---
+title: "Exploratory Data Analysis and Visualization"
+number-sections: true
+number-depth: 3
+---
+
+## Learning Objectives
+
+In this session, we will learn common functions to explore data and visualize data using the synthetic dataset we worked with last time. 
+
+At the end of Session 3, you will be able to:
+
+1. Use R commands to understand data.
+2. Perform descriptive statistics.
+3. Visualize data with box plots, histograms, and scatter plots.
+
+## Setup
+
+We will begin by loading packages and reading in a file.
+```{r}
+#| label: load-synthetic-data2-display
+#| message: false
+#| eval: false
+library(tidyverse)
+df <- read_csv("https://yesols.github.io/aou-workshop/data/final_dataset.csv")
+head(df)
+```
+
+```{r}
+#| label: load-synthetic-data2-local
+#| message: false
+#| echo: false
+
+library(tidyverse)
+
+# Read from local directory for site rendering
+df <- read_csv("data/final_dataset.csv")
+head(df)
+```
+
+This file is what we saved after merging dataframes in the previous session, but I added an additional column `SBP` for systolic blood pressure. 
+
+## Create Necessary Variables for Analysis
+
+We will create an `age` column from `year_of_birth`.
+```{r}
+df <- df %>% mutate(
+  age = 2026 - year_of_birth
+)
+head(df)
+```
+
+It is also useful to have binary variables to indicate their disease status and drug exposure status. We will use `if_else()` function for this purpose. `if_else()` takes three arguments: condition to evaluate, value if the evaluation is true, value if false.
+```{r}
+df <- df %>%
+  mutate(
+    condition_status = if_else(is.na(condition_concept_id), 0, 1), # 0 if condition_concept_id is NA, 1 if not
+    exposure_status = if_else(is.na(drug_concept_id), 0, 1) # 0 if drug_concept_id is NA, 1 if not
+  )
+```
+
+## Contingency Table
+
+Let's take a quick look at MCI/dementia cases breakdown by sex.
+```{r}
+df %>% count(sex_at_birth, condition_status)
+```
+
+`janitor` package has a nice cross-tabulation function:
+```{r}
+#| message: false
+#| warning: false
+library(janitor)
+df %>% tabyl(sex_at_birth, condition_status)
+```
+
+## Summarize Data
+
+`summary()` function can give you a quick overview of data and its distribution. It also will show you a count of NAs in each column. You can use `summary()` on a vector (or a single column from a dataframe) or the entire dataframe.
+```{r}
+summary(df$SBP)
+```
+
+```{r}
+summary(df)
+```
+
+Grouped summaries using `group_by()` and `summarise()` can be helpful.
+```{r}
+df %>%
+  group_by(sex_at_birth) %>%
+  summarise(
+    n = n(),
+    mean_SBP = mean(SBP, na.rm = TRUE),
+    sd_SBP = sd(SBP, na.rm = TRUE),
+    median_age = median(age, na.rm = TRUE)
+  )
+```
+
+
+## Histogram
+
+Histogram is a good way to visualize distribution of continuous data. I like base R commands for a quick visualization on the fly. But `ggplot()` from `ggplot2` package (included already when we loaded `tidyverse`) is highly customizable and recommended for publication-quality plots. Below, you can see the code for both.
+
+::: {.panel-tabset}
+
+## Base R
+
+```{r}
+# Base R histogram
+hist(df$age, breaks = 20) # change breaks size to make bins larger or smaller
+```
+
+## ggplot2
+
+```{r}
+ggplot(df, aes(x = age)) +
+  geom_histogram(
+    binwidth = 5, 
+    fill = "steelblue", 
+    color = "black"
+  ) +
+  labs(
+    title = "Age Distribution",
+    x = "Age (Years)",
+    y = "Frequency"
+  ) +
+  theme_minimal()
+```
+
+:::
+
+## Box Plot
+
+Box plots are good for visualizing continuous data broken down to some groups. Here, we will visualize distribution of `SBP` for each `sex_at_birth` category. Again, I will show both base R version and ggplot2 version.
+
+::: {.panel-tabset}
+
+## Base R
+
+```{r}
+# Base R box plot using the formula interface
+boxplot(
+  SBP ~ sex_at_birth, 
+  data = df
+)
+```
+
+## ggplot2
+
+```{r}
+# ggplot2 box plot
+ggplot(df, aes(x = sex_at_birth, y = SBP, fill = sex_at_birth)) +
+  geom_boxplot(alpha = 0.7) +
+  labs(
+    title = "Systolic Blood Pressure by Sex",
+    x = "Sex at Birth",
+    y = "SBP (mmHg)"
+  ) +
+  theme_minimal() +
+  theme(legend.position = "none") # Suppress redundant legend
+```
+
+:::
+
+::: {.callout-warning}
+Take a note of the warning message in ggplot2 version that says 5 rows were removed. This often occurs when there are NAs in the data. We know SBP column had NA values. If this was unexpected, you need to inspect the data and handle the out-of-range values accordingly. 
+:::
+
+## Scatter Plot
+
+We use scatter plots for visualizing the relationship between two continuous variables. We will plot `SBP` against `age`.
+
+::: {.panel-tabset}
+
+## Base R
+
+```{r}
+# Base R scatter plot
+plot(df$age, df$SBP)
+```
+
+## ggplot2
+
+```{r}
+# ggplot2 scatter plot
+ggplot(df, aes(x = age, y = SBP)) +
+  geom_point(color = "darkblue", alpha = 0.5) +
+  labs(
+    title = "Systolic Blood Pressure vs. Age",
+    x = "Age (Years)",
+    y = "SBP (mmHg)"
+  ) +
+  theme_minimal()
+```
+
+:::
+
+
+## Preparing for Next Session
+
+In session 4, we will learn how to perform basic statistical tests in R. Because this workshop is focused on learning the technical aspect of programming, discussions of statistical concepts will be minimal. Review the following methods as needed prior to the next session:
+
+- t-test and ANOVA
+- chi-square test
+- linear regression
+- logistic regression (WWAMI Research Methods course does not cover this. So we will go over this concept in a little more detail than others.)
+
+Also, we will apply the graphical and statistical functions on the real *All of Us* data. So, if you have not already, ensure you have a dataset prepared for your own project by next session. It does not have to be perfect - constructing a dataset always takes a long time. Just have a dataset that has demographic variables and an outcome variable at a minimum.
+
+
+
+
+
+

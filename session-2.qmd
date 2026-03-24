@@ -1,0 +1,477 @@
+---
+title: "Introduction to R Programming and Data Wrangling"
+number-sections: true
+number-depth: 3
+---
+
+## Learning Objectives
+
+Session 2 will focus on learning the basics of R programming. We will first work with synthetic data to practice common R functions and syntax, followed by logging into *All of Us* Workbench and running the queries we set up last time.
+
+Unless indicated otherwise, we will practic R on [Posit Cloud](https://posit.cloud).
+
+At the end of Session 2, learners will be able to:
+
+1. Manipulate different types of data types in R.
+2. Read in CSV files as a dataframe and save dataframes as CSV files.
+3. Run auto-generated queries and obtain data.
+4. Inspect and clean up data.
+
+## Preliminaries
+
+Concepts:
+
+- file system: "directory", "working directory", "file path"
+- input and output
+- functions and arguments
+- variables
+- errors vs. warning
+
+Best practice in programming:
+
+- comment copiously (You think you will remember what you were doing but you won't)
+- write reproducible code
+- feel free to utilize AI to help you with coding but make sure you understand every line (That's why you should still learn the basics. No "vibe coding" in this workshop and your research!)
+
+## Loading Libraries
+
+"Libraries" or "packages" are collections of pre-written functions that provide convenience and efficiency in coding. Common R libraries we use for *All of Us* projects are:
+
+- tidyverse: collection of packages (dplyr, readr, ggplot2,...) for file handling, working with dataframes, visualizations.
+- bigrquery: facilitates the connection between R and Google BigQuery database - the type of database *All of Us* data are stored in.
+- lubridate: for handling dates and times
+
+We use `library()` function to load these packages.
+
+```{r, message=FALSE, warning=FALSE}
+# Load packages
+library(tidyverse)
+library(lubridate)
+```
+
+These common packages are standard in cloud platforms. Occasionally, a package you want to use may not be available in the virtual machine. Attempting to load a package with `library()` when it does not exist will result in an error. Then, you need to first install it using `install.packages()` function.
+
+```{r}
+#| eval: false
+#| echo: true
+# Do not run this. This is just to show you the code for installing a package.
+install.packages("MatchIt") #MatchIt is a package used for propensity score matching
+library("MatchIt")
+```
+
+
+
+## Data Types
+
+There are 5 data types you must be familiar with in programming with R. Knowing the data types of the values in your dataframe, for example, can be critical in performing computations or troubleshooting errors.
+
+### Numeric
+
+Numeric data can be either **double** (`dbl`) for numbers with decimals such as weight or lab values, or **integer** (`int`) for whole numbers such as participant ID numbers. 
+
+### Character
+
+Also known as string, character (`chr`) data types are non-numeric, text data. In *All of Us* data, condition names or drug names for example, are character types. Character values are enclosed in `" "`. So if you have values like `"1", "2", "3", they are character type even though they are numbers, and R will not be able to perform computations that require numeric data types.
+
+### Factor
+
+Factor (`fct`) data types are used for categorical data. They often look just like characters which is a source of common confusion. However, under the hood, factors are stored as integers with associated "levels". Some statistical functions may require factors as input.
+
+### Logical
+
+Logicals are binary data with values `TRUE` and `FALSE`. While this type of data are rarely seen as values in a dataframe, they are an output of filtering or conditional operations. Interestingly, `TRUE` value equals 1 while `FALSE` equals 0. This property can be useful in checking data.
+
+### Date
+
+
+
+## Data Structures
+
+### Vector
+
+A vector is a sequence of data where all elements are of the same data type. We can create a vector using `c()`.
+
+```{r}
+# Create character vectors
+names <- c("Josh", "Evelyn", "Olivia", "Liam", "Adrian", "Tamara", "Teddy", "Allison")
+cities <- c("Moscow", "Moscow", "Troy", "Viola", "Moscow", "Pullman", "Lewiston", "Moscow")
+# Create a numeric vectors
+ages <- c(23, 18, 32, 56, 15, 25, 24, 16)
+```
+
+Use `print()` to see the values.
+
+```{r}
+print(names)
+```
+
+Use `length()` to see how many elements there are in a vector.
+```{r}
+length(names)
+```
+
+You can use indexing to access a specific element in a vector.
+```{r}
+names[2]  # Access the second element in the names vector.
+```
+
+For numeric values, we can perform simple computations.
+```{r}
+mean(ages)  # Average of the elements in ages vector
+sd(ages)  # Standard deviation 
+```
+
+Other common functions for numeric data include `median()`, `min()`, `max()`.
+
+### List
+
+Lists look similar to vectors but they can contain mixed data types, even lists within a list. Lists are a very versatile object for programming purposes but we won't go into it too much as they are not necessary for typical statistical analyses. I will just mention that we use double brackets (`[[ ]]`) to access a specific element in a list instead of single brackets as with vectors.
+
+### Dataframe
+
+A dataframe is like a table in an Excel sheet. Each column is a vector. Therefore, values in a column must be of same data type but different columns can have different types. We will create a dataframe using the vectors we created earlier to see what it looks like.
+
+```{r}
+# Create a dataframe with existing vectors
+df <- data.frame(Name = names, Age = ages, City = cities)
+# Inspect
+print(df)
+```
+
+In reality, you will rarely create a dataframe from scratch like this. Rather, you will often read a CSV file into a dataframe which we will learn later in this session. For now, we will use this small dataframe to learn a few essential skills in working with dataframes.
+
+## Dataframe Basics
+
+### Inspect the dataframe
+
+`dim()` command to see the dimension. It will return the number of rows and number of columns.
+```{r}
+dim(df)
+```
+Alternatively, you can also use `nrow()` and `ncol()`.
+
+`str()` to see the structure. This is handy in inspecting data types and preview values of all columns.
+```{r}
+str(df)
+```
+
+`names()` to list column names.
+```{r}
+names(df)
+```
+
+`head()` or `tail()` to inspect the first few rows or the last few rows.
+```{r}
+head(df)
+```
+The default is to show 5 rows but you can specify the number of rows inside the function. For example, `head(df, 10)` will show the first 10 rows.
+
+`table()` is a quick way to see value counts in a column.
+```{r}
+table(df$City)
+```
+
+
+
+### Subsetting
+
+`$` signifies names in R. We can use `$` to pull out values for a specific column.
+```{r}
+df$Age   # Show all the values in Age column
+head(df$Age)  # Show the first few values in Age colun
+mean(df$Age)  # Compute average age  
+```
+
+`select()` function can also pull out columns.
+```{r}
+df %>% select(Name, Age)  # Subset just Name and Age columns
+```
+
+::: {.callout-note}
+## Pipe Operator
+Symbols such as `%>%` and `|>` in R are called "pipes". Pipes are used to string together multiple operations in sequence. In the above code block, we take the dataframe `df` and then apply `select()` function on it.  
+:::
+
+`filter()` function is used to subset rows based on some logical criteria.
+```{r}
+df %>% filter(Age >= 21)  # Subset rows for ages 21 or older
+```
+Earlier, we briefly discussed the **logical** data type. When we use `filter()`, R evaluates each row - whether its Age value is 21 or greater - and creates a temporary vector of logical data, e.g., `c(TRUE, FALSE, TRUE, TRUE, FALSE, TRUE, TRUE, FALSE)`. And then it outputs rows that correspond to `TRUE`.
+
+We can filter by more than one criteria as well. We use the symbol `|` for OR and the symbol `&` for AND.
+```{r}
+df %>% filter(Age >= 21 & City == "Moscow")  # Subset rows for ages 21 or older AND city is Moscow
+```
+
+We can then save the resulting filtered dataframe by assigning a new variable.
+```{r}
+df_filtered <- df %>% filter(Age >= 21 & City == "Moscow")
+print(df_filtered)
+```
+
+
+### Join
+
+Working with *All of Us* data frequently involves combining two dataframes. Common join types are `left_join` and `inner_join`. We'll create a new dataframe to demonstrate these joins.
+
+```{r}
+# Create a BMI dataframe
+bmi_df <- data.frame(Name = c("Evelyn", "Liam", "Olivia", "Tamara"),
+                     BMI = c(20.2, 27.9, 32.1, 21.6))
+bmi_df
+```
+
+`inner_join` keeps only the rows where there is a match in both tables. So this type of join can work as a filter.
+```{r}
+# Join df and df_bmi by Name and only keep matched rows
+df_inner_joined <- inner_join(df, bmi_df, by = "Name")
+df_inner_joined
+```
+
+`left_join` is used most often in working with *All of Us* data. This join keeps all the rows from the primary table (left table) and add any matched data from the right table.
+```{r}
+df_left_joined <- left_join(df, bmi_df, by = "Name")
+df_left_joined
+```
+
+Note how rows without a match from `bmi_df` have values `NA` for the BMI column. `NA` indicates missing values and must be handled carefully in data analysis. We will discuss NA more in the [Missing Values](#missing-values) section shortly.
+
+As a side note, the join syntax in above code blocks can be modified using a pipe `%>%`. For example, `left_join()` is often written this way:
+```{r}
+df_left_joined <- df %>% left_join(bmi_df, by = "Name")
+df_left_joined
+```
+
+### Mutate
+
+`mutate()` function is used to create or transform variables. For example, we will create a column to show overweight status based on BMI.
+```{r}
+df_left_joined %>% mutate(Overweight = BMI > 25)
+```
+
+Other use cases of `mutate()` include arithmetic calculation of some numeric values. For example, if we had a dataframe with a year-of-birth column (`YOB`) and no age column, we can use `mutate()` to compute current age like this: `mutate(current_age = 2025 - YOB)`. Similarly, if we had columns `Weight` in kg and `Height` in cm, but no `BMI`, we could create `BMI` column by: `mutate(BMI = Weight / (Height/100)^2)`.
+
+## Missing Values {#missing-values}
+
+In a small dataframes like our toy example, NAs are easy to see. However, it is much harder to spot in a large dataset. This poses a problem because many statistical functions cannot deal with NAs automatically. NAs can also cause errors in unexpected ways. Therefore, researchers must always be vigilant about NAs in their data. 
+
+As an example, let's try computing the average of BMI values.
+```{r}
+mean(df_left_joined$BMI)
+```
+
+What happened? Many functions including `mean()` returns "unknown" if any of the input values are unknown (i.e. missing values). In the case of `mean()`, we must tell R explicitly to ignore NAs by using the optional argument, `na.rm = TRUE`. 
+```{r}
+mean(df_left_joined$BMI, na.rm = TRUE)
+```
+
+NAs are very common in electronic health records and they can also be introduced during joings as we saw earlier. 
+
+::: {.callout-warning}
+Always check for NAs in your data before statistical analyses!
+:::
+
+There are various ways to check for NAs. Here are some examples.
+```{r}
+colSums(is.na(df_left_joined))  # Returns a count of NAs in every column
+```
+
+```{r}
+sum(is.na(df_left_joined$BMI))  # Returns a sum of NA values in a specific column
+```
+
+Sometimes you want to see the entire rows that contain NA.
+```{r}
+df_left_joined %>% filter(is.na(BMI))  # Show rows where BMI values are NAs
+```
+
+For categorical variables, we can use `count()` to see value counts including NAs. `count()` is the same as `table()` but shows NAs by default unlike `table()` which does not count NAs by default. Below example will not return any NAs because our City column does not have any, but this is just to show you the syntax.
+```{r}
+df_left_joined %>% count(City)  # Show value counts of the column City, including possible NAs
+```
+
+If a column of interest turns out to have too many NAs, you may have to remove that variable from your analysis. If NAs are only few and if the variable is critical to your analysis, you might decide to drop the rows containing NAs. 
+```{r}
+df_left_joined %>% drop_na(BMI)
+```
+
+If the variable is critical and you want to keep all the rows, you can look into advanced statistical methods called "imputation" which fills in missing values.
+
+
+## Reading Files
+
+In programming, plain-text files are preferred over application-dependent file formats such as Word or Excel files. Comma-separated values (CSV) format is a popular file format for tabular data. We use this file type extensively to work with *All of Us* data.
+
+We use `read_csv()` function to read CSV files into dataframes so we can work with them. Typically, we put the file path inside the function, which will look like `read_csv("file.csv")` or `read_csv("directory/file.csv")`. For this practice, I placed practice files on the web so that they can be directly read via file URLs. Copy/paste and run the following code to obtain the data:
+```{r}
+#| label: load-synthetic-data-display
+#| message: false
+#| eval: false
+
+library(readr)
+
+# Read directly from public URLs
+person_df <- read_csv("https://yesols.github.io/aou-workshop/data/demographic_data.csv")
+condition_df <- read_csv("https://yesols.github.io/aou-workshop/data/conditions.csv")
+drug_df <- read_csv("https://yesols.github.io/aou-workshop/data/drug_exposures.csv")
+```
+
+```{r}
+#| label: load-synthetic-data-local
+#| message: false
+#| echo: false
+
+library(readr)
+
+# Read from local directory for site rendering
+person_df <- read_csv("data/demographic_data.csv")
+condition_df <- read_csv("data/conditions.csv")
+drug_df <- read_csv("data/drug_exposures.csv")
+```
+
+::: {.callout-note}
+The data in these files are randomly generated and completely fake, but designed to resemble *All of Us* data although much simplified.  
+:::
+
+Now, try the commands, `dim()`, `head()`, `tail()`, `str()`, etc, to inspect the these three dataframes.
+
+In subsequent sections, we will learn how to clean up data and merge these three dataframes. Ultimately, we will analyze the dataset to investigate association between anticholinergic medications and dementia.
+
+## Recoding Values
+
+Sometimes we have to recode values in categorical variables. For example, race in *All of Us* often have categories you might want to collapse into one. Let's take a look at our example data.
+```{r}
+# Inspect the first few lines of the demographics data
+head(person_df)
+```
+
+```{r}
+person_df %>% count(race) # Count the values in race column
+```
+
+"More than one population" and "None of these" can be recoded as "Other". We could also change "Skip" to "Unknown" and "Black or African American" to "Black" for simplicity. We can use `recode_values()` if we are changing all values or `replace_values()` if just updating some of the values. In our case, we just want to tweak some of the categories, so we'll use `replace_values()`.
+```{r}
+# Recode race category
+person_df <- person_df %>%
+  mutate(
+    race = replace_values(
+      race,
+      "Black or African American" ~ "Black",
+      "Skip" ~ "Unknown",
+      c("More than one population", "None of these") ~ "Other"
+    )
+  )
+```
+
+Check the counts again to make sure it worked. This is a good practice to also ensure NAs were not introduced as a result of a coding mistake.
+```{r}
+person_df %>% count(race)
+```
+
+Similarly, we'll also clean up sex_at_birth categories. We will change anything other than "Female" or "Male" to "Other".
+```{r}
+# Recode sex_at_birth
+person_df <- person_df %>%
+  mutate(
+    sex_at_birth = replace_values(
+      sex_at_birth,
+      c("Intersex", "Prefer not to answer", "Skip") ~ "Other"
+    )
+  )
+```
+Check the result:
+```{r}
+person_df %>% count(sex_at_birth)
+```
+
+## Selecting Earliest Occurrence
+
+When you extract conditions, drug exposures, or lab measurements data in *All of Us*, there are multiple entries per person. In our practice data, we will pick the earliest occurrence of the condition and the earliest occurrence of drug exposure. `slice()` and its variations, `slice_head()`, `slice_sample()`, "slice_min()`, "slice_max()` are useful for subsetting a dataframe in a variety of ways. We will use `slice_min()` to pick the earliest date for each person. `group_by()` function allows us to perform `slice_min()` on grouped rows by `person_id` rather than globally.
+
+```{r}
+earliest_condition <- condition_df %>%
+  group_by(person_id) %>%               # group rows by person_id
+  slice_min(                            
+    order_by = condition_start_date,    # specify which column to evaluate
+    n = 1,                              # pick one row
+    with_ties = FALSE                   # keep only one in case of ties
+  ) %>%
+  ungroup()
+```
+
+We do the same for drug dataframe:
+```{r}
+earliest_drug <- drug_df %>%
+  group_by(person_id) %>%
+  slice_min(
+    order_by = drug_exposure_start_date, 
+    n = 1, 
+    with_ties = FALSE
+  ) %>%
+  ungroup()
+```
+
+
+
+## Merging Demographics with Clinical Data
+
+When you extract *All of Us* data with auto-generated queries, you will have separate dataframes for "person", "conditions", "drug exposures", etc, and you must combine them for analysis. We will use `left_join()` that we learned earlier to merge `condition_df` and `drug_df` to `person_df`.
+
+```{r}
+combined_df <- person_df %>% 
+  left_join(earliest_condition, by = "person_id") %>%
+  left_join(earliest_drug, by = "person_id")
+head(combined_df)  # Check result
+```
+
+
+## Writing and Saving Files
+
+In order to save our data, we use `write_csv()` function to save the dataframe as a CSV file. Its arguments are the dataframe name and a file path:
+```{r}
+#| echo: false
+#write_csv(combined_df, "data/cleaned_dataset.csv")
+```
+
+```{r}
+#| eval: false
+write_csv(combined_df, "cleaned_dataset.csv")  # file path will be different
+```
+
+
+## Running Queries and Working with Queried Data
+
+Demonstration in class.
+
+## Saving to and Reading from Workspace Bucket
+
+In *All of Us* Workbench, running the code like `write_csv(combined_df, "cleaned_dataset.csv")` will create a CSV file in your current working directory. For permanent and secure storage, we need to copy the file to the Workspace Bucket. Below code is what it looks like when you save a file to the bucket. 
+
+::: {.callout-warning}
+Do not run these code blocks in Posit Cloud or local RStudio. It will only work within the *All of Us* Workbench.
+:::
+
+```{r}
+#| eval: false
+# Retrieve the environment variable for the bucket path
+my_bucket <- Sys.getenv("WORKSPACE_BUCKET")
+# Save the file to a "data" directory in the workspace bucket
+system(paste0("gsutil cp cleaned_dataset.csv ", my_bucket, "/data/"))
+```
+
+In the second line of the code above, `paste0()` function constructs a string of characters with given arguments. It creates a system command with `gsutil`, a command that allows us to interact with the bucket. `cp` is a system command that means "copy". Then, the constructed system command is passed to the function, `system()`, which is used to invoke operating system commands directly from the R console. 
+
+Conversely, when you want to read a file from the bucket, you will do something like this:
+```{r}
+#| eval: false
+# Copy the file in the bucket to the current working directory
+system(paste0("gsutil cp ", my_bucket, "/data/cleaned_dataset.csv ."))
+# Read the csv file as a dataframe
+df <- read_csv("cleaned_dataset.csv")
+```
+
+
+## Preparing for Next Session
+
+Before the next session, apply what you learned today to your *All of Us* datasets to clean and construct an analysis-ready dataset. Make a note of any issues. We will begin with a brief Q & A next time. 
+

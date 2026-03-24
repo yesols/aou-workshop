@@ -1,0 +1,41 @@
+/* css styles */
+
+/* 1. Override Quarto's default left-alignment on the header */
+.sidebar-header {
+  text-align: center !important;
+}
+
+/* 2. Force the logo container and link to center their contents */
+.sidebar-logo-container,
+.sidebar-logo-link {
+  display: flex !important;
+  justify-content: center !important;
+  width: 100% !important;
+}
+
+/* 3. Restrict the size of the image itself */
+img.sidebar-logo {
+  max-width: 130px !important;
+  margin: 0 auto !important;
+}
+
+.image-attribution {
+    font-size: 10px;       /* Adjust size as needed */
+    color: #808080;        /* Standard gray hex code */
+    text-align: right;     /* Aligns text to the right */
+    display: block;        /* Ensures the element takes up the full width for alignment */
+    margin-top: 5px;       /* Adds a small gap below the image */
+}
+
+
+/* Target the standard output blocks */
+.cell-output-stdout pre {
+  color: #495057; 
+  background-color: #f8f9fa; 
+  border-left: 3px solid #18bc9c; 
+}
+
+/* Target error messages */
+.cell-output-error pre {
+  color: #e74c3c; 
+}

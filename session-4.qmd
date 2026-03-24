@@ -1,0 +1,279 @@
+---
+title: "Statistical Analysis"
+number-sections: true
+number-depth: 3
+---
+
+## Learning Objectives
+
+In this last session, we will perform statistical tests and fit models that are common in medical research. Detailed discussions on statistics are beyond the scope of this workshop. If you want to learn more about these tests, check out links provided in [Additional Resources](resources.qmd).
+
+At the end of Session 4, learners will be able to:
+
+1. Perform t-test, ANOVA, chi-square tests in R.
+2. Fit regression models: simple linear regression, multiple linear regression, logistic regression
+3. Obtain odds ratios from logistic regression models.
+
+## Setup
+
+We will load packages and read in the data file. In addition to `tidyverse`, we will also import `broom` package which has convenient functions to make results output very readable.
+
+```{r}
+#| label: load-synthetic-data3-display
+#| message: false
+#| eval: false
+library(tidyverse)
+library(broom)
+
+df <- read_csv("https://yesols.github.io/aou-workshop/data/final_dataset.csv")
+head(df)
+```
+
+```{r}
+#| label: load-synthetic-data3-local
+#| message: false
+#| echo: false
+
+library(tidyverse)
+library(broom)
+# Read from local directory for site rendering
+df <- read_csv("data/final_dataset.csv")
+head(df)
+```
+
+We also create necessary variables as we did in Session 3.
+```{r}
+df <- df %>% mutate(
+  age = 2026 - year_of_birth,
+  condition_status = if_else(is.na(condition_concept_id), 0, 1),
+  exposure_status = if_else(is.na(drug_concept_id), 0, 1)
+)
+head(df)
+```
+
+
+## Two-Sample T-Test
+
+We use t-test for continuous vs binary variables. Let's test if there is a statistically significant difference in mean Systolic Blood Pressure (`SBP`) between participants with and without the condition (`condition_status`).
+
+By default, R executes a Welch two-sample t-test, which does not assume equal variances between groups. This is generally the preferred approach for clinical data.
+
+```{r}
+t_result <- t.test(SBP ~ condition_status, data = df)
+print(t_result)
+```
+
+## One-Way ANOVA
+
+For testing continuous variables in more than 2 categories in a variable, we use one-way ANOVA. Let's test if there is a statistical difference in mean SBP among sex groups (male, female, other)
+```{r}
+# Execute One-Way ANOVA
+anova_model <- aov(SBP ~ sex_at_birth, data = df)
+
+# Output the ANOVA table (Degrees of freedom, Sum of Squares, F-value, p-value)
+summary(anova_model)
+```
+
+## Pearson's Chi-Square Test
+
+If you want to test associations between categorical variables, use Pearson's Chi-square test. In our example, we will see if drug exposure (`exposure_status`) is associated with MCI/dementia (`condition_status`). 
+
+To execute a Chi-squared test, you must pass a contingency table into the `chisq.test()` function.
+
+```{r}
+# Generate the base R contingency table and pass it to the test
+chi_sq_result <- chisq.test(table(df$condition_status, df$exposure_status))
+print(chi_sq_result)
+```
+
+::: {.callout-note}
+If any expected cell count is less than 5, R will generate a warning. In such cases, `fisher.test()` should be used instead.
+:::
+
+## Simple Linear Regression
+
+To see the relationship a continuous dependent variable and a continuous independent variable, we can use simple linear regression. We will fit a linear regression model for SBP and age. We use `lm()` function for fitting linear regression models.
+
+```{r}
+# Fit the linear model
+lm_model <- lm(SBP ~ age, data = df)
+
+# Base R summary (verbose)
+summary(lm_model)
+```
+
+You can use `tidy()` function from `broom` package to display the model neatly as a dataframe:
+```{r}
+library(broom)
+tidy(lm_model)
+```
+
+We learned how to create scatter plots in the last session. We can overlay regression fit to the scatter plot easily with `ggplot2`, using `geom_smooth()`.
+```{r}
+ggplot(df, aes(x = age, y = SBP)) +
+  geom_point(alpha = 0.5, color = "darkblue") +
+  geom_smooth(
+    method = "lm", 
+    color = "red", 
+    fill = "lightcoral", 
+    alpha = 0.3
+  ) +
+  labs(
+    title = "Linear Regression: Systolic Blood Pressure by Age",
+    x = "Age (Years)",
+    y = "Systolic Blood Pressure (mmHg)"
+  ) +
+  theme_minimal()
+```
+
+
+## Multiple Linear Regression
+
+We use multiple linear regression to see the relationship between one continuous dependent variable and two or more independent variables. In medical research, multiple linear regression is often used as a way to adjust for confounding variables.
+
+We will fit a model to describe the relationship between SBP and age again, but will add sex. To include more independent variables, we simply add variable names to the formula using `+`:
+```{r}
+lm_adj_model <- lm(SBP ~ age + sex_at_birth, data = df)
+summary(lm_adj_model)
+```
+
+Using `broom`:
+```{r}
+tidy(lm_adj_model)
+```
+
+
+## Logistic Regression
+
+Because logistic regression is not discussed in your Research Methods course, I will provide a little bit of background before we learn the R command. 
+
+### Theoretical Background
+
+```{r}
+#| include: false
+# ######### comment out the whole thing once dataset is saved ##########
+# # Generate tumor data for illustrating logistic regression
+# set.seed(42)
+# tumor_df <- tibble(
+#   # Generate continuous tumor sizes between 0.5 and 10.0 cm
+#   tumor_size_cm = round(runif(200, min = 0.5, max = 10.0), 1)
+# ) %>%
+#   mutate(
+#     # Define the linear predictor (log-odds)
+#     # Intercept = -5, Coefficient = 1.2
+#     z = -5 + (1.2 * tumor_size_cm),
+#     # Apply the inverse logit transformation to calculate probability
+#     p_malignant = 1 / (1 + exp(-z)),
+#     # Draw from a binomial distribution based on the calculated probability
+#     malignant = rbinom(n(), size = 1, prob = p_malignant)
+#   )
+# # Save
+# write_csv(tumor_df, "data/tumor.csv")
+```
+
+```{r}
+#| include: false
+# Read in the tumor dataset without showing
+tumor_df <- read_csv("data/tumor.csv")
+```
+
+
+Standard linear regression predicts a continuous outcome $Y$ based on a linear combination of predictors $X$:
+$$Y=\beta_0+\beta_1X_1+\dots+\beta_pX_p$$
+
+When applied to a binary clinical outcome (absence or presence of a disease, benign or malignant. alive or dead), the linear fit does not make sense when trying to model binary outcomes.
+
+Suppose we have a dataset of tumor sizes from 200 patients and whether they are benign (0) or malignant (1). A linear regression model (red line) would look like this:
+
+```{r}
+#| echo: false
+#| message: false
+# Plotting the mathematically invalid linear fit
+ggplot(tumor_df, aes(x = tumor_size_cm, y = malignant)) +
+  geom_point(color = "darkblue", position = position_jitter(height = 0.02, width = 0)) +
+  geom_smooth(method = "lm", color = "red", alpha = 0.3, se = FALSE) +
+  # Expand y-axis limits to clearly show the line exceeding 0 and 1
+  coord_cartesian(ylim = c(-0.2, 1.2)) +
+  geom_hline(yintercept = c(0, 1), linetype = "dashed", color = "black") +
+  labs(
+    x = "Tumor Size (cm)",
+    y = "Predicted Value (Out of Bounds)"
+  ) +
+  theme_minimal()
+```
+It does not seem like a good fit at all!
+
+For this kind of scenarios, we use **logistic regression**. In a logistic regression model, the outcome $Y$ is "logit"-transformed, i.e., turned into log-odds. 
+$$\ln\left(\frac{p}{1-p}\right)=\beta_0+\beta_1X_1+\dots+\beta_pX_p$$
+Solving this equation for $p$, the probability of a given outcome (tumor is malignant):
+$$p=\frac{1}{1+e^{-(\beta_0+\beta_1X_1+\dots+\beta_pX_p)}}$$
+
+Now we have a valid probability that enables us to predict malignancy based on the tumor size.
+
+```{r}
+#| echo: false
+#| message: false
+# Plotting the valid logit-transformed S-curve
+ggplot(tumor_df, aes(x = tumor_size_cm, y = malignant)) +
+  geom_point(color = "darkblue", position = position_jitter(height = 0.02, width = 0)) +
+  stat_smooth(
+    method = "glm", 
+    method.args = list(family = "binomial"), 
+    color = "darkgreen", 
+    alpha = 0.3,
+    se = FALSE
+  ) +
+  coord_cartesian(ylim = c(-0.1, 1.1)) +
+  geom_hline(yintercept = c(0, 1), linetype = "dashed", color = "black") +
+  labs(
+    x = "Tumor Size (cm)",
+    y = "Predicted Probability P(Y=1)"
+  ) +
+  theme_minimal()
+```
+
+The fact that logistic regression models the log-odds of a binary outcome provides a useful mathematical property: the coefficients, $\beta_1, \beta_2, \dots$, of the independent variables, $X_1, X_2, \dots$, represent the log of the **odds ratio** for a one-unit increase in those variables. If the independent variables are binary (e.g., $1$ for exposed and $0$ for unexposed), the coefficient specifically represents the **log odds ratio** of the outcome for the exposed group compared to the unexposed group. That means the exponent of a coefficient, i.e., $e^{\beta_1}$, etc, represent **odds ratio** of the corresponding variable.
+
+So, logistic regression is primarily utilized for two purposes: predictive modeling and effect estimation. In predictive modeling, it is used to calculate the **probability of a binary outcome**. In inferential statistics, it is used to **calculate adjusted odds ratios** to measure the association between exposures and outcomes. This makes it the standard modeling approach for retrospective case-control studies, where calculating relative risk is mathematically invalid.
+
+
+### Application
+
+We will fit a logistic model on our practice dataset now, to see if there is any association between drug exposure and dementia outcome, while adjusting for age and sex. We use `glm()` function for this purpose. The argument, `family = "binomial"`, specifies that we want logit link (i.e., $\ln\left(\frac{p}{1-p}\right)$), which is what makes it logistic regression as opposed to other types.
+
+```{r}
+# Fit the multivariable logistic regression model
+logistic_model <- glm(
+  condition_status ~ exposure_status + age + sex_at_birth,
+  data = df,
+  family = "binomial"
+)
+summary(logistic_model)
+```
+
+You can obtain the odds ratio by expoentiating the coefficients manually, using `exp()` function, or the `tidy()` function from `broom` package can do this for you as well as confidence intervals.
+```{r}
+# Extract exponentiated coefficients (adjusted Odds Ratios) and CIs
+library(broom)
+tidy_results <- tidy(
+  logistic_model,
+  exponentiate = TRUE,
+  conf.int = TRUE
+)
+print(tidy_results)
+```
+
+
+::: {.callout-important}
+## Model Diagnostics
+Regression methods such as linear regression and logistic regression rely on statistical assumptions about underlying data. Before making an inference based on a modeling result, it is critical to check these assumptoms through model diagnostics. Refer to your statistics text or *Additional Resources* link on the left sidebar to learn more. 
+:::
+
+
+## Application to All of Us Data
+
+Work on own datasets in *All of Us* Workbench.
+
+
+
+
