@@ -1,0 +1,1317 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Introduction to R Programming and Data Wrangling – AoU Workshop</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-820421534fc26536042fa068055439ec.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar docked quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./session-1.html">Lessons</a></li><li class="breadcrumb-item"><a href="./session-2.html">Session 2: R Programming and Data Wrangling</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+      <a href="./index.html" class="sidebar-logo-link">
+      <img src="./hex-logo.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
+      <img src="./hex-logo.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
+      </a>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Workshop Information</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Lessons</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./session-1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Session 1: Intro to Cloud Computing and AoU Workbench</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./session-2.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Session 2: R Programming and Data Wrangling</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./session-3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Session 3: Exploratory Data Analysis and Visualization</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./session-4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Session 4: Statistical Analysis</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./resources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Additional Resources</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link active" data-scroll-target="#learning-objectives"><span class="header-section-number">1</span> Learning Objectives</a></li>
+  <li><a href="#preliminaries" id="toc-preliminaries" class="nav-link" data-scroll-target="#preliminaries"><span class="header-section-number">2</span> Preliminaries</a></li>
+  <li><a href="#loading-libraries" id="toc-loading-libraries" class="nav-link" data-scroll-target="#loading-libraries"><span class="header-section-number">3</span> Loading Libraries</a></li>
+  <li><a href="#data-types" id="toc-data-types" class="nav-link" data-scroll-target="#data-types"><span class="header-section-number">4</span> Data Types</a>
+  <ul class="collapse">
+  <li><a href="#numeric" id="toc-numeric" class="nav-link" data-scroll-target="#numeric"><span class="header-section-number">4.1</span> Numeric</a></li>
+  <li><a href="#character" id="toc-character" class="nav-link" data-scroll-target="#character"><span class="header-section-number">4.2</span> Character</a></li>
+  <li><a href="#factor" id="toc-factor" class="nav-link" data-scroll-target="#factor"><span class="header-section-number">4.3</span> Factor</a></li>
+  <li><a href="#logical" id="toc-logical" class="nav-link" data-scroll-target="#logical"><span class="header-section-number">4.4</span> Logical</a></li>
+  <li><a href="#date" id="toc-date" class="nav-link" data-scroll-target="#date"><span class="header-section-number">4.5</span> Date</a></li>
+  </ul></li>
+  <li><a href="#data-structures" id="toc-data-structures" class="nav-link" data-scroll-target="#data-structures"><span class="header-section-number">5</span> Data Structures</a>
+  <ul class="collapse">
+  <li><a href="#vector" id="toc-vector" class="nav-link" data-scroll-target="#vector"><span class="header-section-number">5.1</span> Vector</a></li>
+  <li><a href="#list" id="toc-list" class="nav-link" data-scroll-target="#list"><span class="header-section-number">5.2</span> List</a></li>
+  <li><a href="#dataframe" id="toc-dataframe" class="nav-link" data-scroll-target="#dataframe"><span class="header-section-number">5.3</span> Dataframe</a></li>
+  </ul></li>
+  <li><a href="#dataframe-basics" id="toc-dataframe-basics" class="nav-link" data-scroll-target="#dataframe-basics"><span class="header-section-number">6</span> Dataframe Basics</a>
+  <ul class="collapse">
+  <li><a href="#inspect-the-dataframe" id="toc-inspect-the-dataframe" class="nav-link" data-scroll-target="#inspect-the-dataframe"><span class="header-section-number">6.1</span> Inspect the dataframe</a></li>
+  <li><a href="#subsetting" id="toc-subsetting" class="nav-link" data-scroll-target="#subsetting"><span class="header-section-number">6.2</span> Subsetting</a></li>
+  <li><a href="#join" id="toc-join" class="nav-link" data-scroll-target="#join"><span class="header-section-number">6.3</span> Join</a></li>
+  <li><a href="#mutate" id="toc-mutate" class="nav-link" data-scroll-target="#mutate"><span class="header-section-number">6.4</span> Mutate</a></li>
+  </ul></li>
+  <li><a href="#missing-values" id="toc-missing-values" class="nav-link" data-scroll-target="#missing-values"><span class="header-section-number">7</span> Missing Values</a></li>
+  <li><a href="#reading-files" id="toc-reading-files" class="nav-link" data-scroll-target="#reading-files"><span class="header-section-number">8</span> Reading Files</a></li>
+  <li><a href="#recoding-values" id="toc-recoding-values" class="nav-link" data-scroll-target="#recoding-values"><span class="header-section-number">9</span> Recoding Values</a></li>
+  <li><a href="#selecting-earliest-occurrence" id="toc-selecting-earliest-occurrence" class="nav-link" data-scroll-target="#selecting-earliest-occurrence"><span class="header-section-number">10</span> Selecting Earliest Occurrence</a></li>
+  <li><a href="#merging-demographics-with-clinical-data" id="toc-merging-demographics-with-clinical-data" class="nav-link" data-scroll-target="#merging-demographics-with-clinical-data"><span class="header-section-number">11</span> Merging Demographics with Clinical Data</a></li>
+  <li><a href="#writing-and-saving-files" id="toc-writing-and-saving-files" class="nav-link" data-scroll-target="#writing-and-saving-files"><span class="header-section-number">12</span> Writing and Saving Files</a></li>
+  <li><a href="#running-queries-and-working-with-queried-data" id="toc-running-queries-and-working-with-queried-data" class="nav-link" data-scroll-target="#running-queries-and-working-with-queried-data"><span class="header-section-number">13</span> Running Queries and Working with Queried Data</a></li>
+  <li><a href="#saving-to-and-reading-from-workspace-bucket" id="toc-saving-to-and-reading-from-workspace-bucket" class="nav-link" data-scroll-target="#saving-to-and-reading-from-workspace-bucket"><span class="header-section-number">14</span> Saving to and Reading from Workspace Bucket</a></li>
+  <li><a href="#preparing-for-next-session" id="toc-preparing-for-next-session" class="nav-link" data-scroll-target="#preparing-for-next-session"><span class="header-section-number">15</span> Preparing for Next Session</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./session-1.html">Lessons</a></li><li class="breadcrumb-item"><a href="./session-2.html">Session 2: R Programming and Data Wrangling</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Introduction to R Programming and Data Wrangling</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="learning-objectives" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="learning-objectives"><span class="header-section-number">1</span> Learning Objectives</h2>
+<p>Session 2 will focus on learning the basics of R programming. We will first work with synthetic data to practice common R functions and syntax, followed by logging into <em>All of Us</em> Workbench and running the queries we set up last time.</p>
+<p>Unless indicated otherwise, we will practic R on <a href="https://posit.cloud">Posit Cloud</a>.</p>
+<p>At the end of Session 2, learners will be able to:</p>
+<ol type="1">
+<li>Manipulate different types of data types in R.</li>
+<li>Read in CSV files as a dataframe and save dataframes as CSV files.</li>
+<li>Run auto-generated queries and obtain data.</li>
+<li>Inspect and clean up data.</li>
+</ol>
+</section>
+<section id="preliminaries" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="preliminaries"><span class="header-section-number">2</span> Preliminaries</h2>
+<p>Concepts:</p>
+<ul>
+<li>file system: “directory”, “working directory”, “file path”</li>
+<li>input and output</li>
+<li>functions and arguments</li>
+<li>variables</li>
+<li>errors vs.&nbsp;warning</li>
+</ul>
+<p>Best practice in programming:</p>
+<ul>
+<li>comment copiously (You think you will remember what you were doing but you won’t)</li>
+<li>write reproducible code</li>
+<li>feel free to utilize AI to help you with coding but make sure you understand every line (That’s why you should still learn the basics. No “vibe coding” in this workshop and your research!)</li>
+</ul>
+</section>
+<section id="loading-libraries" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="loading-libraries"><span class="header-section-number">3</span> Loading Libraries</h2>
+<p>“Libraries” or “packages” are collections of pre-written functions that provide convenience and efficiency in coding. Common R libraries we use for <em>All of Us</em> projects are:</p>
+<ul>
+<li>tidyverse: collection of packages (dplyr, readr, ggplot2,…) for file handling, working with dataframes, visualizations.</li>
+<li>bigrquery: facilitates the connection between R and Google BigQuery database - the type of database <em>All of Us</em> data are stored in.</li>
+<li>lubridate: for handling dates and times</li>
+</ul>
+<p>We use <code>library()</code> function to load these packages.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load packages</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lubridate)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>These common packages are standard in cloud platforms. Occasionally, a package you want to use may not be available in the virtual machine. Attempting to load a package with <code>library()</code> when it does not exist will result in an error. Then, you need to first install it using <code>install.packages()</code> function.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Do not run this. This is just to show you the code for installing a package.</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"MatchIt"</span>) <span class="co">#MatchIt is a package used for propensity score matching</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"MatchIt"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="data-types" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="data-types"><span class="header-section-number">4</span> Data Types</h2>
+<p>There are 5 data types you must be familiar with in programming with R. Knowing the data types of the values in your dataframe, for example, can be critical in performing computations or troubleshooting errors.</p>
+<section id="numeric" class="level3" data-number="4.1">
+<h3 data-number="4.1" class="anchored" data-anchor-id="numeric"><span class="header-section-number">4.1</span> Numeric</h3>
+<p>Numeric data can be either <strong>double</strong> (<code>dbl</code>) for numbers with decimals such as weight or lab values, or <strong>integer</strong> (<code>int</code>) for whole numbers such as participant ID numbers.</p>
+</section>
+<section id="character" class="level3" data-number="4.2">
+<h3 data-number="4.2" class="anchored" data-anchor-id="character"><span class="header-section-number">4.2</span> Character</h3>
+<p>Also known as string, character (<code>chr</code>) data types are non-numeric, text data. In <em>All of Us</em> data, condition names or drug names for example, are character types. Character values are enclosed in <code>" "</code>. So if you have values like `“1”, “2”, “3”, they are character type even though they are numbers, and R will not be able to perform computations that require numeric data types.</p>
+</section>
+<section id="factor" class="level3" data-number="4.3">
+<h3 data-number="4.3" class="anchored" data-anchor-id="factor"><span class="header-section-number">4.3</span> Factor</h3>
+<p>Factor (<code>fct</code>) data types are used for categorical data. They often look just like characters which is a source of common confusion. However, under the hood, factors are stored as integers with associated “levels”. Some statistical functions may require factors as input.</p>
+</section>
+<section id="logical" class="level3" data-number="4.4">
+<h3 data-number="4.4" class="anchored" data-anchor-id="logical"><span class="header-section-number">4.4</span> Logical</h3>
+<p>Logicals are binary data with values <code>TRUE</code> and <code>FALSE</code>. While this type of data are rarely seen as values in a dataframe, they are an output of filtering or conditional operations. Interestingly, <code>TRUE</code> value equals 1 while <code>FALSE</code> equals 0. This property can be useful in checking data.</p>
+</section>
+<section id="date" class="level3" data-number="4.5">
+<h3 data-number="4.5" class="anchored" data-anchor-id="date"><span class="header-section-number">4.5</span> Date</h3>
+</section>
+</section>
+<section id="data-structures" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="data-structures"><span class="header-section-number">5</span> Data Structures</h2>
+<section id="vector" class="level3" data-number="5.1">
+<h3 data-number="5.1" class="anchored" data-anchor-id="vector"><span class="header-section-number">5.1</span> Vector</h3>
+<p>A vector is a sequence of data where all elements are of the same data type. We can create a vector using <code>c()</code>.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create character vectors</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>names <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Josh"</span>, <span class="st">"Evelyn"</span>, <span class="st">"Olivia"</span>, <span class="st">"Liam"</span>, <span class="st">"Adrian"</span>, <span class="st">"Tamara"</span>, <span class="st">"Teddy"</span>, <span class="st">"Allison"</span>)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>cities <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Moscow"</span>, <span class="st">"Moscow"</span>, <span class="st">"Troy"</span>, <span class="st">"Viola"</span>, <span class="st">"Moscow"</span>, <span class="st">"Pullman"</span>, <span class="st">"Lewiston"</span>, <span class="st">"Moscow"</span>)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a numeric vectors</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>ages <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">23</span>, <span class="dv">18</span>, <span class="dv">32</span>, <span class="dv">56</span>, <span class="dv">15</span>, <span class="dv">25</span>, <span class="dv">24</span>, <span class="dv">16</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Use <code>print()</code> to see the values.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(names)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Josh"    "Evelyn"  "Olivia"  "Liam"    "Adrian"  "Tamara"  "Teddy"  
+[8] "Allison"</code></pre>
+</div>
+</div>
+<p>Use <code>length()</code> to see how many elements there are in a vector.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(names)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 8</code></pre>
+</div>
+</div>
+<p>You can use indexing to access a specific element in a vector.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>names[<span class="dv">2</span>]  <span class="co"># Access the second element in the names vector.</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Evelyn"</code></pre>
+</div>
+</div>
+<p>For numeric values, we can perform simple computations.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(ages)  <span class="co"># Average of the elements in ages vector</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 26.125</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sd</span>(ages)  <span class="co"># Standard deviation </span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 13.28197</code></pre>
+</div>
+</div>
+<p>Other common functions for numeric data include <code>median()</code>, <code>min()</code>, <code>max()</code>.</p>
+</section>
+<section id="list" class="level3" data-number="5.2">
+<h3 data-number="5.2" class="anchored" data-anchor-id="list"><span class="header-section-number">5.2</span> List</h3>
+<p>Lists look similar to vectors but they can contain mixed data types, even lists within a list. Lists are a very versatile object for programming purposes but we won’t go into it too much as they are not necessary for typical statistical analyses. I will just mention that we use double brackets (<code>[[ ]]</code>) to access a specific element in a list instead of single brackets as with vectors.</p>
+</section>
+<section id="dataframe" class="level3" data-number="5.3">
+<h3 data-number="5.3" class="anchored" data-anchor-id="dataframe"><span class="header-section-number">5.3</span> Dataframe</h3>
+<p>A dataframe is like a table in an Excel sheet. Each column is a vector. Therefore, values in a column must be of same data type but different columns can have different types. We will create a dataframe using the vectors we created earlier to see what it looks like.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a dataframe with existing vectors</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">Name =</span> names, <span class="at">Age =</span> ages, <span class="at">City =</span> cities)</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Inspect</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(df)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     Name Age     City
+1    Josh  23   Moscow
+2  Evelyn  18   Moscow
+3  Olivia  32     Troy
+4    Liam  56    Viola
+5  Adrian  15   Moscow
+6  Tamara  25  Pullman
+7   Teddy  24 Lewiston
+8 Allison  16   Moscow</code></pre>
+</div>
+</div>
+<p>In reality, you will rarely create a dataframe from scratch like this. Rather, you will often read a CSV file into a dataframe which we will learn later in this session. For now, we will use this small dataframe to learn a few essential skills in working with dataframes.</p>
+</section>
+</section>
+<section id="dataframe-basics" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="dataframe-basics"><span class="header-section-number">6</span> Dataframe Basics</h2>
+<section id="inspect-the-dataframe" class="level3" data-number="6.1">
+<h3 data-number="6.1" class="anchored" data-anchor-id="inspect-the-dataframe"><span class="header-section-number">6.1</span> Inspect the dataframe</h3>
+<p><code>dim()</code> command to see the dimension. It will return the number of rows and number of columns.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(df)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 8 3</code></pre>
+</div>
+</div>
+<p>Alternatively, you can also use <code>nrow()</code> and <code>ncol()</code>.</p>
+<p><code>str()</code> to see the structure. This is handy in inspecting data types and preview values of all columns.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(df)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>'data.frame':   8 obs. of  3 variables:
+ $ Name: chr  "Josh" "Evelyn" "Olivia" "Liam" ...
+ $ Age : num  23 18 32 56 15 25 24 16
+ $ City: chr  "Moscow" "Moscow" "Troy" "Viola" ...</code></pre>
+</div>
+</div>
+<p><code>names()</code> to list column names.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(df)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Name" "Age"  "City"</code></pre>
+</div>
+</div>
+<p><code>head()</code> or <code>tail()</code> to inspect the first few rows or the last few rows.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(df)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>    Name Age    City
+1   Josh  23  Moscow
+2 Evelyn  18  Moscow
+3 Olivia  32    Troy
+4   Liam  56   Viola
+5 Adrian  15  Moscow
+6 Tamara  25 Pullman</code></pre>
+</div>
+</div>
+<p>The default is to show 5 rows but you can specify the number of rows inside the function. For example, <code>head(df, 10)</code> will show the first 10 rows.</p>
+<p><code>table()</code> is a quick way to see value counts in a column.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(df<span class="sc">$</span>City)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Lewiston   Moscow  Pullman     Troy    Viola 
+       1        4        1        1        1 </code></pre>
+</div>
+</div>
+</section>
+<section id="subsetting" class="level3" data-number="6.2">
+<h3 data-number="6.2" class="anchored" data-anchor-id="subsetting"><span class="header-section-number">6.2</span> Subsetting</h3>
+<p><code>$</code> signifies names in R. We can use <code>$</code> to pull out values for a specific column.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>df<span class="sc">$</span>Age   <span class="co"># Show all the values in Age column</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 23 18 32 56 15 25 24 16</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(df<span class="sc">$</span>Age)  <span class="co"># Show the first few values in Age colun</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 23 18 32 56 15 25</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(df<span class="sc">$</span>Age)  <span class="co"># Compute average age  </span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 26.125</code></pre>
+</div>
+</div>
+<p><code>select()</code> function can also pull out columns.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>df <span class="sc">%&gt;%</span> <span class="fu">select</span>(Name, Age)  <span class="co"># Subset just Name and Age columns</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     Name Age
+1    Josh  23
+2  Evelyn  18
+3  Olivia  32
+4    Liam  56
+5  Adrian  15
+6  Tamara  25
+7   Teddy  24
+8 Allison  16</code></pre>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Pipe Operator
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Symbols such as <code>%&gt;%</code> and <code>|&gt;</code> in R are called “pipes”. Pipes are used to string together multiple operations in sequence. In the above code block, we take the dataframe <code>df</code> and then apply <code>select()</code> function on it.</p>
+</div>
+</div>
+<p><code>filter()</code> function is used to subset rows based on some logical criteria.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>df <span class="sc">%&gt;%</span> <span class="fu">filter</span>(Age <span class="sc">&gt;=</span> <span class="dv">21</span>)  <span class="co"># Subset rows for ages 21 or older</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>    Name Age     City
+1   Josh  23   Moscow
+2 Olivia  32     Troy
+3   Liam  56    Viola
+4 Tamara  25  Pullman
+5  Teddy  24 Lewiston</code></pre>
+</div>
+</div>
+<p>Earlier, we briefly discussed the <strong>logical</strong> data type. When we use <code>filter()</code>, R evaluates each row - whether its Age value is 21 or greater - and creates a temporary vector of logical data, e.g., <code>c(TRUE, FALSE, TRUE, TRUE, FALSE, TRUE, TRUE, FALSE)</code>. And then it outputs rows that correspond to <code>TRUE</code>.</p>
+<p>We can filter by more than one criteria as well. We use the symbol <code>|</code> for OR and the symbol <code>&amp;</code> for AND.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>df <span class="sc">%&gt;%</span> <span class="fu">filter</span>(Age <span class="sc">&gt;=</span> <span class="dv">21</span> <span class="sc">&amp;</span> City <span class="sc">==</span> <span class="st">"Moscow"</span>)  <span class="co"># Subset rows for ages 21 or older AND city is Moscow</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  Name Age   City
+1 Josh  23 Moscow</code></pre>
+</div>
+</div>
+<p>We can then save the resulting filtered dataframe by assigning a new variable.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>df_filtered <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span> <span class="fu">filter</span>(Age <span class="sc">&gt;=</span> <span class="dv">21</span> <span class="sc">&amp;</span> City <span class="sc">==</span> <span class="st">"Moscow"</span>)</span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(df_filtered)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  Name Age   City
+1 Josh  23 Moscow</code></pre>
+</div>
+</div>
+</section>
+<section id="join" class="level3" data-number="6.3">
+<h3 data-number="6.3" class="anchored" data-anchor-id="join"><span class="header-section-number">6.3</span> Join</h3>
+<p>Working with <em>All of Us</em> data frequently involves combining two dataframes. Common join types are <code>left_join</code> and <code>inner_join</code>. We’ll create a new dataframe to demonstrate these joins.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a BMI dataframe</span></span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>bmi_df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">Name =</span> <span class="fu">c</span>(<span class="st">"Evelyn"</span>, <span class="st">"Liam"</span>, <span class="st">"Olivia"</span>, <span class="st">"Tamara"</span>),</span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a>                     <span class="at">BMI =</span> <span class="fu">c</span>(<span class="fl">20.2</span>, <span class="fl">27.9</span>, <span class="fl">32.1</span>, <span class="fl">21.6</span>))</span>
+<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a>bmi_df</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>    Name  BMI
+1 Evelyn 20.2
+2   Liam 27.9
+3 Olivia 32.1
+4 Tamara 21.6</code></pre>
+</div>
+</div>
+<p><code>inner_join</code> keeps only the rows where there is a match in both tables. So this type of join can work as a filter.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Join df and df_bmi by Name and only keep matched rows</span></span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>df_inner_joined <span class="ot">&lt;-</span> <span class="fu">inner_join</span>(df, bmi_df, <span class="at">by =</span> <span class="st">"Name"</span>)</span>
+<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a>df_inner_joined</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>    Name Age    City  BMI
+1 Evelyn  18  Moscow 20.2
+2 Olivia  32    Troy 32.1
+3   Liam  56   Viola 27.9
+4 Tamara  25 Pullman 21.6</code></pre>
+</div>
+</div>
+<p><code>left_join</code> is used most often in working with <em>All of Us</em> data. This join keeps all the rows from the primary table (left table) and add any matched data from the right table.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>df_left_joined <span class="ot">&lt;-</span> <span class="fu">left_join</span>(df, bmi_df, <span class="at">by =</span> <span class="st">"Name"</span>)</span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>df_left_joined</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     Name Age     City  BMI
+1    Josh  23   Moscow   NA
+2  Evelyn  18   Moscow 20.2
+3  Olivia  32     Troy 32.1
+4    Liam  56    Viola 27.9
+5  Adrian  15   Moscow   NA
+6  Tamara  25  Pullman 21.6
+7   Teddy  24 Lewiston   NA
+8 Allison  16   Moscow   NA</code></pre>
+</div>
+</div>
+<p>Note how rows without a match from <code>bmi_df</code> have values <code>NA</code> for the BMI column. <code>NA</code> indicates missing values and must be handled carefully in data analysis. We will discuss NA more in the <a href="#missing-values">Missing Values</a> section shortly.</p>
+<p>As a side note, the join syntax in above code blocks can be modified using a pipe <code>%&gt;%</code>. For example, <code>left_join()</code> is often written this way:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>df_left_joined <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span> <span class="fu">left_join</span>(bmi_df, <span class="at">by =</span> <span class="st">"Name"</span>)</span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a>df_left_joined</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     Name Age     City  BMI
+1    Josh  23   Moscow   NA
+2  Evelyn  18   Moscow 20.2
+3  Olivia  32     Troy 32.1
+4    Liam  56    Viola 27.9
+5  Adrian  15   Moscow   NA
+6  Tamara  25  Pullman 21.6
+7   Teddy  24 Lewiston   NA
+8 Allison  16   Moscow   NA</code></pre>
+</div>
+</div>
+</section>
+<section id="mutate" class="level3" data-number="6.4">
+<h3 data-number="6.4" class="anchored" data-anchor-id="mutate"><span class="header-section-number">6.4</span> Mutate</h3>
+<p><code>mutate()</code> function is used to create or transform variables. For example, we will create a column to show overweight status based on BMI.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>df_left_joined <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">Overweight =</span> BMI <span class="sc">&gt;</span> <span class="dv">25</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     Name Age     City  BMI Overweight
+1    Josh  23   Moscow   NA         NA
+2  Evelyn  18   Moscow 20.2      FALSE
+3  Olivia  32     Troy 32.1       TRUE
+4    Liam  56    Viola 27.9       TRUE
+5  Adrian  15   Moscow   NA         NA
+6  Tamara  25  Pullman 21.6      FALSE
+7   Teddy  24 Lewiston   NA         NA
+8 Allison  16   Moscow   NA         NA</code></pre>
+</div>
+</div>
+<p>Other use cases of <code>mutate()</code> include arithmetic calculation of some numeric values. For example, if we had a dataframe with a year-of-birth column (<code>YOB</code>) and no age column, we can use <code>mutate()</code> to compute current age like this: <code>mutate(current_age = 2025 - YOB)</code>. Similarly, if we had columns <code>Weight</code> in kg and <code>Height</code> in cm, but no <code>BMI</code>, we could create <code>BMI</code> column by: <code>mutate(BMI = Weight / (Height/100)^2)</code>.</p>
+</section>
+</section>
+<section id="missing-values" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="missing-values"><span class="header-section-number">7</span> Missing Values</h2>
+<p>In a small dataframes like our toy example, NAs are easy to see. However, it is much harder to spot in a large dataset. This poses a problem because many statistical functions cannot deal with NAs automatically. NAs can also cause errors in unexpected ways. Therefore, researchers must always be vigilant about NAs in their data.</p>
+<p>As an example, let’s try computing the average of BMI values.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(df_left_joined<span class="sc">$</span>BMI)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] NA</code></pre>
+</div>
+</div>
+<p>What happened? Many functions including <code>mean()</code> returns “unknown” if any of the input values are unknown (i.e.&nbsp;missing values). In the case of <code>mean()</code>, we must tell R explicitly to ignore NAs by using the optional argument, <code>na.rm = TRUE</code>.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(df_left_joined<span class="sc">$</span>BMI, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 25.45</code></pre>
+</div>
+</div>
+<p>NAs are very common in electronic health records and they can also be introduced during joings as we saw earlier.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Always check for NAs in your data before statistical analyses!</p>
+</div>
+</div>
+<p>There are various ways to check for NAs. Here are some examples.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb54"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colSums</span>(<span class="fu">is.na</span>(df_left_joined))  <span class="co"># Returns a count of NAs in every column</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Name  Age City  BMI 
+   0    0    0    4 </code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb56"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(<span class="fu">is.na</span>(df_left_joined<span class="sc">$</span>BMI))  <span class="co"># Returns a sum of NA values in a specific column</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 4</code></pre>
+</div>
+</div>
+<p>Sometimes you want to see the entire rows that contain NA.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb58"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a>df_left_joined <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="fu">is.na</span>(BMI))  <span class="co"># Show rows where BMI values are NAs</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     Name Age     City BMI
+1    Josh  23   Moscow  NA
+2  Adrian  15   Moscow  NA
+3   Teddy  24 Lewiston  NA
+4 Allison  16   Moscow  NA</code></pre>
+</div>
+</div>
+<p>For categorical variables, we can use <code>count()</code> to see value counts including NAs. <code>count()</code> is the same as <code>table()</code> but shows NAs by default unlike <code>table()</code> which does not count NAs by default. Below example will not return any NAs because our City column does not have any, but this is just to show you the syntax.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb60"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a>df_left_joined <span class="sc">%&gt;%</span> <span class="fu">count</span>(City)  <span class="co"># Show value counts of the column City, including possible NAs</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>      City n
+1 Lewiston 1
+2   Moscow 4
+3  Pullman 1
+4     Troy 1
+5    Viola 1</code></pre>
+</div>
+</div>
+<p>If a column of interest turns out to have too many NAs, you may have to remove that variable from your analysis. If NAs are only few and if the variable is critical to your analysis, you might decide to drop the rows containing NAs.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb62"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a>df_left_joined <span class="sc">%&gt;%</span> <span class="fu">drop_na</span>(BMI)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>    Name Age    City  BMI
+1 Evelyn  18  Moscow 20.2
+2 Olivia  32    Troy 32.1
+3   Liam  56   Viola 27.9
+4 Tamara  25 Pullman 21.6</code></pre>
+</div>
+</div>
+<p>If the variable is critical and you want to keep all the rows, you can look into advanced statistical methods called “imputation” which fills in missing values.</p>
+</section>
+<section id="reading-files" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="reading-files"><span class="header-section-number">8</span> Reading Files</h2>
+<p>In programming, plain-text files are preferred over application-dependent file formats such as Word or Excel files. Comma-separated values (CSV) format is a popular file format for tabular data. We use this file type extensively to work with <em>All of Us</em> data.</p>
+<p>We use <code>read_csv()</code> function to read CSV files into dataframes so we can work with them. Typically, we put the file path inside the function, which will look like <code>read_csv("file.csv")</code> or <code>read_csv("directory/file.csv")</code>. For this practice, I placed practice files on the web so that they can be directly read via file URLs. Copy/paste and run the following code to obtain the data:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb64"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
+<span id="cb64-2"><a href="#cb64-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb64-3"><a href="#cb64-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Read directly from public URLs</span></span>
+<span id="cb64-4"><a href="#cb64-4" aria-hidden="true" tabindex="-1"></a>person_df <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://yesols.github.io/aou-workshop/data/demographic_data.csv"</span>)</span>
+<span id="cb64-5"><a href="#cb64-5" aria-hidden="true" tabindex="-1"></a>condition_df <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://yesols.github.io/aou-workshop/data/conditions.csv"</span>)</span>
+<span id="cb64-6"><a href="#cb64-6" aria-hidden="true" tabindex="-1"></a>drug_df <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://yesols.github.io/aou-workshop/data/drug_exposures.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The data in these files are randomly generated and completely fake, but designed to resemble <em>All of Us</em> data although much simplified.</p>
+</div>
+</div>
+<p>Now, try the commands, <code>dim()</code>, <code>head()</code>, <code>tail()</code>, <code>str()</code>, etc, to inspect the these three dataframes.</p>
+<p>In subsequent sections, we will learn how to clean up data and merge these three dataframes. Ultimately, we will analyze the dataset to investigate association between anticholinergic medications and dementia.</p>
+</section>
+<section id="recoding-values" class="level2" data-number="9">
+<h2 data-number="9" class="anchored" data-anchor-id="recoding-values"><span class="header-section-number">9</span> Recoding Values</h2>
+<p>Sometimes we have to recode values in categorical variables. For example, race in <em>All of Us</em> often have categories you might want to collapse into one. Let’s take a look at our example data.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb65"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Inspect the first few lines of the demographics data</span></span>
+<span id="cb65-2"><a href="#cb65-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(person_df)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 4
+  person_id year_of_birth race                      sex_at_birth
+      &lt;dbl&gt;         &lt;dbl&gt; &lt;chr&gt;                     &lt;chr&gt;       
+1         1          1987 Skip                      Male        
+2         2          1987 Asian                     Female      
+3         3          2004 Asian                     Male        
+4         4          1944 Black or African American Male        
+5         5          1941 Asian                     Male        
+6         6          2006 More than one population  Male        </code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb67"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a>person_df <span class="sc">%&gt;%</span> <span class="fu">count</span>(race) <span class="co"># Count the values in race column</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 7 × 2
+  race                          n
+  &lt;chr&gt;                     &lt;int&gt;
+1 Asian                        20
+2 Black or African American    23
+3 More than one population      6
+4 None of these                 5
+5 Other                         4
+6 Skip                          4
+7 White                        38</code></pre>
+</div>
+</div>
+<p>“More than one population” and “None of these” can be recoded as “Other”. We could also change “Skip” to “Unknown” and “Black or African American” to “Black” for simplicity. We can use <code>recode_values()</code> if we are changing all values or <code>replace_values()</code> if just updating some of the values. In our case, we just want to tweak some of the categories, so we’ll use <code>replace_values()</code>.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb69"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Recode race category</span></span>
+<span id="cb69-2"><a href="#cb69-2" aria-hidden="true" tabindex="-1"></a>person_df <span class="ot">&lt;-</span> person_df <span class="sc">%&gt;%</span></span>
+<span id="cb69-3"><a href="#cb69-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb69-4"><a href="#cb69-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">race =</span> <span class="fu">replace_values</span>(</span>
+<span id="cb69-5"><a href="#cb69-5" aria-hidden="true" tabindex="-1"></a>      race,</span>
+<span id="cb69-6"><a href="#cb69-6" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Black or African American"</span> <span class="sc">~</span> <span class="st">"Black"</span>,</span>
+<span id="cb69-7"><a href="#cb69-7" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Skip"</span> <span class="sc">~</span> <span class="st">"Unknown"</span>,</span>
+<span id="cb69-8"><a href="#cb69-8" aria-hidden="true" tabindex="-1"></a>      <span class="fu">c</span>(<span class="st">"More than one population"</span>, <span class="st">"None of these"</span>) <span class="sc">~</span> <span class="st">"Other"</span></span>
+<span id="cb69-9"><a href="#cb69-9" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb69-10"><a href="#cb69-10" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Check the counts again to make sure it worked. This is a good practice to also ensure NAs were not introduced as a result of a coding mistake.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb70"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a>person_df <span class="sc">%&gt;%</span> <span class="fu">count</span>(race)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 5 × 2
+  race        n
+  &lt;chr&gt;   &lt;int&gt;
+1 Asian      20
+2 Black      23
+3 Other      15
+4 Unknown     4
+5 White      38</code></pre>
+</div>
+</div>
+<p>Similarly, we’ll also clean up sex_at_birth categories. We will change anything other than “Female” or “Male” to “Other”.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb72"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Recode sex_at_birth</span></span>
+<span id="cb72-2"><a href="#cb72-2" aria-hidden="true" tabindex="-1"></a>person_df <span class="ot">&lt;-</span> person_df <span class="sc">%&gt;%</span></span>
+<span id="cb72-3"><a href="#cb72-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb72-4"><a href="#cb72-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">sex_at_birth =</span> <span class="fu">replace_values</span>(</span>
+<span id="cb72-5"><a href="#cb72-5" aria-hidden="true" tabindex="-1"></a>      sex_at_birth,</span>
+<span id="cb72-6"><a href="#cb72-6" aria-hidden="true" tabindex="-1"></a>      <span class="fu">c</span>(<span class="st">"Intersex"</span>, <span class="st">"Prefer not to answer"</span>, <span class="st">"Skip"</span>) <span class="sc">~</span> <span class="st">"Other"</span></span>
+<span id="cb72-7"><a href="#cb72-7" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb72-8"><a href="#cb72-8" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Check the result:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb73"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb73-1"><a href="#cb73-1" aria-hidden="true" tabindex="-1"></a>person_df <span class="sc">%&gt;%</span> <span class="fu">count</span>(sex_at_birth)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 2
+  sex_at_birth     n
+  &lt;chr&gt;        &lt;int&gt;
+1 Female          44
+2 Male            48
+3 Other            8</code></pre>
+</div>
+</div>
+</section>
+<section id="selecting-earliest-occurrence" class="level2" data-number="10">
+<h2 data-number="10" class="anchored" data-anchor-id="selecting-earliest-occurrence"><span class="header-section-number">10</span> Selecting Earliest Occurrence</h2>
+<p>When you extract conditions, drug exposures, or lab measurements data in <em>All of Us</em>, there are multiple entries per person. In our practice data, we will pick the earliest occurrence of the condition and the earliest occurrence of drug exposure. <code>slice()</code> and its variations, <code>slice_head()</code>, <code>slice_sample()</code>, “slice_min()<code>, "slice_max()</code> are useful for subsetting a dataframe in a variety of ways. We will use <code>slice_min()</code> to pick the earliest date for each person. <code>group_by()</code> function allows us to perform <code>slice_min()</code> on grouped rows by <code>person_id</code> rather than globally.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb75"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb75-1"><a href="#cb75-1" aria-hidden="true" tabindex="-1"></a>earliest_condition <span class="ot">&lt;-</span> condition_df <span class="sc">%&gt;%</span></span>
+<span id="cb75-2"><a href="#cb75-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(person_id) <span class="sc">%&gt;%</span>               <span class="co"># group rows by person_id</span></span>
+<span id="cb75-3"><a href="#cb75-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice_min</span>(                            </span>
+<span id="cb75-4"><a href="#cb75-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">order_by =</span> condition_start_date,    <span class="co"># specify which column to evaluate</span></span>
+<span id="cb75-5"><a href="#cb75-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">n =</span> <span class="dv">1</span>,                              <span class="co"># pick one row</span></span>
+<span id="cb75-6"><a href="#cb75-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">with_ties =</span> <span class="cn">FALSE</span>                   <span class="co"># keep only one in case of ties</span></span>
+<span id="cb75-7"><a href="#cb75-7" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb75-8"><a href="#cb75-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>We do the same for drug dataframe:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb76"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb76-1"><a href="#cb76-1" aria-hidden="true" tabindex="-1"></a>earliest_drug <span class="ot">&lt;-</span> drug_df <span class="sc">%&gt;%</span></span>
+<span id="cb76-2"><a href="#cb76-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(person_id) <span class="sc">%&gt;%</span></span>
+<span id="cb76-3"><a href="#cb76-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice_min</span>(</span>
+<span id="cb76-4"><a href="#cb76-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">order_by =</span> drug_exposure_start_date, </span>
+<span id="cb76-5"><a href="#cb76-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">n =</span> <span class="dv">1</span>, </span>
+<span id="cb76-6"><a href="#cb76-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">with_ties =</span> <span class="cn">FALSE</span></span>
+<span id="cb76-7"><a href="#cb76-7" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb76-8"><a href="#cb76-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="merging-demographics-with-clinical-data" class="level2" data-number="11">
+<h2 data-number="11" class="anchored" data-anchor-id="merging-demographics-with-clinical-data"><span class="header-section-number">11</span> Merging Demographics with Clinical Data</h2>
+<p>When you extract <em>All of Us</em> data with auto-generated queries, you will have separate dataframes for “person”, “conditions”, “drug exposures”, etc, and you must combine them for analysis. We will use <code>left_join()</code> that we learned earlier to merge <code>condition_df</code> and <code>drug_df</code> to <code>person_df</code>.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb77"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb77-1"><a href="#cb77-1" aria-hidden="true" tabindex="-1"></a>combined_df <span class="ot">&lt;-</span> person_df <span class="sc">%&gt;%</span> </span>
+<span id="cb77-2"><a href="#cb77-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(earliest_condition, <span class="at">by =</span> <span class="st">"person_id"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb77-3"><a href="#cb77-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(earliest_drug, <span class="at">by =</span> <span class="st">"person_id"</span>)</span>
+<span id="cb77-4"><a href="#cb77-4" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(combined_df)  <span class="co"># Check result</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 9
+  person_id year_of_birth race    sex_at_birth condition_concept_id
+      &lt;dbl&gt;         &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;                       &lt;dbl&gt;
+1         1          1987 Unknown Male                           NA
+2         2          1987 Asian   Female                         NA
+3         3          2004 Asian   Male                           NA
+4         4          1944 Black   Male                           NA
+5         5          1941 Asian   Male                           NA
+6         6          2006 Other   Male                           NA
+# ℹ 4 more variables: condition_start_date &lt;date&gt;,
+#   condition_source_value &lt;chr&gt;, drug_concept_id &lt;dbl&gt;,
+#   drug_exposure_start_date &lt;date&gt;</code></pre>
+</div>
+</div>
+</section>
+<section id="writing-and-saving-files" class="level2" data-number="12">
+<h2 data-number="12" class="anchored" data-anchor-id="writing-and-saving-files"><span class="header-section-number">12</span> Writing and Saving Files</h2>
+<p>In order to save our data, we use <code>write_csv()</code> function to save the dataframe as a CSV file. Its arguments are the dataframe name and a file path:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb79"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb79-1"><a href="#cb79-1" aria-hidden="true" tabindex="-1"></a><span class="fu">write_csv</span>(combined_df, <span class="st">"cleaned_dataset.csv"</span>)  <span class="co"># file path will be different</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="running-queries-and-working-with-queried-data" class="level2" data-number="13">
+<h2 data-number="13" class="anchored" data-anchor-id="running-queries-and-working-with-queried-data"><span class="header-section-number">13</span> Running Queries and Working with Queried Data</h2>
+<p>Demonstration in class.</p>
+</section>
+<section id="saving-to-and-reading-from-workspace-bucket" class="level2" data-number="14">
+<h2 data-number="14" class="anchored" data-anchor-id="saving-to-and-reading-from-workspace-bucket"><span class="header-section-number">14</span> Saving to and Reading from Workspace Bucket</h2>
+<p>In <em>All of Us</em> Workbench, running the code like <code>write_csv(combined_df, "cleaned_dataset.csv")</code> will create a CSV file in your current working directory. For permanent and secure storage, we need to copy the file to the Workspace Bucket. Below code is what it looks like when you save a file to the bucket.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Do not run these code blocks in Posit Cloud or local RStudio. It will only work within the <em>All of Us</em> Workbench.</p>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb80"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb80-1"><a href="#cb80-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Retrieve the environment variable for the bucket path</span></span>
+<span id="cb80-2"><a href="#cb80-2" aria-hidden="true" tabindex="-1"></a>my_bucket <span class="ot">&lt;-</span> <span class="fu">Sys.getenv</span>(<span class="st">"WORKSPACE_BUCKET"</span>)</span>
+<span id="cb80-3"><a href="#cb80-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Save the file to a "data" directory in the workspace bucket</span></span>
+<span id="cb80-4"><a href="#cb80-4" aria-hidden="true" tabindex="-1"></a><span class="fu">system</span>(<span class="fu">paste0</span>(<span class="st">"gsutil cp cleaned_dataset.csv "</span>, my_bucket, <span class="st">"/data/"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>In the second line of the code above, <code>paste0()</code> function constructs a string of characters with given arguments. It creates a system command with <code>gsutil</code>, a command that allows us to interact with the bucket. <code>cp</code> is a system command that means “copy”. Then, the constructed system command is passed to the function, <code>system()</code>, which is used to invoke operating system commands directly from the R console.</p>
+<p>Conversely, when you want to read a file from the bucket, you will do something like this:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb81"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb81-1"><a href="#cb81-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Copy the file in the bucket to the current working directory</span></span>
+<span id="cb81-2"><a href="#cb81-2" aria-hidden="true" tabindex="-1"></a><span class="fu">system</span>(<span class="fu">paste0</span>(<span class="st">"gsutil cp "</span>, my_bucket, <span class="st">"/data/cleaned_dataset.csv ."</span>))</span>
+<span id="cb81-3"><a href="#cb81-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Read the csv file as a dataframe</span></span>
+<span id="cb81-4"><a href="#cb81-4" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"cleaned_dataset.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="preparing-for-next-session" class="level2" data-number="15">
+<h2 data-number="15" class="anchored" data-anchor-id="preparing-for-next-session"><span class="header-section-number">15</span> Preparing for Next Session</h2>
+<p>Before the next session, apply what you learned today to your <em>All of Us</em> datasets to clean and construct an analysis-ready dataset. Make a note of any issues. We will begin with a brief Q &amp; A next time.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

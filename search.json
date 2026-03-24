@@ -1,0 +1,614 @@
+[
+  {
+    "objectID": "resources.html",
+    "href": "resources.html",
+    "title": "Additional Resources",
+    "section": "",
+    "text": "R for Health Data Science\n\nR tutorials for medical statistics\n\nR Recipes\n\nQuickly find code snippets by tasks\n\nR Tutorials & Resources\n\nCollection of tutorials by University of Idaho Statistical Programs, CALS",
+    "crumbs": [
+      "Additional Resources"
+    ]
+  },
+  {
+    "objectID": "resources.html#r-programming-and-statistics",
+    "href": "resources.html#r-programming-and-statistics",
+    "title": "Additional Resources",
+    "section": "",
+    "text": "R for Health Data Science\n\nR tutorials for medical statistics\n\nR Recipes\n\nQuickly find code snippets by tasks\n\nR Tutorials & Resources\n\nCollection of tutorials by University of Idaho Statistical Programs, CALS",
+    "crumbs": [
+      "Additional Resources"
+    ]
+  },
+  {
+    "objectID": "resources.html#useful-r-packages",
+    "href": "resources.html#useful-r-packages",
+    "title": "Additional Resources",
+    "section": "Useful R Packages",
+    "text": "Useful R Packages\n\njanitor\n\nUseful functions for cleaning data\nhas tabyl() function which is particularly useful for cross-tabulation\n\nbroom\n\nUseful functions for displaying model components as a neat dataframe\n\ngtsummary\n\nConvenient package to create publication-ready tables to describe data and more\n\nallofus\n\nProvides convenient functions for working with All of Us data\n\nMatchIt\n\nUseful package for creating matched datasets (can do exact matching or propensity score matching)\nCheck out this very approachable tutorial: Introduction to Propensity Score Matching with MatchIt\n\nsurvival package is widely used for survival analysis including Kaplan-Meier plots and Cox proportional hazards models. Here are a few tutorial pages you can check out:\n\nSurvival Analysis in R - Emily C. Zabor\nSurvival Analysis in R - The Miller Lab\nIntroduction to Survival Analysis in R - UCLA",
+    "crumbs": [
+      "Additional Resources"
+    ]
+  },
+  {
+    "objectID": "resources.html#all-of-us-workbench",
+    "href": "resources.html#all-of-us-workbench",
+    "title": "Additional Resources",
+    "section": "All of Us Workbench",
+    "text": "All of Us Workbench\n\nSupport Hub\nAll of Us YouTube Channel",
+    "crumbs": [
+      "Additional Resources"
+    ]
+  },
+  {
+    "objectID": "session-1.html",
+    "href": "session-1.html",
+    "title": "Introduction to Cloud Computing and All of Us Workbench",
+    "section": "",
+    "text": "In this session, we will start with an overview of cloud computing concepts. We will then log into the All of Us Workbench and build the cohort and datasets for your project.\nAt the end of Session 1, learners will be able to:\n\nDefine the concept of cloud computing and its advantages in working with large and sensitive data.\nIdentify and navigate the components of Researcher Workbench.\nDemonstrate proper steps of starting and ending analysis sessions in the Workbench.\nDemonstrate using the Workbench tools to create cohorts and datasets.",
+    "crumbs": [
+      "Lessons",
+      "Session 1: Intro to Cloud Computing and AoU Workbench"
+    ]
+  },
+  {
+    "objectID": "session-1.html#learning-objectives",
+    "href": "session-1.html#learning-objectives",
+    "title": "Introduction to Cloud Computing and All of Us Workbench",
+    "section": "",
+    "text": "In this session, we will start with an overview of cloud computing concepts. We will then log into the All of Us Workbench and build the cohort and datasets for your project.\nAt the end of Session 1, learners will be able to:\n\nDefine the concept of cloud computing and its advantages in working with large and sensitive data.\nIdentify and navigate the components of Researcher Workbench.\nDemonstrate proper steps of starting and ending analysis sessions in the Workbench.\nDemonstrate using the Workbench tools to create cohorts and datasets.",
+    "crumbs": [
+      "Lessons",
+      "Session 1: Intro to Cloud Computing and AoU Workbench"
+    ]
+  },
+  {
+    "objectID": "session-1.html#what-is-cloud-computing",
+    "href": "session-1.html#what-is-cloud-computing",
+    "title": "Introduction to Cloud Computing and All of Us Workbench",
+    "section": "2 What is Cloud Computing?",
+    "text": "2 What is Cloud Computing?\nCloud computing is the on-demand availability of computing resources (servers, storage, software, etc) over the internet. Common services include AWS by Amazon, Azure by Microsoft, and Google Cloud Platform (GCP). The All of Us Researcher Workbench is built on GCP. Cloud computing allows users to only pay for what they use without having to maintain the computing resources themselves.\n\n\n“Cloud Computing” by Sam Johnston is licensed under CC BY-SA 3.0.\n\nCloud computing is especially advantageous for researchers to share and analyze large data as they do not have to buy and maintain expensive hardware. Cloud computing is also secure and provides better protection for sensitive data than if it were stored in individual researchers’ own machines.",
+    "crumbs": [
+      "Lessons",
+      "Session 1: Intro to Cloud Computing and AoU Workbench"
+    ]
+  },
+  {
+    "objectID": "session-1.html#relational-database",
+    "href": "session-1.html#relational-database",
+    "title": "Introduction to Cloud Computing and All of Us Workbench",
+    "section": "3 Relational Database",
+    "text": "3 Relational Database\nAll of Us data is organized in so-called “relational database.” In a relational database, data is not stored in a single, massive spreadsheet, but rather organized into multiple, specialized tables that are linked together through shared identifiers called “keys.” This structure ensures data integrity and efficiency.\n (Full diagram at: http://ohdsi.github.io/CommonDataModel/cdm54erd.html)\nStructured Query Language (SQL) is a programming language for interacting with relational databases. In All of Us context, point-and-click data extraction tools in the Workbench generates SQL queries automatically, which are then pasted to a notebook and run to extract data. Advanced users can write their own SQL queries themselves.\nHowever, knowledge of SQL is not necessary to conduct research projects with All of Us and we will not learn it in this workshop. If you are interested, All of Us Support Hub has helpful articles and videos on how to use manual SQL queries to work with All of Us data.",
+    "crumbs": [
+      "Lessons",
+      "Session 1: Intro to Cloud Computing and AoU Workbench"
+    ]
+  },
+  {
+    "objectID": "session-1.html#navigating-researcher-workbench",
+    "href": "session-1.html#navigating-researcher-workbench",
+    "title": "Introduction to Cloud Computing and All of Us Workbench",
+    "section": "4 Navigating Researcher Workbench",
+    "text": "4 Navigating Researcher Workbench\nDemonstration in class.",
+    "crumbs": [
+      "Lessons",
+      "Session 1: Intro to Cloud Computing and AoU Workbench"
+    ]
+  },
+  {
+    "objectID": "session-1.html#starting-analysis-environment",
+    "href": "session-1.html#starting-analysis-environment",
+    "title": "Introduction to Cloud Computing and All of Us Workbench",
+    "section": "5 Starting Analysis Environment",
+    "text": "5 Starting Analysis Environment\nDemonstration in class.",
+    "crumbs": [
+      "Lessons",
+      "Session 1: Intro to Cloud Computing and AoU Workbench"
+    ]
+  },
+  {
+    "objectID": "session-1.html#workspace-bucket-for-storage",
+    "href": "session-1.html#workspace-bucket-for-storage",
+    "title": "Introduction to Cloud Computing and All of Us Workbench",
+    "section": "6 Workspace Bucket for Storage",
+    "text": "6 Workspace Bucket for Storage\nThere are two file storage options in All of Us Workbench: persistent disk and workspace bucket.\n\nThe persistent disk is a storage space that automatically attaches to the virtual machine. From a user’s standpoint, it acts similarly as a local drive on your computer which. makes it easy to save and retrieve files. However, it comes with an additional monthly cost in order to maintain the storage, and it cannot be shared with your workspace collaborators because it is unique to the individual user.\nThe workspace bucket is a Google Cloud Storage system. Each project workspace you create comes with a workspace bucket that is permanently associated with the workspace. Files in the bucket are accessible to all collaborators in the same project workspace. Unlike the persistent disk, saving and retrieving files to and from the bucket require using specialized system commands (gsutil) rather than direct access.\n\nIn this workshop, we will use the workspace bucket exclusively. You will learn how to manage files in the bucket either using an R package or using gsutil system commands.",
+    "crumbs": [
+      "Lessons",
+      "Session 1: Intro to Cloud Computing and AoU Workbench"
+    ]
+  },
+  {
+    "objectID": "session-1.html#creating-cohorts-and-datasets",
+    "href": "session-1.html#creating-cohorts-and-datasets",
+    "title": "Introduction to Cloud Computing and All of Us Workbench",
+    "section": "7 Creating Cohorts and Datasets",
+    "text": "7 Creating Cohorts and Datasets\nDemonstration in class.",
+    "crumbs": [
+      "Lessons",
+      "Session 1: Intro to Cloud Computing and AoU Workbench"
+    ]
+  },
+  {
+    "objectID": "session-1.html#preparing-for-next-session",
+    "href": "session-1.html#preparing-for-next-session",
+    "title": "Introduction to Cloud Computing and All of Us Workbench",
+    "section": "8 Preparing for Next Session",
+    "text": "8 Preparing for Next Session\nIn Session 2, we will learn basic R programming. We will use Posit Cloud, a cloud computing platform for R community. A free account will suffice for our purpose. Go to Posit Cloud: https://posit.cloud and click on Log In. Create a new account or log in with your Gmail account if you have one. Ensure you are able to log in prior to Session 2.\nWhile not strictly required, some familiarity will help. review this quick R intro.",
+    "crumbs": [
+      "Lessons",
+      "Session 1: Intro to Cloud Computing and AoU Workbench"
+    ]
+  },
+  {
+    "objectID": "session-2.html",
+    "href": "session-2.html",
+    "title": "Introduction to R Programming and Data Wrangling",
+    "section": "",
+    "text": "Session 2 will focus on learning the basics of R programming. We will first work with synthetic data to practice common R functions and syntax, followed by logging into All of Us Workbench and running the queries we set up last time.\nUnless indicated otherwise, we will practic R on Posit Cloud.\nAt the end of Session 2, learners will be able to:\n\nManipulate different types of data types in R.\nRead in CSV files as a dataframe and save dataframes as CSV files.\nRun auto-generated queries and obtain data.\nInspect and clean up data.",
+    "crumbs": [
+      "Lessons",
+      "Session 2: R Programming and Data Wrangling"
+    ]
+  },
+  {
+    "objectID": "session-2.html#learning-objectives",
+    "href": "session-2.html#learning-objectives",
+    "title": "Introduction to R Programming and Data Wrangling",
+    "section": "",
+    "text": "Session 2 will focus on learning the basics of R programming. We will first work with synthetic data to practice common R functions and syntax, followed by logging into All of Us Workbench and running the queries we set up last time.\nUnless indicated otherwise, we will practic R on Posit Cloud.\nAt the end of Session 2, learners will be able to:\n\nManipulate different types of data types in R.\nRead in CSV files as a dataframe and save dataframes as CSV files.\nRun auto-generated queries and obtain data.\nInspect and clean up data.",
+    "crumbs": [
+      "Lessons",
+      "Session 2: R Programming and Data Wrangling"
+    ]
+  },
+  {
+    "objectID": "session-2.html#preliminaries",
+    "href": "session-2.html#preliminaries",
+    "title": "Introduction to R Programming and Data Wrangling",
+    "section": "2 Preliminaries",
+    "text": "2 Preliminaries\nConcepts:\n\nfile system: “directory”, “working directory”, “file path”\ninput and output\nfunctions and arguments\nvariables\nerrors vs. warning\n\nBest practice in programming:\n\ncomment copiously (You think you will remember what you were doing but you won’t)\nwrite reproducible code\nfeel free to utilize AI to help you with coding but make sure you understand every line (That’s why you should still learn the basics. No “vibe coding” in this workshop and your research!)",
+    "crumbs": [
+      "Lessons",
+      "Session 2: R Programming and Data Wrangling"
+    ]
+  },
+  {
+    "objectID": "session-2.html#loading-libraries",
+    "href": "session-2.html#loading-libraries",
+    "title": "Introduction to R Programming and Data Wrangling",
+    "section": "3 Loading Libraries",
+    "text": "3 Loading Libraries\n“Libraries” or “packages” are collections of pre-written functions that provide convenience and efficiency in coding. Common R libraries we use for All of Us projects are:\n\ntidyverse: collection of packages (dplyr, readr, ggplot2,…) for file handling, working with dataframes, visualizations.\nbigrquery: facilitates the connection between R and Google BigQuery database - the type of database All of Us data are stored in.\nlubridate: for handling dates and times\n\nWe use library() function to load these packages.\n\n# Load packages\nlibrary(tidyverse)\nlibrary(lubridate)\n\nThese common packages are standard in cloud platforms. Occasionally, a package you want to use may not be available in the virtual machine. Attempting to load a package with library() when it does not exist will result in an error. Then, you need to first install it using install.packages() function.\n\n# Do not run this. This is just to show you the code for installing a package.\ninstall.packages(\"MatchIt\") #MatchIt is a package used for propensity score matching\nlibrary(\"MatchIt\")",
+    "crumbs": [
+      "Lessons",
+      "Session 2: R Programming and Data Wrangling"
+    ]
+  },
+  {
+    "objectID": "session-2.html#data-types",
+    "href": "session-2.html#data-types",
+    "title": "Introduction to R Programming and Data Wrangling",
+    "section": "4 Data Types",
+    "text": "4 Data Types\nThere are 5 data types you must be familiar with in programming with R. Knowing the data types of the values in your dataframe, for example, can be critical in performing computations or troubleshooting errors.\n\n4.1 Numeric\nNumeric data can be either double (dbl) for numbers with decimals such as weight or lab values, or integer (int) for whole numbers such as participant ID numbers.\n\n\n4.2 Character\nAlso known as string, character (chr) data types are non-numeric, text data. In All of Us data, condition names or drug names for example, are character types. Character values are enclosed in \" \". So if you have values like `“1”, “2”, “3”, they are character type even though they are numbers, and R will not be able to perform computations that require numeric data types.\n\n\n4.3 Factor\nFactor (fct) data types are used for categorical data. They often look just like characters which is a source of common confusion. However, under the hood, factors are stored as integers with associated “levels”. Some statistical functions may require factors as input.\n\n\n4.4 Logical\nLogicals are binary data with values TRUE and FALSE. While this type of data are rarely seen as values in a dataframe, they are an output of filtering or conditional operations. Interestingly, TRUE value equals 1 while FALSE equals 0. This property can be useful in checking data.\n\n\n4.5 Date",
+    "crumbs": [
+      "Lessons",
+      "Session 2: R Programming and Data Wrangling"
+    ]
+  },
+  {
+    "objectID": "session-2.html#data-structures",
+    "href": "session-2.html#data-structures",
+    "title": "Introduction to R Programming and Data Wrangling",
+    "section": "5 Data Structures",
+    "text": "5 Data Structures\n\n5.1 Vector\nA vector is a sequence of data where all elements are of the same data type. We can create a vector using c().\n\n# Create character vectors\nnames &lt;- c(\"Josh\", \"Evelyn\", \"Olivia\", \"Liam\", \"Adrian\", \"Tamara\", \"Teddy\", \"Allison\")\ncities &lt;- c(\"Moscow\", \"Moscow\", \"Troy\", \"Viola\", \"Moscow\", \"Pullman\", \"Lewiston\", \"Moscow\")\n# Create a numeric vectors\nages &lt;- c(23, 18, 32, 56, 15, 25, 24, 16)\n\nUse print() to see the values.\n\nprint(names)\n\n[1] \"Josh\"    \"Evelyn\"  \"Olivia\"  \"Liam\"    \"Adrian\"  \"Tamara\"  \"Teddy\"  \n[8] \"Allison\"\n\n\nUse length() to see how many elements there are in a vector.\n\nlength(names)\n\n[1] 8\n\n\nYou can use indexing to access a specific element in a vector.\n\nnames[2]  # Access the second element in the names vector.\n\n[1] \"Evelyn\"\n\n\nFor numeric values, we can perform simple computations.\n\nmean(ages)  # Average of the elements in ages vector\n\n[1] 26.125\n\nsd(ages)  # Standard deviation \n\n[1] 13.28197\n\n\nOther common functions for numeric data include median(), min(), max().\n\n\n5.2 List\nLists look similar to vectors but they can contain mixed data types, even lists within a list. Lists are a very versatile object for programming purposes but we won’t go into it too much as they are not necessary for typical statistical analyses. I will just mention that we use double brackets ([[ ]]) to access a specific element in a list instead of single brackets as with vectors.\n\n\n5.3 Dataframe\nA dataframe is like a table in an Excel sheet. Each column is a vector. Therefore, values in a column must be of same data type but different columns can have different types. We will create a dataframe using the vectors we created earlier to see what it looks like.\n\n# Create a dataframe with existing vectors\ndf &lt;- data.frame(Name = names, Age = ages, City = cities)\n# Inspect\nprint(df)\n\n     Name Age     City\n1    Josh  23   Moscow\n2  Evelyn  18   Moscow\n3  Olivia  32     Troy\n4    Liam  56    Viola\n5  Adrian  15   Moscow\n6  Tamara  25  Pullman\n7   Teddy  24 Lewiston\n8 Allison  16   Moscow\n\n\nIn reality, you will rarely create a dataframe from scratch like this. Rather, you will often read a CSV file into a dataframe which we will learn later in this session. For now, we will use this small dataframe to learn a few essential skills in working with dataframes.",
+    "crumbs": [
+      "Lessons",
+      "Session 2: R Programming and Data Wrangling"
+    ]
+  },
+  {
+    "objectID": "session-2.html#dataframe-basics",
+    "href": "session-2.html#dataframe-basics",
+    "title": "Introduction to R Programming and Data Wrangling",
+    "section": "6 Dataframe Basics",
+    "text": "6 Dataframe Basics\n\n6.1 Inspect the dataframe\ndim() command to see the dimension. It will return the number of rows and number of columns.\n\ndim(df)\n\n[1] 8 3\n\n\nAlternatively, you can also use nrow() and ncol().\nstr() to see the structure. This is handy in inspecting data types and preview values of all columns.\n\nstr(df)\n\n'data.frame':   8 obs. of  3 variables:\n $ Name: chr  \"Josh\" \"Evelyn\" \"Olivia\" \"Liam\" ...\n $ Age : num  23 18 32 56 15 25 24 16\n $ City: chr  \"Moscow\" \"Moscow\" \"Troy\" \"Viola\" ...\n\n\nnames() to list column names.\n\nnames(df)\n\n[1] \"Name\" \"Age\"  \"City\"\n\n\nhead() or tail() to inspect the first few rows or the last few rows.\n\nhead(df)\n\n    Name Age    City\n1   Josh  23  Moscow\n2 Evelyn  18  Moscow\n3 Olivia  32    Troy\n4   Liam  56   Viola\n5 Adrian  15  Moscow\n6 Tamara  25 Pullman\n\n\nThe default is to show 5 rows but you can specify the number of rows inside the function. For example, head(df, 10) will show the first 10 rows.\ntable() is a quick way to see value counts in a column.\n\ntable(df$City)\n\n\nLewiston   Moscow  Pullman     Troy    Viola \n       1        4        1        1        1 \n\n\n\n\n6.2 Subsetting\n$ signifies names in R. We can use $ to pull out values for a specific column.\n\ndf$Age   # Show all the values in Age column\n\n[1] 23 18 32 56 15 25 24 16\n\nhead(df$Age)  # Show the first few values in Age colun\n\n[1] 23 18 32 56 15 25\n\nmean(df$Age)  # Compute average age  \n\n[1] 26.125\n\n\nselect() function can also pull out columns.\n\ndf %&gt;% select(Name, Age)  # Subset just Name and Age columns\n\n     Name Age\n1    Josh  23\n2  Evelyn  18\n3  Olivia  32\n4    Liam  56\n5  Adrian  15\n6  Tamara  25\n7   Teddy  24\n8 Allison  16\n\n\n\n\n\n\n\n\nNotePipe Operator\n\n\n\nSymbols such as %&gt;% and |&gt; in R are called “pipes”. Pipes are used to string together multiple operations in sequence. In the above code block, we take the dataframe df and then apply select() function on it.\n\n\nfilter() function is used to subset rows based on some logical criteria.\n\ndf %&gt;% filter(Age &gt;= 21)  # Subset rows for ages 21 or older\n\n    Name Age     City\n1   Josh  23   Moscow\n2 Olivia  32     Troy\n3   Liam  56    Viola\n4 Tamara  25  Pullman\n5  Teddy  24 Lewiston\n\n\nEarlier, we briefly discussed the logical data type. When we use filter(), R evaluates each row - whether its Age value is 21 or greater - and creates a temporary vector of logical data, e.g., c(TRUE, FALSE, TRUE, TRUE, FALSE, TRUE, TRUE, FALSE). And then it outputs rows that correspond to TRUE.\nWe can filter by more than one criteria as well. We use the symbol | for OR and the symbol & for AND.\n\ndf %&gt;% filter(Age &gt;= 21 & City == \"Moscow\")  # Subset rows for ages 21 or older AND city is Moscow\n\n  Name Age   City\n1 Josh  23 Moscow\n\n\nWe can then save the resulting filtered dataframe by assigning a new variable.\n\ndf_filtered &lt;- df %&gt;% filter(Age &gt;= 21 & City == \"Moscow\")\nprint(df_filtered)\n\n  Name Age   City\n1 Josh  23 Moscow\n\n\n\n\n6.3 Join\nWorking with All of Us data frequently involves combining two dataframes. Common join types are left_join and inner_join. We’ll create a new dataframe to demonstrate these joins.\n\n# Create a BMI dataframe\nbmi_df &lt;- data.frame(Name = c(\"Evelyn\", \"Liam\", \"Olivia\", \"Tamara\"),\n                     BMI = c(20.2, 27.9, 32.1, 21.6))\nbmi_df\n\n    Name  BMI\n1 Evelyn 20.2\n2   Liam 27.9\n3 Olivia 32.1\n4 Tamara 21.6\n\n\ninner_join keeps only the rows where there is a match in both tables. So this type of join can work as a filter.\n\n# Join df and df_bmi by Name and only keep matched rows\ndf_inner_joined &lt;- inner_join(df, bmi_df, by = \"Name\")\ndf_inner_joined\n\n    Name Age    City  BMI\n1 Evelyn  18  Moscow 20.2\n2 Olivia  32    Troy 32.1\n3   Liam  56   Viola 27.9\n4 Tamara  25 Pullman 21.6\n\n\nleft_join is used most often in working with All of Us data. This join keeps all the rows from the primary table (left table) and add any matched data from the right table.\n\ndf_left_joined &lt;- left_join(df, bmi_df, by = \"Name\")\ndf_left_joined\n\n     Name Age     City  BMI\n1    Josh  23   Moscow   NA\n2  Evelyn  18   Moscow 20.2\n3  Olivia  32     Troy 32.1\n4    Liam  56    Viola 27.9\n5  Adrian  15   Moscow   NA\n6  Tamara  25  Pullman 21.6\n7   Teddy  24 Lewiston   NA\n8 Allison  16   Moscow   NA\n\n\nNote how rows without a match from bmi_df have values NA for the BMI column. NA indicates missing values and must be handled carefully in data analysis. We will discuss NA more in the Missing Values section shortly.\nAs a side note, the join syntax in above code blocks can be modified using a pipe %&gt;%. For example, left_join() is often written this way:\n\ndf_left_joined &lt;- df %&gt;% left_join(bmi_df, by = \"Name\")\ndf_left_joined\n\n     Name Age     City  BMI\n1    Josh  23   Moscow   NA\n2  Evelyn  18   Moscow 20.2\n3  Olivia  32     Troy 32.1\n4    Liam  56    Viola 27.9\n5  Adrian  15   Moscow   NA\n6  Tamara  25  Pullman 21.6\n7   Teddy  24 Lewiston   NA\n8 Allison  16   Moscow   NA\n\n\n\n\n6.4 Mutate\nmutate() function is used to create or transform variables. For example, we will create a column to show overweight status based on BMI.\n\ndf_left_joined %&gt;% mutate(Overweight = BMI &gt; 25)\n\n     Name Age     City  BMI Overweight\n1    Josh  23   Moscow   NA         NA\n2  Evelyn  18   Moscow 20.2      FALSE\n3  Olivia  32     Troy 32.1       TRUE\n4    Liam  56    Viola 27.9       TRUE\n5  Adrian  15   Moscow   NA         NA\n6  Tamara  25  Pullman 21.6      FALSE\n7   Teddy  24 Lewiston   NA         NA\n8 Allison  16   Moscow   NA         NA\n\n\nOther use cases of mutate() include arithmetic calculation of some numeric values. For example, if we had a dataframe with a year-of-birth column (YOB) and no age column, we can use mutate() to compute current age like this: mutate(current_age = 2025 - YOB). Similarly, if we had columns Weight in kg and Height in cm, but no BMI, we could create BMI column by: mutate(BMI = Weight / (Height/100)^2).",
+    "crumbs": [
+      "Lessons",
+      "Session 2: R Programming and Data Wrangling"
+    ]
+  },
+  {
+    "objectID": "session-2.html#missing-values",
+    "href": "session-2.html#missing-values",
+    "title": "Introduction to R Programming and Data Wrangling",
+    "section": "7 Missing Values",
+    "text": "7 Missing Values\nIn a small dataframes like our toy example, NAs are easy to see. However, it is much harder to spot in a large dataset. This poses a problem because many statistical functions cannot deal with NAs automatically. NAs can also cause errors in unexpected ways. Therefore, researchers must always be vigilant about NAs in their data.\nAs an example, let’s try computing the average of BMI values.\n\nmean(df_left_joined$BMI)\n\n[1] NA\n\n\nWhat happened? Many functions including mean() returns “unknown” if any of the input values are unknown (i.e. missing values). In the case of mean(), we must tell R explicitly to ignore NAs by using the optional argument, na.rm = TRUE.\n\nmean(df_left_joined$BMI, na.rm = TRUE)\n\n[1] 25.45\n\n\nNAs are very common in electronic health records and they can also be introduced during joings as we saw earlier.\n\n\n\n\n\n\nWarning\n\n\n\nAlways check for NAs in your data before statistical analyses!\n\n\nThere are various ways to check for NAs. Here are some examples.\n\ncolSums(is.na(df_left_joined))  # Returns a count of NAs in every column\n\nName  Age City  BMI \n   0    0    0    4 \n\n\n\nsum(is.na(df_left_joined$BMI))  # Returns a sum of NA values in a specific column\n\n[1] 4\n\n\nSometimes you want to see the entire rows that contain NA.\n\ndf_left_joined %&gt;% filter(is.na(BMI))  # Show rows where BMI values are NAs\n\n     Name Age     City BMI\n1    Josh  23   Moscow  NA\n2  Adrian  15   Moscow  NA\n3   Teddy  24 Lewiston  NA\n4 Allison  16   Moscow  NA\n\n\nFor categorical variables, we can use count() to see value counts including NAs. count() is the same as table() but shows NAs by default unlike table() which does not count NAs by default. Below example will not return any NAs because our City column does not have any, but this is just to show you the syntax.\n\ndf_left_joined %&gt;% count(City)  # Show value counts of the column City, including possible NAs\n\n      City n\n1 Lewiston 1\n2   Moscow 4\n3  Pullman 1\n4     Troy 1\n5    Viola 1\n\n\nIf a column of interest turns out to have too many NAs, you may have to remove that variable from your analysis. If NAs are only few and if the variable is critical to your analysis, you might decide to drop the rows containing NAs.\n\ndf_left_joined %&gt;% drop_na(BMI)\n\n    Name Age    City  BMI\n1 Evelyn  18  Moscow 20.2\n2 Olivia  32    Troy 32.1\n3   Liam  56   Viola 27.9\n4 Tamara  25 Pullman 21.6\n\n\nIf the variable is critical and you want to keep all the rows, you can look into advanced statistical methods called “imputation” which fills in missing values.",
+    "crumbs": [
+      "Lessons",
+      "Session 2: R Programming and Data Wrangling"
+    ]
+  },
+  {
+    "objectID": "session-2.html#reading-files",
+    "href": "session-2.html#reading-files",
+    "title": "Introduction to R Programming and Data Wrangling",
+    "section": "8 Reading Files",
+    "text": "8 Reading Files\nIn programming, plain-text files are preferred over application-dependent file formats such as Word or Excel files. Comma-separated values (CSV) format is a popular file format for tabular data. We use this file type extensively to work with All of Us data.\nWe use read_csv() function to read CSV files into dataframes so we can work with them. Typically, we put the file path inside the function, which will look like read_csv(\"file.csv\") or read_csv(\"directory/file.csv\"). For this practice, I placed practice files on the web so that they can be directly read via file URLs. Copy/paste and run the following code to obtain the data:\n\nlibrary(readr)\n\n# Read directly from public URLs\nperson_df &lt;- read_csv(\"https://yesols.github.io/aou-workshop/data/demographic_data.csv\")\ncondition_df &lt;- read_csv(\"https://yesols.github.io/aou-workshop/data/conditions.csv\")\ndrug_df &lt;- read_csv(\"https://yesols.github.io/aou-workshop/data/drug_exposures.csv\")\n\n\n\n\n\n\n\nNote\n\n\n\nThe data in these files are randomly generated and completely fake, but designed to resemble All of Us data although much simplified.\n\n\nNow, try the commands, dim(), head(), tail(), str(), etc, to inspect the these three dataframes.\nIn subsequent sections, we will learn how to clean up data and merge these three dataframes. Ultimately, we will analyze the dataset to investigate association between anticholinergic medications and dementia.",
+    "crumbs": [
+      "Lessons",
+      "Session 2: R Programming and Data Wrangling"
+    ]
+  },
+  {
+    "objectID": "session-2.html#recoding-values",
+    "href": "session-2.html#recoding-values",
+    "title": "Introduction to R Programming and Data Wrangling",
+    "section": "9 Recoding Values",
+    "text": "9 Recoding Values\nSometimes we have to recode values in categorical variables. For example, race in All of Us often have categories you might want to collapse into one. Let’s take a look at our example data.\n\n# Inspect the first few lines of the demographics data\nhead(person_df)\n\n# A tibble: 6 × 4\n  person_id year_of_birth race                      sex_at_birth\n      &lt;dbl&gt;         &lt;dbl&gt; &lt;chr&gt;                     &lt;chr&gt;       \n1         1          1987 Skip                      Male        \n2         2          1987 Asian                     Female      \n3         3          2004 Asian                     Male        \n4         4          1944 Black or African American Male        \n5         5          1941 Asian                     Male        \n6         6          2006 More than one population  Male        \n\n\n\nperson_df %&gt;% count(race) # Count the values in race column\n\n# A tibble: 7 × 2\n  race                          n\n  &lt;chr&gt;                     &lt;int&gt;\n1 Asian                        20\n2 Black or African American    23\n3 More than one population      6\n4 None of these                 5\n5 Other                         4\n6 Skip                          4\n7 White                        38\n\n\n“More than one population” and “None of these” can be recoded as “Other”. We could also change “Skip” to “Unknown” and “Black or African American” to “Black” for simplicity. We can use recode_values() if we are changing all values or replace_values() if just updating some of the values. In our case, we just want to tweak some of the categories, so we’ll use replace_values().\n\n# Recode race category\nperson_df &lt;- person_df %&gt;%\n  mutate(\n    race = replace_values(\n      race,\n      \"Black or African American\" ~ \"Black\",\n      \"Skip\" ~ \"Unknown\",\n      c(\"More than one population\", \"None of these\") ~ \"Other\"\n    )\n  )\n\nCheck the counts again to make sure it worked. This is a good practice to also ensure NAs were not introduced as a result of a coding mistake.\n\nperson_df %&gt;% count(race)\n\n# A tibble: 5 × 2\n  race        n\n  &lt;chr&gt;   &lt;int&gt;\n1 Asian      20\n2 Black      23\n3 Other      15\n4 Unknown     4\n5 White      38\n\n\nSimilarly, we’ll also clean up sex_at_birth categories. We will change anything other than “Female” or “Male” to “Other”.\n\n# Recode sex_at_birth\nperson_df &lt;- person_df %&gt;%\n  mutate(\n    sex_at_birth = replace_values(\n      sex_at_birth,\n      c(\"Intersex\", \"Prefer not to answer\", \"Skip\") ~ \"Other\"\n    )\n  )\n\nCheck the result:\n\nperson_df %&gt;% count(sex_at_birth)\n\n# A tibble: 3 × 2\n  sex_at_birth     n\n  &lt;chr&gt;        &lt;int&gt;\n1 Female          44\n2 Male            48\n3 Other            8",
+    "crumbs": [
+      "Lessons",
+      "Session 2: R Programming and Data Wrangling"
+    ]
+  },
+  {
+    "objectID": "session-2.html#selecting-earliest-occurrence",
+    "href": "session-2.html#selecting-earliest-occurrence",
+    "title": "Introduction to R Programming and Data Wrangling",
+    "section": "10 Selecting Earliest Occurrence",
+    "text": "10 Selecting Earliest Occurrence\nWhen you extract conditions, drug exposures, or lab measurements data in All of Us, there are multiple entries per person. In our practice data, we will pick the earliest occurrence of the condition and the earliest occurrence of drug exposure. slice() and its variations, slice_head(), slice_sample(), “slice_min(), \"slice_max() are useful for subsetting a dataframe in a variety of ways. We will use slice_min() to pick the earliest date for each person. group_by() function allows us to perform slice_min() on grouped rows by person_id rather than globally.\n\nearliest_condition &lt;- condition_df %&gt;%\n  group_by(person_id) %&gt;%               # group rows by person_id\n  slice_min(                            \n    order_by = condition_start_date,    # specify which column to evaluate\n    n = 1,                              # pick one row\n    with_ties = FALSE                   # keep only one in case of ties\n  ) %&gt;%\n  ungroup()\n\nWe do the same for drug dataframe:\n\nearliest_drug &lt;- drug_df %&gt;%\n  group_by(person_id) %&gt;%\n  slice_min(\n    order_by = drug_exposure_start_date, \n    n = 1, \n    with_ties = FALSE\n  ) %&gt;%\n  ungroup()",
+    "crumbs": [
+      "Lessons",
+      "Session 2: R Programming and Data Wrangling"
+    ]
+  },
+  {
+    "objectID": "session-2.html#merging-demographics-with-clinical-data",
+    "href": "session-2.html#merging-demographics-with-clinical-data",
+    "title": "Introduction to R Programming and Data Wrangling",
+    "section": "11 Merging Demographics with Clinical Data",
+    "text": "11 Merging Demographics with Clinical Data\nWhen you extract All of Us data with auto-generated queries, you will have separate dataframes for “person”, “conditions”, “drug exposures”, etc, and you must combine them for analysis. We will use left_join() that we learned earlier to merge condition_df and drug_df to person_df.\n\ncombined_df &lt;- person_df %&gt;% \n  left_join(earliest_condition, by = \"person_id\") %&gt;%\n  left_join(earliest_drug, by = \"person_id\")\nhead(combined_df)  # Check result\n\n# A tibble: 6 × 9\n  person_id year_of_birth race    sex_at_birth condition_concept_id\n      &lt;dbl&gt;         &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;                       &lt;dbl&gt;\n1         1          1987 Unknown Male                           NA\n2         2          1987 Asian   Female                         NA\n3         3          2004 Asian   Male                           NA\n4         4          1944 Black   Male                           NA\n5         5          1941 Asian   Male                           NA\n6         6          2006 Other   Male                           NA\n# ℹ 4 more variables: condition_start_date &lt;date&gt;,\n#   condition_source_value &lt;chr&gt;, drug_concept_id &lt;dbl&gt;,\n#   drug_exposure_start_date &lt;date&gt;",
+    "crumbs": [
+      "Lessons",
+      "Session 2: R Programming and Data Wrangling"
+    ]
+  },
+  {
+    "objectID": "session-2.html#writing-and-saving-files",
+    "href": "session-2.html#writing-and-saving-files",
+    "title": "Introduction to R Programming and Data Wrangling",
+    "section": "12 Writing and Saving Files",
+    "text": "12 Writing and Saving Files\nIn order to save our data, we use write_csv() function to save the dataframe as a CSV file. Its arguments are the dataframe name and a file path:\n\nwrite_csv(combined_df, \"cleaned_dataset.csv\")  # file path will be different",
+    "crumbs": [
+      "Lessons",
+      "Session 2: R Programming and Data Wrangling"
+    ]
+  },
+  {
+    "objectID": "session-2.html#running-queries-and-working-with-queried-data",
+    "href": "session-2.html#running-queries-and-working-with-queried-data",
+    "title": "Introduction to R Programming and Data Wrangling",
+    "section": "13 Running Queries and Working with Queried Data",
+    "text": "13 Running Queries and Working with Queried Data\nDemonstration in class.",
+    "crumbs": [
+      "Lessons",
+      "Session 2: R Programming and Data Wrangling"
+    ]
+  },
+  {
+    "objectID": "session-2.html#saving-to-and-reading-from-workspace-bucket",
+    "href": "session-2.html#saving-to-and-reading-from-workspace-bucket",
+    "title": "Introduction to R Programming and Data Wrangling",
+    "section": "14 Saving to and Reading from Workspace Bucket",
+    "text": "14 Saving to and Reading from Workspace Bucket\nIn All of Us Workbench, running the code like write_csv(combined_df, \"cleaned_dataset.csv\") will create a CSV file in your current working directory. For permanent and secure storage, we need to copy the file to the Workspace Bucket. Below code is what it looks like when you save a file to the bucket.\n\n\n\n\n\n\nWarning\n\n\n\nDo not run these code blocks in Posit Cloud or local RStudio. It will only work within the All of Us Workbench.\n\n\n\n# Retrieve the environment variable for the bucket path\nmy_bucket &lt;- Sys.getenv(\"WORKSPACE_BUCKET\")\n# Save the file to a \"data\" directory in the workspace bucket\nsystem(paste0(\"gsutil cp cleaned_dataset.csv \", my_bucket, \"/data/\"))\n\nIn the second line of the code above, paste0() function constructs a string of characters with given arguments. It creates a system command with gsutil, a command that allows us to interact with the bucket. cp is a system command that means “copy”. Then, the constructed system command is passed to the function, system(), which is used to invoke operating system commands directly from the R console.\nConversely, when you want to read a file from the bucket, you will do something like this:\n\n# Copy the file in the bucket to the current working directory\nsystem(paste0(\"gsutil cp \", my_bucket, \"/data/cleaned_dataset.csv .\"))\n# Read the csv file as a dataframe\ndf &lt;- read_csv(\"cleaned_dataset.csv\")",
+    "crumbs": [
+      "Lessons",
+      "Session 2: R Programming and Data Wrangling"
+    ]
+  },
+  {
+    "objectID": "session-2.html#preparing-for-next-session",
+    "href": "session-2.html#preparing-for-next-session",
+    "title": "Introduction to R Programming and Data Wrangling",
+    "section": "15 Preparing for Next Session",
+    "text": "15 Preparing for Next Session\nBefore the next session, apply what you learned today to your All of Us datasets to clean and construct an analysis-ready dataset. Make a note of any issues. We will begin with a brief Q & A next time.",
+    "crumbs": [
+      "Lessons",
+      "Session 2: R Programming and Data Wrangling"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "All of Us Workshop",
+    "section": "",
+    "text": "This workshop is designed for SHAMP students who are interested in conducting research projects using the All of Us Research Program data but do not have programming experience. Participants will gain skills in basic R programming and familiarity with All of Us data and Workbench so that they can complete research projects independently.\nThe workshop is intentionally short, consisting of four 2-hr sessions, and participants are expected to spend time outside of workshop sessions to prepare ahead and practice after sessions.",
+    "crumbs": [
+      "Workshop Information"
+    ]
+  },
+  {
+    "objectID": "index.html#overview",
+    "href": "index.html#overview",
+    "title": "All of Us Workshop",
+    "section": "",
+    "text": "This workshop is designed for SHAMP students who are interested in conducting research projects using the All of Us Research Program data but do not have programming experience. Participants will gain skills in basic R programming and familiarity with All of Us data and Workbench so that they can complete research projects independently.\nThe workshop is intentionally short, consisting of four 2-hr sessions, and participants are expected to spend time outside of workshop sessions to prepare ahead and practice after sessions.",
+    "crumbs": [
+      "Workshop Information"
+    ]
+  },
+  {
+    "objectID": "index.html#prerequisites",
+    "href": "index.html#prerequisites",
+    "title": "All of Us Workshop",
+    "section": "Prerequisites",
+    "text": "Prerequisites\n\nBefore participating in this workshop, you must read through Getting Started with All of Us Projects and complete all the numbered steps prior to attending the workshop.\n\nWWAMI students: Draft a proposal even if your All of Us project is not for Triple-I. It will serve as a blueprint of how you prepare data and plan analysis.\nSHAMP students: Depending on the scope of your project, you may or may not need to identify a formal PI. Discuss with your program director and IOURMR before committing to a project. Also, do prepare a proposal as well.\nStudents from other academic units: You do not have to identify an advisor for your project if you already have a PI. You also do not have to meet with IOURMR Research Core since your research is not under IOURMR supervision. But do prepare a proposal to help your data preparation and project planning.\n\nThis is a hands-on workshop. Bring your laptop to all sessions.\nBasic statistics knowledge is expected. We will learn how to perform common statistical tasks in R but will not discuss the theory or interpretation of results in detail.\n\n\n\n\n\n\n\nWarning\n\n\n\nYou must be a registered user of the All of Us Workbench and have created your own Project Workspace in order to participate in the workshop.",
+    "crumbs": [
+      "Workshop Information"
+    ]
+  },
+  {
+    "objectID": "index.html#registration",
+    "href": "index.html#registration",
+    "title": "All of Us Workshop",
+    "section": "Registration",
+    "text": "Registration\n\nWWAMI students: no formal registration necessary\nStudents from other SHAMP programs or other academic units: email yesols@uidaho.edu and ncoombs@uidaho.edu",
+    "crumbs": [
+      "Workshop Information"
+    ]
+  },
+  {
+    "objectID": "index.html#schedule",
+    "href": "index.html#schedule",
+    "title": "All of Us Workshop",
+    "section": "Schedule",
+    "text": "Schedule\n\n\n\n\n\n\nNote\n\n\n\n2026 workshop dates are TBD\n\n\n\n\n\n\n\n\n\n\nSession\nDate and Time\nTopics Covered\n\n\n\n\nSession 1\n[Date], [Time]\n• Introduction to cloud computing and Researcher Workbench• Super-brief introduction to relational database structures and queries• Selecting cohorts and building your dataset\n\n\nSession 2\n[Date], [Time]\n• Introduction to R• Working with dataframes in R• Obtaining query results and data wrangling\n\n\nSession 3\n[Date], [Time]\n• More data wrangling• Exploratory data analysis• Data visualization\n\n\nSession 4\n[Date], [Time]\n• Performing statistical tests• Fitting regression models\n\n\n\n\nLocation: IOURMR Conference Room (D. A. Huckabay Bldg, Rm 122)",
+    "crumbs": [
+      "Workshop Information"
+    ]
+  },
+  {
+    "objectID": "index.html#instructor",
+    "href": "index.html#instructor",
+    "title": "All of Us Workshop",
+    "section": "Instructor",
+    "text": "Instructor\nYesol Sapozhnikov is a postdoctoral fellow in the School of Health and Medical Professions. She has experience in teaching programming, genomics, and statistics. She is a member of the All of Us Biomedical Researchers Scholars Program by Baylor College of Medicine, and conducting several projects using the database.",
+    "crumbs": [
+      "Workshop Information"
+    ]
+  },
+  {
+    "objectID": "index.html#contact-us",
+    "href": "index.html#contact-us",
+    "title": "All of Us Workshop",
+    "section": "Contact Us",
+    "text": "Contact Us\nFor any questions and inquiries about the workshop, contact Yesol Sapozhnikov (email: yesols@uidaho.edu). For general inquiries regarding student-led projects in SHAMP, contact Nicholas Coombs (email: ncoombs@uidaho.edu).",
+    "crumbs": [
+      "Workshop Information"
+    ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "session-3.html",
+    "href": "session-3.html",
+    "title": "Exploratory Data Analysis and Visualization",
+    "section": "",
+    "text": "In this session, we will learn common functions to explore data and visualize data using the synthetic dataset we worked with last time.\nAt the end of Session 3, you will be able to:\n\nUse R commands to understand data.\nPerform descriptive statistics.\nVisualize data with box plots, histograms, and scatter plots.",
+    "crumbs": [
+      "Lessons",
+      "Session 3: Exploratory Data Analysis and Visualization"
+    ]
+  },
+  {
+    "objectID": "session-3.html#learning-objectives",
+    "href": "session-3.html#learning-objectives",
+    "title": "Exploratory Data Analysis and Visualization",
+    "section": "",
+    "text": "In this session, we will learn common functions to explore data and visualize data using the synthetic dataset we worked with last time.\nAt the end of Session 3, you will be able to:\n\nUse R commands to understand data.\nPerform descriptive statistics.\nVisualize data with box plots, histograms, and scatter plots.",
+    "crumbs": [
+      "Lessons",
+      "Session 3: Exploratory Data Analysis and Visualization"
+    ]
+  },
+  {
+    "objectID": "session-3.html#setup",
+    "href": "session-3.html#setup",
+    "title": "Exploratory Data Analysis and Visualization",
+    "section": "2 Setup",
+    "text": "2 Setup\nWe will begin by loading packages and reading in a file.\n\nlibrary(tidyverse)\ndf &lt;- read_csv(\"https://yesols.github.io/aou-workshop/data/final_dataset.csv\")\nhead(df)\n\n\n\n# A tibble: 6 × 10\n  person_id year_of_birth race    sex_at_birth condition_concept_id\n      &lt;dbl&gt;         &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;                       &lt;dbl&gt;\n1         1          1987 Unknown Male                           NA\n2         2          1987 Asian   Female                         NA\n3         3          2004 Asian   Male                           NA\n4         4          1944 Black   Male                           NA\n5         5          1941 Asian   Male                           NA\n6         6          2006 Other   Male                           NA\n# ℹ 5 more variables: condition_start_date &lt;date&gt;,\n#   condition_source_value &lt;chr&gt;, drug_concept_id &lt;dbl&gt;,\n#   drug_exposure_start_date &lt;date&gt;, SBP &lt;dbl&gt;\n\n\nThis file is what we saved after merging dataframes in the previous session, but I added an additional column SBP for systolic blood pressure.",
+    "crumbs": [
+      "Lessons",
+      "Session 3: Exploratory Data Analysis and Visualization"
+    ]
+  },
+  {
+    "objectID": "session-3.html#create-necessary-variables-for-analysis",
+    "href": "session-3.html#create-necessary-variables-for-analysis",
+    "title": "Exploratory Data Analysis and Visualization",
+    "section": "3 Create Necessary Variables for Analysis",
+    "text": "3 Create Necessary Variables for Analysis\nWe will create an age column from year_of_birth.\n\ndf &lt;- df %&gt;% mutate(\n  age = 2026 - year_of_birth\n)\nhead(df)\n\n# A tibble: 6 × 11\n  person_id year_of_birth race    sex_at_birth condition_concept_id\n      &lt;dbl&gt;         &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;                       &lt;dbl&gt;\n1         1          1987 Unknown Male                           NA\n2         2          1987 Asian   Female                         NA\n3         3          2004 Asian   Male                           NA\n4         4          1944 Black   Male                           NA\n5         5          1941 Asian   Male                           NA\n6         6          2006 Other   Male                           NA\n# ℹ 6 more variables: condition_start_date &lt;date&gt;,\n#   condition_source_value &lt;chr&gt;, drug_concept_id &lt;dbl&gt;,\n#   drug_exposure_start_date &lt;date&gt;, SBP &lt;dbl&gt;, age &lt;dbl&gt;\n\n\nIt is also useful to have binary variables to indicate their disease status and drug exposure status. We will use if_else() function for this purpose. if_else() takes three arguments: condition to evaluate, value if the evaluation is true, value if false.\n\ndf &lt;- df %&gt;%\n  mutate(\n    condition_status = if_else(is.na(condition_concept_id), 0, 1), # 0 if condition_concept_id is NA, 1 if not\n    exposure_status = if_else(is.na(drug_concept_id), 0, 1) # 0 if drug_concept_id is NA, 1 if not\n  )",
+    "crumbs": [
+      "Lessons",
+      "Session 3: Exploratory Data Analysis and Visualization"
+    ]
+  },
+  {
+    "objectID": "session-3.html#contingency-table",
+    "href": "session-3.html#contingency-table",
+    "title": "Exploratory Data Analysis and Visualization",
+    "section": "4 Contingency Table",
+    "text": "4 Contingency Table\nLet’s take a quick look at MCI/dementia cases breakdown by sex.\n\ndf %&gt;% count(sex_at_birth, condition_status)\n\n# A tibble: 6 × 3\n  sex_at_birth condition_status     n\n  &lt;chr&gt;                   &lt;dbl&gt; &lt;int&gt;\n1 Female                      0    28\n2 Female                      1    16\n3 Male                        0    37\n4 Male                        1    11\n5 Other                       0     5\n6 Other                       1     3\n\n\njanitor package has a nice cross-tabulation function:\n\nlibrary(janitor)\ndf %&gt;% tabyl(sex_at_birth, condition_status)\n\n sex_at_birth  0  1\n       Female 28 16\n         Male 37 11\n        Other  5  3",
+    "crumbs": [
+      "Lessons",
+      "Session 3: Exploratory Data Analysis and Visualization"
+    ]
+  },
+  {
+    "objectID": "session-3.html#summarize-data",
+    "href": "session-3.html#summarize-data",
+    "title": "Exploratory Data Analysis and Visualization",
+    "section": "5 Summarize Data",
+    "text": "5 Summarize Data\nsummary() function can give you a quick overview of data and its distribution. It also will show you a count of NAs in each column. You can use summary() on a vector (or a single column from a dataframe) or the entire dataframe.\n\nsummary(df$SBP)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's \n   84.0   108.0   119.0   117.2   127.0   149.0       5 \n\n\n\nsummary(df)\n\n   person_id      year_of_birth      race           sex_at_birth      \n Min.   :  1.00   Min.   :1936   Length:100         Length:100        \n 1st Qu.: 25.75   1st Qu.:1957   Class :character   Class :character  \n Median : 50.50   Median :1972   Mode  :character   Mode  :character  \n Mean   : 50.50   Mean   :1973                                        \n 3rd Qu.: 75.25   3rd Qu.:1990                                        \n Max.   :100.00   Max.   :2007                                        \n                                                                      \n condition_concept_id condition_start_date condition_source_value\n Min.   :4128031      Min.   :1988-02-15   Length:100            \n 1st Qu.:4128031      1st Qu.:2016-04-30   Class :character      \n Median :4128031      Median :2026-12-22   Mode  :character      \n Mean   :4151509      Mean   :2028-10-20                         \n 3rd Qu.:4182210      3rd Qu.:2041-07-23                         \n Max.   :4182210      Max.   :2071-04-19                         \n NA's   :70           NA's   :70                                 \n drug_concept_id    drug_exposure_start_date      SBP             age       \n Min.   :19073183   Min.   :1987-09-16       Min.   : 84.0   Min.   :19.00  \n 1st Qu.:19073183   1st Qu.:2013-02-12       1st Qu.:108.0   1st Qu.:35.75  \n Median :19073183   Median :2025-05-28       Median :119.0   Median :54.50  \n Mean   :19073183   Mean   :2029-02-16       Mean   :117.2   Mean   :52.91  \n 3rd Qu.:19073183   3rd Qu.:2043-04-05       3rd Qu.:127.0   3rd Qu.:69.00  \n Max.   :19073183   Max.   :2080-10-17       Max.   :149.0   Max.   :90.00  \n NA's   :65         NA's   :65               NA's   :5                      \n condition_status exposure_status\n Min.   :0.0      Min.   :0.00   \n 1st Qu.:0.0      1st Qu.:0.00   \n Median :0.0      Median :0.00   \n Mean   :0.3      Mean   :0.35   \n 3rd Qu.:1.0      3rd Qu.:1.00   \n Max.   :1.0      Max.   :1.00   \n                                 \n\n\nGrouped summaries using group_by() and summarise() can be helpful.\n\ndf %&gt;%\n  group_by(sex_at_birth) %&gt;%\n  summarise(\n    n = n(),\n    mean_SBP = mean(SBP, na.rm = TRUE),\n    sd_SBP = sd(SBP, na.rm = TRUE),\n    median_age = median(age, na.rm = TRUE)\n  )\n\n# A tibble: 3 × 5\n  sex_at_birth     n mean_SBP sd_SBP median_age\n  &lt;chr&gt;        &lt;int&gt;    &lt;dbl&gt;  &lt;dbl&gt;      &lt;dbl&gt;\n1 Female          44     116.  16.6        51.5\n2 Male            48     118.  13.1        56.5\n3 Other            8     117.   9.05       59.5",
+    "crumbs": [
+      "Lessons",
+      "Session 3: Exploratory Data Analysis and Visualization"
+    ]
+  },
+  {
+    "objectID": "session-3.html#histogram",
+    "href": "session-3.html#histogram",
+    "title": "Exploratory Data Analysis and Visualization",
+    "section": "6 Histogram",
+    "text": "6 Histogram\nHistogram is a good way to visualize distribution of continuous data. I like base R commands for a quick visualization on the fly. But ggplot() from ggplot2 package (included already when we loaded tidyverse) is highly customizable and recommended for publication-quality plots. Below, you can see the code for both.\n\nBase Rggplot2\n\n\n\n# Base R histogram\nhist(df$age, breaks = 20) # change breaks size to make bins larger or smaller\n\n\n\n\n\n\n\n\n\n\n\nggplot(df, aes(x = age)) +\n  geom_histogram(\n    binwidth = 5, \n    fill = \"steelblue\", \n    color = \"black\"\n  ) +\n  labs(\n    title = \"Age Distribution\",\n    x = \"Age (Years)\",\n    y = \"Frequency\"\n  ) +\n  theme_minimal()",
+    "crumbs": [
+      "Lessons",
+      "Session 3: Exploratory Data Analysis and Visualization"
+    ]
+  },
+  {
+    "objectID": "session-3.html#box-plot",
+    "href": "session-3.html#box-plot",
+    "title": "Exploratory Data Analysis and Visualization",
+    "section": "7 Box Plot",
+    "text": "7 Box Plot\nBox plots are good for visualizing continuous data broken down to some groups. Here, we will visualize distribution of SBP for each sex_at_birth category. Again, I will show both base R version and ggplot2 version.\n\nBase Rggplot2\n\n\n\n# Base R box plot using the formula interface\nboxplot(\n  SBP ~ sex_at_birth, \n  data = df\n)\n\n\n\n\n\n\n\n\n\n\n\n# ggplot2 box plot\nggplot(df, aes(x = sex_at_birth, y = SBP, fill = sex_at_birth)) +\n  geom_boxplot(alpha = 0.7) +\n  labs(\n    title = \"Systolic Blood Pressure by Sex\",\n    x = \"Sex at Birth\",\n    y = \"SBP (mmHg)\"\n  ) +\n  theme_minimal() +\n  theme(legend.position = \"none\") # Suppress redundant legend\n\nWarning: Removed 5 rows containing non-finite outside the scale range\n(`stat_boxplot()`).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWarning\n\n\n\nTake a note of the warning message in ggplot2 version that says 5 rows were removed. This often occurs when there are NAs in the data. We know SBP column had NA values. If this was unexpected, you need to inspect the data and handle the out-of-range values accordingly.",
+    "crumbs": [
+      "Lessons",
+      "Session 3: Exploratory Data Analysis and Visualization"
+    ]
+  },
+  {
+    "objectID": "session-3.html#scatter-plot",
+    "href": "session-3.html#scatter-plot",
+    "title": "Exploratory Data Analysis and Visualization",
+    "section": "8 Scatter Plot",
+    "text": "8 Scatter Plot\nWe use scatter plots for visualizing the relationship between two continuous variables. We will plot SBP against age.\n\nBase Rggplot2\n\n\n\n# Base R scatter plot\nplot(df$age, df$SBP)\n\n\n\n\n\n\n\n\n\n\n\n# ggplot2 scatter plot\nggplot(df, aes(x = age, y = SBP)) +\n  geom_point(color = \"darkblue\", alpha = 0.5) +\n  labs(\n    title = \"Systolic Blood Pressure vs. Age\",\n    x = \"Age (Years)\",\n    y = \"SBP (mmHg)\"\n  ) +\n  theme_minimal()\n\nWarning: Removed 5 rows containing missing values or values outside the scale range\n(`geom_point()`).",
+    "crumbs": [
+      "Lessons",
+      "Session 3: Exploratory Data Analysis and Visualization"
+    ]
+  },
+  {
+    "objectID": "session-3.html#preparing-for-next-session",
+    "href": "session-3.html#preparing-for-next-session",
+    "title": "Exploratory Data Analysis and Visualization",
+    "section": "9 Preparing for Next Session",
+    "text": "9 Preparing for Next Session\nIn session 4, we will learn how to perform basic statistical tests in R. Because this workshop is focused on learning the technical aspect of programming, discussions of statistical concepts will be minimal. Review the following methods as needed prior to the next session:\n\nt-test and ANOVA\nchi-square test\nlinear regression\nlogistic regression (WWAMI Research Methods course does not cover this. So we will go over this concept in a little more detail than others.)\n\nAlso, we will apply the graphical and statistical functions on the real All of Us data. So, if you have not already, ensure you have a dataset prepared for your own project by next session. It does not have to be perfect - constructing a dataset always takes a long time. Just have a dataset that has demographic variables and an outcome variable at a minimum.",
+    "crumbs": [
+      "Lessons",
+      "Session 3: Exploratory Data Analysis and Visualization"
+    ]
+  },
+  {
+    "objectID": "session-4.html",
+    "href": "session-4.html",
+    "title": "Statistical Analysis",
+    "section": "",
+    "text": "In this last session, we will perform statistical tests and fit models that are common in medical research. Detailed discussions on statistics are beyond the scope of this workshop. If you want to learn more about these tests, check out links provided in Additional Resources.\nAt the end of Session 4, learners will be able to:\n\nPerform t-test, ANOVA, chi-square tests in R.\nFit regression models: simple linear regression, multiple linear regression, logistic regression\nObtain odds ratios from logistic regression models.",
+    "crumbs": [
+      "Lessons",
+      "Session 4: Statistical Analysis"
+    ]
+  },
+  {
+    "objectID": "session-4.html#learning-objectives",
+    "href": "session-4.html#learning-objectives",
+    "title": "Statistical Analysis",
+    "section": "",
+    "text": "In this last session, we will perform statistical tests and fit models that are common in medical research. Detailed discussions on statistics are beyond the scope of this workshop. If you want to learn more about these tests, check out links provided in Additional Resources.\nAt the end of Session 4, learners will be able to:\n\nPerform t-test, ANOVA, chi-square tests in R.\nFit regression models: simple linear regression, multiple linear regression, logistic regression\nObtain odds ratios from logistic regression models.",
+    "crumbs": [
+      "Lessons",
+      "Session 4: Statistical Analysis"
+    ]
+  },
+  {
+    "objectID": "session-4.html#setup",
+    "href": "session-4.html#setup",
+    "title": "Statistical Analysis",
+    "section": "2 Setup",
+    "text": "2 Setup\nWe will load packages and read in the data file. In addition to tidyverse, we will also import broom package which has convenient functions to make results output very readable.\n\nlibrary(tidyverse)\nlibrary(broom)\n\ndf &lt;- read_csv(\"https://yesols.github.io/aou-workshop/data/final_dataset.csv\")\nhead(df)\n\n\n\n# A tibble: 6 × 10\n  person_id year_of_birth race    sex_at_birth condition_concept_id\n      &lt;dbl&gt;         &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;                       &lt;dbl&gt;\n1         1          1987 Unknown Male                           NA\n2         2          1987 Asian   Female                         NA\n3         3          2004 Asian   Male                           NA\n4         4          1944 Black   Male                           NA\n5         5          1941 Asian   Male                           NA\n6         6          2006 Other   Male                           NA\n# ℹ 5 more variables: condition_start_date &lt;date&gt;,\n#   condition_source_value &lt;chr&gt;, drug_concept_id &lt;dbl&gt;,\n#   drug_exposure_start_date &lt;date&gt;, SBP &lt;dbl&gt;\n\n\nWe also create necessary variables as we did in Session 3.\n\ndf &lt;- df %&gt;% mutate(\n  age = 2026 - year_of_birth,\n  condition_status = if_else(is.na(condition_concept_id), 0, 1),\n  exposure_status = if_else(is.na(drug_concept_id), 0, 1)\n)\nhead(df)\n\n# A tibble: 6 × 13\n  person_id year_of_birth race    sex_at_birth condition_concept_id\n      &lt;dbl&gt;         &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;                       &lt;dbl&gt;\n1         1          1987 Unknown Male                           NA\n2         2          1987 Asian   Female                         NA\n3         3          2004 Asian   Male                           NA\n4         4          1944 Black   Male                           NA\n5         5          1941 Asian   Male                           NA\n6         6          2006 Other   Male                           NA\n# ℹ 8 more variables: condition_start_date &lt;date&gt;,\n#   condition_source_value &lt;chr&gt;, drug_concept_id &lt;dbl&gt;,\n#   drug_exposure_start_date &lt;date&gt;, SBP &lt;dbl&gt;, age &lt;dbl&gt;,\n#   condition_status &lt;dbl&gt;, exposure_status &lt;dbl&gt;",
+    "crumbs": [
+      "Lessons",
+      "Session 4: Statistical Analysis"
+    ]
+  },
+  {
+    "objectID": "session-4.html#two-sample-t-test",
+    "href": "session-4.html#two-sample-t-test",
+    "title": "Statistical Analysis",
+    "section": "3 Two-Sample T-Test",
+    "text": "3 Two-Sample T-Test\nWe use t-test for continuous vs binary variables. Let’s test if there is a statistically significant difference in mean Systolic Blood Pressure (SBP) between participants with and without the condition (condition_status).\nBy default, R executes a Welch two-sample t-test, which does not assume equal variances between groups. This is generally the preferred approach for clinical data.\n\nt_result &lt;- t.test(SBP ~ condition_status, data = df)\nprint(t_result)\n\n\n    Welch Two Sample t-test\n\ndata:  SBP by condition_status\nt = 0.20451, df = 74.577, p-value = 0.8385\nalternative hypothesis: true difference in means between group 0 and group 1 is not equal to 0\n95 percent confidence interval:\n -4.953265  6.086527\nsample estimates:\nmean in group 0 mean in group 1 \n       117.3881        116.8214",
+    "crumbs": [
+      "Lessons",
+      "Session 4: Statistical Analysis"
+    ]
+  },
+  {
+    "objectID": "session-4.html#one-way-anova",
+    "href": "session-4.html#one-way-anova",
+    "title": "Statistical Analysis",
+    "section": "4 One-Way ANOVA",
+    "text": "4 One-Way ANOVA\nFor testing continuous variables in more than 2 categories in a variable, we use one-way ANOVA. Let’s test if there is a statistical difference in mean SBP among sex groups (male, female, other)\n\n# Execute One-Way ANOVA\nanova_model &lt;- aov(SBP ~ sex_at_birth, data = df)\n\n# Output the ANOVA table (Degrees of freedom, Sum of Squares, F-value, p-value)\nsummary(anova_model)\n\n             Df Sum Sq Mean Sq F value Pr(&gt;F)\nsex_at_birth  2    174   87.08   0.416  0.661\nResiduals    92  19258  209.33               \n5 observations deleted due to missingness",
+    "crumbs": [
+      "Lessons",
+      "Session 4: Statistical Analysis"
+    ]
+  },
+  {
+    "objectID": "session-4.html#pearsons-chi-square-test",
+    "href": "session-4.html#pearsons-chi-square-test",
+    "title": "Statistical Analysis",
+    "section": "5 Pearson’s Chi-Square Test",
+    "text": "5 Pearson’s Chi-Square Test\nIf you want to test associations between categorical variables, use Pearson’s Chi-square test. In our example, we will see if drug exposure (exposure_status) is associated with MCI/dementia (condition_status).\nTo execute a Chi-squared test, you must pass a contingency table into the chisq.test() function.\n\n# Generate the base R contingency table and pass it to the test\nchi_sq_result &lt;- chisq.test(table(df$condition_status, df$exposure_status))\nprint(chi_sq_result)\n\n\n    Pearson's Chi-squared test with Yates' continuity correction\n\ndata:  table(df$condition_status, df$exposure_status)\nX-squared = 20.931, df = 1, p-value = 4.76e-06\n\n\n\n\n\n\n\n\nNote\n\n\n\nIf any expected cell count is less than 5, R will generate a warning. In such cases, fisher.test() should be used instead.",
+    "crumbs": [
+      "Lessons",
+      "Session 4: Statistical Analysis"
+    ]
+  },
+  {
+    "objectID": "session-4.html#simple-linear-regression",
+    "href": "session-4.html#simple-linear-regression",
+    "title": "Statistical Analysis",
+    "section": "6 Simple Linear Regression",
+    "text": "6 Simple Linear Regression\nTo see the relationship a continuous dependent variable and a continuous independent variable, we can use simple linear regression. We will fit a linear regression model for SBP and age. We use lm() function for fitting linear regression models.\n\n# Fit the linear model\nlm_model &lt;- lm(SBP ~ age, data = df)\n\n# Base R summary (verbose)\nsummary(lm_model)\n\n\nCall:\nlm(formula = SBP ~ age, data = df)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-30.1453  -6.0564   0.9969   5.9673  22.3843 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept) 90.34318    2.92574  30.879  &lt; 2e-16 ***\nage          0.50592    0.05148   9.827 4.75e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 10.12 on 93 degrees of freedom\n  (5 observations deleted due to missingness)\nMultiple R-squared:  0.5094,    Adjusted R-squared:  0.5041 \nF-statistic: 96.57 on 1 and 93 DF,  p-value: 4.754e-16\n\n\nYou can use tidy() function from broom package to display the model neatly as a dataframe:\n\nlibrary(broom)\ntidy(lm_model)\n\n# A tibble: 2 × 5\n  term        estimate std.error statistic  p.value\n  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;\n1 (Intercept)   90.3      2.93       30.9  1.13e-50\n2 age            0.506    0.0515      9.83 4.75e-16\n\n\nWe learned how to create scatter plots in the last session. We can overlay regression fit to the scatter plot easily with ggplot2, using geom_smooth().\n\nggplot(df, aes(x = age, y = SBP)) +\n  geom_point(alpha = 0.5, color = \"darkblue\") +\n  geom_smooth(\n    method = \"lm\", \n    color = \"red\", \n    fill = \"lightcoral\", \n    alpha = 0.3\n  ) +\n  labs(\n    title = \"Linear Regression: Systolic Blood Pressure by Age\",\n    x = \"Age (Years)\",\n    y = \"Systolic Blood Pressure (mmHg)\"\n  ) +\n  theme_minimal()\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\nWarning: Removed 5 rows containing non-finite outside the scale range\n(`stat_smooth()`).\n\n\nWarning: Removed 5 rows containing missing values or values outside the scale range\n(`geom_point()`).",
+    "crumbs": [
+      "Lessons",
+      "Session 4: Statistical Analysis"
+    ]
+  },
+  {
+    "objectID": "session-4.html#multiple-linear-regression",
+    "href": "session-4.html#multiple-linear-regression",
+    "title": "Statistical Analysis",
+    "section": "7 Multiple Linear Regression",
+    "text": "7 Multiple Linear Regression\nWe use multiple linear regression to see the relationship between one continuous dependent variable and two or more independent variables. In medical research, multiple linear regression is often used as a way to adjust for confounding variables.\nWe will fit a model to describe the relationship between SBP and age again, but will add sex. To include more independent variables, we simply add variable names to the formula using +:\n\nlm_adj_model &lt;- lm(SBP ~ age + sex_at_birth, data = df)\nsummary(lm_adj_model)\n\n\nCall:\nlm(formula = SBP ~ age + sex_at_birth, data = df)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-29.3473  -5.4471   0.5786   6.7308  21.8585 \n\nCoefficients:\n                  Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)       89.63749    3.13686  28.576  &lt; 2e-16 ***\nage                0.50411    0.05207   9.681 1.19e-15 ***\nsex_at_birthMale   1.31476    2.19149   0.600    0.550    \nsex_at_birthOther  1.86637    4.18336   0.446    0.657    \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 10.21 on 91 degrees of freedom\n  (5 observations deleted due to missingness)\nMultiple R-squared:  0.5118,    Adjusted R-squared:  0.4957 \nF-statistic:  31.8 on 3 and 91 DF,  p-value: 3.764e-14\n\n\nUsing broom:\n\ntidy(lm_adj_model)\n\n# A tibble: 4 × 5\n  term              estimate std.error statistic  p.value\n  &lt;chr&gt;                &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;\n1 (Intercept)         89.6      3.14      28.6   3.14e-47\n2 age                  0.504    0.0521     9.68  1.19e-15\n3 sex_at_birthMale     1.31     2.19       0.600 5.50e- 1\n4 sex_at_birthOther    1.87     4.18       0.446 6.57e- 1",
+    "crumbs": [
+      "Lessons",
+      "Session 4: Statistical Analysis"
+    ]
+  },
+  {
+    "objectID": "session-4.html#logistic-regression",
+    "href": "session-4.html#logistic-regression",
+    "title": "Statistical Analysis",
+    "section": "8 Logistic Regression",
+    "text": "8 Logistic Regression\nBecause logistic regression is not discussed in your Research Methods course, I will provide a little bit of background before we learn the R command.\n\n8.1 Theoretical Background\nStandard linear regression predicts a continuous outcome \\(Y\\) based on a linear combination of predictors \\(X\\): \\[Y=\\beta_0+\\beta_1X_1+\\dots+\\beta_pX_p\\]\nWhen applied to a binary clinical outcome (absence or presence of a disease, benign or malignant. alive or dead), the linear fit does not make sense when trying to model binary outcomes.\nSuppose we have a dataset of tumor sizes from 200 patients and whether they are benign (0) or malignant (1). A linear regression model (red line) would look like this:\n\n\n\n\n\n\n\n\n\nIt does not seem like a good fit at all!\nFor this kind of scenarios, we use logistic regression. In a logistic regression model, the outcome \\(Y\\) is “logit”-transformed, i.e., turned into log-odds. \\[\\ln\\left(\\frac{p}{1-p}\\right)=\\beta_0+\\beta_1X_1+\\dots+\\beta_pX_p\\] Solving this equation for \\(p\\), the probability of a given outcome (tumor is malignant): \\[p=\\frac{1}{1+e^{-(\\beta_0+\\beta_1X_1+\\dots+\\beta_pX_p)}}\\]\nNow we have a valid probability that enables us to predict malignancy based on the tumor size.\n\n\n\n\n\n\n\n\n\nThe fact that logistic regression models the log-odds of a binary outcome provides a useful mathematical property: the coefficients, \\(\\beta_1, \\beta_2, \\dots\\), of the independent variables, \\(X_1, X_2, \\dots\\), represent the log of the odds ratio for a one-unit increase in those variables. If the independent variables are binary (e.g., \\(1\\) for exposed and \\(0\\) for unexposed), the coefficient specifically represents the log odds ratio of the outcome for the exposed group compared to the unexposed group. That means the exponent of a coefficient, i.e., \\(e^{\\beta_1}\\), etc, represent odds ratio of the corresponding variable.\nSo, logistic regression is primarily utilized for two purposes: predictive modeling and effect estimation. In predictive modeling, it is used to calculate the probability of a binary outcome. In inferential statistics, it is used to calculate adjusted odds ratios to measure the association between exposures and outcomes. This makes it the standard modeling approach for retrospective case-control studies, where calculating relative risk is mathematically invalid.\n\n\n8.2 Application\nWe will fit a logistic model on our practice dataset now, to see if there is any association between drug exposure and dementia outcome, while adjusting for age and sex. We use glm() function for this purpose. The argument, family = \"binomial\", specifies that we want logit link (i.e., \\(\\ln\\left(\\frac{p}{1-p}\\right)\\)), which is what makes it logistic regression as opposed to other types.\n\n# Fit the multivariable logistic regression model\nlogistic_model &lt;- glm(\n  condition_status ~ exposure_status + age + sex_at_birth,\n  data = df,\n  family = \"binomial\"\n)\nsummary(logistic_model)\n\n\nCall:\nglm(formula = condition_status ~ exposure_status + age + sex_at_birth, \n    family = \"binomial\", data = df)\n\nCoefficients:\n                  Estimate Std. Error z value Pr(&gt;|z|)    \n(Intercept)       -2.18139    0.83531  -2.611  0.00902 ** \nexposure_status    2.15673    0.50529   4.268 1.97e-05 ***\nage                0.01018    0.01301   0.783  0.43383    \nsex_at_birthMale  -0.39916    0.52993  -0.753  0.45131    \nsex_at_birthOther  0.22907    0.90841   0.252  0.80091    \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n(Dispersion parameter for binomial family taken to be 1)\n\n    Null deviance: 122.173  on 99  degrees of freedom\nResidual deviance:  98.024  on 95  degrees of freedom\nAIC: 108.02\n\nNumber of Fisher Scoring iterations: 4\n\n\nYou can obtain the odds ratio by expoentiating the coefficients manually, using exp() function, or the tidy() function from broom package can do this for you as well as confidence intervals.\n\n# Extract exponentiated coefficients (adjusted Odds Ratios) and CIs\nlibrary(broom)\ntidy_results &lt;- tidy(\n  logistic_model,\n  exponentiate = TRUE,\n  conf.int = TRUE\n)\nprint(tidy_results)\n\n# A tibble: 5 × 7\n  term              estimate std.error statistic   p.value conf.low conf.high\n  &lt;chr&gt;                &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;\n1 (Intercept)          0.113    0.835     -2.61  0.00902     0.0191     0.525\n2 exposure_status      8.64     0.505      4.27  0.0000197   3.31      24.3  \n3 age                  1.01     0.0130     0.783 0.434       0.985      1.04 \n4 sex_at_birthMale     0.671    0.530     -0.753 0.451       0.235      1.91 \n5 sex_at_birthOther    1.26     0.908      0.252 0.801       0.193      7.35 \n\n\n\n\n\n\n\n\nImportantModel Diagnostics\n\n\n\nRegression methods such as linear regression and logistic regression rely on statistical assumptions about underlying data. Before making an inference based on a modeling result, it is critical to check these assumptoms through model diagnostics. Refer to your statistics text or Additional Resources link on the left sidebar to learn more.",
+    "crumbs": [
+      "Lessons",
+      "Session 4: Statistical Analysis"
+    ]
+  },
+  {
+    "objectID": "session-4.html#application-to-all-of-us-data",
+    "href": "session-4.html#application-to-all-of-us-data",
+    "title": "Statistical Analysis",
+    "section": "9 Application to All of Us Data",
+    "text": "9 Application to All of Us Data\nWork on own datasets in All of Us Workbench.",
+    "crumbs": [
+      "Lessons",
+      "Session 4: Statistical Analysis"
+    ]
+  }
+]
