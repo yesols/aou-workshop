@@ -25,7 +25,7 @@ We will load packages and read in the data file. In addition to `tidyverse`, we 
 library(tidyverse)
 library(broom)
 
-df <- read_csv("https://yesols.github.io/aou-workshop/data/final_dataset.csv")
+df <- read_csv("https://raw.githubusercontent.com/yesols/aou-workshop/refs/heads/main/data/final_dataset.csv")
 head(df)
 ```
 

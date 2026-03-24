@@ -22,7 +22,7 @@ We will begin by loading packages and reading in a file.
 #| message: false
 #| eval: false
 library(tidyverse)
-df <- read_csv("https://yesols.github.io/aou-workshop/data/final_dataset.csv")
+df <- read_csv("https://raw.githubusercontent.com/yesols/aou-workshop/refs/heads/main/data/final_dataset.csv")
 head(df)
 ```
 

@@ -311,9 +311,9 @@ We use `read_csv()` function to read CSV files into dataframes so we can work wi
 library(readr)
 
 # Read directly from public URLs
-person_df <- read_csv("https://yesols.github.io/aou-workshop/data/demographic_data.csv")
-condition_df <- read_csv("https://yesols.github.io/aou-workshop/data/conditions.csv")
-drug_df <- read_csv("https://yesols.github.io/aou-workshop/data/drug_exposures.csv")
+person_df <- read_csv("https://raw.githubusercontent.com/yesols/aou-workshop/refs/heads/main/data/demographic_data.csv")
+condition_df <- read_csv("https://raw.githubusercontent.com/yesols/aou-workshop/refs/heads/main/data/conditions.csv")
+drug_df <- read_csv("https://raw.githubusercontent.com/yesols/aou-workshop/refs/heads/main/data/drug_exposures.csv")
 ```
 
 ```{r}
