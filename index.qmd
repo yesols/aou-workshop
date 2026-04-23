@@ -24,36 +24,55 @@ You must be a registered user of the *All of Us* Workbench and have created your
 
 ## Registration
 
-- WWAMI students: no formal registration necessary
-- Students from other SHAMP programs or other academic units: email yesols@uidaho.edu and ncoombs@uidaho.edu
+- WWAMI students: No formal registration necessary
+- Students from other SHAMP programs or other academic units: Email Yesol and Nick ([Contact Us](#contact-us))
 
 
 ## Schedule
 
-::: {.callout-note}
-2026 workshop dates are TBD
-:::
-
 | Session | Date and Time | Topics Covered |
 | :--- | :--- | :--- |
-| **Session 1** | [Date], [Time] | • Introduction to cloud computing and Researcher Workbench<br>• Super-brief introduction to relational database structures and queries<br>• Selecting cohorts and building your dataset |
-| **Session 2** | [Date], [Time] | • Introduction to R<br>• Working with dataframes in R<br>• Obtaining query results and data wrangling |
-| **Session 3** | [Date], [Time] | • More data wrangling<br>• Exploratory data analysis<br>• Data visualization |
-| **Session 4** | [Date], [Time] | • Performing statistical tests<br>• Fitting regression models |
+| **Session 0** | May 18, 11-12 | • Orientation to the Workbench and Workshop |
+| **Session 1** | May 21, 10-12 | • Introduction to cloud computing and Researcher Workbench<br>• Super-brief introduction to relational database structures and queries<br>• Selecting cohorts and building your dataset |
+| **Session 2** | May 22, 10-12 | • Introduction to R<br>• Working with dataframes in R<br>• Obtaining query results and data wrangling |
+| **Session 3** | May 28, 10-12 | • More data wrangling<br>• Exploratory data analysis<br>• Data visualization |
+| **Session 4** | May 29, 10-12 | • Performing statistical tests<br>• Fitting regression models |
 : {tbl-colwidths="[15,25,60]"}
 
-* **Location:** IOURMR Conference Room (D. A. Huckabay Bldg, Rm 122)
+* **Location:** IOURMR Conference Room (D.A. Huckabay Bldg, Rm 122)
 
 
 ## Instructor
 
 [Yesol Sapozhnikov](https://yesols.github.io) is a postdoctoral fellow in the School of Health and Medical Professions. She has experience in teaching programming, genomics, and statistics. She is a member of the *All of Us* Biomedical Researchers Scholars Program by Baylor College of Medicine, and conducting several projects using the database.
 
+
 ## Contact Us
 
-For any questions and inquiries about the workshop, contact Yesol Sapozhnikov (email: yesols@uidaho.edu). For general inquiries regarding student-led projects in SHAMP, contact Nicholas Coombs (email: ncoombs@uidaho.edu). 
+:::: {.columns}
 
+::: {.column width="45%"}
+#### Yesol Sapozhnikov
+- Workshop inquiries
+- *All of Us* data questions
 
+**Office:** D.A. Huckabay Medical Education Bldg 122C\
+**Email:** [yesols@uidaho.edu](mailto:yesols@uidaho.edu)
+:::
+
+::: {.column width="10%"}
+:::
+
+::: {.column width="45%"}
+#### Nicholas Coombs
+- Student-led project inquiries
+- General research questions
+
+**Office:** D.A. Huckabay Medical Education Bldg 122B\
+**Email:** [ncoombs@uidaho.edu](mailto:ncoombs@uidaho.edu)
+:::
+
+::::
 
 
 
