@@ -349,7 +349,7 @@
     "href": "index.html#registration",
     "title": "All of Us Workshop",
     "section": "Registration",
-    "text": "Registration\n\nWWAMI students: no formal registration necessary\nStudents from other SHAMP programs or other academic units: email yesols@uidaho.edu and ncoombs@uidaho.edu",
+    "text": "Registration\n\nWWAMI students: No formal registration necessary\nStudents from other SHAMP programs or other academic units: Email Yesol and Nick (Contact Us)",
     "crumbs": [
       "Workshop Information"
     ]
@@ -359,7 +359,7 @@
     "href": "index.html#schedule",
     "title": "All of Us Workshop",
     "section": "Schedule",
-    "text": "Schedule\n\n\n\n\n\n\nNote\n\n\n\n2026 workshop dates are TBD\n\n\n\n\n\n\n\n\n\n\nSession\nDate and Time\nTopics Covered\n\n\n\n\nSession 1\n[Date], [Time]\n• Introduction to cloud computing and Researcher Workbench• Super-brief introduction to relational database structures and queries• Selecting cohorts and building your dataset\n\n\nSession 2\n[Date], [Time]\n• Introduction to R• Working with dataframes in R• Obtaining query results and data wrangling\n\n\nSession 3\n[Date], [Time]\n• More data wrangling• Exploratory data analysis• Data visualization\n\n\nSession 4\n[Date], [Time]\n• Performing statistical tests• Fitting regression models\n\n\n\n\nLocation: IOURMR Conference Room (D. A. Huckabay Bldg, Rm 122)",
+    "text": "Schedule\n\n\n\n\n\n\n\n\nSession\nDate and Time\nTopics Covered\n\n\n\n\nSession 0\nMay 18, 11-12\n• Orientation to the Workbench and Workshop\n\n\nSession 1\nMay 21, 10-12\n• Introduction to cloud computing and Researcher Workbench• Super-brief introduction to relational database structures and queries• Selecting cohorts and building your dataset\n\n\nSession 2\nMay 22, 10-12\n• Introduction to R• Working with dataframes in R• Obtaining query results and data wrangling\n\n\nSession 3\nMay 28, 10-12\n• More data wrangling• Exploratory data analysis• Data visualization\n\n\nSession 4\nMay 29, 10-12\n• Performing statistical tests• Fitting regression models\n\n\n\n\nLocation: IOURMR Conference Room (D.A. Huckabay Bldg, Rm 122)",
     "crumbs": [
       "Workshop Information"
     ]
@@ -379,7 +379,7 @@
     "href": "index.html#contact-us",
     "title": "All of Us Workshop",
     "section": "Contact Us",
-    "text": "Contact Us\nFor any questions and inquiries about the workshop, contact Yesol Sapozhnikov (email: yesols@uidaho.edu). For general inquiries regarding student-led projects in SHAMP, contact Nicholas Coombs (email: ncoombs@uidaho.edu).",
+    "text": "Contact Us\n\n\n\nYesol Sapozhnikov\n\nWorkshop inquiries\nAll of Us data questions\n\nOffice: D.A. Huckabay Medical Education Bldg 122C\nEmail: yesols@uidaho.edu\n\n\n\n\n\nNicholas Coombs\n\nStudent-led project inquiries\nGeneral research questions\n\nOffice: D.A. Huckabay Medical Education Bldg 122B\nEmail: ncoombs@uidaho.edu",
     "crumbs": [
       "Workshop Information"
     ]
