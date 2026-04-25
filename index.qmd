@@ -2,41 +2,37 @@
 title: "All of Us Workshop"
 ---
 
+#### **School of Health and Medical Professions, University of Idaho**
+
 ## Overview
 
-This workshop is designed for SHAMP students who are interested in conducting research projects using the [*All of Us* Research Program](https://researchallofus.org) data but do not have programming experience. Participants will gain skills in basic R programming and familiarity with *All of Us* data and Workbench so that they can complete research projects independently.
+This workshop is primarily intended for SHAMP students who are interested in conducting research projects using the [*All of Us* Research Program](https://researchallofus.org) data but do not have programming experience. Participants will gain skills in basic R programming and familiarity with *All of Us* data and Workbench so that they can complete research projects independently.
 
 The workshop is intentionally short, consisting of four 2-hr sessions, and participants are expected to spend time outside of workshop sessions to prepare ahead and practice after sessions. 
 
-## Prerequisites
+## Prerequisites and Expectations
 
-- Before participating in this workshop, you must read through [Getting Started with *All of Us* Projects](https://yesols.github.io/projects/all-of-us/) and complete all the numbered steps prior to attending the workshop. 
-  - WWAMI students: Draft a proposal even if your *All of Us* project is not for Triple-I. It will serve as a blueprint of how you prepare data and plan analysis.
-  - SHAMP students: Depending on the scope of your project, you may or may not need to identify a formal PI. Discuss with your program director and IOURMR before committing to a project. Also, do prepare a proposal as well.
-  - Students from other academic units: You do not have to identify an advisor for your project if you already have a PI. You also do not have to meet with IOURMR Research Core since your research is not under IOURMR supervision. But do prepare a proposal to help your data preparation and project planning.
-
-- This is a **hands-on** workshop. Bring your laptop to all sessions.
+- Complete all the steps laid out in this page: [Getting Started with *All of Us* Projects](https://yesols.github.io/projects/all-of-us/).
+  - Non-WWAMI students: writing a proposal, identifying an advisor, or meeting with IOURMR Research Core may not be applicable to you. If you are not sure, [contact us](#contact-us).
+- This is a **hands-on** workshop. Bring your own laptop.
 - Basic statistics knowledge is expected. We will learn how to perform common statistical tasks in R but will not discuss the theory or interpretation of results in detail.
 
-::: {.callout-warning}
-You must be a registered user of the *All of Us* Workbench and have created your own Project Workspace in order to participate in the workshop.
-:::
+## Workshop Registration
 
-## Registration
+- WWAMI students: 
+  - No action needed if you have been in contact with IOURMR Research Core regarding your project already.
+- Students from other SHAMP programs or other academic units: 
+  - Email Yesol and Nick ([Contact Us](#contact-us)) and let us know your intent to participate.
 
-- WWAMI students: No formal registration necessary
-- Students from other SHAMP programs or other academic units: Email Yesol and Nick ([Contact Us](#contact-us))
-
-
-## Schedule
+## Schedule for 2026
 
 | Session | Date and Time | Topics Covered |
 | :--- | :--- | :--- |
-| **Session 0** | May 18, 11-12 | • Orientation to the Workbench and Workshop |
-| **Session 1** | May 21, 10-12 | • Introduction to cloud computing and Researcher Workbench<br>• Super-brief introduction to relational database structures and queries<br>• Selecting cohorts and building your dataset |
-| **Session 2** | May 22, 10-12 | • Introduction to R<br>• Working with dataframes in R<br>• Obtaining query results and data wrangling |
-| **Session 3** | May 28, 10-12 | • More data wrangling<br>• Exploratory data analysis<br>• Data visualization |
-| **Session 4** | May 29, 10-12 | • Performing statistical tests<br>• Fitting regression models |
+| **Session 0** | May 18, 11am-12pm | • Orientation to the Workbench and Workshop |
+| **Session 1** | May 21, 10am-12pm | • Introduction to cloud computing and Researcher Workbench<br>• Super-brief introduction to relational database structures and queries<br>• Selecting cohorts and building your dataset |
+| **Session 2** | May 22, 10am-12pm | • Introduction to R<br>• Working with dataframes in R<br>• Obtaining query results and data wrangling |
+| **Session 3** | May 28, 10am-12pm | • More data wrangling<br>• Exploratory data analysis<br>• Data visualization |
+| **Session 4** | May 29, 10am-12pm | • Performing statistical tests<br>• Fitting regression models |
 : {tbl-colwidths="[15,25,60]"}
 
 * **Location:** IOURMR Conference Room (D.A. Huckabay Bldg, Rm 122)
