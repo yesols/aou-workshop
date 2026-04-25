@@ -315,51 +315,41 @@
     ]
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "All of Us Workshop",
-    "section": "",
-    "text": "This workshop is designed for SHAMP students who are interested in conducting research projects using the All of Us Research Program data but do not have programming experience. Participants will gain skills in basic R programming and familiarity with All of Us data and Workbench so that they can complete research projects independently.\nThe workshop is intentionally short, consisting of four 2-hr sessions, and participants are expected to spend time outside of workshop sessions to prepare ahead and practice after sessions.",
-    "crumbs": [
-      "Workshop Information"
-    ]
-  },
-  {
     "objectID": "index.html#overview",
     "href": "index.html#overview",
     "title": "All of Us Workshop",
-    "section": "",
-    "text": "This workshop is designed for SHAMP students who are interested in conducting research projects using the All of Us Research Program data but do not have programming experience. Participants will gain skills in basic R programming and familiarity with All of Us data and Workbench so that they can complete research projects independently.\nThe workshop is intentionally short, consisting of four 2-hr sessions, and participants are expected to spend time outside of workshop sessions to prepare ahead and practice after sessions.",
+    "section": "Overview",
+    "text": "Overview\nThis workshop is primarily intended for SHAMP students who are interested in conducting research projects using the All of Us Research Program data but do not have programming experience. Participants will gain skills in basic R programming and familiarity with All of Us data and Workbench so that they can complete research projects independently.\nThe workshop is intentionally short, consisting of four 2-hr sessions, and participants are expected to spend time outside of workshop sessions to prepare ahead and practice after sessions.",
     "crumbs": [
       "Workshop Information"
     ]
   },
   {
-    "objectID": "index.html#prerequisites",
-    "href": "index.html#prerequisites",
+    "objectID": "index.html#prerequisites-and-expectations",
+    "href": "index.html#prerequisites-and-expectations",
     "title": "All of Us Workshop",
-    "section": "Prerequisites",
-    "text": "Prerequisites\n\nBefore participating in this workshop, you must read through Getting Started with All of Us Projects and complete all the numbered steps prior to attending the workshop.\n\nWWAMI students: Draft a proposal even if your All of Us project is not for Triple-I. It will serve as a blueprint of how you prepare data and plan analysis.\nSHAMP students: Depending on the scope of your project, you may or may not need to identify a formal PI. Discuss with your program director and IOURMR before committing to a project. Also, do prepare a proposal as well.\nStudents from other academic units: You do not have to identify an advisor for your project if you already have a PI. You also do not have to meet with IOURMR Research Core since your research is not under IOURMR supervision. But do prepare a proposal to help your data preparation and project planning.\n\nThis is a hands-on workshop. Bring your laptop to all sessions.\nBasic statistics knowledge is expected. We will learn how to perform common statistical tasks in R but will not discuss the theory or interpretation of results in detail.\n\n\n\n\n\n\n\nWarning\n\n\n\nYou must be a registered user of the All of Us Workbench and have created your own Project Workspace in order to participate in the workshop.",
+    "section": "Prerequisites and Expectations",
+    "text": "Prerequisites and Expectations\n\nComplete all the steps laid out in this page: Getting Started with All of Us Projects.\n\nNon-WWAMI students: writing a proposal, identifying an advisor, or meeting with IOURMR Research Core may not be applicable to you. If you are not sure, contact us.\n\nThis is a hands-on workshop. Bring your own laptop.\nBasic statistics knowledge is expected. We will learn how to perform common statistical tasks in R but will not discuss the theory or interpretation of results in detail.",
     "crumbs": [
       "Workshop Information"
     ]
   },
   {
-    "objectID": "index.html#registration",
-    "href": "index.html#registration",
+    "objectID": "index.html#workshop-registration",
+    "href": "index.html#workshop-registration",
     "title": "All of Us Workshop",
-    "section": "Registration",
-    "text": "Registration\n\nWWAMI students: No formal registration necessary\nStudents from other SHAMP programs or other academic units: Email Yesol and Nick (Contact Us)",
+    "section": "Workshop Registration",
+    "text": "Workshop Registration\n\nWWAMI students:\n\nNo action needed if you have been in contact with IOURMR Research Core regarding your project already.\n\nStudents from other SHAMP programs or other academic units:\n\nEmail Yesol and Nick (Contact Us) and let us know your intent to participate.",
     "crumbs": [
       "Workshop Information"
     ]
   },
   {
-    "objectID": "index.html#schedule",
-    "href": "index.html#schedule",
+    "objectID": "index.html#schedule-for-2026",
+    "href": "index.html#schedule-for-2026",
     "title": "All of Us Workshop",
-    "section": "Schedule",
-    "text": "Schedule\n\n\n\n\n\n\n\n\nSession\nDate and Time\nTopics Covered\n\n\n\n\nSession 0\nMay 18, 11-12\n• Orientation to the Workbench and Workshop\n\n\nSession 1\nMay 21, 10-12\n• Introduction to cloud computing and Researcher Workbench• Super-brief introduction to relational database structures and queries• Selecting cohorts and building your dataset\n\n\nSession 2\nMay 22, 10-12\n• Introduction to R• Working with dataframes in R• Obtaining query results and data wrangling\n\n\nSession 3\nMay 28, 10-12\n• More data wrangling• Exploratory data analysis• Data visualization\n\n\nSession 4\nMay 29, 10-12\n• Performing statistical tests• Fitting regression models\n\n\n\n\nLocation: IOURMR Conference Room (D.A. Huckabay Bldg, Rm 122)",
+    "section": "Schedule for 2026",
+    "text": "Schedule for 2026\n\n\n\n\n\n\n\n\nSession\nDate and Time\nTopics Covered\n\n\n\n\nSession 0\nMay 18, 11am-12pm\n• Orientation to the Workbench and Workshop\n\n\nSession 1\nMay 21, 10am-12pm\n• Introduction to cloud computing and Researcher Workbench• Super-brief introduction to relational database structures and queries• Selecting cohorts and building your dataset\n\n\nSession 2\nMay 22, 10am-12pm\n• Introduction to R• Working with dataframes in R• Obtaining query results and data wrangling\n\n\nSession 3\nMay 28, 10am-12pm\n• More data wrangling• Exploratory data analysis• Data visualization\n\n\nSession 4\nMay 29, 10am-12pm\n• Performing statistical tests• Fitting regression models\n\n\n\n\nLocation: IOURMR Conference Room (D.A. Huckabay Bldg, Rm 122)",
     "crumbs": [
       "Workshop Information"
     ]
