@@ -319,7 +319,7 @@
     "href": "index.html#overview",
     "title": "All of Us Workshop",
     "section": "Overview",
-    "text": "Overview\nThis workshop is primarily intended for SHAMP students who are interested in conducting research projects using the All of Us Research Program data but do not have programming experience. Participants will gain skills in basic R programming and familiarity with All of Us data and Workbench so that they can complete research projects independently.\nThe workshop is intentionally short, consisting of four 2-hr sessions, and participants are expected to spend time outside of workshop sessions to prepare ahead and practice after sessions.",
+    "text": "Overview\nThis workshop is primarily intended for SHAMP students who are interested in conducting research projects using All of Us Research Program data but do not have programming experience. Participants will gain skills in basic R programming and familiarity with All of Us data and Workbench so that they can complete research projects independently.\nThe workshop is intentionally short, consisting of four 2-hr sessions (with a 1-hr info session), and participants are expected to spend time outside of workshop sessions to prepare ahead and practice after.",
     "crumbs": [
       "Workshop Information"
     ]
@@ -329,7 +329,7 @@
     "href": "index.html#prerequisites-and-expectations",
     "title": "All of Us Workshop",
     "section": "Prerequisites and Expectations",
-    "text": "Prerequisites and Expectations\n\nComplete all the steps laid out in this page: Getting Started with All of Us Projects.\n\nNon-WWAMI students: writing a proposal, identifying an advisor, or meeting with IOURMR Research Core may not be applicable to you. If you are not sure, contact us.\n\nThis is a hands-on workshop. Bring your own laptop.\nBasic statistics knowledge is expected. We will learn how to perform common statistical tasks in R but will not discuss the theory or interpretation of results in detail.",
+    "text": "Prerequisites and Expectations\n\nComplete all the steps laid out in this page: Getting Started with All of Us Projects.\n\nNon-WWAMI students: Some of the instructions in step A may not be applicable. If you are not sure, contact us.\n\nThis is a hands-on workshop. Bring your own laptop.\nBasic statistics knowledge is expected. We will learn how to perform common statistical tasks in R but will not discuss the theory or interpretation of results in detail.",
     "crumbs": [
       "Workshop Information"
     ]
@@ -350,16 +350,6 @@
     "title": "All of Us Workshop",
     "section": "Schedule for 2026",
     "text": "Schedule for 2026\n\n\n\n\n\n\n\n\nSession\nDate and Time\nTopics Covered\n\n\n\n\nSession 0\nMay 18, 11am-12pm\n• Orientation to the Workbench and Workshop\n\n\nSession 1\nMay 21, 10am-12pm\n• Introduction to cloud computing and Researcher Workbench• Super-brief introduction to relational database structures and queries• Selecting cohorts and building your dataset\n\n\nSession 2\nMay 22, 10am-12pm\n• Introduction to R• Working with dataframes in R• Obtaining query results and data wrangling\n\n\nSession 3\nMay 28, 10am-12pm\n• More data wrangling• Exploratory data analysis• Data visualization\n\n\nSession 4\nMay 29, 10am-12pm\n• Performing statistical tests• Fitting regression models\n\n\n\n\nLocation: IOURMR Conference Room (D.A. Huckabay Bldg, Rm 122)",
-    "crumbs": [
-      "Workshop Information"
-    ]
-  },
-  {
-    "objectID": "index.html#instructor",
-    "href": "index.html#instructor",
-    "title": "All of Us Workshop",
-    "section": "Instructor",
-    "text": "Instructor\nYesol Sapozhnikov is a postdoctoral fellow in the School of Health and Medical Professions. She has experience in teaching programming, genomics, and statistics. She is a member of the All of Us Biomedical Researchers Scholars Program by Baylor College of Medicine, and conducting several projects using the database.",
     "crumbs": [
       "Workshop Information"
     ]
