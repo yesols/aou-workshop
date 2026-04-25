@@ -6,14 +6,14 @@ title: "All of Us Workshop"
 
 ## Overview
 
-This workshop is primarily intended for SHAMP students who are interested in conducting research projects using the [*All of Us* Research Program](https://researchallofus.org) data but do not have programming experience. Participants will gain skills in basic R programming and familiarity with *All of Us* data and Workbench so that they can complete research projects independently.
+This workshop is primarily intended for SHAMP students who are interested in conducting research projects using [*All of Us* Research Program](https://researchallofus.org) data but do not have programming experience. Participants will gain skills in basic R programming and familiarity with *All of Us* data and Workbench so that they can complete research projects independently.
 
-The workshop is intentionally short, consisting of four 2-hr sessions, and participants are expected to spend time outside of workshop sessions to prepare ahead and practice after sessions. 
+The workshop is intentionally short, consisting of four 2-hr sessions (with a 1-hr info session), and participants are expected to spend time outside of workshop sessions to prepare ahead and practice after. 
 
 ## Prerequisites and Expectations
 
 - Complete all the steps laid out in this page: [Getting Started with *All of Us* Projects](https://yesols.github.io/projects/all-of-us/).
-  - Non-WWAMI students: writing a proposal, identifying an advisor, or meeting with IOURMR Research Core may not be applicable to you. If you are not sure, [contact us](#contact-us).
+  - Non-WWAMI students: Some of the instructions in step A may not be applicable. If you are not sure, [contact us](#contact-us).
 - This is a **hands-on** workshop. Bring your own laptop.
 - Basic statistics knowledge is expected. We will learn how to perform common statistical tasks in R but will not discuss the theory or interpretation of results in detail.
 
@@ -36,12 +36,6 @@ The workshop is intentionally short, consisting of four 2-hr sessions, and parti
 : {tbl-colwidths="[15,25,60]"}
 
 * **Location:** IOURMR Conference Room (D.A. Huckabay Bldg, Rm 122)
-
-
-## Instructor
-
-[Yesol Sapozhnikov](https://yesols.github.io) is a postdoctoral fellow in the School of Health and Medical Professions. She has experience in teaching programming, genomics, and statistics. She is a member of the *All of Us* Biomedical Researchers Scholars Program by Baylor College of Medicine, and conducting several projects using the database.
-
 
 ## Contact Us
 
