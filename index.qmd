@@ -48,7 +48,8 @@ The workshop is intentionally short, consisting of four 2-hr sessions, and parti
 :::: {.columns}
 
 ::: {.column width="45%"}
-#### Yesol Sapozhnikov
+#### Yesol Sapozhnikov, PhD, RN
+Postdoctoral Fellow
 - Workshop inquiries
 - *All of Us* data questions
 
@@ -60,7 +61,8 @@ The workshop is intentionally short, consisting of four 2-hr sessions, and parti
 :::
 
 ::: {.column width="45%"}
-#### Nicholas Coombs
+#### Nicholas Coombs, PhD, MSTAT
+Research Assistant Professor
 - Student-led project inquiries
 - General research questions
 
