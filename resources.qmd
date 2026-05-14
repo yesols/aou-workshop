@@ -10,6 +10,7 @@ title: "Additional Resources"
 ## Course Supplemental Materials
 - [Analysis Plan Template](resources/analysis_plan_template.docx)
 - [Researcher's Guide to Using the Workbench](resources/guide_legacy_wb.pdf)
+  - The information about workbench navigation and tools are outdated due to the recent roll-out of Workbench 2.0. However, the rest of the guide is still very helpful for new users.
 
 ## R Programming and Statistics
 

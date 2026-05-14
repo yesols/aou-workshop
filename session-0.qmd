@@ -1,0 +1,38 @@
+---
+title: "Session Zero"
+number-sections: true
+number-depth: 3
+---
+
+## Introduction
+
+- Who are we and what do we hope to gain from the workshop?
+- Workshop expectations - materials, accounts, etc
+
+## Resources
+
+These files are linked in the [Additional Resources](resources.qmd) page
+
+- Analysis Plan
+- Researcher's Guide to Using the Workbench
+  - Note: the information about workbench navigation and tools are outdated due to the recent roll-out of Workbench 2.0
+
+## Workbench Tips
+
+- [Data User Code of Conduct](https://support.researchallofus.org/hc/en-us/articles/22346176432532-Data-User-Code-of-Conduct)
+  - **Do NOT** upload data or files containing personally identifiable information (PII), protected health information (PHI), or identifiable private information (IPI)
+  - **Do NOT** take screenshots or attempt in any way to copy, download, or otherwise remove any participant-level data from the *All of Us* Workbench
+  - **Do NOT** publish or otherwise distribute any participant-level data from the *All of Us* Research Program database
+  - **Do NOT** publish or otherwise distribute any data or aggregate statistics corresponding to fewer than 20 participants
+    - Refer to [All of Us Data and Statistics Dissemination Policy](https://support.researchallofus.org/hc/en-us/articles/22346276580372-Data-and-Statistics-Dissemination-Policy)
+
+- If planning on publishing or presenting your result:
+  - [Publication and Presentation Checklist](https://support.researchallofus.org/hc/en-us/articles/22344017910804-All-of-Us-Researcher-Publication-Presentation-and-Poster-Checklist)
+
+- Strategies to keep notebooks and data files organized
+
+## Creating a Workspace
+
+Create a Workspace prior to Session 1. Follow the instruction [here](https://support.researchallofus.org/hc/en-us/articles/41981050556564-Getting-Started-in-new-Researcher-Workbench-2-0) or the video posted in the [Getting Started page](https://yesols.github.io/projects/all-of-us/).
+
+## Q&A

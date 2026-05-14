@@ -13,7 +13,7 @@ At the end of Session 1, learners will be able to:
 1. Define the concept of cloud computing and its advantages in working with large and sensitive data.
 2. Identify and navigate the components of Researcher Workbench.
 3. Demonstrate proper steps of starting and ending analysis sessions in the Workbench.
-4. Demonstrate using the Workbench tools to create cohorts and datasets.
+4. Demonstrate using the Workbench tools to create datasets
 
 ## What is Cloud Computing?
 
@@ -25,6 +25,15 @@ Cloud computing is the on-demand availability of computing resources (servers, s
 
 Cloud computing is especially advantageous for researchers to share and analyze large data as they do not have to buy and maintain expensive hardware. Cloud computing is also secure and provides better protection for sensitive data than if it were stored in individual researchers' own machines.
 
+## OMOP Common Data Model
+
+Raw data collected from various EHR systems lack standardization that makes analysis challenging. The *All of Us* Research Program harmonizes the data in accordance to the [OMOP CDM](https://ohdsi.github.io/CommonDataModel/index.html) framework in which clinical terms such as medication names, diagnoses, procedures, etc, are mapped to the OMOP standard vocabulary. For example, SNOMED is the standard vocabulary for conditions and RxNorm is the standard vocabulary for drugs. Then, all concepts are assigned an "OMOP Concept ID", which is globally unique across all concept domains, allowing an accurate and efficient query. Refer to this support article for more details: [Understanding OMOP Basics](https://support.researchallofus.org/hc/en-us/articles/360039585391-Understanding-OMOP-Basics)
+
+A good way to look up a concept is [Athena database](https://athena.ohdsi.org). I often use Athena to:
+- obtain the code or concept ID for a term
+- inspect hierarchical relationship of a concept
+- translate between different vocabularies (for example, between ICD-10 and SNOMED)
+
 ## Relational Database
 
 *All of Us* data is organized in so-called "relational database." In a relational database, data is not stored in a single, massive spreadsheet, but rather organized into multiple, specialized tables that are linked together through shared identifiers called "keys." This structure ensures data integrity and efficiency.
@@ -34,7 +43,10 @@ Cloud computing is especially advantageous for researchers to share and analyze 
 
 Structured Query Language (SQL) is a programming language for interacting with relational databases. In *All of Us* context, point-and-click data extraction tools in the Workbench generates SQL queries automatically, which are then pasted to a notebook and run to extract data. Advanced users can write their own SQL queries themselves.
 
-However, knowledge of SQL is not necessary to conduct research projects with *All of Us* and we will not learn it in this workshop. If you are interested, [*All of Us* Support Hub](https://support.researchallofus.org) has helpful articles and videos on how to use manual SQL queries to work with *All of Us* data.
+However, knowledge of SQL is not necessary to conduct research projects with *All of Us* and we will not learn it in this workshop. If you are interested in learning how to use SQL to extract data, check out this support article: [Exploring Concepts with OMOP and SQL](https://support.researchallofus.org/hc/en-us/articles/360039585491-Exploring-Concepts-with-OMOP-and-SQL)
+
+Sometimes, you might want to look up exact data tables and associated column names in *All of Us*. Check on the [Data Dictionary](https://support.researchallofus.org/hc/en-us/articles/360033200232-Data-Dictionaries) which shows you exactly how all the data are organized. It also contains information about suppressed data types.
+
 
 ## Navigating Researcher Workbench
 

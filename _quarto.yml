@@ -12,6 +12,8 @@ website:
     contents:
       - text: "Workshop Information"
         file: index.qmd
+      - text: "Session Zero"
+        file: session-0.qmd
       - section: "Lessons"
         contents:
           - text: "Session 1: Intro to Cloud Computing and AoU Workbench"
