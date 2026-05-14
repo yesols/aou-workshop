@@ -2,6 +2,15 @@
 title: "Additional Resources"
 ---
 
+## All of Us Workbench
+
+- [Support Hub](https://support.researchallofus.org/hc/)
+- [All of Us YouTube Channel](https://www.youtube.com/@AllOfUsResearcherWorkbench)
+
+## Course Supplemental Materials
+- [Analysis Plan Template](resources/analysis_plan_template.docx)
+- [Researcher's Guide to Using the Workbench](resources/guide_legacy_wb.pdf)
+
 ## R Programming and Statistics
 
 - [R for Health Data Science](https://argoshare.is.ed.ac.uk/healthyr_book/)
@@ -30,7 +39,4 @@ title: "Additional Resources"
   - [Survival Analysis in R - The Miller Lab](https://www.themillerlab.io/posts/survival_analysis/)
   - [Introduction to Survival Analysis in R - UCLA](https://stats.oarc.ucla.edu/wp-content/uploads/2025/02/survival_r_full.html)
 
-## All of Us Workbench
 
-- [Support Hub](https://support.researchallofus.org/hc/)
-- [All of Us YouTube Channel](https://www.youtube.com/@AllOfUsResearcherWorkbench)
