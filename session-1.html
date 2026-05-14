@@ -228,7 +228,12 @@ ul.task-list li input[type="checkbox"] {
 <section id="omop-common-data-model" class="level2" data-number="3">
 <h2 data-number="3" class="anchored" data-anchor-id="omop-common-data-model"><span class="header-section-number">3</span> OMOP Common Data Model</h2>
 <p>Raw data collected from various EHR systems lack standardization that makes analysis challenging. The <em>All of Us</em> Research Program harmonizes the data in accordance to the <a href="https://ohdsi.github.io/CommonDataModel/index.html">OMOP CDM</a> framework in which clinical terms such as medication names, diagnoses, procedures, etc, are mapped to the OMOP standard vocabulary. For example, SNOMED is the standard vocabulary for conditions and RxNorm is the standard vocabulary for drugs. Then, all concepts are assigned an “OMOP Concept ID”, which is globally unique across all concept domains, allowing an accurate and efficient query. Refer to this support article for more details: <a href="https://support.researchallofus.org/hc/en-us/articles/360039585391-Understanding-OMOP-Basics">Understanding OMOP Basics</a></p>
-<p>A good way to look up a concept is <a href="https://athena.ohdsi.org">Athena database</a>. I often use Athena to: - obtain the code or concept ID for a term - inspect hierarchical relationship of a concept - translate between different vocabularies (for example, between ICD-10 and SNOMED)</p>
+<p>A good way to look up a concept is <a href="https://athena.ohdsi.org">Athena database</a>. I often use Athena to:</p>
+<ul>
+<li>obtain the code or concept ID for a term</li>
+<li>inspect hierarchical relationship of a concept</li>
+<li>translate between different vocabularies (for example, between ICD-10 and SNOMED)</li>
+</ul>
 </section>
 <section id="relational-database" class="level2" data-number="4">
 <h2 data-number="4" class="anchored" data-anchor-id="relational-database"><span class="header-section-number">4</span> Relational Database</h2>
