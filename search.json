@@ -4,7 +4,27 @@
     "href": "resources.html",
     "title": "Additional Resources",
     "section": "",
-    "text": "R for Health Data Science\n\nR tutorials for medical statistics\n\nR Recipes\n\nQuickly find code snippets by tasks\n\nR Tutorials & Resources\n\nCollection of tutorials by University of Idaho Statistical Programs, CALS",
+    "text": "Support Hub\nAll of Us YouTube Channel",
+    "crumbs": [
+      "Additional Resources"
+    ]
+  },
+  {
+    "objectID": "resources.html#all-of-us-workbench",
+    "href": "resources.html#all-of-us-workbench",
+    "title": "Additional Resources",
+    "section": "",
+    "text": "Support Hub\nAll of Us YouTube Channel",
+    "crumbs": [
+      "Additional Resources"
+    ]
+  },
+  {
+    "objectID": "resources.html#course-supplemental-materials",
+    "href": "resources.html#course-supplemental-materials",
+    "title": "Additional Resources",
+    "section": "Course Supplemental Materials",
+    "text": "Course Supplemental Materials\n\nAnalysis Plan Template\nResearcher’s Guide to Using the Workbench",
     "crumbs": [
       "Additional Resources"
     ]
@@ -13,8 +33,8 @@
     "objectID": "resources.html#r-programming-and-statistics",
     "href": "resources.html#r-programming-and-statistics",
     "title": "Additional Resources",
-    "section": "",
-    "text": "R for Health Data Science\n\nR tutorials for medical statistics\n\nR Recipes\n\nQuickly find code snippets by tasks\n\nR Tutorials & Resources\n\nCollection of tutorials by University of Idaho Statistical Programs, CALS",
+    "section": "R Programming and Statistics",
+    "text": "R Programming and Statistics\n\nR for Health Data Science\n\nR tutorials for medical statistics\n\nR Recipes\n\nQuickly find code snippets by tasks\n\nR Tutorials & Resources\n\nCollection of tutorials by University of Idaho Statistical Programs, CALS",
     "crumbs": [
       "Additional Resources"
     ]
@@ -25,16 +45,6 @@
     "title": "Additional Resources",
     "section": "Useful R Packages",
     "text": "Useful R Packages\n\njanitor\n\nUseful functions for cleaning data\nhas tabyl() function which is particularly useful for cross-tabulation\n\nbroom\n\nUseful functions for displaying model components as a neat dataframe\n\ngtsummary\n\nConvenient package to create publication-ready tables to describe data and more\n\nallofus\n\nProvides convenient functions for working with All of Us data\n\nMatchIt\n\nUseful package for creating matched datasets (can do exact matching or propensity score matching)\nCheck out this very approachable tutorial: Introduction to Propensity Score Matching with MatchIt\n\nsurvival package is widely used for survival analysis including Kaplan-Meier plots and Cox proportional hazards models. Here are a few tutorial pages you can check out:\n\nSurvival Analysis in R - Emily C. Zabor\nSurvival Analysis in R - The Miller Lab\nIntroduction to Survival Analysis in R - UCLA",
-    "crumbs": [
-      "Additional Resources"
-    ]
-  },
-  {
-    "objectID": "resources.html#all-of-us-workbench",
-    "href": "resources.html#all-of-us-workbench",
-    "title": "Additional Resources",
-    "section": "All of Us Workbench",
-    "text": "All of Us Workbench\n\nSupport Hub\nAll of Us YouTube Channel",
     "crumbs": [
       "Additional Resources"
     ]
