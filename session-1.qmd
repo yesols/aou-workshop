@@ -30,6 +30,7 @@ Cloud computing is especially advantageous for researchers to share and analyze 
 Raw data collected from various EHR systems lack standardization that makes analysis challenging. The *All of Us* Research Program harmonizes the data in accordance to the [OMOP CDM](https://ohdsi.github.io/CommonDataModel/index.html) framework in which clinical terms such as medication names, diagnoses, procedures, etc, are mapped to the OMOP standard vocabulary. For example, SNOMED is the standard vocabulary for conditions and RxNorm is the standard vocabulary for drugs. Then, all concepts are assigned an "OMOP Concept ID", which is globally unique across all concept domains, allowing an accurate and efficient query. Refer to this support article for more details: [Understanding OMOP Basics](https://support.researchallofus.org/hc/en-us/articles/360039585391-Understanding-OMOP-Basics)
 
 A good way to look up a concept is [Athena database](https://athena.ohdsi.org). I often use Athena to:
+
 - obtain the code or concept ID for a term
 - inspect hierarchical relationship of a concept
 - translate between different vocabularies (for example, between ICD-10 and SNOMED)
