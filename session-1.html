@@ -176,10 +176,9 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#omop-common-data-model" id="toc-omop-common-data-model" class="nav-link" data-scroll-target="#omop-common-data-model"><span class="header-section-number">3</span> OMOP Common Data Model</a></li>
   <li><a href="#relational-database" id="toc-relational-database" class="nav-link" data-scroll-target="#relational-database"><span class="header-section-number">4</span> Relational Database</a></li>
   <li><a href="#navigating-researcher-workbench" id="toc-navigating-researcher-workbench" class="nav-link" data-scroll-target="#navigating-researcher-workbench"><span class="header-section-number">5</span> Navigating Researcher Workbench</a></li>
-  <li><a href="#starting-analysis-environment" id="toc-starting-analysis-environment" class="nav-link" data-scroll-target="#starting-analysis-environment"><span class="header-section-number">6</span> Starting Analysis Environment</a></li>
-  <li><a href="#workspace-bucket-for-storage" id="toc-workspace-bucket-for-storage" class="nav-link" data-scroll-target="#workspace-bucket-for-storage"><span class="header-section-number">7</span> Workspace Bucket for Storage</a></li>
-  <li><a href="#creating-cohorts-and-datasets" id="toc-creating-cohorts-and-datasets" class="nav-link" data-scroll-target="#creating-cohorts-and-datasets"><span class="header-section-number">8</span> Creating Cohorts and Datasets</a></li>
-  <li><a href="#preparing-for-next-session" id="toc-preparing-for-next-session" class="nav-link" data-scroll-target="#preparing-for-next-session"><span class="header-section-number">9</span> Preparing for Next Session</a></li>
+  <li><a href="#billing" id="toc-billing" class="nav-link" data-scroll-target="#billing"><span class="header-section-number">6</span> Billing</a></li>
+  <li><a href="#using-data-explorer" id="toc-using-data-explorer" class="nav-link" data-scroll-target="#using-data-explorer"><span class="header-section-number">7</span> Using Data Explorer</a></li>
+  <li><a href="#preparing-for-next-session" id="toc-preparing-for-next-session" class="nav-link" data-scroll-target="#preparing-for-next-session"><span class="header-section-number">8</span> Preparing for Next Session</a></li>
   </ul>
 </nav>
     </div>
@@ -245,27 +244,48 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="navigating-researcher-workbench" class="level2" data-number="5">
 <h2 data-number="5" class="anchored" data-anchor-id="navigating-researcher-workbench"><span class="header-section-number">5</span> Navigating Researcher Workbench</h2>
-<p>Demonstration in class.</p>
-</section>
-<section id="starting-analysis-environment" class="level2" data-number="6">
-<h2 data-number="6" class="anchored" data-anchor-id="starting-analysis-environment"><span class="header-section-number">6</span> Starting Analysis Environment</h2>
-<p>Demonstration in class.</p>
-</section>
-<section id="workspace-bucket-for-storage" class="level2" data-number="7">
-<h2 data-number="7" class="anchored" data-anchor-id="workspace-bucket-for-storage"><span class="header-section-number">7</span> Workspace Bucket for Storage</h2>
-<p>There are two file storage options in <em>All of Us</em> Workbench: persistent disk and workspace bucket.</p>
+<p>Demonstration in class:</p>
 <ul>
-<li><p>The persistent disk is a storage space that automatically attaches to the virtual machine. From a user’s standpoint, it acts similarly as a local drive on your computer which. makes it easy to save and retrieve files. However, it comes with an additional monthly cost in order to maintain the storage, and it cannot be shared with your workspace collaborators because it is unique to the individual user.</p></li>
-<li><p>The workspace bucket is a Google Cloud Storage system. Each project workspace you create comes with a workspace bucket that is permanently associated with the workspace. Files in the bucket are accessible to all collaborators in the same project workspace. Unlike the persistent disk, saving and retrieving files to and from the bucket require using specialized system commands (<code>gsutil</code>) rather than direct access.</p></li>
+<li>Legacy Workbench vs.&nbsp;Verily Workbench</li>
+<li>Creating a Workspace
+<ul>
+<li><a href="https://support.researchallofus.org/hc/en-us/articles/30351591538580-Writing-Your-Workspace-Description">Writing Your Workspace Description</a></li>
+</ul></li>
+<li>Types of Resources</li>
+<li>Choosing and configuring an analysis app
+<ul>
+<li><strong>AoU Jupyter</strong>: This is what we want.</li>
+<li>R Analysis Environment for AoU: If you prefer RStudio envrionment, but more expensive.</li>
+<li>JupyterLab Spark Cluster: This is for genomics.</li>
+<li>JupyterLab NVIDIA options: These are for AI applications needing GPU nodes. Very expensive.</li>
+</ul></li>
 </ul>
-<p>In this workshop, we will use the workspace bucket exclusively. You will learn how to manage files in the bucket either using an R package or using <code>gsutil</code> system commands.</p>
 </section>
-<section id="creating-cohorts-and-datasets" class="level2" data-number="8">
-<h2 data-number="8" class="anchored" data-anchor-id="creating-cohorts-and-datasets"><span class="header-section-number">8</span> Creating Cohorts and Datasets</h2>
-<p>Demonstration in class.</p>
+<section id="billing" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="billing"><span class="header-section-number">6</span> Billing</h2>
+<ul>
+<li>Pods</li>
+<li>Initial credits</li>
+<li>What happens when initial credits expire</li>
+<li>3 components:
+<ul>
+<li>Data extraction</li>
+<li>Computation</li>
+<li>Storage</li>
+</ul></li>
+</ul>
 </section>
-<section id="preparing-for-next-session" class="level2" data-number="9">
-<h2 data-number="9" class="anchored" data-anchor-id="preparing-for-next-session"><span class="header-section-number">9</span> Preparing for Next Session</h2>
+<section id="using-data-explorer" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="using-data-explorer"><span class="header-section-number">7</span> Using Data Explorer</h2>
+<p>Demonstration in class:</p>
+<ul>
+<li>Selecting cohorts</li>
+<li>Adding concepts</li>
+<li>Saving data snapshot</li>
+</ul>
+</section>
+<section id="preparing-for-next-session" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="preparing-for-next-session"><span class="header-section-number">8</span> Preparing for Next Session</h2>
 <p>In Session 2, we will learn basic R programming. We will use Posit Cloud, a cloud computing platform for R community. A free account will suffice for our purpose. Go to Posit Cloud: <a href="https://posit.cloud" class="uri">https://posit.cloud</a> and click on <code>Log In</code>. Create a new account or log in with your Gmail account if you have one. Ensure you are able to log in prior to Session 2.</p>
 <p>While not strictly required, some familiarity will help. review this quick <a href="https://yesols.github.io/projects/all-of-us/r/">R intro</a>.</p>
 
