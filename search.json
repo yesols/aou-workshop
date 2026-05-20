@@ -519,11 +519,22 @@
     ]
   },
   {
+    "objectID": "session-1.html#file-management",
+    "href": "session-1.html#file-management",
+    "title": "Introduction to Cloud Computing and All of Us Workbench",
+    "section": "6 File Management",
+    "text": "6 File Management\n\nBucket for storage\nViewing files: “Browse” and GCP\nDeleting files: exercise caution!",
+    "crumbs": [
+      "Lessons",
+      "Session 1: Intro to Cloud Computing and AoU Workbench"
+    ]
+  },
+  {
     "objectID": "session-1.html#billing",
     "href": "session-1.html#billing",
     "title": "Introduction to Cloud Computing and All of Us Workbench",
-    "section": "6 Billing",
-    "text": "6 Billing\n\nPods\nInitial credits\nWhat happens when initial credits expire\n3 components:\n\nData extraction\nComputation\nStorage\n\nMonitoring cost",
+    "section": "7 Billing",
+    "text": "7 Billing\n\nPods\nInitial credits\nWhat happens when initial credits expire\n3 components:\n\nData extraction\nComputation\nStorage\n\nMonitoring cost",
     "crumbs": [
       "Lessons",
       "Session 1: Intro to Cloud Computing and AoU Workbench"
@@ -533,8 +544,8 @@
     "objectID": "session-1.html#using-data-explorer",
     "href": "session-1.html#using-data-explorer",
     "title": "Introduction to Cloud Computing and All of Us Workbench",
-    "section": "7 Using Data Explorer",
-    "text": "7 Using Data Explorer\nDemonstration in class:\n\nSelecting cohorts\nAdding concepts\nSaving data snapshot",
+    "section": "8 Using Data Explorer",
+    "text": "8 Using Data Explorer\nDemonstration in class:\n\nSelecting cohorts\nAdding concepts\nSaving data snapshot",
     "crumbs": [
       "Lessons",
       "Session 1: Intro to Cloud Computing and AoU Workbench"
@@ -544,8 +555,8 @@
     "objectID": "session-1.html#preparing-for-next-session",
     "href": "session-1.html#preparing-for-next-session",
     "title": "Introduction to Cloud Computing and All of Us Workbench",
-    "section": "8 Preparing for Next Session",
-    "text": "8 Preparing for Next Session\nIn Session 2, we will learn basic R programming. We will use Posit Cloud, a cloud computing platform for R community. A free account will suffice for our purpose. Go to Posit Cloud: https://posit.cloud and click on Log In. Create a new account or log in with your Gmail account if you have one. Ensure you are able to log in prior to Session 2.\nWhile not strictly required, some familiarity will help. review this quick R intro.",
+    "section": "9 Preparing for Next Session",
+    "text": "9 Preparing for Next Session\nIn Session 2, we will learn basic R programming. We will use Posit Cloud, a cloud computing platform for R community. A free account will suffice for our purpose. Go to Posit Cloud: https://posit.cloud and click on Log In. Create a new account or log in with your Gmail account if you have one. Ensure you are able to log in prior to Session 2.\nWhile not strictly required, some familiarity will help. review this quick R intro.",
     "crumbs": [
       "Lessons",
       "Session 1: Intro to Cloud Computing and AoU Workbench"
