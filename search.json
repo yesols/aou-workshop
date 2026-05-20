@@ -556,7 +556,7 @@
     "href": "session-1.html#preparing-for-next-session",
     "title": "Introduction to Cloud Computing and All of Us Workbench",
     "section": "9 Preparing for Next Session",
-    "text": "9 Preparing for Next Session\nIn Session 2, we will learn basic R programming. We will use Posit Cloud, a cloud computing platform for R community. A free account will suffice for our purpose. Go to Posit Cloud: https://posit.cloud and click on Log In. Create a new account or log in with your Gmail account if you have one. Ensure you are able to log in prior to Session 2.\nWhile not strictly required, some familiarity will help. review this quick R intro.",
+    "text": "9 Preparing for Next Session\nIn Session 2, we will learn basic R programming. We will use Posit Cloud, a cloud computing platform for R community. A free account will suffice for our purpose. Go to Posit Cloud: https://posit.cloud and click on Log In. Create a new account or log in with your Gmail account if you have one. Ensure you are able to log in prior to Session 2.",
     "crumbs": [
       "Lessons",
       "Session 1: Intro to Cloud Computing and AoU Workbench"
