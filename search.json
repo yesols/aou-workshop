@@ -512,7 +512,7 @@
     "href": "session-1.html#navigating-researcher-workbench",
     "title": "Introduction to Cloud Computing and All of Us Workbench",
     "section": "5 Navigating Researcher Workbench",
-    "text": "5 Navigating Researcher Workbench\nDemonstration in class:\n\nLegacy Workbench vs. Verily Workbench\nCreating a Workspace\n\nWriting Your Workspace Description\n\nTypes of Resources\nChoosing and configuring an analysis app\n\nAoU Jupyter: This is what we want.\nR Analysis Environment for AoU: If you prefer RStudio envrionment, but more expensive.\nJupyterLab Spark Cluster: This is for genomics.\nJupyterLab NVIDIA options: These are for AI applications needing GPU nodes. Very expensive.",
+    "text": "5 Navigating Researcher Workbench\nDemonstration in class:\n\nLegacy Workbench vs. Verily Workbench\nCreating a Workspace\n\nWriting Your Workspace Description\n\nTypes of Resources\nChoosing and configuring an analysis app\n\nAoU Jupyter: This is what we want.\nR Analysis Environment for AoU: For those who prefer RStudio environment.\nJupyterLab Spark Cluster: This is for genomics.\nJupyterLab NVIDIA options: These are GPU-accelerated environment suitable for AI/ML, and very expensive.",
     "crumbs": [
       "Lessons",
       "Session 1: Intro to Cloud Computing and AoU Workbench"
