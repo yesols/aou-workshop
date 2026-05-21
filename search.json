@@ -84,17 +84,7 @@
     "href": "session-0.html#workbench-tips",
     "title": "Session Zero",
     "section": "3 Workbench Tips",
-    "text": "3 Workbench Tips\n\nData User Code of Conduct\n\nDo NOT upload data or files containing personally identifiable information (PII), protected health information (PHI), or identifiable private information (IPI)\nDo NOT take screenshots or attempt in any way to copy, download, or otherwise remove any participant-level data from the All of Us Workbench\nDo NOT publish or otherwise distribute any participant-level data from the All of Us Research Program database\nDo NOT publish or otherwise distribute any data or aggregate statistics corresponding to fewer than 20 participants\n\nRefer to All of Us Data and Statistics Dissemination Policy\n\n\nIf planning on publishing or presenting your result:\n\nPublication and Presentation Checklist\n\nStrategies to keep notebooks and data files organized",
-    "crumbs": [
-      "Session Zero"
-    ]
-  },
-  {
-    "objectID": "session-0.html#creating-a-workspace",
-    "href": "session-0.html#creating-a-workspace",
-    "title": "Session Zero",
-    "section": "4 Creating a Workspace",
-    "text": "4 Creating a Workspace\nCreate a Workspace prior to Session 1. Follow the instruction here or the video posted in the Getting Started page.",
+    "text": "3 Workbench Tips\n\nData User Code of Conduct\n\nDo NOT upload data or files containing personally identifiable information (PII), protected health information (PHI), or identifiable private information (IPI)\nDo NOT take screenshots or attempt in any way to copy, download, or otherwise remove any participant-level data from the All of Us Workbench\nDo NOT publish or otherwise distribute any participant-level data from the All of Us Research Program database\nDo NOT publish or otherwise distribute any data or aggregate statistics corresponding to fewer than 20 participants\n\nRefer to All of Us Data and Statistics Dissemination Policy\n\n\nIf planning on publishing or presenting your result:\n\nPublication and Presentation Checklist",
     "crumbs": [
       "Session Zero"
     ]
@@ -103,8 +93,8 @@
     "objectID": "session-0.html#qa",
     "href": "session-0.html#qa",
     "title": "Session Zero",
-    "section": "5 Q&A",
-    "text": "5 Q&A",
+    "section": "4 Q&A",
+    "text": "4 Q&A",
     "crumbs": [
       "Session Zero"
     ]
@@ -435,7 +425,7 @@
     "href": "session-2.html#running-queries-and-working-with-queried-data",
     "title": "Introduction to R Programming and Data Wrangling",
     "section": "14 Running Queries and Working with Queried Data",
-    "text": "14 Running Queries and Working with Queried Data\nDemonstration in class:\n\nFile organization in the Bucket\nBrowsing and viewing files in the Workbench vs. GCP",
+    "text": "14 Running Queries and Working with Queried Data\nDemonstration in class:\n\nFile organization in the Bucket\nStrategies to keep Notebooks organized\nBrowsing and viewing files in the Workbench vs. GCP",
     "crumbs": [
       "Lessons",
       "Session 2: R Programming and Data Wrangling"
@@ -446,7 +436,7 @@
     "href": "session-2.html#preparing-for-next-session",
     "title": "Introduction to R Programming and Data Wrangling",
     "section": "15 Preparing for Next Session",
-    "text": "15 Preparing for Next Session\nCreate a your own project workspace and at least one data snapshot using Data Explorer prior to Session 3. Follow the instruction here or the video posted in the Getting Started page.\nTry running the queries, inspect and clean up your dataframes as demonstrated in class.",
+    "text": "15 Preparing for Next Session\nCreate your own project workspace and at least one data snapshot using Data Explorer prior to Session 3. Follow the instruction here or the video posted in the Getting Started page.\nTry running the queries, inspect and clean up your dataframes as demonstrated in class.",
     "crumbs": [
       "Lessons",
       "Session 2: R Programming and Data Wrangling"
