@@ -420,22 +420,22 @@
     ]
   },
   {
-    "objectID": "session-2.html#running-queries-and-working-with-queried-data",
-    "href": "session-2.html#running-queries-and-working-with-queried-data",
+    "objectID": "session-2.html#navigating-researcher-workbench-continued",
+    "href": "session-2.html#navigating-researcher-workbench-continued",
     "title": "Introduction to R Programming and Data Wrangling",
-    "section": "13 Running Queries and Working with Queried Data",
-    "text": "13 Running Queries and Working with Queried Data\nDemonstration in class.",
+    "section": "13 Navigating Researcher Workbench Continued",
+    "text": "13 Navigating Researcher Workbench Continued\nDemonstration in class:\n\nChoosing and configuring an analysis app\n\nAoU Jupyter: This is what we want.\nR Analysis Environment for AoU: For those who prefer RStudio environment.\nJupyterLab Spark Cluster: This is for genomics.\nJupyterLab NVIDIA options: These are GPU-accelerated environment suitable for AI/ML, and very expensive.",
     "crumbs": [
       "Lessons",
       "Session 2: R Programming and Data Wrangling"
     ]
   },
   {
-    "objectID": "session-2.html#saving-to-and-reading-from-workspace-bucket",
-    "href": "session-2.html#saving-to-and-reading-from-workspace-bucket",
+    "objectID": "session-2.html#running-queries-and-working-with-queried-data",
+    "href": "session-2.html#running-queries-and-working-with-queried-data",
     "title": "Introduction to R Programming and Data Wrangling",
-    "section": "14 Saving to and Reading from Workspace Bucket",
-    "text": "14 Saving to and Reading from Workspace Bucket\nIn All of Us Workbench, running the code like write_csv(combined_df, \"cleaned_dataset.csv\") will create a CSV file in your current working directory. For permanent and secure storage, we need to copy the file to the Workspace Bucket. Below code is what it looks like when you save a file to the bucket.\n\n\n\n\n\n\nWarning\n\n\n\nDo not run these code blocks in Posit Cloud or local RStudio. It will only work within the All of Us Workbench.\n\n\n\n# Retrieve the environment variable for the bucket path\nmy_bucket &lt;- Sys.getenv(\"WORKSPACE_BUCKET\")\n# Save the file to a \"data\" directory in the workspace bucket\nsystem(paste0(\"gsutil cp cleaned_dataset.csv \", my_bucket, \"/data/\"))\n\nIn the second line of the code above, paste0() function constructs a string of characters with given arguments. It creates a system command with gsutil, a command that allows us to interact with the bucket. cp is a system command that means “copy”. Then, the constructed system command is passed to the function, system(), which is used to invoke operating system commands directly from the R console.\nConversely, when you want to read a file from the bucket, you will do something like this:\n\n# Copy the file in the bucket to the current working directory\nsystem(paste0(\"gsutil cp \", my_bucket, \"/data/cleaned_dataset.csv .\"))\n# Read the csv file as a dataframe\ndf &lt;- read_csv(\"cleaned_dataset.csv\")",
+    "section": "14 Running Queries and Working with Queried Data",
+    "text": "14 Running Queries and Working with Queried Data\nDemonstration in class:\n\nFile organization in the Bucket\nBrowsing and viewing files in the Workbench vs. GCP",
     "crumbs": [
       "Lessons",
       "Session 2: R Programming and Data Wrangling"
@@ -446,7 +446,7 @@
     "href": "session-2.html#preparing-for-next-session",
     "title": "Introduction to R Programming and Data Wrangling",
     "section": "15 Preparing for Next Session",
-    "text": "15 Preparing for Next Session\nBefore the next session, apply what you learned today to your All of Us datasets to clean and construct an analysis-ready dataset. Make a note of any issues. We will begin with a brief Q & A next time.",
+    "text": "15 Preparing for Next Session\nCreate a your own project workspace and at least one data snapshot using Data Explorer prior to Session 3. Follow the instruction here or the video posted in the Getting Started page.\nTry running the queries, inspect and clean up your dataframes as demonstrated in class.",
     "crumbs": [
       "Lessons",
       "Session 2: R Programming and Data Wrangling"
@@ -512,7 +512,7 @@
     "href": "session-1.html#navigating-researcher-workbench",
     "title": "Introduction to Cloud Computing and All of Us Workbench",
     "section": "5 Navigating Researcher Workbench",
-    "text": "5 Navigating Researcher Workbench\nDemonstration in class:\n\nLegacy Workbench vs. Verily Workbench\nCreating a Workspace\n\nWriting Your Workspace Description\n\nTypes of Resources\nChoosing and configuring an analysis app\n\nAoU Jupyter: This is what we want.\nR Analysis Environment for AoU: For those who prefer RStudio environment.\nJupyterLab Spark Cluster: This is for genomics.\nJupyterLab NVIDIA options: These are GPU-accelerated environment suitable for AI/ML, and very expensive.",
+    "text": "5 Navigating Researcher Workbench\nDemonstration in class:\n\nLegacy Workbench vs. Verily Workbench\nCreating a Workspace\n\nWriting Your Workspace Description\n\nTypes of Resources",
     "crumbs": [
       "Lessons",
       "Session 1: Intro to Cloud Computing and AoU Workbench"
@@ -523,7 +523,7 @@
     "href": "session-1.html#file-management",
     "title": "Introduction to Cloud Computing and All of Us Workbench",
     "section": "6 File Management",
-    "text": "6 File Management\n\nBucket for storage\nViewing files: “Browse” and GCP\nPreview mode for notebooks\nDeleting files: exercise caution!",
+    "text": "6 File Management\n\nBucket for storage\nDeleting files: exercise caution!",
     "crumbs": [
       "Lessons",
       "Session 1: Intro to Cloud Computing and AoU Workbench"

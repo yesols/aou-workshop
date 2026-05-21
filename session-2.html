@@ -236,8 +236,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#selecting-earliest-occurrence" id="toc-selecting-earliest-occurrence" class="nav-link" data-scroll-target="#selecting-earliest-occurrence"><span class="header-section-number">10</span> Selecting Earliest Occurrence</a></li>
   <li><a href="#merging-demographics-with-clinical-data" id="toc-merging-demographics-with-clinical-data" class="nav-link" data-scroll-target="#merging-demographics-with-clinical-data"><span class="header-section-number">11</span> Merging Demographics with Clinical Data</a></li>
   <li><a href="#writing-and-saving-files" id="toc-writing-and-saving-files" class="nav-link" data-scroll-target="#writing-and-saving-files"><span class="header-section-number">12</span> Writing and Saving Files</a></li>
-  <li><a href="#running-queries-and-working-with-queried-data" id="toc-running-queries-and-working-with-queried-data" class="nav-link" data-scroll-target="#running-queries-and-working-with-queried-data"><span class="header-section-number">13</span> Running Queries and Working with Queried Data</a></li>
-  <li><a href="#saving-to-and-reading-from-workspace-bucket" id="toc-saving-to-and-reading-from-workspace-bucket" class="nav-link" data-scroll-target="#saving-to-and-reading-from-workspace-bucket"><span class="header-section-number">14</span> Saving to and Reading from Workspace Bucket</a></li>
+  <li><a href="#navigating-researcher-workbench-continued" id="toc-navigating-researcher-workbench-continued" class="nav-link" data-scroll-target="#navigating-researcher-workbench-continued"><span class="header-section-number">13</span> Navigating Researcher Workbench Continued</a></li>
+  <li><a href="#running-queries-and-working-with-queried-data" id="toc-running-queries-and-working-with-queried-data" class="nav-link" data-scroll-target="#running-queries-and-working-with-queried-data"><span class="header-section-number">14</span> Running Queries and Working with Queried Data</a></li>
   <li><a href="#preparing-for-next-session" id="toc-preparing-for-next-session" class="nav-link" data-scroll-target="#preparing-for-next-session"><span class="header-section-number">15</span> Preparing for Next Session</a></li>
   </ul>
 </nav>
@@ -872,44 +872,31 @@ Note
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb79"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb79-1"><a href="#cb79-1" aria-hidden="true" tabindex="-1"></a><span class="fu">write_csv</span>(combined_df, <span class="st">"cleaned_dataset.csv"</span>)  <span class="co"># file path will be different</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="running-queries-and-working-with-queried-data" class="level2" data-number="13">
-<h2 data-number="13" class="anchored" data-anchor-id="running-queries-and-working-with-queried-data"><span class="header-section-number">13</span> Running Queries and Working with Queried Data</h2>
-<p>Demonstration in class.</p>
+<section id="navigating-researcher-workbench-continued" class="level2" data-number="13">
+<h2 data-number="13" class="anchored" data-anchor-id="navigating-researcher-workbench-continued"><span class="header-section-number">13</span> Navigating Researcher Workbench Continued</h2>
+<p>Demonstration in class:</p>
+<ul>
+<li>Choosing and configuring an analysis app
+<ul>
+<li><strong>AoU Jupyter</strong>: This is what we want.</li>
+<li>R Analysis Environment for AoU: For those who prefer RStudio environment.</li>
+<li>JupyterLab Spark Cluster: This is for genomics.</li>
+<li>JupyterLab NVIDIA options: These are GPU-accelerated environment suitable for AI/ML, and very expensive.</li>
+</ul></li>
+</ul>
 </section>
-<section id="saving-to-and-reading-from-workspace-bucket" class="level2" data-number="14">
-<h2 data-number="14" class="anchored" data-anchor-id="saving-to-and-reading-from-workspace-bucket"><span class="header-section-number">14</span> Saving to and Reading from Workspace Bucket</h2>
-<p>In <em>All of Us</em> Workbench, running the code like <code>write_csv(combined_df, "cleaned_dataset.csv")</code> will create a CSV file in your current working directory. For permanent and secure storage, we need to copy the file to the Workspace Bucket. Below code is what it looks like when you save a file to the bucket.</p>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Warning
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Do not run these code blocks in Posit Cloud or local RStudio. It will only work within the <em>All of Us</em> Workbench.</p>
-</div>
-</div>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb80"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb80-1"><a href="#cb80-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Retrieve the environment variable for the bucket path</span></span>
-<span id="cb80-2"><a href="#cb80-2" aria-hidden="true" tabindex="-1"></a>my_bucket <span class="ot">&lt;-</span> <span class="fu">Sys.getenv</span>(<span class="st">"WORKSPACE_BUCKET"</span>)</span>
-<span id="cb80-3"><a href="#cb80-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Save the file to a "data" directory in the workspace bucket</span></span>
-<span id="cb80-4"><a href="#cb80-4" aria-hidden="true" tabindex="-1"></a><span class="fu">system</span>(<span class="fu">paste0</span>(<span class="st">"gsutil cp cleaned_dataset.csv "</span>, my_bucket, <span class="st">"/data/"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<p>In the second line of the code above, <code>paste0()</code> function constructs a string of characters with given arguments. It creates a system command with <code>gsutil</code>, a command that allows us to interact with the bucket. <code>cp</code> is a system command that means “copy”. Then, the constructed system command is passed to the function, <code>system()</code>, which is used to invoke operating system commands directly from the R console.</p>
-<p>Conversely, when you want to read a file from the bucket, you will do something like this:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb81"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb81-1"><a href="#cb81-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Copy the file in the bucket to the current working directory</span></span>
-<span id="cb81-2"><a href="#cb81-2" aria-hidden="true" tabindex="-1"></a><span class="fu">system</span>(<span class="fu">paste0</span>(<span class="st">"gsutil cp "</span>, my_bucket, <span class="st">"/data/cleaned_dataset.csv ."</span>))</span>
-<span id="cb81-3"><a href="#cb81-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Read the csv file as a dataframe</span></span>
-<span id="cb81-4"><a href="#cb81-4" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"cleaned_dataset.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
+<section id="running-queries-and-working-with-queried-data" class="level2" data-number="14">
+<h2 data-number="14" class="anchored" data-anchor-id="running-queries-and-working-with-queried-data"><span class="header-section-number">14</span> Running Queries and Working with Queried Data</h2>
+<p>Demonstration in class:</p>
+<ul>
+<li>File organization in the Bucket</li>
+<li>Browsing and viewing files in the Workbench vs.&nbsp;GCP</li>
+</ul>
 </section>
 <section id="preparing-for-next-session" class="level2" data-number="15">
 <h2 data-number="15" class="anchored" data-anchor-id="preparing-for-next-session"><span class="header-section-number">15</span> Preparing for Next Session</h2>
-<p>Before the next session, apply what you learned today to your <em>All of Us</em> datasets to clean and construct an analysis-ready dataset. Make a note of any issues. We will begin with a brief Q &amp; A next time.</p>
+<p>Create a your own project workspace and at least one data snapshot using Data Explorer prior to Session 3. Follow the instruction <a href="https://support.researchallofus.org/hc/en-us/articles/41981050556564-Getting-Started-in-new-Researcher-Workbench-2-0">here</a> or the video posted in the <a href="https://yesols.github.io/projects/all-of-us/">Getting Started page</a>.</p>
+<p>Try running the queries, inspect and clean up your dataframes as demonstrated in class.</p>
 
 
 </section>
