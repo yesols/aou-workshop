@@ -281,7 +281,7 @@
     "href": "session-2.html",
     "title": "Introduction to R Programming and Data Wrangling",
     "section": "",
-    "text": "Session 2 will focus on learning the basics of R programming. We will first work with synthetic data to practice common R functions and syntax, followed by logging into All of Us Workbench and running the queries we set up last time.\nUnless indicated otherwise, we will practic R on Posit Cloud.\nAt the end of Session 2, learners will be able to:\n\nManipulate different types of data types in R.\nRead in CSV files as a dataframe and save dataframes as CSV files.\nRun auto-generated queries and obtain data.\nInspect and clean up data.",
+    "text": "Session 2 will focus on learning the basics of R programming. We will first work with synthetic data to practice common R functions and syntax, followed by logging into All of Us Workbench and running the queries we set up last time.\nUnless indicated otherwise, we will practice R on Google Colab.\nAt the end of Session 2, learners will be able to:\n\nManipulate different types of data types in R.\nRead in CSV files as a dataframe and save dataframes as CSV files.\nRun auto-generated queries and obtain data.\nInspect and clean up data.",
     "crumbs": [
       "Lessons",
       "Session 2: R Programming and Data Wrangling"
@@ -292,7 +292,7 @@
     "href": "session-2.html#learning-objectives",
     "title": "Introduction to R Programming and Data Wrangling",
     "section": "",
-    "text": "Session 2 will focus on learning the basics of R programming. We will first work with synthetic data to practice common R functions and syntax, followed by logging into All of Us Workbench and running the queries we set up last time.\nUnless indicated otherwise, we will practic R on Posit Cloud.\nAt the end of Session 2, learners will be able to:\n\nManipulate different types of data types in R.\nRead in CSV files as a dataframe and save dataframes as CSV files.\nRun auto-generated queries and obtain data.\nInspect and clean up data.",
+    "text": "Session 2 will focus on learning the basics of R programming. We will first work with synthetic data to practice common R functions and syntax, followed by logging into All of Us Workbench and running the queries we set up last time.\nUnless indicated otherwise, we will practice R on Google Colab.\nAt the end of Session 2, learners will be able to:\n\nManipulate different types of data types in R.\nRead in CSV files as a dataframe and save dataframes as CSV files.\nRun auto-generated queries and obtain data.\nInspect and clean up data.",
     "crumbs": [
       "Lessons",
       "Session 2: R Programming and Data Wrangling"
@@ -523,7 +523,7 @@
     "href": "session-1.html#file-management",
     "title": "Introduction to Cloud Computing and All of Us Workbench",
     "section": "6 File Management",
-    "text": "6 File Management\n\nBucket for storage\nViewing files: “Browse” and GCP\nDeleting files: exercise caution!",
+    "text": "6 File Management\n\nBucket for storage\nViewing files: “Browse” and GCP\nPreview mode for notebooks\nDeleting files: exercise caution!",
     "crumbs": [
       "Lessons",
       "Session 1: Intro to Cloud Computing and AoU Workbench"
@@ -556,7 +556,7 @@
     "href": "session-1.html#preparing-for-next-session",
     "title": "Introduction to Cloud Computing and All of Us Workbench",
     "section": "9 Preparing for Next Session",
-    "text": "9 Preparing for Next Session\nIn Session 2, we will learn basic R programming. We will use Posit Cloud, a cloud computing platform for R community. A free account will suffice for our purpose. Go to Posit Cloud: https://posit.cloud and click on Log In. Create a new account or log in with your Gmail account if you have one. Ensure you are able to log in prior to Session 2.",
+    "text": "9 Preparing for Next Session\nIn Session 2, we will learn basic R programming. We will use Google Colab, a cloud-based Jupyter environment. This way, you do not have to deal with installations on your own machine and can start coding right away from a browser window.",
     "crumbs": [
       "Lessons",
       "Session 1: Intro to Cloud Computing and AoU Workbench"
