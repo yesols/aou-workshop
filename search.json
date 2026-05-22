@@ -436,7 +436,7 @@
     "href": "session-2.html#preparing-for-next-session",
     "title": "Introduction to R Programming and Data Wrangling",
     "section": "15 Preparing for Next Session",
-    "text": "15 Preparing for Next Session\nCreate your own project workspace and at least one data snapshot using Data Explorer prior to Session 3. Follow the instruction here or the video posted in the Getting Started page.\nTry running the queries, inspect and clean up your dataframes as demonstrated in class.",
+    "text": "15 Preparing for Next Session\nCreate your own project workspace and at least one data snapshot using Data Explorer prior to Session 3. Follow the instruction here or the video posted in the Getting Started page.",
     "crumbs": [
       "Lessons",
       "Session 2: R Programming and Data Wrangling"
