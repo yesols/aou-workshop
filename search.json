@@ -271,7 +271,7 @@
     "href": "session-2.html",
     "title": "Introduction to R Programming and Data Wrangling",
     "section": "",
-    "text": "Session 2 will focus on learning the basics of R programming. We will first work with synthetic data to practice common R functions and syntax, followed by logging into All of Us Workbench and running the queries we set up last time.\nUnless indicated otherwise, we will practice R on Google Colab.\nAt the end of Session 2, learners will be able to:\n\nManipulate different types of data types in R.\nRead in CSV files as a dataframe and save dataframes as CSV files.\nRun auto-generated queries and obtain data.\nInspect and clean up data.",
+    "text": "Session 2 will focus on learning the basics of R programming. We will first work with synthetic data to practice common R functions and syntax, followed by demonstration of running queries in the All of Us Workbench.\nUnless indicated otherwise, we will practice R on Google Colab. When you start a new Colab notebook, it defaults to python. Change to R by clicking Runtime &gt; Change runtime type and select R from the dropdown menu. Click Save. Click Connect in the top right corner to start coding.\nAt the end of Session 2, learners will be able to:\n\nManipulate different types of data types in R.\nRead in CSV files as a dataframe and save dataframes as CSV files.\nRun auto-generated queries and obtain data.\nInspect and clean up data.",
     "crumbs": [
       "Lessons",
       "Session 2: R Programming and Data Wrangling"
@@ -282,7 +282,7 @@
     "href": "session-2.html#learning-objectives",
     "title": "Introduction to R Programming and Data Wrangling",
     "section": "",
-    "text": "Session 2 will focus on learning the basics of R programming. We will first work with synthetic data to practice common R functions and syntax, followed by logging into All of Us Workbench and running the queries we set up last time.\nUnless indicated otherwise, we will practice R on Google Colab.\nAt the end of Session 2, learners will be able to:\n\nManipulate different types of data types in R.\nRead in CSV files as a dataframe and save dataframes as CSV files.\nRun auto-generated queries and obtain data.\nInspect and clean up data.",
+    "text": "Session 2 will focus on learning the basics of R programming. We will first work with synthetic data to practice common R functions and syntax, followed by demonstration of running queries in the All of Us Workbench.\nUnless indicated otherwise, we will practice R on Google Colab. When you start a new Colab notebook, it defaults to python. Change to R by clicking Runtime &gt; Change runtime type and select R from the dropdown menu. Click Save. Click Connect in the top right corner to start coding.\nAt the end of Session 2, learners will be able to:\n\nManipulate different types of data types in R.\nRead in CSV files as a dataframe and save dataframes as CSV files.\nRun auto-generated queries and obtain data.\nInspect and clean up data.",
     "crumbs": [
       "Lessons",
       "Session 2: R Programming and Data Wrangling"
