@@ -231,14 +231,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#mutate" id="toc-mutate" class="nav-link" data-scroll-target="#mutate"><span class="header-section-number">6.4</span> Mutate</a></li>
   </ul></li>
   <li><a href="#missing-values" id="toc-missing-values" class="nav-link" data-scroll-target="#missing-values"><span class="header-section-number">7</span> Missing Values</a></li>
-  <li><a href="#reading-files" id="toc-reading-files" class="nav-link" data-scroll-target="#reading-files"><span class="header-section-number">8</span> Reading Files</a></li>
-  <li><a href="#recoding-values" id="toc-recoding-values" class="nav-link" data-scroll-target="#recoding-values"><span class="header-section-number">9</span> Recoding Values</a></li>
-  <li><a href="#selecting-earliest-occurrence" id="toc-selecting-earliest-occurrence" class="nav-link" data-scroll-target="#selecting-earliest-occurrence"><span class="header-section-number">10</span> Selecting Earliest Occurrence</a></li>
-  <li><a href="#merging-demographics-with-clinical-data" id="toc-merging-demographics-with-clinical-data" class="nav-link" data-scroll-target="#merging-demographics-with-clinical-data"><span class="header-section-number">11</span> Merging Demographics with Clinical Data</a></li>
-  <li><a href="#writing-and-saving-files" id="toc-writing-and-saving-files" class="nav-link" data-scroll-target="#writing-and-saving-files"><span class="header-section-number">12</span> Writing and Saving Files</a></li>
-  <li><a href="#navigating-researcher-workbench-continued" id="toc-navigating-researcher-workbench-continued" class="nav-link" data-scroll-target="#navigating-researcher-workbench-continued"><span class="header-section-number">13</span> Navigating Researcher Workbench Continued</a></li>
-  <li><a href="#running-queries-and-working-with-queried-data" id="toc-running-queries-and-working-with-queried-data" class="nav-link" data-scroll-target="#running-queries-and-working-with-queried-data"><span class="header-section-number">14</span> Running Queries and Working with Queried Data</a></li>
-  <li><a href="#preparing-for-next-session" id="toc-preparing-for-next-session" class="nav-link" data-scroll-target="#preparing-for-next-session"><span class="header-section-number">15</span> Preparing for Next Session</a></li>
+  <li><a href="#navigating-researcher-workbench-continued" id="toc-navigating-researcher-workbench-continued" class="nav-link" data-scroll-target="#navigating-researcher-workbench-continued"><span class="header-section-number">8</span> Navigating Researcher Workbench Continued</a></li>
+  <li><a href="#running-queries-and-working-with-queried-data" id="toc-running-queries-and-working-with-queried-data" class="nav-link" data-scroll-target="#running-queries-and-working-with-queried-data"><span class="header-section-number">9</span> Running Queries and Working with Queried Data</a></li>
+  <li><a href="#preparing-for-next-session" id="toc-preparing-for-next-session" class="nav-link" data-scroll-target="#preparing-for-next-session"><span class="header-section-number">10</span> Preparing for Next Session</a></li>
   </ul>
 </nav>
     </div>
@@ -270,10 +265,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Unless indicated otherwise, we will practice R on <a href="https://colab.research.google.com">Google Colab</a>. When you start a new Colab notebook, it defaults to python. Change to R by clicking <strong>Runtime &gt; Change runtime type</strong> and select R from the dropdown menu. Click <strong>Save</strong>. Click <strong>Connect</strong> in the top right corner to start coding.</p>
 <p>At the end of Session 2, learners will be able to:</p>
 <ol type="1">
-<li>Manipulate different types of data types in R.</li>
-<li>Read in CSV files as a dataframe and save dataframes as CSV files.</li>
-<li>Run auto-generated queries and obtain data.</li>
-<li>Inspect and clean up data.</li>
+<li>Understand different types of data types and structures in R.</li>
+<li>Inspect and manipulate dataframes.</li>
+<li>Familiarize with Data Explorer and app configurations in the Workbench.</li>
 </ol>
 </section>
 <section id="preliminaries" class="level2" data-number="2">
@@ -722,176 +716,8 @@ Warning
 </div>
 <p>If the variable is critical and you want to keep all the rows, you can look into advanced statistical methods called “imputation” which fills in missing values.</p>
 </section>
-<section id="reading-files" class="level2" data-number="8">
-<h2 data-number="8" class="anchored" data-anchor-id="reading-files"><span class="header-section-number">8</span> Reading Files</h2>
-<p>In programming, plain-text files are preferred over application-dependent file formats such as Word or Excel files. Comma-separated values (CSV) format is a popular file format for tabular data. We use this file type extensively to work with <em>All of Us</em> data.</p>
-<p>We use <code>read_csv()</code> function to read CSV files into dataframes so we can work with them. Typically, we put the file path inside the function, which will look like <code>read_csv("file.csv")</code> or <code>read_csv("directory/file.csv")</code>. For this practice, I placed practice files on the web so that they can be directly read via file URLs. Copy/paste and run the following code to obtain the data:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb68"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
-<span id="cb68-2"><a href="#cb68-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-3"><a href="#cb68-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Read directly from public URLs</span></span>
-<span id="cb68-4"><a href="#cb68-4" aria-hidden="true" tabindex="-1"></a>person_df <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://raw.githubusercontent.com/yesols/aou-workshop/refs/heads/main/data/demographic_data.csv"</span>)</span>
-<span id="cb68-5"><a href="#cb68-5" aria-hidden="true" tabindex="-1"></a>condition_df <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://raw.githubusercontent.com/yesols/aou-workshop/refs/heads/main/data/conditions.csv"</span>)</span>
-<span id="cb68-6"><a href="#cb68-6" aria-hidden="true" tabindex="-1"></a>drug_df <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://raw.githubusercontent.com/yesols/aou-workshop/refs/heads/main/data/drug_exposures.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>The data in these files are randomly generated and completely fake, but designed to resemble <em>All of Us</em> data although much simplified.</p>
-</div>
-</div>
-<p>Now, try the commands, <code>dim()</code>, <code>head()</code>, <code>tail()</code>, <code>str()</code>, etc, to inspect the these three dataframes.</p>
-<p>In subsequent sections, we will learn how to clean up data and merge these three dataframes. Ultimately, we will analyze the dataset to investigate association between anticholinergic medications and dementia.</p>
-</section>
-<section id="recoding-values" class="level2" data-number="9">
-<h2 data-number="9" class="anchored" data-anchor-id="recoding-values"><span class="header-section-number">9</span> Recoding Values</h2>
-<p>Sometimes we have to recode values in categorical variables. For example, race in <em>All of Us</em> often have categories you might want to collapse into one. Let’s take a look at our example data.</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb69"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Inspect the first few lines of the demographics data</span></span>
-<span id="cb69-2"><a href="#cb69-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(person_df)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 6 × 4
-  person_id year_of_birth race                      sex_at_birth
-      &lt;dbl&gt;         &lt;dbl&gt; &lt;chr&gt;                     &lt;chr&gt;       
-1         1          1987 Skip                      Male        
-2         2          1987 Asian                     Female      
-3         3          2004 Asian                     Male        
-4         4          1944 Black or African American Male        
-5         5          1941 Asian                     Male        
-6         6          2006 More than one population  Male        </code></pre>
-</div>
-</div>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb71"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb71-1"><a href="#cb71-1" aria-hidden="true" tabindex="-1"></a>person_df <span class="sc">%&gt;%</span> <span class="fu">count</span>(race) <span class="co"># Count the values in race column</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 7 × 2
-  race                          n
-  &lt;chr&gt;                     &lt;int&gt;
-1 Asian                        20
-2 Black or African American    23
-3 More than one population      6
-4 None of these                 5
-5 Other                         4
-6 Skip                          4
-7 White                        38</code></pre>
-</div>
-</div>
-<p>“More than one population” and “None of these” can be recoded as “Other”. We could also change “Skip” to “Unknown” and “Black or African American” to “Black” for simplicity. We can use <code>recode_values()</code> if we are changing all values or <code>replace_values()</code> if just updating some of the values. In our case, we just want to tweak some of the categories, so we’ll use <code>replace_values()</code>.</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb73"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb73-1"><a href="#cb73-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Recode race category</span></span>
-<span id="cb73-2"><a href="#cb73-2" aria-hidden="true" tabindex="-1"></a>person_df <span class="ot">&lt;-</span> person_df <span class="sc">%&gt;%</span></span>
-<span id="cb73-3"><a href="#cb73-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb73-4"><a href="#cb73-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">race =</span> <span class="fu">replace_values</span>(</span>
-<span id="cb73-5"><a href="#cb73-5" aria-hidden="true" tabindex="-1"></a>      race,</span>
-<span id="cb73-6"><a href="#cb73-6" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Black or African American"</span> <span class="sc">~</span> <span class="st">"Black"</span>,</span>
-<span id="cb73-7"><a href="#cb73-7" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Skip"</span> <span class="sc">~</span> <span class="st">"Unknown"</span>,</span>
-<span id="cb73-8"><a href="#cb73-8" aria-hidden="true" tabindex="-1"></a>      <span class="fu">c</span>(<span class="st">"More than one population"</span>, <span class="st">"None of these"</span>) <span class="sc">~</span> <span class="st">"Other"</span></span>
-<span id="cb73-9"><a href="#cb73-9" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb73-10"><a href="#cb73-10" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<p>Check the counts again to make sure it worked. This is a good practice to also ensure NAs were not introduced as a result of a coding mistake.</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb74"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb74-1"><a href="#cb74-1" aria-hidden="true" tabindex="-1"></a>person_df <span class="sc">%&gt;%</span> <span class="fu">count</span>(race)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 5 × 2
-  race        n
-  &lt;chr&gt;   &lt;int&gt;
-1 Asian      20
-2 Black      23
-3 Other      15
-4 Unknown     4
-5 White      38</code></pre>
-</div>
-</div>
-<p>Similarly, we’ll also clean up sex_at_birth categories. We will change anything other than “Female” or “Male” to “Other”.</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb76"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb76-1"><a href="#cb76-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Recode sex_at_birth</span></span>
-<span id="cb76-2"><a href="#cb76-2" aria-hidden="true" tabindex="-1"></a>person_df <span class="ot">&lt;-</span> person_df <span class="sc">%&gt;%</span></span>
-<span id="cb76-3"><a href="#cb76-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb76-4"><a href="#cb76-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">sex_at_birth =</span> <span class="fu">replace_values</span>(</span>
-<span id="cb76-5"><a href="#cb76-5" aria-hidden="true" tabindex="-1"></a>      sex_at_birth,</span>
-<span id="cb76-6"><a href="#cb76-6" aria-hidden="true" tabindex="-1"></a>      <span class="fu">c</span>(<span class="st">"Intersex"</span>, <span class="st">"Prefer not to answer"</span>, <span class="st">"Skip"</span>) <span class="sc">~</span> <span class="st">"Other"</span></span>
-<span id="cb76-7"><a href="#cb76-7" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb76-8"><a href="#cb76-8" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<p>Check the result:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb77"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb77-1"><a href="#cb77-1" aria-hidden="true" tabindex="-1"></a>person_df <span class="sc">%&gt;%</span> <span class="fu">count</span>(sex_at_birth)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 3 × 2
-  sex_at_birth     n
-  &lt;chr&gt;        &lt;int&gt;
-1 Female          44
-2 Male            48
-3 Other            8</code></pre>
-</div>
-</div>
-</section>
-<section id="selecting-earliest-occurrence" class="level2" data-number="10">
-<h2 data-number="10" class="anchored" data-anchor-id="selecting-earliest-occurrence"><span class="header-section-number">10</span> Selecting Earliest Occurrence</h2>
-<p>When you extract conditions, drug exposures, or lab measurements data in <em>All of Us</em>, there are multiple entries per person. In our practice data, we will pick the earliest occurrence of the condition and the earliest occurrence of drug exposure. <code>slice()</code> and its variations, <code>slice_head()</code>, <code>slice_sample()</code>, “slice_min()<code>, "slice_max()</code> are useful for subsetting a dataframe in a variety of ways. We will use <code>slice_min()</code> to pick the earliest date for each person. <code>group_by()</code> function allows us to perform <code>slice_min()</code> on grouped rows by <code>person_id</code> rather than globally.</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb79"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb79-1"><a href="#cb79-1" aria-hidden="true" tabindex="-1"></a>earliest_condition <span class="ot">&lt;-</span> condition_df <span class="sc">%&gt;%</span></span>
-<span id="cb79-2"><a href="#cb79-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(person_id) <span class="sc">%&gt;%</span>               <span class="co"># group rows by person_id</span></span>
-<span id="cb79-3"><a href="#cb79-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice_min</span>(                            </span>
-<span id="cb79-4"><a href="#cb79-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">order_by =</span> condition_start_date,    <span class="co"># specify which column to evaluate</span></span>
-<span id="cb79-5"><a href="#cb79-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">n =</span> <span class="dv">1</span>,                              <span class="co"># pick one row</span></span>
-<span id="cb79-6"><a href="#cb79-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">with_ties =</span> <span class="cn">FALSE</span>                   <span class="co"># keep only one in case of ties</span></span>
-<span id="cb79-7"><a href="#cb79-7" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
-<span id="cb79-8"><a href="#cb79-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<p>We do the same for drug dataframe:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb80"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb80-1"><a href="#cb80-1" aria-hidden="true" tabindex="-1"></a>earliest_drug <span class="ot">&lt;-</span> drug_df <span class="sc">%&gt;%</span></span>
-<span id="cb80-2"><a href="#cb80-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(person_id) <span class="sc">%&gt;%</span></span>
-<span id="cb80-3"><a href="#cb80-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice_min</span>(</span>
-<span id="cb80-4"><a href="#cb80-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">order_by =</span> drug_exposure_start_date, </span>
-<span id="cb80-5"><a href="#cb80-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">n =</span> <span class="dv">1</span>, </span>
-<span id="cb80-6"><a href="#cb80-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">with_ties =</span> <span class="cn">FALSE</span></span>
-<span id="cb80-7"><a href="#cb80-7" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
-<span id="cb80-8"><a href="#cb80-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</section>
-<section id="merging-demographics-with-clinical-data" class="level2" data-number="11">
-<h2 data-number="11" class="anchored" data-anchor-id="merging-demographics-with-clinical-data"><span class="header-section-number">11</span> Merging Demographics with Clinical Data</h2>
-<p>When you extract <em>All of Us</em> data with auto-generated queries, you will have separate dataframes for “person”, “conditions”, “drug exposures”, etc, and you must combine them for analysis. We will use <code>left_join()</code> that we learned earlier to merge <code>condition_df</code> and <code>drug_df</code> to <code>person_df</code>.</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb81"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb81-1"><a href="#cb81-1" aria-hidden="true" tabindex="-1"></a>combined_df <span class="ot">&lt;-</span> person_df <span class="sc">%&gt;%</span> </span>
-<span id="cb81-2"><a href="#cb81-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(earliest_condition, <span class="at">by =</span> <span class="st">"person_id"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb81-3"><a href="#cb81-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(earliest_drug, <span class="at">by =</span> <span class="st">"person_id"</span>)</span>
-<span id="cb81-4"><a href="#cb81-4" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(combined_df)  <span class="co"># Check result</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 6 × 9
-  person_id year_of_birth race    sex_at_birth condition_concept_id
-      &lt;dbl&gt;         &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;                       &lt;dbl&gt;
-1         1          1987 Unknown Male                           NA
-2         2          1987 Asian   Female                         NA
-3         3          2004 Asian   Male                           NA
-4         4          1944 Black   Male                           NA
-5         5          1941 Asian   Male                           NA
-6         6          2006 Other   Male                           NA
-# ℹ 4 more variables: condition_start_date &lt;date&gt;,
-#   condition_source_value &lt;chr&gt;, drug_concept_id &lt;dbl&gt;,
-#   drug_exposure_start_date &lt;date&gt;</code></pre>
-</div>
-</div>
-</section>
-<section id="writing-and-saving-files" class="level2" data-number="12">
-<h2 data-number="12" class="anchored" data-anchor-id="writing-and-saving-files"><span class="header-section-number">12</span> Writing and Saving Files</h2>
-<p>In order to save our data, we use <code>write_csv()</code> function to save the dataframe as a CSV file. Its arguments are the dataframe name and a file path:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb83"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb83-1"><a href="#cb83-1" aria-hidden="true" tabindex="-1"></a><span class="fu">write_csv</span>(combined_df, <span class="st">"cleaned_dataset.csv"</span>)  <span class="co"># file path will be different</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</section>
-<section id="navigating-researcher-workbench-continued" class="level2" data-number="13">
-<h2 data-number="13" class="anchored" data-anchor-id="navigating-researcher-workbench-continued"><span class="header-section-number">13</span> Navigating Researcher Workbench Continued</h2>
+<section id="navigating-researcher-workbench-continued" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="navigating-researcher-workbench-continued"><span class="header-section-number">8</span> Navigating Researcher Workbench Continued</h2>
 <p>Demonstration in class:</p>
 <ul>
 <li>Choosing and configuring an analysis app
@@ -903,8 +729,8 @@ Note
 </ul></li>
 </ul>
 </section>
-<section id="running-queries-and-working-with-queried-data" class="level2" data-number="14">
-<h2 data-number="14" class="anchored" data-anchor-id="running-queries-and-working-with-queried-data"><span class="header-section-number">14</span> Running Queries and Working with Queried Data</h2>
+<section id="running-queries-and-working-with-queried-data" class="level2" data-number="9">
+<h2 data-number="9" class="anchored" data-anchor-id="running-queries-and-working-with-queried-data"><span class="header-section-number">9</span> Running Queries and Working with Queried Data</h2>
 <p>Demonstration in class:</p>
 <ul>
 <li>Continue Data Explorer demo
@@ -917,8 +743,8 @@ Note
 <li>Browsing and viewing files in the Workbench vs.&nbsp;GCP</li>
 </ul>
 </section>
-<section id="preparing-for-next-session" class="level2" data-number="15">
-<h2 data-number="15" class="anchored" data-anchor-id="preparing-for-next-session"><span class="header-section-number">15</span> Preparing for Next Session</h2>
+<section id="preparing-for-next-session" class="level2" data-number="10">
+<h2 data-number="10" class="anchored" data-anchor-id="preparing-for-next-session"><span class="header-section-number">10</span> Preparing for Next Session</h2>
 <p>Create your own project workspace and at least one data snapshot using Data Explorer prior to Session 3. Follow the instruction <a href="https://support.researchallofus.org/hc/en-us/articles/41981050556564-Getting-Started-in-new-Researcher-Workbench-2-0">here</a> or the video posted in the <a href="https://yesols.github.io/projects/all-of-us/">Getting Started page</a>.</p>
 
 
