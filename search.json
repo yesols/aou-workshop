@@ -425,7 +425,7 @@
     "href": "session-2.html#running-queries-and-working-with-queried-data",
     "title": "Introduction to R Programming and Data Wrangling",
     "section": "14 Running Queries and Working with Queried Data",
-    "text": "14 Running Queries and Working with Queried Data\nDemonstration in class:\n\nFile organization in the Bucket\nStrategies to keep Notebooks organized\nBrowsing and viewing files in the Workbench vs. GCP",
+    "text": "14 Running Queries and Working with Queried Data\nDemonstration in class:\n\nContinue Data Explorer demo\n\n“View in hierarchy” issue\nSource code for conditions and mapping\n\nFile organization in the Bucket\nStrategies to keep Notebooks organized\nBrowsing and viewing files in the Workbench vs. GCP",
     "crumbs": [
       "Lessons",
       "Session 2: R Programming and Data Wrangling"
