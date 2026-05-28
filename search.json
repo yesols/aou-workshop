@@ -269,7 +269,7 @@
     "href": "session-3.html#preparing-for-next-session",
     "title": "More Data Wrangling and Exploratory Data Analysis",
     "section": "15 Preparing for Next Session",
-    "text": "15 Preparing for Next Session\nIn session 4, we will learn how to perform basic statistical tests in R. Because this workshop is focused on learning the technical aspect of programming, discussions of statistical concepts will be minimal. Review the following methods as needed prior to the next session:\n\nt-test and ANOVA\nchi-square test\nlinear regression\nlogistic regression (WWAMI Research Methods course does not cover this. So we will go over this concept in a little more detail than others.)\n\nAlso, we will apply the graphical and statistical functions on the real All of Us data. So, if you have not already, ensure you have a dataset prepared for your own project by next session. It does not have to be perfect - constructing a dataset always takes a long time. Just have a dataset that has demographic variables and an outcome variable at a minimum.",
+    "text": "15 Preparing for Next Session\nIn session 4, we will learn how to perform basic statistical tests in R. Because this workshop is focused on learning the technical aspect of programming, discussions of statistical concepts will be minimal. Review the following methods as needed prior to the next session:\n\nt-test and ANOVA\nchi-square test\nlinear regression\nlogistic regression (WWAMI Research Methods course does not cover this. So we will go over this concept in a little more detail than others.)\n\nWe will also run queries, take a look at the extracted data, and interact with the Workspace bucket. You can follow along with your own data or just observe. However, do create your own Workspace and work with Data Explorer and bring any questions or comments to discuss in class.",
     "crumbs": [
       "Lessons",
       "Session 3: More Data Wrangling and Exploratory Data Analysis"
@@ -281,6 +281,27 @@
     "title": "About",
     "section": "",
     "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "other_notes.html",
+    "href": "other_notes.html",
+    "title": "Other Notes",
+    "section": "",
+    "text": "Here are some tidbits that didn’t make it into the session materials but might be useful."
+  },
+  {
+    "objectID": "other_notes.html#listing-objects",
+    "href": "other_notes.html#listing-objects",
+    "title": "Other Notes",
+    "section": "1 Listing Objects",
+    "text": "1 Listing Objects\nls() will print the names of all objects you currently have in your environment, such as dataframes and vectors. This can be helpful when you accumulate many objects and need to remind yourself the name of a dataframe you’re looking for."
+  },
+  {
+    "objectID": "other_notes.html#more-operators",
+    "href": "other_notes.html#more-operators",
+    "title": "Other Notes",
+    "section": "2 More Operators",
+    "text": "2 More Operators\n\n2.1 NOT"
   },
   {
     "objectID": "index.html#overview",
