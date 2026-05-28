@@ -214,15 +214,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#recoding-values" id="toc-recoding-values" class="nav-link" data-scroll-target="#recoding-values"><span class="header-section-number">3</span> Recoding Values</a></li>
   <li><a href="#selecting-earliest-occurrence" id="toc-selecting-earliest-occurrence" class="nav-link" data-scroll-target="#selecting-earliest-occurrence"><span class="header-section-number">4</span> Selecting Earliest Occurrence</a></li>
   <li><a href="#merging-demographics-with-clinical-data" id="toc-merging-demographics-with-clinical-data" class="nav-link" data-scroll-target="#merging-demographics-with-clinical-data"><span class="header-section-number">5</span> Merging Demographics with Clinical Data</a></li>
-  <li><a href="#writing-and-saving-files" id="toc-writing-and-saving-files" class="nav-link" data-scroll-target="#writing-and-saving-files"><span class="header-section-number">6</span> Writing and Saving Files</a></li>
-  <li><a href="#reading-files-2" id="toc-reading-files-2" class="nav-link" data-scroll-target="#reading-files-2"><span class="header-section-number">7</span> Reading files 2</a></li>
-  <li><a href="#create-necessary-variables-for-analysis" id="toc-create-necessary-variables-for-analysis" class="nav-link" data-scroll-target="#create-necessary-variables-for-analysis"><span class="header-section-number">8</span> Create Necessary Variables for Analysis</a></li>
-  <li><a href="#contingency-table" id="toc-contingency-table" class="nav-link" data-scroll-target="#contingency-table"><span class="header-section-number">9</span> Contingency Table</a></li>
-  <li><a href="#summarize-data" id="toc-summarize-data" class="nav-link" data-scroll-target="#summarize-data"><span class="header-section-number">10</span> Summarize Data</a></li>
-  <li><a href="#histogram" id="toc-histogram" class="nav-link" data-scroll-target="#histogram"><span class="header-section-number">11</span> Histogram</a></li>
-  <li><a href="#box-plot" id="toc-box-plot" class="nav-link" data-scroll-target="#box-plot"><span class="header-section-number">12</span> Box Plot</a></li>
-  <li><a href="#scatter-plot" id="toc-scatter-plot" class="nav-link" data-scroll-target="#scatter-plot"><span class="header-section-number">13</span> Scatter Plot</a></li>
-  <li><a href="#preparing-for-next-session" id="toc-preparing-for-next-session" class="nav-link" data-scroll-target="#preparing-for-next-session"><span class="header-section-number">14</span> Preparing for Next Session</a></li>
+  <li><a href="#establishing-temporal-sequence-with-dates" id="toc-establishing-temporal-sequence-with-dates" class="nav-link" data-scroll-target="#establishing-temporal-sequence-with-dates"><span class="header-section-number">6</span> Establishing Temporal Sequence with Dates</a></li>
+  <li><a href="#writing-and-saving-files" id="toc-writing-and-saving-files" class="nav-link" data-scroll-target="#writing-and-saving-files"><span class="header-section-number">7</span> Writing and Saving Files</a></li>
+  <li><a href="#reading-files-2" id="toc-reading-files-2" class="nav-link" data-scroll-target="#reading-files-2"><span class="header-section-number">8</span> Reading files 2</a></li>
+  <li><a href="#create-necessary-variables-for-analysis" id="toc-create-necessary-variables-for-analysis" class="nav-link" data-scroll-target="#create-necessary-variables-for-analysis"><span class="header-section-number">9</span> Create Necessary Variables for Analysis</a></li>
+  <li><a href="#contingency-table" id="toc-contingency-table" class="nav-link" data-scroll-target="#contingency-table"><span class="header-section-number">10</span> Contingency Table</a></li>
+  <li><a href="#summarize-data" id="toc-summarize-data" class="nav-link" data-scroll-target="#summarize-data"><span class="header-section-number">11</span> Summarize Data</a></li>
+  <li><a href="#histogram" id="toc-histogram" class="nav-link" data-scroll-target="#histogram"><span class="header-section-number">12</span> Histogram</a></li>
+  <li><a href="#box-plot" id="toc-box-plot" class="nav-link" data-scroll-target="#box-plot"><span class="header-section-number">13</span> Box Plot</a></li>
+  <li><a href="#scatter-plot" id="toc-scatter-plot" class="nav-link" data-scroll-target="#scatter-plot"><span class="header-section-number">14</span> Scatter Plot</a></li>
+  <li><a href="#preparing-for-next-session" id="toc-preparing-for-next-session" class="nav-link" data-scroll-target="#preparing-for-next-session"><span class="header-section-number">15</span> Preparing for Next Session</a></li>
   </ul>
 </nav>
     </div>
@@ -250,7 +251,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="learning-objectives" class="level2" data-number="1">
 <h2 data-number="1" class="anchored" data-anchor-id="learning-objectives"><span class="header-section-number">1</span> Learning Objectives</h2>
-<p>In this session, we will learn common functions to explore data and visualize data using the synthetic dataset we worked with last time.</p>
+<p>In this session, we will continue data wrangling with larger datasets that resemble <em>All of Us</em> EHR data. We will also learn common functions to explore data and visualize data.</p>
 <p>At the end of Session 3, you will be able to:</p>
 <ol type="1">
 <li>Clean up and merge dataframes to create an analysis-ready dataset.</li>
@@ -285,7 +286,7 @@ Note
 </div>
 </div>
 <p>Now, try the commands, <code>dim()</code>, <code>head()</code>, <code>tail()</code>, <code>str()</code>, etc, to inspect the these three dataframes.</p>
-<p>In subsequent sections, we will learn how to clean up data and merge these three dataframes. Ultimately, we will analyze the dataset to investigate association between anticholinergic medications and dementia.</p>
+<p>In subsequent sections, we will learn how to clean up data and merge these three dataframes. Ultimately, we will analyze the dataset to investigate association between anticholinergic medications (exposure) and dementia (disease).</p>
 </section>
 <section id="recoding-values" class="level2" data-number="3">
 <h2 data-number="3" class="anchored" data-anchor-id="recoding-values"><span class="header-section-number">3</span> Recoding Values</h2>
@@ -420,46 +421,73 @@ Note
 </div>
 </div>
 </section>
-<section id="writing-and-saving-files" class="level2" data-number="6">
-<h2 data-number="6" class="anchored" data-anchor-id="writing-and-saving-files"><span class="header-section-number">6</span> Writing and Saving Files</h2>
+<section id="establishing-temporal-sequence-with-dates" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="establishing-temporal-sequence-with-dates"><span class="header-section-number">6</span> Establishing Temporal Sequence with Dates</h2>
+<p>In epidemiological research, establishing a timeline is critical. A drug cannot be considered a risk factor for a disease if it was prescribed <em>after</em> the disease was diagnosed. Because we merged our datasets in the previous session, our <code>combined_df</code> now contains both <code>drug_exposure_start_date</code> and <code>condition_start_date</code>. Because R recognizes these columns as Date data types, we can compare them mathematically to determine the “true” exposure status of our patients.</p>
+<p>We will use <code>case_when()</code> function which allows us to write multiple logical conditions, evaluating each row step-by-step to assign the correct exposure status.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>combined_df <span class="ot">&lt;-</span> combined_df <span class="sc">%&gt;%</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">true_exposure_status =</span> <span class="fu">case_when</span>(</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>      <span class="co"># Condition 1: No record of taking the drug</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>      <span class="fu">is.na</span>(drug_exposure_start_date) <span class="sc">~</span> <span class="st">"Unexposed"</span>,</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>      <span class="co"># Condition 2: Took the drug, but never got the condition</span></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>      <span class="sc">!</span><span class="fu">is.na</span>(drug_exposure_start_date) <span class="sc">&amp;</span> <span class="fu">is.na</span>(condition_start_date) <span class="sc">~</span> <span class="st">"Exposed"</span>,</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>      <span class="co"># Condition 3: Took the drug BEFORE the condition started</span></span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>      drug_exposure_start_date <span class="sc">&lt;</span> condition_start_date <span class="sc">~</span> <span class="st">"Exposed"</span>,</span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>      <span class="co"># Condition 4: Took the drug AFTER the condition started</span></span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>      drug_exposure_start_date <span class="sc">&gt;=</span> condition_start_date <span class="sc">~</span> <span class="st">"Unexposed (Post-Diagnosis)"</span></span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Let’s check our work by looking at the patients who had both the drug and the condition:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>combined_df <span class="sc">%&gt;%</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(drug_exposure_start_date) <span class="sc">&amp;</span> <span class="sc">!</span><span class="fu">is.na</span>(condition_start_date)) <span class="sc">%&gt;%</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(person_id, drug_exposure_start_date, condition_start_date, true_exposure_status) <span class="sc">%&gt;%</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 4
+  person_id drug_exposure_start_date condition_start_date true_exposure_status
+      &lt;dbl&gt; &lt;date&gt;                   &lt;date&gt;               &lt;chr&gt;               
+1        10 2002-04-28               2012-02-17           Exposed             
+2        13 1992-01-21               2001-09-25           Exposed             
+3        14 2048-05-09               2056-07-03           Exposed             
+4        25 2048-11-22               2056-10-02           Exposed             
+5        27 2044-02-09               2048-10-30           Exposed             
+6        34 2025-12-05               2027-02-04           Exposed             </code></pre>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Math with Dates
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Because dates are stored as numbers under the hood, you can also subtract them! For example, condition_start_date - drug_exposure_start_date will output the exact number of days between the two events.</p>
+</div>
+</div>
+</section>
+<section id="writing-and-saving-files" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="writing-and-saving-files"><span class="header-section-number">7</span> Writing and Saving Files</h2>
 <p>Suppose we are ready to wrap up for the day and save our work. In order to save our data, we use <code>write_csv()</code> function to save the dataframe as a CSV file. Its arguments are the dataframe name and a file path:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">write_csv</span>(combined_df, <span class="st">"cleaned_dataset.csv"</span>)  <span class="co"># file path will be different</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">write_csv</span>(combined_df, <span class="st">"cleaned_dataset.csv"</span>)  <span class="co"># file path will be different</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="reading-files-2" class="level2" data-number="7">
-<h2 data-number="7" class="anchored" data-anchor-id="reading-files-2"><span class="header-section-number">7</span> Reading files 2</h2>
+<section id="reading-files-2" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="reading-files-2"><span class="header-section-number">8</span> Reading files 2</h2>
 <p>To resume working on the data, let’s read back in the file. This file is what we saved after merging dataframes earlier, but I added an additional column <code>SBP</code> for systolic blood pressure.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://raw.githubusercontent.com/yesols/aou-workshop/refs/heads/main/data/final_dataset.csv"</span>)</span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(df)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://raw.githubusercontent.com/yesols/aou-workshop/refs/heads/main/data/final_dataset.csv"</span>)</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(df)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 6 × 10
-  person_id year_of_birth race    sex_at_birth condition_concept_id
-      &lt;dbl&gt;         &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;                       &lt;dbl&gt;
-1         1          1987 Unknown Male                           NA
-2         2          1987 Asian   Female                         NA
-3         3          2004 Asian   Male                           NA
-4         4          1944 Black   Male                           NA
-5         5          1941 Asian   Male                           NA
-6         6          2006 Other   Male                           NA
-# ℹ 5 more variables: condition_start_date &lt;date&gt;,
-#   condition_source_value &lt;chr&gt;, drug_concept_id &lt;dbl&gt;,
-#   drug_exposure_start_date &lt;date&gt;, SBP &lt;dbl&gt;</code></pre>
-</div>
-</div>
-</section>
-<section id="create-necessary-variables-for-analysis" class="level2" data-number="8">
-<h2 data-number="8" class="anchored" data-anchor-id="create-necessary-variables-for-analysis"><span class="header-section-number">8</span> Create Necessary Variables for Analysis</h2>
-<p>We will create an <code>age</code> column from <code>year_of_birth</code>.</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(</span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">age =</span> <span class="dv">2026</span> <span class="sc">-</span> year_of_birth</span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(df)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 11
   person_id year_of_birth race    sex_at_birth condition_concept_id
@@ -472,23 +500,61 @@ Note
 6         6          2006 Other   Male                           NA
 # ℹ 6 more variables: condition_start_date &lt;date&gt;,
 #   condition_source_value &lt;chr&gt;, drug_concept_id &lt;dbl&gt;,
-#   drug_exposure_start_date &lt;date&gt;, SBP &lt;dbl&gt;, age &lt;dbl&gt;</code></pre>
+#   drug_exposure_start_date &lt;date&gt;, true_exposure_status &lt;chr&gt;, SBP &lt;dbl&gt;</code></pre>
+</div>
+</div>
+</section>
+<section id="create-necessary-variables-for-analysis" class="level2" data-number="9">
+<h2 data-number="9" class="anchored" data-anchor-id="create-necessary-variables-for-analysis"><span class="header-section-number">9</span> Create Necessary Variables for Analysis</h2>
+<p>We will create an <code>age</code> column from <code>year_of_birth</code>.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">age =</span> <span class="dv">2026</span> <span class="sc">-</span> year_of_birth</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(df)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 12
+  person_id year_of_birth race    sex_at_birth condition_concept_id
+      &lt;dbl&gt;         &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;                       &lt;dbl&gt;
+1         1          1987 Unknown Male                           NA
+2         2          1987 Asian   Female                         NA
+3         3          2004 Asian   Male                           NA
+4         4          1944 Black   Male                           NA
+5         5          1941 Asian   Male                           NA
+6         6          2006 Other   Male                           NA
+# ℹ 7 more variables: condition_start_date &lt;date&gt;,
+#   condition_source_value &lt;chr&gt;, drug_concept_id &lt;dbl&gt;,
+#   drug_exposure_start_date &lt;date&gt;, true_exposure_status &lt;chr&gt;, SBP &lt;dbl&gt;,
+#   age &lt;dbl&gt;</code></pre>
 </div>
 </div>
 <p>It is also useful to have binary variables to indicate their disease status and drug exposure status. We will use <code>if_else()</code> function for this purpose. <code>if_else()</code> takes three arguments: condition to evaluate, value if the evaluation is true, value if false.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span></span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">condition_status =</span> <span class="fu">if_else</span>(<span class="fu">is.na</span>(condition_concept_id), <span class="dv">0</span>, <span class="dv">1</span>), <span class="co"># 0 if condition_concept_id is NA, 1 if not</span></span>
-<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">exposure_status =</span> <span class="fu">if_else</span>(<span class="fu">is.na</span>(drug_concept_id), <span class="dv">0</span>, <span class="dv">1</span>) <span class="co"># 0 if drug_concept_id is NA, 1 if not</span></span>
-<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">condition_status =</span> <span class="fu">if_else</span>(<span class="fu">is.na</span>(condition_concept_id), <span class="dv">0</span>, <span class="dv">1</span>), <span class="co"># 0 if condition_concept_id is NA, 1 if not</span></span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">exposure_status =</span> <span class="fu">if_else</span>(true_exposure_status <span class="sc">==</span> <span class="st">"Exposed"</span>, <span class="dv">1</span>, <span class="dv">0</span>) <span class="co"># 1 if true_exposure_status is "Exposed", 0 if not</span></span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Binary Coding with 1s and 0s
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>While you can certainly code your binary variables with character, such as “yes” and “no” or “exposed” and “unexposed,” it is safer to code them numerically especially if you are performing logistic regression.</p>
+</div>
 </div>
 </section>
-<section id="contingency-table" class="level2" data-number="9">
-<h2 data-number="9" class="anchored" data-anchor-id="contingency-table"><span class="header-section-number">9</span> Contingency Table</h2>
+<section id="contingency-table" class="level2" data-number="10">
+<h2 data-number="10" class="anchored" data-anchor-id="contingency-table"><span class="header-section-number">10</span> Contingency Table</h2>
 <p>Let’s take a quick look at MCI/dementia cases breakdown by sex.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>df <span class="sc">%&gt;%</span> <span class="fu">count</span>(sex_at_birth, condition_status)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>df <span class="sc">%&gt;%</span> <span class="fu">count</span>(sex_at_birth, condition_status)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 3
   sex_at_birth condition_status     n
@@ -503,8 +569,8 @@ Note
 </div>
 <p><code>janitor</code> package has a nice cross-tabulation function:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(janitor)</span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>df <span class="sc">%&gt;%</span> <span class="fu">tabyl</span>(sex_at_birth, condition_status)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(janitor)</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>df <span class="sc">%&gt;%</span> <span class="fu">tabyl</span>(sex_at_birth, condition_status)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> sex_at_birth  0  1
        Female 28 16
@@ -513,18 +579,18 @@ Note
 </div>
 </div>
 </section>
-<section id="summarize-data" class="level2" data-number="10">
-<h2 data-number="10" class="anchored" data-anchor-id="summarize-data"><span class="header-section-number">10</span> Summarize Data</h2>
+<section id="summarize-data" class="level2" data-number="11">
+<h2 data-number="11" class="anchored" data-anchor-id="summarize-data"><span class="header-section-number">11</span> Summarize Data</h2>
 <p><code>summary()</code> function can give you a quick overview of data and its distribution. It also will show you a count of NAs in each column. You can use <code>summary()</code> on a vector (or a single column from a dataframe) or the entire dataframe.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(df<span class="sc">$</span>SBP)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(df<span class="sc">$</span>SBP)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
    84.0   108.0   119.0   117.2   127.0   149.0       5 </code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(df)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(df)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   person_id      year_of_birth      race           sex_at_birth      
  Min.   :  1.00   Min.   :1936   Length:100         Length:100        
@@ -542,34 +608,34 @@ Note
  3rd Qu.:4182210      3rd Qu.:2041-07-23                         
  Max.   :4182210      Max.   :2071-04-19                         
  NA's   :70           NA's   :70                                 
- drug_concept_id    drug_exposure_start_date      SBP             age       
- Min.   :19073183   Min.   :1987-09-16       Min.   : 84.0   Min.   :19.00  
- 1st Qu.:19073183   1st Qu.:2013-02-12       1st Qu.:108.0   1st Qu.:35.75  
- Median :19073183   Median :2025-05-28       Median :119.0   Median :54.50  
- Mean   :19073183   Mean   :2029-02-16       Mean   :117.2   Mean   :52.91  
- 3rd Qu.:19073183   3rd Qu.:2043-04-05       3rd Qu.:127.0   3rd Qu.:69.00  
- Max.   :19073183   Max.   :2080-10-17       Max.   :149.0   Max.   :90.00  
- NA's   :65         NA's   :65               NA's   :5                      
- condition_status exposure_status
- Min.   :0.0      Min.   :0.00   
- 1st Qu.:0.0      1st Qu.:0.00   
- Median :0.0      Median :0.00   
- Mean   :0.3      Mean   :0.35   
- 3rd Qu.:1.0      3rd Qu.:1.00   
- Max.   :1.0      Max.   :1.00   
-                                 </code></pre>
+ drug_concept_id    drug_exposure_start_date true_exposure_status
+ Min.   :19073183   Min.   :1987-09-16       Length:100          
+ 1st Qu.:19073183   1st Qu.:2013-02-12       Class :character    
+ Median :19073183   Median :2025-05-28       Mode  :character    
+ Mean   :19073183   Mean   :2029-02-16                           
+ 3rd Qu.:19073183   3rd Qu.:2043-04-05                           
+ Max.   :19073183   Max.   :2080-10-17                           
+ NA's   :65         NA's   :65                                   
+      SBP             age        condition_status exposure_status
+ Min.   : 84.0   Min.   :19.00   Min.   :0.0      Min.   :0.00   
+ 1st Qu.:108.0   1st Qu.:35.75   1st Qu.:0.0      1st Qu.:0.00   
+ Median :119.0   Median :54.50   Median :0.0      Median :0.00   
+ Mean   :117.2   Mean   :52.91   Mean   :0.3      Mean   :0.35   
+ 3rd Qu.:127.0   3rd Qu.:69.00   3rd Qu.:1.0      3rd Qu.:1.00   
+ Max.   :149.0   Max.   :90.00   Max.   :1.0      Max.   :1.00   
+ NA's   :5                                                       </code></pre>
 </div>
 </div>
 <p>Grouped summaries using <code>group_by()</code> and <code>summarise()</code> can be helpful.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>df <span class="sc">%&gt;%</span></span>
-<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(sex_at_birth) <span class="sc">%&gt;%</span></span>
-<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
-<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">n =</span> <span class="fu">n</span>(),</span>
-<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">mean_SBP =</span> <span class="fu">mean</span>(SBP, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">sd_SBP =</span> <span class="fu">sd</span>(SBP, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">median_age =</span> <span class="fu">median</span>(age, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb30-8"><a href="#cb30-8" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>df <span class="sc">%&gt;%</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(sex_at_birth) <span class="sc">%&gt;%</span></span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">n =</span> <span class="fu">n</span>(),</span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">mean_SBP =</span> <span class="fu">mean</span>(SBP, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">sd_SBP =</span> <span class="fu">sd</span>(SBP, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">median_age =</span> <span class="fu">median</span>(age, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb33-8"><a href="#cb33-8" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 5
   sex_at_birth     n mean_SBP sd_SBP median_age
@@ -580,20 +646,20 @@ Note
 </div>
 </div>
 </section>
-<section id="histogram" class="level2" data-number="11">
-<h2 data-number="11" class="anchored" data-anchor-id="histogram"><span class="header-section-number">11</span> Histogram</h2>
+<section id="histogram" class="level2" data-number="12">
+<h2 data-number="12" class="anchored" data-anchor-id="histogram"><span class="header-section-number">12</span> Histogram</h2>
 <p>Histogram is a good way to visualize distribution of continuous data. I like base R commands for a quick visualization on the fly. But <code>ggplot()</code> from <code>ggplot2</code> package (included already when we loaded <code>tidyverse</code>) is highly customizable and recommended for publication-quality plots. Below, you can see the code for both.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Base R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">ggplot2</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Base R histogram</span></span>
-<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(df<span class="sc">$</span>age, <span class="at">breaks =</span> <span class="dv">20</span>) <span class="co"># change breaks size to make bins larger or smaller</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Base R histogram</span></span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(df<span class="sc">$</span>age, <span class="at">breaks =</span> <span class="dv">20</span>) <span class="co"># change breaks size to make bins larger or smaller</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><a href="session-3_files/figure-html/unnamed-chunk-19-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="session-3_files/figure-html/unnamed-chunk-19-1.png" class="img-fluid figure-img" width="672"></a></p>
+<p><a href="session-3_files/figure-html/unnamed-chunk-21-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="session-3_files/figure-html/unnamed-chunk-21-1.png" class="img-fluid figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
@@ -601,22 +667,22 @@ Note
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df, <span class="fu">aes</span>(<span class="at">x =</span> age)) <span class="sc">+</span></span>
-<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(</span>
-<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">binwidth =</span> <span class="dv">5</span>, </span>
-<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill =</span> <span class="st">"steelblue"</span>, </span>
-<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">"black"</span></span>
-<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb33-8"><a href="#cb33-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Age Distribution"</span>,</span>
-<span id="cb33-9"><a href="#cb33-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Age (Years)"</span>,</span>
-<span id="cb33-10"><a href="#cb33-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Frequency"</span></span>
-<span id="cb33-11"><a href="#cb33-11" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb33-12"><a href="#cb33-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df, <span class="fu">aes</span>(<span class="at">x =</span> age)) <span class="sc">+</span></span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(</span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">binwidth =</span> <span class="dv">5</span>, </span>
+<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill =</span> <span class="st">"steelblue"</span>, </span>
+<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">"black"</span></span>
+<span id="cb36-6"><a href="#cb36-6" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb36-7"><a href="#cb36-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb36-8"><a href="#cb36-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Age Distribution"</span>,</span>
+<span id="cb36-9"><a href="#cb36-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Age (Years)"</span>,</span>
+<span id="cb36-10"><a href="#cb36-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Frequency"</span></span>
+<span id="cb36-11"><a href="#cb36-11" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb36-12"><a href="#cb36-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><a href="session-3_files/figure-html/unnamed-chunk-20-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="session-3_files/figure-html/unnamed-chunk-20-1.png" class="img-fluid figure-img" width="672"></a></p>
+<p><a href="session-3_files/figure-html/unnamed-chunk-22-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="session-3_files/figure-html/unnamed-chunk-22-1.png" class="img-fluid figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
@@ -625,23 +691,23 @@ Note
 </div>
 </div>
 </section>
-<section id="box-plot" class="level2" data-number="12">
-<h2 data-number="12" class="anchored" data-anchor-id="box-plot"><span class="header-section-number">12</span> Box Plot</h2>
+<section id="box-plot" class="level2" data-number="13">
+<h2 data-number="13" class="anchored" data-anchor-id="box-plot"><span class="header-section-number">13</span> Box Plot</h2>
 <p>Box plots are good for visualizing continuous data broken down to some groups. Here, we will visualize distribution of <code>SBP</code> for each <code>sex_at_birth</code> category. Again, I will show both base R version and ggplot2 version.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">Base R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">ggplot2</a></li></ul>
 <div class="tab-content">
 <div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Base R box plot using the formula interface</span></span>
-<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(</span>
-<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>  SBP <span class="sc">~</span> sex_at_birth, </span>
-<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> df</span>
-<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Base R box plot using the formula interface</span></span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(</span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>  SBP <span class="sc">~</span> sex_at_birth, </span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> df</span>
+<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><a href="session-3_files/figure-html/unnamed-chunk-21-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="session-3_files/figure-html/unnamed-chunk-21-1.png" class="img-fluid figure-img" width="672"></a></p>
+<p><a href="session-3_files/figure-html/unnamed-chunk-23-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="session-3_files/figure-html/unnamed-chunk-23-1.png" class="img-fluid figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
@@ -649,16 +715,16 @@ Note
 </div>
 <div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ggplot2 box plot</span></span>
-<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df, <span class="fu">aes</span>(<span class="at">x =</span> sex_at_birth, <span class="at">y =</span> SBP, <span class="at">fill =</span> sex_at_birth)) <span class="sc">+</span></span>
-<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="at">alpha =</span> <span class="fl">0.7</span>) <span class="sc">+</span></span>
-<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Systolic Blood Pressure by Sex"</span>,</span>
-<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Sex at Birth"</span>,</span>
-<span id="cb35-7"><a href="#cb35-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"SBP (mmHg)"</span></span>
-<span id="cb35-8"><a href="#cb35-8" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb35-9"><a href="#cb35-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
-<span id="cb35-10"><a href="#cb35-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>) <span class="co"># Suppress redundant legend</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ggplot2 box plot</span></span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df, <span class="fu">aes</span>(<span class="at">x =</span> sex_at_birth, <span class="at">y =</span> SBP, <span class="at">fill =</span> sex_at_birth)) <span class="sc">+</span></span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="at">alpha =</span> <span class="fl">0.7</span>) <span class="sc">+</span></span>
+<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb38-5"><a href="#cb38-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Systolic Blood Pressure by Sex"</span>,</span>
+<span id="cb38-6"><a href="#cb38-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Sex at Birth"</span>,</span>
+<span id="cb38-7"><a href="#cb38-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"SBP (mmHg)"</span></span>
+<span id="cb38-8"><a href="#cb38-8" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb38-9"><a href="#cb38-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb38-10"><a href="#cb38-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>) <span class="co"># Suppress redundant legend</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: Removed 5 rows containing non-finite outside the scale range
 (`stat_boxplot()`).</code></pre>
@@ -666,7 +732,7 @@ Note
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><a href="session-3_files/figure-html/unnamed-chunk-22-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="session-3_files/figure-html/unnamed-chunk-22-1.png" class="img-fluid figure-img" width="672"></a></p>
+<p><a href="session-3_files/figure-html/unnamed-chunk-24-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="session-3_files/figure-html/unnamed-chunk-24-1.png" class="img-fluid figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
@@ -688,20 +754,20 @@ Warning
 </div>
 </div>
 </section>
-<section id="scatter-plot" class="level2" data-number="13">
-<h2 data-number="13" class="anchored" data-anchor-id="scatter-plot"><span class="header-section-number">13</span> Scatter Plot</h2>
+<section id="scatter-plot" class="level2" data-number="14">
+<h2 data-number="14" class="anchored" data-anchor-id="scatter-plot"><span class="header-section-number">14</span> Scatter Plot</h2>
 <p>We use scatter plots for visualizing the relationship between two continuous variables. We will plot <code>SBP</code> against <code>age</code>.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true" href="">Base R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false" href="">ggplot2</a></li></ul>
 <div class="tab-content">
 <div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Base R scatter plot</span></span>
-<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(df<span class="sc">$</span>age, df<span class="sc">$</span>SBP)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Base R scatter plot</span></span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(df<span class="sc">$</span>age, df<span class="sc">$</span>SBP)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><a href="session-3_files/figure-html/unnamed-chunk-23-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="session-3_files/figure-html/unnamed-chunk-23-1.png" class="img-fluid figure-img" width="672"></a></p>
+<p><a href="session-3_files/figure-html/unnamed-chunk-25-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="session-3_files/figure-html/unnamed-chunk-25-1.png" class="img-fluid figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
@@ -709,15 +775,15 @@ Warning
 </div>
 <div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ggplot2 scatter plot</span></span>
-<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df, <span class="fu">aes</span>(<span class="at">x =</span> age, <span class="at">y =</span> SBP)) <span class="sc">+</span></span>
-<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">"darkblue"</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
-<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb38-5"><a href="#cb38-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Systolic Blood Pressure vs. Age"</span>,</span>
-<span id="cb38-6"><a href="#cb38-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Age (Years)"</span>,</span>
-<span id="cb38-7"><a href="#cb38-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"SBP (mmHg)"</span></span>
-<span id="cb38-8"><a href="#cb38-8" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb38-9"><a href="#cb38-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ggplot2 scatter plot</span></span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df, <span class="fu">aes</span>(<span class="at">x =</span> age, <span class="at">y =</span> SBP)) <span class="sc">+</span></span>
+<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">"darkblue"</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb41-5"><a href="#cb41-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Systolic Blood Pressure vs. Age"</span>,</span>
+<span id="cb41-6"><a href="#cb41-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Age (Years)"</span>,</span>
+<span id="cb41-7"><a href="#cb41-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"SBP (mmHg)"</span></span>
+<span id="cb41-8"><a href="#cb41-8" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb41-9"><a href="#cb41-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: Removed 5 rows containing missing values or values outside the scale range
 (`geom_point()`).</code></pre>
@@ -725,7 +791,7 @@ Warning
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><a href="session-3_files/figure-html/unnamed-chunk-24-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="session-3_files/figure-html/unnamed-chunk-24-1.png" class="img-fluid figure-img" width="672"></a></p>
+<p><a href="session-3_files/figure-html/unnamed-chunk-26-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="session-3_files/figure-html/unnamed-chunk-26-1.png" class="img-fluid figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
@@ -734,8 +800,8 @@ Warning
 </div>
 </div>
 </section>
-<section id="preparing-for-next-session" class="level2" data-number="14">
-<h2 data-number="14" class="anchored" data-anchor-id="preparing-for-next-session"><span class="header-section-number">14</span> Preparing for Next Session</h2>
+<section id="preparing-for-next-session" class="level2" data-number="15">
+<h2 data-number="15" class="anchored" data-anchor-id="preparing-for-next-session"><span class="header-section-number">15</span> Preparing for Next Session</h2>
 <p>In session 4, we will learn how to perform basic statistical tests in R. Because this workshop is focused on learning the technical aspect of programming, discussions of statistical concepts will be minimal. Review the following methods as needed prior to the next session:</p>
 <ul>
 <li>t-test and ANOVA</li>
