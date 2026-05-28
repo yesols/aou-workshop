@@ -567,15 +567,15 @@ Note
 6 Other                       1     3</code></pre>
 </div>
 </div>
-<p><code>janitor</code> package has a nice cross-tabulation function:</p>
+<p>You might prefer a simpler cross tabulation using a base R function, <code>table()</code>:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(janitor)</span>
-<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>df <span class="sc">%&gt;%</span> <span class="fu">tabyl</span>(sex_at_birth, condition_status)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(df<span class="sc">$</span>sex_at_birth, df<span class="sc">$</span>condition_status)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> sex_at_birth  0  1
-       Female 28 16
-         Male 37 11
-        Other  5  3</code></pre>
+<pre><code>        
+          0  1
+  Female 28 16
+  Male   37 11
+  Other   5  3</code></pre>
 </div>
 </div>
 </section>
