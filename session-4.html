@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Statistical Analysis – AoU Workshop</title>
+<title>Statistical Analysis and JupyterLab Tips – AoU Workshop</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -149,7 +149,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./session-1.html">Lessons</a></li><li class="breadcrumb-item"><a href="./session-4.html">Session 4: Statistical Analysis</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./session-1.html">Lessons</a></li><li class="breadcrumb-item"><a href="./session-4.html">Session 4: Statistical Analysis and JupyterLab Tips</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -217,7 +217,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./session-4.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Session 4: Statistical Analysis</span></a>
+ <span class="menu-text">Session 4: Statistical Analysis and JupyterLab Tips</span></a>
   </div>
 </li>
       </ul>
@@ -250,16 +250,19 @@ window.Quarto = {
   <li><a href="#theoretical-background" id="toc-theoretical-background" class="nav-link" data-scroll-target="#theoretical-background"><span class="header-section-number">8.1</span> Theoretical Background</a></li>
   <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><span class="header-section-number">8.2</span> Application</a></li>
   </ul></li>
-  <li><a href="#application-to-all-of-us-data" id="toc-application-to-all-of-us-data" class="nav-link" data-scroll-target="#application-to-all-of-us-data"><span class="header-section-number">9</span> Application to All of Us Data</a></li>
+  <li><a href="#navigating-the-notebook-modes-and-shortcuts" id="toc-navigating-the-notebook-modes-and-shortcuts" class="nav-link" data-scroll-target="#navigating-the-notebook-modes-and-shortcuts"><span class="header-section-number">9</span> Navigating the Notebook: Modes and Shortcuts</a></li>
+  <li><a href="#documenting-with-markdown-cells" id="toc-documenting-with-markdown-cells" class="nav-link" data-scroll-target="#documenting-with-markdown-cells"><span class="header-section-number">10</span> Documenting with Markdown Cells</a></li>
+  <li><a href="#pivoting-survey-data-long-to-wide" id="toc-pivoting-survey-data-long-to-wide" class="nav-link" data-scroll-target="#pivoting-survey-data-long-to-wide"><span class="header-section-number">11</span> Pivoting Survey Data (Long to Wide)</a></li>
+  <li><a href="#other-tips" id="toc-other-tips" class="nav-link" data-scroll-target="#other-tips"><span class="header-section-number">12</span> Other Tips</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./session-1.html">Lessons</a></li><li class="breadcrumb-item"><a href="./session-4.html">Session 4: Statistical Analysis</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./session-1.html">Lessons</a></li><li class="breadcrumb-item"><a href="./session-4.html">Session 4: Statistical Analysis and JupyterLab Tips</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Statistical Analysis</h1>
+<h1 class="title">Statistical Analysis and JupyterLab Tips</h1>
 </div>
 
 
@@ -284,6 +287,7 @@ window.Quarto = {
 <li>Perform t-test, ANOVA, chi-square tests in R.</li>
 <li>Fit regression models: simple linear regression, multiple linear regression, logistic regression</li>
 <li>Obtain odds ratios from logistic regression models.</li>
+<li>Familiarize with navigating JupyterLab and the storage bucket</li>
 </ol>
 </section>
 <section id="setup" class="level2" data-number="2">
@@ -611,9 +615,117 @@ Number of Fisher Scoring iterations: 4</code></pre>
 </div>
 </section>
 </section>
-<section id="application-to-all-of-us-data" class="level2" data-number="9">
-<h2 data-number="9" class="anchored" data-anchor-id="application-to-all-of-us-data"><span class="header-section-number">9</span> Application to All of Us Data</h2>
-<p>Work on own datasets in <em>All of Us</em> Workbench.</p>
+<section id="navigating-the-notebook-modes-and-shortcuts" class="level2" data-number="9">
+<h2 data-number="9" class="anchored" data-anchor-id="navigating-the-notebook-modes-and-shortcuts"><span class="header-section-number">9</span> Navigating the Notebook: Modes and Shortcuts</h2>
+<p>When you click inside a cell to type code or text, you enter <strong>Edit Mode</strong> (indicated by a blinking cursor and often a highlighted border). However, if you press the <code>Esc</code> key or click outside the text box, you switch to <strong>Command Mode</strong> which allows you delete, move, insert cells.</p>
+<p>Mastering a few Command Mode keyboard shortcuts will drastically speed up your workflow. Press <code>Esc</code> to ensure you are in Command Mode, and try these keystrokes:</p>
+<ul>
+<li><strong><code>A</code></strong>: Insert a new cell <strong>A</strong>bove the current one.</li>
+<li><strong><code>B</code></strong>: Insert a new cell <strong>B</strong>elow the current one.</li>
+<li><strong><code>D</code>, <code>D</code></strong> (press D twice quickly): <strong>D</strong>elete the current cell.</li>
+<li><strong><code>Z</code></strong>: Undo a deleted cell.</li>
+<li><strong><code>Shift</code> + <code>Enter</code></strong>: Execute the code (or format the Markdown) in the current cell and advance to the next one.</li>
+</ul>
+</section>
+<section id="documenting-with-markdown-cells" class="level2" data-number="10">
+<h2 data-number="10" class="anchored" data-anchor-id="documenting-with-markdown-cells"><span class="header-section-number">10</span> Documenting with Markdown Cells</h2>
+<p>Markdown is a lightweight markup language that is easy to use for simple text formatting. In Jupyter Notebooks, markdown is often used for sectioning the documents and annotating the code. You can change a cell from “Code” to “Markdown”, type in the section headings or your comments, and running the cell will render the markdown formatting.</p>
+<p>Here are a few common markdown examples:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb25"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Main Heading</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="fu">## Subheading</span></span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="fu">### Smaller Heading</span></span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>**Bold Text**</span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a>*Italic Text*</span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Bullet point 1</span>
+<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Bullet point 2</span>
+<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Indented bullet point</span>
+<span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-12"><a href="#cb25-12" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Numbered list</span>
+<span id="cb25-13"><a href="#cb25-13" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Numbered list</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>And here is what that exact formatting looks like once the cell is executed:</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div style="font-size: 2em; font-weight: bold; margin-bottom: 0.5em; margin-top: 0.5em;">
+Main Heading
+</div>
+<div style="font-size: 1.5em; font-weight: bold; margin-bottom: 0.5em;">
+Subheading
+</div>
+<div style="font-size: 1.17em; font-weight: bold; margin-bottom: 0.5em;">
+Smaller Heading
+</div>
+<p><strong>Bold Text</strong><br> <em>Italic Text</em></p>
+<ul>
+<li>Bullet point 1</li>
+<li>Bullet point 2
+<ul>
+<li>Indented bullet point</li>
+</ul></li>
+</ul>
+<ol type="1">
+<li>Numbered list</li>
+<li>Numbered list</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="pivoting-survey-data-long-to-wide" class="level2" data-number="11">
+<h2 data-number="11" class="anchored" data-anchor-id="pivoting-survey-data-long-to-wide"><span class="header-section-number">11</span> Pivoting Survey Data (Long to Wide)</h2>
+<p>If you pull multiple survey items, the query result will be in a “long” format, where each row corresponds to a single survey item per person. This means that there will be multiple rows per person. We typically want a dataframe where each row is a unique participant and questions are columns with answers as values. We can reshape the dataframe from a long format to a wide format using <code>pivot_wider()</code> function.</p>
+<p>First, let’s look at a mock example of what your raw survey data might look like:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a mock "long" survey dataframe</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>survey_long <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">person_id =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span>),</span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">question =</span> <span class="fu">c</span>(<span class="st">"1535717"</span>, <span class="st">"1585723"</span>, <span class="st">"1585729"</span>, <span class="st">"1535717"</span>, <span class="st">"1585723"</span>, <span class="st">"1585729"</span>),</span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">T_DISP_answer =</span> <span class="fu">c</span>(<span class="st">"Yes"</span>, <span class="st">"Never"</span>, <span class="st">"Good"</span>, <span class="st">"No"</span>, <span class="st">"Always"</span>, <span class="st">"Fair"</span>)</span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(survey_long)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  person_id question T_DISP_answer
+1         1  1535717           Yes
+2         1  1585723         Never
+3         1  1585729          Good
+4         2  1535717            No
+5         2  1585723        Always
+6         2  1585729          Fair</code></pre>
+</div>
+</div>
+<p>Now, we will pivot this dataframe so the question IDs become our new column names, and the T_DISP_answers become the values inside those columns.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Reshape to wide format</span></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>survey_wide <span class="ot">&lt;-</span> survey_long <span class="sc">%&gt;%</span></span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(</span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">id_cols =</span> person_id,               <span class="co"># The column that identifies unique rows</span></span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">names_from =</span> question,             <span class="co"># The column containing your new column names</span></span>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">values_from =</span> T_DISP_answer,       <span class="co"># The column containing the actual answers</span></span>
+<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-9"><a href="#cb28-9" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(survey_wide)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 4
+  person_id `1535717` `1585723` `1585729`
+      &lt;dbl&gt; &lt;chr&gt;     &lt;chr&gt;     &lt;chr&gt;    
+1         1 Yes       Never     Good     
+2         2 No        Always    Fair     </code></pre>
+</div>
+</div>
+</section>
+<section id="other-tips" class="level2" data-number="12">
+<h2 data-number="12" class="anchored" data-anchor-id="other-tips"><span class="header-section-number">12</span> Other Tips</h2>
+<p><strong>Tab completion</strong>: Use tab key to see suggested functions or to drill down a file path.</p>
+<p><strong>Datetime</strong>: In <em>All of Us</em> data, you will often see a datetime column with values in a format, “YYYY-MM-DD 00:00:00 UTC”. When you read in a CSV file, this type may be read as character data type. In that case, use <code>as_date()</code> function from <code>lubridate</code> package (included when you load <code>tidyverse</code>).</p>
+<p><strong>R objects vs.&nbsp;files</strong>: When you run commands like <code>df &lt;- read_csv("my_data.csv")</code>, you are reading a copy of the file contents into the Jupyter environment as an R object (the dataframe <code>df</code>). This object exists solely in memory (RAM), not in any directories unlike files. To list all those objects that are currently in your environment, use <code>ls()</code> function. Also note that if your notebook kernel restarts or your session times out, all R objects are erased from memory and must be reloaded by re-running your code.</p>
+<p><strong>%in% operator</strong>: %in% checks whether an element exists in a vector. This can be useful when you want to filter rows with certain values. For example: <code>person_df %&gt;% filter(sex_at_birth %in% c("Male", "Female"))</code></p>
+<p><strong>Where am I?</strong>: Use <code>getwd()</code> function to check the current directory you’re in. This may become relevant when you’re constructing a relative path of a file.</p>
 
 
 </section>

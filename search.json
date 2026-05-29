@@ -283,27 +283,6 @@
     "text": "About this site\n\n1 + 1\n\n[1] 2"
   },
   {
-    "objectID": "other_notes.html",
-    "href": "other_notes.html",
-    "title": "Other Notes",
-    "section": "",
-    "text": "Here are some tidbits that didn’t make it into the session materials but might be useful."
-  },
-  {
-    "objectID": "other_notes.html#listing-objects",
-    "href": "other_notes.html#listing-objects",
-    "title": "Other Notes",
-    "section": "1 Listing Objects",
-    "text": "1 Listing Objects\nls() will print the names of all objects you currently have in your environment, such as dataframes and vectors. This can be helpful when you accumulate many objects and need to remind yourself the name of a dataframe you’re looking for."
-  },
-  {
-    "objectID": "other_notes.html#more-operators",
-    "href": "other_notes.html#more-operators",
-    "title": "Other Notes",
-    "section": "2 More Operators",
-    "text": "2 More Operators\n\n2.1 NOT"
-  },
-  {
     "objectID": "index.html#overview",
     "href": "index.html#overview",
     "title": "All of Us Workshop",
@@ -587,111 +566,144 @@
   {
     "objectID": "session-4.html",
     "href": "session-4.html",
-    "title": "Statistical Analysis",
+    "title": "Statistical Analysis and JupyterLab Tips",
     "section": "",
-    "text": "In this last session, we will perform statistical tests and fit models that are common in medical research. Detailed discussions on statistics are beyond the scope of this workshop. If you want to learn more about these tests, check out links provided in Additional Resources.\nAt the end of Session 4, learners will be able to:\n\nPerform t-test, ANOVA, chi-square tests in R.\nFit regression models: simple linear regression, multiple linear regression, logistic regression\nObtain odds ratios from logistic regression models.",
+    "text": "In this last session, we will perform statistical tests and fit models that are common in medical research. Detailed discussions on statistics are beyond the scope of this workshop. If you want to learn more about these tests, check out links provided in Additional Resources.\nAt the end of Session 4, learners will be able to:\n\nPerform t-test, ANOVA, chi-square tests in R.\nFit regression models: simple linear regression, multiple linear regression, logistic regression\nObtain odds ratios from logistic regression models.\nFamiliarize with navigating JupyterLab and the storage bucket",
     "crumbs": [
       "Lessons",
-      "Session 4: Statistical Analysis"
+      "Session 4: Statistical Analysis and JupyterLab Tips"
     ]
   },
   {
     "objectID": "session-4.html#learning-objectives",
     "href": "session-4.html#learning-objectives",
-    "title": "Statistical Analysis",
+    "title": "Statistical Analysis and JupyterLab Tips",
     "section": "",
-    "text": "In this last session, we will perform statistical tests and fit models that are common in medical research. Detailed discussions on statistics are beyond the scope of this workshop. If you want to learn more about these tests, check out links provided in Additional Resources.\nAt the end of Session 4, learners will be able to:\n\nPerform t-test, ANOVA, chi-square tests in R.\nFit regression models: simple linear regression, multiple linear regression, logistic regression\nObtain odds ratios from logistic regression models.",
+    "text": "In this last session, we will perform statistical tests and fit models that are common in medical research. Detailed discussions on statistics are beyond the scope of this workshop. If you want to learn more about these tests, check out links provided in Additional Resources.\nAt the end of Session 4, learners will be able to:\n\nPerform t-test, ANOVA, chi-square tests in R.\nFit regression models: simple linear regression, multiple linear regression, logistic regression\nObtain odds ratios from logistic regression models.\nFamiliarize with navigating JupyterLab and the storage bucket",
     "crumbs": [
       "Lessons",
-      "Session 4: Statistical Analysis"
+      "Session 4: Statistical Analysis and JupyterLab Tips"
     ]
   },
   {
     "objectID": "session-4.html#setup",
     "href": "session-4.html#setup",
-    "title": "Statistical Analysis",
+    "title": "Statistical Analysis and JupyterLab Tips",
     "section": "2 Setup",
     "text": "2 Setup\nWe will load packages and read in the data file. In addition to tidyverse, we will also import broom package which has convenient functions to make results output very readable.\n\nlibrary(tidyverse)\nlibrary(broom)\n\ndf &lt;- read_csv(\"https://raw.githubusercontent.com/yesols/aou-workshop/refs/heads/main/data/final_dataset2.csv\")\nhead(df)\n\n\n\n# A tibble: 6 × 14\n  person_id year_of_birth race    sex_at_birth condition_concept_id\n      &lt;dbl&gt;         &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;                       &lt;dbl&gt;\n1         1          1987 Unknown Male                           NA\n2         2          1987 Asian   Female                         NA\n3         3          2004 Asian   Male                           NA\n4         4          1944 Black   Male                           NA\n5         5          1941 Asian   Male                           NA\n6         6          2006 Other   Male                           NA\n# ℹ 9 more variables: condition_start_date &lt;date&gt;,\n#   condition_source_value &lt;chr&gt;, drug_concept_id &lt;dbl&gt;,\n#   drug_exposure_start_date &lt;date&gt;, true_exposure_status &lt;chr&gt;, SBP &lt;dbl&gt;,\n#   age &lt;dbl&gt;, condition_status &lt;dbl&gt;, exposure_status &lt;dbl&gt;",
     "crumbs": [
       "Lessons",
-      "Session 4: Statistical Analysis"
+      "Session 4: Statistical Analysis and JupyterLab Tips"
     ]
   },
   {
     "objectID": "session-4.html#two-sample-t-test",
     "href": "session-4.html#two-sample-t-test",
-    "title": "Statistical Analysis",
+    "title": "Statistical Analysis and JupyterLab Tips",
     "section": "3 Two-Sample T-Test",
     "text": "3 Two-Sample T-Test\nWe use t-test for continuous vs binary variables. Let’s test if there is a statistically significant difference in mean Systolic Blood Pressure (SBP) between participants with and without the condition (condition_status).\nBy default, R executes a Welch two-sample t-test, which does not assume equal variances between groups. This is generally the preferred approach for clinical data.\n\nt_result &lt;- t.test(SBP ~ condition_status, data = df)\nprint(t_result)\n\n\n    Welch Two Sample t-test\n\ndata:  SBP by condition_status\nt = 0.20451, df = 74.577, p-value = 0.8385\nalternative hypothesis: true difference in means between group 0 and group 1 is not equal to 0\n95 percent confidence interval:\n -4.953265  6.086527\nsample estimates:\nmean in group 0 mean in group 1 \n       117.3881        116.8214",
     "crumbs": [
       "Lessons",
-      "Session 4: Statistical Analysis"
+      "Session 4: Statistical Analysis and JupyterLab Tips"
     ]
   },
   {
     "objectID": "session-4.html#one-way-anova",
     "href": "session-4.html#one-way-anova",
-    "title": "Statistical Analysis",
+    "title": "Statistical Analysis and JupyterLab Tips",
     "section": "4 One-Way ANOVA",
     "text": "4 One-Way ANOVA\nFor testing continuous variables in more than 2 categories in a variable, we use one-way ANOVA. Let’s test if there is a statistical difference in mean SBP among sex groups (male, female, other)\n\n# Execute One-Way ANOVA\nanova_model &lt;- aov(SBP ~ sex_at_birth, data = df)\n\n# Output the ANOVA table (Degrees of freedom, Sum of Squares, F-value, p-value)\nsummary(anova_model)\n\n             Df Sum Sq Mean Sq F value Pr(&gt;F)\nsex_at_birth  2    174   87.08   0.416  0.661\nResiduals    92  19258  209.33               \n5 observations deleted due to missingness",
     "crumbs": [
       "Lessons",
-      "Session 4: Statistical Analysis"
+      "Session 4: Statistical Analysis and JupyterLab Tips"
     ]
   },
   {
     "objectID": "session-4.html#pearsons-chi-square-test",
     "href": "session-4.html#pearsons-chi-square-test",
-    "title": "Statistical Analysis",
+    "title": "Statistical Analysis and JupyterLab Tips",
     "section": "5 Pearson’s Chi-Square Test",
     "text": "5 Pearson’s Chi-Square Test\nIf you want to test associations between categorical variables, use Pearson’s Chi-square test. In our example, we will see if drug exposure (exposure_status) is associated with MCI/dementia (condition_status).\nTo execute a Chi-squared test, you must pass a contingency table into the chisq.test() function.\n\n# Generate the base R contingency table and pass it to the test\nchi_sq_result &lt;- chisq.test(table(df$condition_status, df$exposure_status))\nprint(chi_sq_result)\n\n\n    Pearson's Chi-squared test with Yates' continuity correction\n\ndata:  table(df$condition_status, df$exposure_status)\nX-squared = 20.931, df = 1, p-value = 4.76e-06\n\n\n\n\n\n\n\n\nNote\n\n\n\nIf any expected cell count is less than 5, R will generate a warning. In such cases, fisher.test() should be used instead.",
     "crumbs": [
       "Lessons",
-      "Session 4: Statistical Analysis"
+      "Session 4: Statistical Analysis and JupyterLab Tips"
     ]
   },
   {
     "objectID": "session-4.html#simple-linear-regression",
     "href": "session-4.html#simple-linear-regression",
-    "title": "Statistical Analysis",
+    "title": "Statistical Analysis and JupyterLab Tips",
     "section": "6 Simple Linear Regression",
     "text": "6 Simple Linear Regression\nTo see the relationship a continuous dependent variable and a continuous independent variable, we can use simple linear regression. We will fit a linear regression model for SBP and age. We use lm() function for fitting linear regression models.\n\n# Fit the linear model\nlm_model &lt;- lm(SBP ~ age, data = df)\n\n# Base R summary (verbose)\nsummary(lm_model)\n\n\nCall:\nlm(formula = SBP ~ age, data = df)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-30.1453  -6.0564   0.9969   5.9673  22.3843 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept) 90.34318    2.92574  30.879  &lt; 2e-16 ***\nage          0.50592    0.05148   9.827 4.75e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 10.12 on 93 degrees of freedom\n  (5 observations deleted due to missingness)\nMultiple R-squared:  0.5094,    Adjusted R-squared:  0.5041 \nF-statistic: 96.57 on 1 and 93 DF,  p-value: 4.754e-16\n\n\nYou can use tidy() function from broom package to display the model neatly as a dataframe:\n\nlibrary(broom)\ntidy(lm_model)\n\n# A tibble: 2 × 5\n  term        estimate std.error statistic  p.value\n  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;\n1 (Intercept)   90.3      2.93       30.9  1.13e-50\n2 age            0.506    0.0515      9.83 4.75e-16\n\n\nWe learned how to create scatter plots in the last session. We can overlay regression fit to the scatter plot easily with ggplot2, using geom_smooth().\n\nggplot(df, aes(x = age, y = SBP)) +\n  geom_point(alpha = 0.5, color = \"darkblue\") +\n  geom_smooth(\n    method = \"lm\", \n    color = \"red\", \n    fill = \"lightcoral\", \n    alpha = 0.3\n  ) +\n  labs(\n    title = \"Linear Regression: Systolic Blood Pressure by Age\",\n    x = \"Age (Years)\",\n    y = \"Systolic Blood Pressure (mmHg)\"\n  ) +\n  theme_minimal()\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\nWarning: Removed 5 rows containing non-finite outside the scale range\n(`stat_smooth()`).\n\n\nWarning: Removed 5 rows containing missing values or values outside the scale range\n(`geom_point()`).",
     "crumbs": [
       "Lessons",
-      "Session 4: Statistical Analysis"
+      "Session 4: Statistical Analysis and JupyterLab Tips"
     ]
   },
   {
     "objectID": "session-4.html#multiple-linear-regression",
     "href": "session-4.html#multiple-linear-regression",
-    "title": "Statistical Analysis",
+    "title": "Statistical Analysis and JupyterLab Tips",
     "section": "7 Multiple Linear Regression",
     "text": "7 Multiple Linear Regression\nWe use multiple linear regression to see the relationship between one continuous dependent variable and two or more independent variables. In medical research, multiple linear regression is often used as a way to adjust for confounding variables.\nWe will fit a model to describe the relationship between SBP and age again, but will add sex. To include more independent variables, we simply add variable names to the formula using +:\n\nlm_adj_model &lt;- lm(SBP ~ age + sex_at_birth, data = df)\nsummary(lm_adj_model)\n\n\nCall:\nlm(formula = SBP ~ age + sex_at_birth, data = df)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-29.3473  -5.4471   0.5786   6.7308  21.8585 \n\nCoefficients:\n                  Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)       89.63749    3.13686  28.576  &lt; 2e-16 ***\nage                0.50411    0.05207   9.681 1.19e-15 ***\nsex_at_birthMale   1.31476    2.19149   0.600    0.550    \nsex_at_birthOther  1.86637    4.18336   0.446    0.657    \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 10.21 on 91 degrees of freedom\n  (5 observations deleted due to missingness)\nMultiple R-squared:  0.5118,    Adjusted R-squared:  0.4957 \nF-statistic:  31.8 on 3 and 91 DF,  p-value: 3.764e-14\n\n\nUsing broom:\n\ntidy(lm_adj_model)\n\n# A tibble: 4 × 5\n  term              estimate std.error statistic  p.value\n  &lt;chr&gt;                &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;\n1 (Intercept)         89.6      3.14      28.6   3.14e-47\n2 age                  0.504    0.0521     9.68  1.19e-15\n3 sex_at_birthMale     1.31     2.19       0.600 5.50e- 1\n4 sex_at_birthOther    1.87     4.18       0.446 6.57e- 1",
     "crumbs": [
       "Lessons",
-      "Session 4: Statistical Analysis"
+      "Session 4: Statistical Analysis and JupyterLab Tips"
     ]
   },
   {
     "objectID": "session-4.html#logistic-regression",
     "href": "session-4.html#logistic-regression",
-    "title": "Statistical Analysis",
+    "title": "Statistical Analysis and JupyterLab Tips",
     "section": "8 Logistic Regression",
     "text": "8 Logistic Regression\nBecause logistic regression is not discussed in your Research Methods course, I will provide a little bit of background before we learn the R command.\n\n8.1 Theoretical Background\nStandard linear regression predicts a continuous outcome \\(Y\\) based on a linear combination of predictors \\(X\\): \\[Y=\\beta_0+\\beta_1X_1+\\dots+\\beta_pX_p\\]\nWhen applied to a binary clinical outcome (absence or presence of a disease, benign or malignant. alive or dead), the linear fit does not make sense when trying to model binary outcomes.\nSuppose we have a dataset of tumor sizes from 200 patients and whether they are benign (0) or malignant (1). A linear regression model (red line) would look like this:\n\n\n\n\n\n\n\n\n\nIt does not seem like a good fit at all!\nFor this kind of scenarios, we use logistic regression. In a logistic regression model, the outcome \\(Y\\) is “logit”-transformed, i.e., turned into log-odds. \\[\\ln\\left(\\frac{p}{1-p}\\right)=\\beta_0+\\beta_1X_1+\\dots+\\beta_pX_p\\] Solving this equation for \\(p\\), the probability of a given outcome (tumor is malignant): \\[p=\\frac{1}{1+e^{-(\\beta_0+\\beta_1X_1+\\dots+\\beta_pX_p)}}\\]\nNow we have a valid probability that enables us to predict malignancy based on the tumor size.\n\n\n\n\n\n\n\n\n\nThe fact that logistic regression models the log-odds of a binary outcome provides a useful mathematical property: the coefficients, \\(\\beta_1, \\beta_2, \\dots\\), of the independent variables, \\(X_1, X_2, \\dots\\), represent the log of the odds ratio for a one-unit increase in those variables. If the independent variables are binary (e.g., \\(1\\) for exposed and \\(0\\) for unexposed), the coefficient specifically represents the log odds ratio of the outcome for the exposed group compared to the unexposed group. That means the exponent of a coefficient, i.e., \\(e^{\\beta_1}\\), etc, represent odds ratio of the corresponding variable.\nSo, logistic regression is primarily utilized for two purposes: predictive modeling and effect estimation. In predictive modeling, it is used to calculate the probability of a binary outcome. In inferential statistics, it is used to calculate adjusted odds ratios to measure the association between exposures and outcomes. This makes it the standard modeling approach for retrospective case-control studies, where calculating relative risk is mathematically invalid.\n\n\n8.2 Application\nWe will fit a logistic model on our practice dataset now, to see if there is any association between drug exposure and dementia outcome, while adjusting for age and sex. We use glm() function for this purpose. The argument, family = \"binomial\", specifies that we want logit link (i.e., \\(\\ln\\left(\\frac{p}{1-p}\\right)\\)), which is what makes it logistic regression as opposed to other types.\n\n# Fit the multivariable logistic regression model\nlogistic_model &lt;- glm(\n  condition_status ~ exposure_status + age + sex_at_birth,\n  data = df,\n  family = \"binomial\"\n)\nsummary(logistic_model)\n\n\nCall:\nglm(formula = condition_status ~ exposure_status + age + sex_at_birth, \n    family = \"binomial\", data = df)\n\nCoefficients:\n                  Estimate Std. Error z value Pr(&gt;|z|)    \n(Intercept)       -2.18139    0.83531  -2.611  0.00902 ** \nexposure_status    2.15673    0.50529   4.268 1.97e-05 ***\nage                0.01018    0.01301   0.783  0.43383    \nsex_at_birthMale  -0.39916    0.52993  -0.753  0.45131    \nsex_at_birthOther  0.22907    0.90841   0.252  0.80091    \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n(Dispersion parameter for binomial family taken to be 1)\n\n    Null deviance: 122.173  on 99  degrees of freedom\nResidual deviance:  98.024  on 95  degrees of freedom\nAIC: 108.02\n\nNumber of Fisher Scoring iterations: 4\n\n\nYou can obtain the odds ratio by expoentiating the coefficients manually, using exp() function, or the tidy() function from broom package can do this for you as well as confidence intervals.\n\n# Extract exponentiated coefficients (adjusted Odds Ratios) and CIs\nlibrary(broom)\ntidy_results &lt;- tidy(\n  logistic_model,\n  exponentiate = TRUE,\n  conf.int = TRUE\n)\nprint(tidy_results)\n\n# A tibble: 5 × 7\n  term              estimate std.error statistic   p.value conf.low conf.high\n  &lt;chr&gt;                &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;\n1 (Intercept)          0.113    0.835     -2.61  0.00902     0.0191     0.525\n2 exposure_status      8.64     0.505      4.27  0.0000197   3.31      24.3  \n3 age                  1.01     0.0130     0.783 0.434       0.985      1.04 \n4 sex_at_birthMale     0.671    0.530     -0.753 0.451       0.235      1.91 \n5 sex_at_birthOther    1.26     0.908      0.252 0.801       0.193      7.35 \n\n\n\n\n\n\n\n\nImportantModel Diagnostics\n\n\n\nRegression methods such as linear regression and logistic regression rely on statistical assumptions about underlying data. Before making an inference based on a modeling result, it is critical to check these assumptoms through model diagnostics. Refer to your statistics text or Additional Resources link on the left sidebar to learn more.",
     "crumbs": [
       "Lessons",
-      "Session 4: Statistical Analysis"
+      "Session 4: Statistical Analysis and JupyterLab Tips"
     ]
   },
   {
-    "objectID": "session-4.html#application-to-all-of-us-data",
-    "href": "session-4.html#application-to-all-of-us-data",
-    "title": "Statistical Analysis",
-    "section": "9 Application to All of Us Data",
-    "text": "9 Application to All of Us Data\nWork on own datasets in All of Us Workbench.",
+    "objectID": "session-4.html#navigating-the-notebook-modes-and-shortcuts",
+    "href": "session-4.html#navigating-the-notebook-modes-and-shortcuts",
+    "title": "Statistical Analysis and JupyterLab Tips",
+    "section": "9 Navigating the Notebook: Modes and Shortcuts",
+    "text": "9 Navigating the Notebook: Modes and Shortcuts\nWhen you click inside a cell to type code or text, you enter Edit Mode (indicated by a blinking cursor and often a highlighted border). However, if you press the Esc key or click outside the text box, you switch to Command Mode which allows you delete, move, insert cells.\nMastering a few Command Mode keyboard shortcuts will drastically speed up your workflow. Press Esc to ensure you are in Command Mode, and try these keystrokes:\n\nA: Insert a new cell Above the current one.\nB: Insert a new cell Below the current one.\nD, D (press D twice quickly): Delete the current cell.\nZ: Undo a deleted cell.\nShift + Enter: Execute the code (or format the Markdown) in the current cell and advance to the next one.",
     "crumbs": [
       "Lessons",
-      "Session 4: Statistical Analysis"
+      "Session 4: Statistical Analysis and JupyterLab Tips"
+    ]
+  },
+  {
+    "objectID": "session-4.html#documenting-with-markdown-cells",
+    "href": "session-4.html#documenting-with-markdown-cells",
+    "title": "Statistical Analysis and JupyterLab Tips",
+    "section": "10 Documenting with Markdown Cells",
+    "text": "10 Documenting with Markdown Cells\nMarkdown is a lightweight markup language that is easy to use for simple text formatting. In Jupyter Notebooks, markdown is often used for sectioning the documents and annotating the code. You can change a cell from “Code” to “Markdown”, type in the section headings or your comments, and running the cell will render the markdown formatting.\nHere are a few common markdown examples:\n# Main Heading\n## Subheading\n### Smaller Heading\n\n**Bold Text**\n*Italic Text*\n\n- Bullet point 1\n- Bullet point 2\n  - Indented bullet point\n\n1. Numbered list\n2. Numbered list\nAnd here is what that exact formatting looks like once the cell is executed:\n\n\n\n\n\n\n\nMain Heading\n\n\nSubheading\n\n\nSmaller Heading\n\nBold Text Italic Text\n\nBullet point 1\nBullet point 2\n\nIndented bullet point\n\n\n\nNumbered list\nNumbered list",
+    "crumbs": [
+      "Lessons",
+      "Session 4: Statistical Analysis and JupyterLab Tips"
+    ]
+  },
+  {
+    "objectID": "session-4.html#pivoting-survey-data-long-to-wide",
+    "href": "session-4.html#pivoting-survey-data-long-to-wide",
+    "title": "Statistical Analysis and JupyterLab Tips",
+    "section": "11 Pivoting Survey Data (Long to Wide)",
+    "text": "11 Pivoting Survey Data (Long to Wide)\nIf you pull multiple survey items, the query result will be in a “long” format, where each row corresponds to a single survey item per person. This means that there will be multiple rows per person. We typically want a dataframe where each row is a unique participant and questions are columns with answers as values. We can reshape the dataframe from a long format to a wide format using pivot_wider() function.\nFirst, let’s look at a mock example of what your raw survey data might look like:\n\n# Create a mock \"long\" survey dataframe\nsurvey_long &lt;- data.frame(\n  person_id = c(1, 1, 1, 2, 2, 2),\n  question = c(\"1535717\", \"1585723\", \"1585729\", \"1535717\", \"1585723\", \"1585729\"),\n  T_DISP_answer = c(\"Yes\", \"Never\", \"Good\", \"No\", \"Always\", \"Fair\")\n)\n\nhead(survey_long)\n\n  person_id question T_DISP_answer\n1         1  1535717           Yes\n2         1  1585723         Never\n3         1  1585729          Good\n4         2  1535717            No\n5         2  1585723        Always\n6         2  1585729          Fair\n\n\nNow, we will pivot this dataframe so the question IDs become our new column names, and the T_DISP_answers become the values inside those columns.\n\n# Reshape to wide format\nsurvey_wide &lt;- survey_long %&gt;%\n  pivot_wider(\n    id_cols = person_id,               # The column that identifies unique rows\n    names_from = question,             # The column containing your new column names\n    values_from = T_DISP_answer,       # The column containing the actual answers\n  )\n\nhead(survey_wide)\n\n# A tibble: 2 × 4\n  person_id `1535717` `1585723` `1585729`\n      &lt;dbl&gt; &lt;chr&gt;     &lt;chr&gt;     &lt;chr&gt;    \n1         1 Yes       Never     Good     \n2         2 No        Always    Fair",
+    "crumbs": [
+      "Lessons",
+      "Session 4: Statistical Analysis and JupyterLab Tips"
+    ]
+  },
+  {
+    "objectID": "session-4.html#other-tips",
+    "href": "session-4.html#other-tips",
+    "title": "Statistical Analysis and JupyterLab Tips",
+    "section": "12 Other Tips",
+    "text": "12 Other Tips\nTab completion: Use tab key to see suggested functions or to drill down a file path.\nDatetime: In All of Us data, you will often see a datetime column with values in a format, “YYYY-MM-DD 00:00:00 UTC”. When you read in a CSV file, this type may be read as character data type. In that case, use as_date() function from lubridate package (included when you load tidyverse).\nR objects vs. files: When you run commands like df &lt;- read_csv(\"my_data.csv\"), you are reading a copy of the file contents into the Jupyter environment as an R object (the dataframe df). This object exists solely in memory (RAM), not in any directories unlike files. To list all those objects that are currently in your environment, use ls() function. Also note that if your notebook kernel restarts or your session times out, all R objects are erased from memory and must be reloaded by re-running your code.\n%in% operator: %in% checks whether an element exists in a vector. This can be useful when you want to filter rows with certain values. For example: person_df %&gt;% filter(sex_at_birth %in% c(\"Male\", \"Female\"))\nWhere am I?: Use getwd() function to check the current directory you’re in. This may become relevant when you’re constructing a relative path of a file.",
+    "crumbs": [
+      "Lessons",
+      "Session 4: Statistical Analysis and JupyterLab Tips"
     ]
   }
 ]
