@@ -44,7 +44,7 @@
     "href": "resources.html#useful-r-packages",
     "title": "Additional Resources",
     "section": "Useful R Packages",
-    "text": "Useful R Packages\n\nbroom\n\nUseful functions for displaying model components as a neat dataframe\n\ngtsummary\n\nConvenient package to create publication-ready tables to describe data and more\n\nallofus\n\nProvides convenient functions for working with All of Us data\n\nMatchIt\n\nUseful package for creating matched datasets (can do exact matching or propensity score matching)\nCheck out this very approachable tutorial: Introduction to Propensity Score Matching with MatchIt\n\nsurvival package is widely used for survival analysis including Kaplan-Meier plots and Cox proportional hazards models. Here are a few tutorial pages you can check out:\n\nSurvival Analysis in R - Emily C. Zabor\nSurvival Analysis in R - The Miller Lab\nIntroduction to Survival Analysis in R - UCLA",
+    "text": "Useful R Packages\n\nbroom\n\nUseful functions for displaying model components as a neat dataframe\n\ngtsummary\n\nConvenient package to create publication-ready tables to describe data and more\n\nMatchIt\n\nUseful package for creating matched datasets (can do exact matching or propensity score matching)\nCheck out this very approachable tutorial: Introduction to Propensity Score Matching with MatchIt\n\nsurvival package is widely used for survival analysis including Kaplan-Meier plots and Cox proportional hazards models. Here are a few tutorial pages you can check out:\n\nSurvival Analysis in R - Emily C. Zabor\nSurvival Analysis in R - The Miller Lab\nIntroduction to Survival Analysis in R - UCLA",
     "crumbs": [
       "Additional Resources"
     ]
