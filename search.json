@@ -568,7 +568,7 @@
     "href": "session-4.html",
     "title": "Statistical Analysis and JupyterLab Tips",
     "section": "",
-    "text": "In this last session, we will perform statistical tests and fit models that are common in medical research. Detailed discussions on statistics are beyond the scope of this workshop. If you want to learn more about these tests, check out links provided in Additional Resources.\nAt the end of Session 4, learners will be able to:\n\nPerform t-test, ANOVA, chi-square tests in R.\nFit regression models: simple linear regression, multiple linear regression, logistic regression\nObtain odds ratios from logistic regression models.\nFamiliarize with navigating JupyterLab and the storage bucket",
+    "text": "In this last session, we will perform statistical tests and fit models that are common in medical research. Detailed discussions on statistics are beyond the scope of this workshop. If you want to learn more about these tests, check out links provided in Additional Resources.\nAt the end of Session 4, learners will be able to:\n\nPerform t-test, ANOVA, chi-square tests in R.\nFit regression models: simple linear regression, multiple linear regression, logistic regression\nObtain odds ratios from logistic regression models.\nFamiliarize with navigating JupyterLab",
     "crumbs": [
       "Lessons",
       "Session 4: Statistical Analysis and JupyterLab Tips"
@@ -579,7 +579,7 @@
     "href": "session-4.html#learning-objectives",
     "title": "Statistical Analysis and JupyterLab Tips",
     "section": "",
-    "text": "In this last session, we will perform statistical tests and fit models that are common in medical research. Detailed discussions on statistics are beyond the scope of this workshop. If you want to learn more about these tests, check out links provided in Additional Resources.\nAt the end of Session 4, learners will be able to:\n\nPerform t-test, ANOVA, chi-square tests in R.\nFit regression models: simple linear regression, multiple linear regression, logistic regression\nObtain odds ratios from logistic regression models.\nFamiliarize with navigating JupyterLab and the storage bucket",
+    "text": "In this last session, we will perform statistical tests and fit models that are common in medical research. Detailed discussions on statistics are beyond the scope of this workshop. If you want to learn more about these tests, check out links provided in Additional Resources.\nAt the end of Session 4, learners will be able to:\n\nPerform t-test, ANOVA, chi-square tests in R.\nFit regression models: simple linear regression, multiple linear regression, logistic regression\nObtain odds ratios from logistic regression models.\nFamiliarize with navigating JupyterLab",
     "crumbs": [
       "Lessons",
       "Session 4: Statistical Analysis and JupyterLab Tips"
