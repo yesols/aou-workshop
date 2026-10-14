@@ -1,102 +1,52 @@
 [
   {
-    "objectID": "resources.html",
-    "href": "resources.html",
-    "title": "Additional Resources",
+    "objectID": "tutorials.html",
+    "href": "tutorials.html",
+    "title": "Self-Paced R Tutorials",
     "section": "",
-    "text": "Support Hub\nAll of Us YouTube Channel",
+    "text": "A self-paced introduction to R for students with no programming experience, using simulated data laid out like All of Us Research Program data. Each notebook opens in Google Colab with the R runtime already selected and takes roughly 20 to 40 minutes.\nEveryone starts with the Foundations, then follows one of two paths.",
     "crumbs": [
-      "Additional Resources"
+      "Self-Paced R Tutorials"
     ]
   },
   {
-    "objectID": "resources.html#all-of-us-workbench",
-    "href": "resources.html#all-of-us-workbench",
-    "title": "Additional Resources",
-    "section": "",
-    "text": "Support Hub\nAll of Us YouTube Channel",
+    "objectID": "tutorials.html#how-to-use-the-notebooks",
+    "href": "tutorials.html#how-to-use-the-notebooks",
+    "title": "Self-Paced R Tutorials",
+    "section": "How to Use the Notebooks",
+    "text": "How to Use the Notebooks\n\nClick a notebook link below.\nSign in with a Google account.\nChoose File &gt; Save a copy in Drive and work in your copy.\nRun the cells in order from top to bottom. Each notebook ends with solutions and a link to the next one.",
     "crumbs": [
-      "Additional Resources"
+      "Self-Paced R Tutorials"
     ]
   },
   {
-    "objectID": "resources.html#course-supplemental-materials",
-    "href": "resources.html#course-supplemental-materials",
-    "title": "Additional Resources",
-    "section": "Course Supplemental Materials",
-    "text": "Course Supplemental Materials\n\nAnalysis Plan Template\nResearcher’s Guide to Using the Workbench\n\nThis guide is created by RTI International who partners with the All of Us Research Program in training researchers. Chapter 2 contains information about courses they offer and their “Amaze” platform for learning. But this is not required or expected for our workshop.\nThe information about workbench navigation and tools (Chapters 6-9) are outdated due to the recent roll-out of Workbench 2.0. However, the rest of the guide is still very helpful.",
+    "objectID": "tutorials.html#foundations",
+    "href": "tutorials.html#foundations",
+    "title": "Self-Paced R Tutorials",
+    "section": "Foundations",
+    "text": "Foundations\n\n\n\nNotebook\nCovers\n\n\n\n\nF1: First Steps in R\nRunning code, arithmetic, variables, functions, reading error messages\n\n\nF2: Vectors and Data Types\nVectors, numbers vs. text, TRUE/FALSE, dates, missing values\n\n\nF3: Dataframes\nBuilding and inspecting a table; one row per person or many\n\n\nF4: Choosing Rows and Columns\nPackages, select(), filter(), the pipe\n\n\nF5: New Columns and Data Files\nmutate(), if_else(), reading a CSV file, exploring a new dataset\n\n\nF6: Combining Tables\nInner and left joins, missing values from joins, duplicated rows",
     "crumbs": [
-      "Additional Resources"
+      "Self-Paced R Tutorials"
     ]
   },
   {
-    "objectID": "resources.html#r-programming-and-statistics",
-    "href": "resources.html#r-programming-and-statistics",
-    "title": "Additional Resources",
-    "section": "R Programming and Statistics",
-    "text": "R Programming and Statistics\n\nR for Health Data Science\n\nR tutorials for medical statistics\n\nR Recipes\n\nQuickly find code snippets by tasks\n\nR Tutorials & Resources\n\nCollection of tutorials by University of Idaho Statistical Programs, CALS",
+    "objectID": "tutorials.html#path-a-write-it-yourself",
+    "href": "tutorials.html#path-a-write-it-yourself",
+    "title": "Self-Paced R Tutorials",
+    "section": "Path A: Write It Yourself",
+    "text": "Path A: Write It Yourself\nStudents write the code.\n\n\n\nNotebook\nCovers\n\n\n\n\nA1: Cleaning Real Data\nRecoding categories with if_else() and case_when()\n\n\nA2: One Row per Person\nEarliest record per person, merging three tables, long to wide\n\n\nA3: Dates and New Variables\nDate logic, exposure before diagnosis, analysis variables, saving\n\n\nA4: Exploring and Plotting\nGroup summaries, histogram, box plot, scatter plot\n\n\nA5: Statistical Tests\nt-test, ANOVA, chi-square, Fisher’s exact test\n\n\nA6: Regression\nLinear and logistic regression, odds ratios",
     "crumbs": [
-      "Additional Resources"
+      "Self-Paced R Tutorials"
     ]
   },
   {
-    "objectID": "resources.html#useful-r-packages",
-    "href": "resources.html#useful-r-packages",
-    "title": "Additional Resources",
-    "section": "Useful R Packages",
-    "text": "Useful R Packages\n\nbroom\n\nUseful functions for displaying model components as a neat dataframe\n\ngtsummary\n\nConvenient package to create publication-ready tables to describe data and more\n\nMatchIt\n\nUseful package for creating matched datasets (can do exact matching or propensity score matching)\nCheck out this very approachable tutorial: Introduction to Propensity Score Matching with MatchIt\n\nsurvival package is widely used for survival analysis including Kaplan-Meier plots and Cox proportional hazards models. Here are a few tutorial pages you can check out:\n\nSurvival Analysis in R - Emily C. Zabor\nSurvival Analysis in R - The Miller Lab\nIntroduction to Survival Analysis in R - UCLA",
+    "objectID": "tutorials.html#path-b-ai-assisted",
+    "href": "tutorials.html#path-b-ai-assisted",
+    "title": "Self-Paced R Tutorials",
+    "section": "Path B: AI-Assisted",
+    "text": "Path B: AI-Assisted\nStudents describe what they want to an AI chat assistant, then read and check the code it returns.\n\n\n\nNotebook\nCovers\n\n\n\n\nB1: Your First Prompts\nThe describe-generate-read-run-check loop; what may be shared with an AI tool\n\n\nB2: Building a Dataset with AI\nPrompting for one row per person, merging, date logic; test cases\n\n\nB3: Exploring and Plotting with AI\nSummaries and plots by prompt; checking a plot against numbers\n\n\nB4: Catching Mistakes\nDebugging errors with AI; four mistakes that run without an error\n\n\nB5: Statistics with AI\nChoosing the test, reading output, odds ratios, moving to the Workbench",
     "crumbs": [
-      "Additional Resources"
-    ]
-  },
-  {
-    "objectID": "session-0.html",
-    "href": "session-0.html",
-    "title": "Session Zero",
-    "section": "",
-    "text": "Who are we and what do we hope to gain from the workshop?\nWorkshop expectations - materials, accounts, etc",
-    "crumbs": [
-      "Session Zero"
-    ]
-  },
-  {
-    "objectID": "session-0.html#introduction",
-    "href": "session-0.html#introduction",
-    "title": "Session Zero",
-    "section": "",
-    "text": "Who are we and what do we hope to gain from the workshop?\nWorkshop expectations - materials, accounts, etc",
-    "crumbs": [
-      "Session Zero"
-    ]
-  },
-  {
-    "objectID": "session-0.html#resources",
-    "href": "session-0.html#resources",
-    "title": "Session Zero",
-    "section": "2 Resources",
-    "text": "2 Resources\nThese files are linked in the Additional Resources page\n\nAnalysis Plan\nResearcher’s Guide to Using the Workbench\n\nNote: the information about workbench navigation and tools are outdated due to the recent roll-out of Workbench 2.0",
-    "crumbs": [
-      "Session Zero"
-    ]
-  },
-  {
-    "objectID": "session-0.html#workbench-tips",
-    "href": "session-0.html#workbench-tips",
-    "title": "Session Zero",
-    "section": "3 Workbench Tips",
-    "text": "3 Workbench Tips\n\nData User Code of Conduct\n\nDo NOT upload data or files containing personally identifiable information (PII), protected health information (PHI), or identifiable private information (IPI)\nDo NOT take screenshots or attempt in any way to copy, download, or otherwise remove any participant-level data from the All of Us Workbench\nDo NOT publish or otherwise distribute any participant-level data from the All of Us Research Program database\nDo NOT publish or otherwise distribute any data or aggregate statistics corresponding to fewer than 20 participants\n\nRefer to All of Us Data and Statistics Dissemination Policy\n\n\nIf planning on publishing or presenting your result:\n\nPublication and Presentation Checklist",
-    "crumbs": [
-      "Session Zero"
-    ]
-  },
-  {
-    "objectID": "session-0.html#qa",
-    "href": "session-0.html#qa",
-    "title": "Session Zero",
-    "section": "4 Q&A",
-    "text": "4 Q&A",
-    "crumbs": [
-      "Session Zero"
+      "Self-Paced R Tutorials"
     ]
   },
   {
@@ -276,184 +226,6 @@
     ]
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
-  },
-  {
-    "objectID": "index.html#overview",
-    "href": "index.html#overview",
-    "title": "All of Us Workshop",
-    "section": "Overview",
-    "text": "Overview\nThis workshop is primarily intended for SHAMP students who are interested in conducting research projects using All of Us Research Program data but do not have programming experience. Participants will gain skills in basic R programming and familiarity with All of Us data and Workbench so that they can complete research projects independently.\nThe workshop is intentionally short, consisting of four 2-hr sessions (with a 1-hr info session), and participants are expected to spend time outside of workshop sessions to prepare ahead and practice after.",
-    "crumbs": [
-      "Workshop Information"
-    ]
-  },
-  {
-    "objectID": "index.html#prerequisites-and-expectations",
-    "href": "index.html#prerequisites-and-expectations",
-    "title": "All of Us Workshop",
-    "section": "Prerequisites and Expectations",
-    "text": "Prerequisites and Expectations\n\nComplete all the steps laid out in this page: Getting Started with All of Us Projects.\n\nNon-WWAMI students: Some of the instructions in step A may not be applicable. If you are not sure, contact us.\n\nThis is a hands-on workshop. Bring your own laptop.\nBasic statistics knowledge is expected. We will learn how to perform common statistical tasks in R but will not discuss the theory or interpretation of results in detail.",
-    "crumbs": [
-      "Workshop Information"
-    ]
-  },
-  {
-    "objectID": "index.html#workshop-registration",
-    "href": "index.html#workshop-registration",
-    "title": "All of Us Workshop",
-    "section": "Workshop Registration",
-    "text": "Workshop Registration\n\nWWAMI students:\n\nNo action needed if you have been in contact with IOURMR Research Core regarding your project already.\n\nStudents from other SHAMP programs or other academic units:\n\nEmail Yesol and Nick (Contact Us) and let us know your intent to participate.",
-    "crumbs": [
-      "Workshop Information"
-    ]
-  },
-  {
-    "objectID": "index.html#schedule-for-2026",
-    "href": "index.html#schedule-for-2026",
-    "title": "All of Us Workshop",
-    "section": "Schedule for 2026",
-    "text": "Schedule for 2026\n\n\n\n\n\n\n\n\nSession\nDate and Time\nTopics Covered\n\n\n\n\nSession 0\nMay 18, 11am-12pm\n• Orientation to the Workbench and Workshop\n\n\nSession 1\nMay 21, 10am-12pm\n• Introduction to cloud computing and Researcher Workbench• Super-brief introduction to relational database structures and queries• Selecting cohorts and building your dataset\n\n\nSession 2\nMay 22, 10am-12pm\n• Introduction to R• Working with dataframes in R• Obtaining query results and data wrangling\n\n\nSession 3\nMay 28, 10am-12pm\n• More data wrangling• Exploratory data analysis• Data visualization\n\n\nSession 4\nMay 29, 10am-12pm\n• Performing statistical tests• Fitting regression models\n\n\n\n\nLocation: IOURMR Conference Room (D.A. Huckabay Bldg, Rm 122)",
-    "crumbs": [
-      "Workshop Information"
-    ]
-  },
-  {
-    "objectID": "index.html#contact-us",
-    "href": "index.html#contact-us",
-    "title": "All of Us Workshop",
-    "section": "Contact Us",
-    "text": "Contact Us\n\n\n\nYesol Sapozhnikov, PhD, RN\nPostdoctoral Fellow\n\nWorkshop inquiries\nAll of Us data questions\n\nOffice: D.A. Huckabay Medical Education Bldg 122C\nEmail: yesols@uidaho.edu\n\n\n\n\n\nNicholas Coombs, PhD, MSTAT\nResearch Assistant Professor\n\nStudent-led project inquiries\nGeneral research questions\n\nOffice: D.A. Huckabay Medical Education Bldg 122B\nEmail: ncoombs@uidaho.edu",
-    "crumbs": [
-      "Workshop Information"
-    ]
-  },
-  {
-    "objectID": "session-2.html",
-    "href": "session-2.html",
-    "title": "Introduction to R Programming and Data Wrangling",
-    "section": "",
-    "text": "Session 2 will focus on learning the basics of R programming. We will first work with small datasets to practice common R functions and syntax, followed by demonstration of running queries in the All of Us Workbench.\nAt the end of Session 2, learners will be able to:\n\nUnderstand different types of data types and structures in R.\nInspect and manipulate dataframes.\nFamiliarize with Data Explorer and app configurations in the Workbench.\n\nUnless indicated otherwise, we will practice R on Google Colab. When you start a new Colab notebook, it defaults to python. Change to R by clicking Runtime &gt; Change runtime type and select R from the dropdown menu. Click Save. Click Connect in the top right corner to start coding.",
-    "crumbs": [
-      "Lessons",
-      "Session 2: R Programming and Data Wrangling"
-    ]
-  },
-  {
-    "objectID": "session-2.html#learning-objectives",
-    "href": "session-2.html#learning-objectives",
-    "title": "Introduction to R Programming and Data Wrangling",
-    "section": "",
-    "text": "Session 2 will focus on learning the basics of R programming. We will first work with small datasets to practice common R functions and syntax, followed by demonstration of running queries in the All of Us Workbench.\nAt the end of Session 2, learners will be able to:\n\nUnderstand different types of data types and structures in R.\nInspect and manipulate dataframes.\nFamiliarize with Data Explorer and app configurations in the Workbench.\n\nUnless indicated otherwise, we will practice R on Google Colab. When you start a new Colab notebook, it defaults to python. Change to R by clicking Runtime &gt; Change runtime type and select R from the dropdown menu. Click Save. Click Connect in the top right corner to start coding.",
-    "crumbs": [
-      "Lessons",
-      "Session 2: R Programming and Data Wrangling"
-    ]
-  },
-  {
-    "objectID": "session-2.html#preliminaries",
-    "href": "session-2.html#preliminaries",
-    "title": "Introduction to R Programming and Data Wrangling",
-    "section": "2 Preliminaries",
-    "text": "2 Preliminaries\nConcepts:\n\nfile system: “directory”, “working directory”, “file path”\ninput and output\nfunctions and arguments\nvariables\nerrors vs. warning\n\nBest practice in programming:\n\nWhen naming files and directories, avoid spaces. Use underscores or dashes for readability. (e.g. my_important_file.csv)\nIf including dates in naming files, use a standard format such as YYYY-MM-DD or YYYYMMDD. (e.g. query_result_2026-05-21.csv)\nComment copiously: you think you will remember what you were doing but you won’t. Within a code cell, comment using #. Any lines beginning with # are ignored during code execution. Alternatively, utilize “markdown” cells.\nWrite reproducible code: keep a linear flow in a Notebook, and write it so that you have a clear “paper trail”. Anyone who runs your Notebook should be able to get the same result.\nFeel free to utilize AI to help you with coding but make sure you understand every line (That’s why you should still learn the basics. No “vibe coding” in this workshop and your research!)",
-    "crumbs": [
-      "Lessons",
-      "Session 2: R Programming and Data Wrangling"
-    ]
-  },
-  {
-    "objectID": "session-2.html#loading-libraries",
-    "href": "session-2.html#loading-libraries",
-    "title": "Introduction to R Programming and Data Wrangling",
-    "section": "3 Loading Libraries",
-    "text": "3 Loading Libraries\n“Libraries” or “packages” are collections of pre-written functions that provide convenience and efficiency in coding. Common R libraries we use for All of Us projects are:\n\ntidyverse: collection of packages (dplyr, readr, ggplot2,…) for file handling, working with dataframes, visualizations.\nbigrquery: facilitates the connection between R and Google BigQuery database - the type of database All of Us data are stored in.\nlubridate: for handling dates and times\n\nWe use library() function to load these packages.\n\n# Load packages\nlibrary(tidyverse)\nlibrary(lubridate)\n\nThese common packages are standard in cloud platforms. Occasionally, a package you want to use may not be available in the virtual machine. Attempting to load a package with library() when it does not exist will result in an error. Then, you need to first install it using install.packages() function.\n\n# Do not run this. This is just to show you the code for installing a package.\ninstall.packages(\"MatchIt\") #MatchIt is a package used for propensity score matching\nlibrary(\"MatchIt\")",
-    "crumbs": [
-      "Lessons",
-      "Session 2: R Programming and Data Wrangling"
-    ]
-  },
-  {
-    "objectID": "session-2.html#data-types",
-    "href": "session-2.html#data-types",
-    "title": "Introduction to R Programming and Data Wrangling",
-    "section": "4 Data Types",
-    "text": "4 Data Types\nThere are 5 data types you must be familiar with in programming with R. Knowing the data types of the values in your dataframe, for example, can be critical in performing computations or troubleshooting errors.\n\n4.1 Numeric\nNumeric data can be either double (dbl) for numbers with decimals such as weight or lab values, or integer (int) for whole numbers such as participant ID numbers.\n\n\n4.2 Character\nAlso known as string, character (chr) data types are non-numeric, text data. In All of Us data, condition names or drug names for example, are character types. Character values are enclosed in \" \". So if you have values like `“1”, “2”, “3”, they are character type even though they are numbers, and R will not be able to perform computations that require numeric data types.\n\n\n4.3 Factor\nFactor (fct) data types are used for categorical data. They often look just like characters which is a source of common confusion. However, under the hood, factors are stored as integers with associated “levels”. Some statistical functions may require factors as input.\n\n\n4.4 Logical\nLogicals are binary data with values TRUE and FALSE. While this type of data are rarely seen as values in a dataframe, they are an output of filtering or conditional operations. Interestingly, TRUE value equals 1 while FALSE equals 0. This property can be useful in checking data.\n\n\n4.5 Date\nDate data types represent calendar dates and times. In All of Us data, variables like condition_start_date fall into this category. While they might look like character strings (e.g., “2024-10-31”), R stores them numerically under the hood and is able to calculate things like age or the number of days between two medical visits.",
-    "crumbs": [
-      "Lessons",
-      "Session 2: R Programming and Data Wrangling"
-    ]
-  },
-  {
-    "objectID": "session-2.html#data-structures",
-    "href": "session-2.html#data-structures",
-    "title": "Introduction to R Programming and Data Wrangling",
-    "section": "5 Data Structures",
-    "text": "5 Data Structures\n\n5.1 Vector\nA vector is a sequence of data where all elements are of the same data type. We can create a vector using c().\n\n# Create character vectors\nnames &lt;- c(\"Josh\", \"Evelyn\", \"Olivia\", \"Liam\", \"Adrian\", \"Tamara\", \"Teddy\", \"Allison\")\ncities &lt;- c(\"Moscow\", \"Moscow\", \"Troy\", \"Viola\", \"Moscow\", \"Pullman\", \"Lewiston\", \"Moscow\")\n# Create a numeric vectors\nages &lt;- c(23, 18, 32, 56, 15, 25, 24, 16)\n\nUse print() to see the values.\n\nprint(names)\n\n[1] \"Josh\"    \"Evelyn\"  \"Olivia\"  \"Liam\"    \"Adrian\"  \"Tamara\"  \"Teddy\"  \n[8] \"Allison\"\n\n\nUse length() to see how many elements there are in a vector.\n\nlength(names)\n\n[1] 8\n\n\nYou can use indexing to access a specific element in a vector.\n\nnames[2]  # Access the second element in the names vector.\n\n[1] \"Evelyn\"\n\n\nFor numeric values, we can perform simple computations.\n\nmean(ages)  # Average of the elements in ages vector\n\n[1] 26.125\n\nsd(ages)  # Standard deviation \n\n[1] 13.28197\n\n\nOther common functions for numeric data include median(), min(), max().\n\n\n5.2 List\nLists look similar to vectors but they can contain mixed data types, even lists within a list. Lists are a very versatile object for programming purposes but we won’t go into it too much as they are not necessary for typical statistical analyses. I will just mention that we use double brackets ([[ ]]) to access a specific element in a list instead of single brackets as with vectors.\n\n\n5.3 Dataframe\nA dataframe is like a table in an Excel sheet. Each column is a vector. Therefore, values in a column must be of same data type but different columns can have different types. We will create a dataframe using the vectors we created earlier to see what it looks like.\n\n# Create a dataframe with existing vectors\ndf &lt;- data.frame(Name = names, Age = ages, City = cities)\n# Inspect\nprint(df)\n\n     Name Age     City\n1    Josh  23   Moscow\n2  Evelyn  18   Moscow\n3  Olivia  32     Troy\n4    Liam  56    Viola\n5  Adrian  15   Moscow\n6  Tamara  25  Pullman\n7   Teddy  24 Lewiston\n8 Allison  16   Moscow\n\n\nIn reality, you will rarely create a dataframe from scratch like this. Rather, you will often read a CSV file into a dataframe which we will learn later in this session. For now, we will use this small dataframe to learn a few essential skills in working with dataframes.",
-    "crumbs": [
-      "Lessons",
-      "Session 2: R Programming and Data Wrangling"
-    ]
-  },
-  {
-    "objectID": "session-2.html#dataframe-basics",
-    "href": "session-2.html#dataframe-basics",
-    "title": "Introduction to R Programming and Data Wrangling",
-    "section": "6 Dataframe Basics",
-    "text": "6 Dataframe Basics\n\n6.1 Inspect the dataframe\ndim() command to see the dimension. It will return the number of rows and number of columns.\n\ndim(df)\n\n[1] 8 3\n\n\nAlternatively, you can also use nrow() and ncol().\nstr() to see the structure. This is handy in inspecting data types and preview values of all columns.\n\nstr(df)\n\n'data.frame':   8 obs. of  3 variables:\n $ Name: chr  \"Josh\" \"Evelyn\" \"Olivia\" \"Liam\" ...\n $ Age : num  23 18 32 56 15 25 24 16\n $ City: chr  \"Moscow\" \"Moscow\" \"Troy\" \"Viola\" ...\n\n\nnames() to list column names.\n\nnames(df)\n\n[1] \"Name\" \"Age\"  \"City\"\n\n\nhead() or tail() to inspect the first few rows or the last few rows.\n\nhead(df)\n\n    Name Age    City\n1   Josh  23  Moscow\n2 Evelyn  18  Moscow\n3 Olivia  32    Troy\n4   Liam  56   Viola\n5 Adrian  15  Moscow\n6 Tamara  25 Pullman\n\n\nThe default is to show 5 rows but you can specify the number of rows inside the function. For example, head(df, 10) will show the first 10 rows.\ntable() is a quick way to see value counts in a column.\n\ntable(df$City)\n\n\nLewiston   Moscow  Pullman     Troy    Viola \n       1        4        1        1        1 \n\n\nunique() lists distinct, unique values.\n\nunique(df$City)\n\n[1] \"Moscow\"   \"Troy\"     \"Viola\"    \"Pullman\"  \"Lewiston\"\n\n\nThis can be combined with length() to show how many unique values in a vector (or a column).\n\nlength(unique(df$City))\n\n[1] 5\n\n\nI often use this combination to check for redundancies in a large dataframe. For example, let’s say I have a demographics dataframe with thousands of participants. I might run nrow(df_demographics) and then length(unique(df_demographics$person_id)). If the number of rows is larger than the number of unique individuals, then I know there are duplicates which needs further investigation.\n\n\n6.2 Subsetting\n$ signifies names in R. We can use $ to pull out values for a specific column.\n\ndf$Age   # Show all the values in Age column\n\n[1] 23 18 32 56 15 25 24 16\n\nhead(df$Age)  # Show the first few values in Age colun\n\n[1] 23 18 32 56 15 25\n\nmean(df$Age)  # Compute average age  \n\n[1] 26.125\n\n\nselect() function can also pull out columns.\n\ndf %&gt;% select(Name, Age)  # Subset just Name and Age columns\n\n     Name Age\n1    Josh  23\n2  Evelyn  18\n3  Olivia  32\n4    Liam  56\n5  Adrian  15\n6  Tamara  25\n7   Teddy  24\n8 Allison  16\n\n\n\n\n\n\n\n\nNotePipe Operator\n\n\n\nSymbols such as %&gt;% and |&gt; in R are called “pipes”. Pipes are used to string together multiple operations in sequence. In the above code block, we take the dataframe df and then apply select() function on it.\n\n\nfilter() function is used to subset rows based on some logical criteria.\n\ndf %&gt;% filter(Age &gt;= 21)  # Subset rows for ages 21 or older\n\n    Name Age     City\n1   Josh  23   Moscow\n2 Olivia  32     Troy\n3   Liam  56    Viola\n4 Tamara  25  Pullman\n5  Teddy  24 Lewiston\n\n\nEarlier, we briefly discussed the logical data type. When we use filter(), R evaluates each row - whether its Age value is 21 or greater - and creates a temporary vector of logical data, e.g., c(TRUE, FALSE, TRUE, TRUE, FALSE, TRUE, TRUE, FALSE). And then it outputs rows that correspond to TRUE.\nWe can filter by more than one criteria as well. We use the symbol | for OR and the symbol & for AND.\n\ndf %&gt;% filter(Age &gt;= 21 & City == \"Moscow\")  # Subset rows for ages 21 or older AND city is Moscow\n\n  Name Age   City\n1 Josh  23 Moscow\n\n\nWe can then save the resulting filtered dataframe by assigning a new variable.\n\ndf_filtered &lt;- df %&gt;% filter(Age &gt;= 21 & City == \"Moscow\")\nprint(df_filtered)\n\n  Name Age   City\n1 Josh  23 Moscow\n\n\n\n\n6.3 Join\nWorking with All of Us data frequently involves combining two dataframes. Common join types are left_join and inner_join. We’ll create a new dataframe to demonstrate these joins.\n\n# Create a BMI dataframe\nbmi_df &lt;- data.frame(Name = c(\"Evelyn\", \"Liam\", \"Olivia\", \"Tamara\"),\n                     BMI = c(20.2, 27.9, 32.1, 21.6))\nbmi_df\n\n    Name  BMI\n1 Evelyn 20.2\n2   Liam 27.9\n3 Olivia 32.1\n4 Tamara 21.6\n\n\ninner_join keeps only the rows where there is a match in both tables. So this type of join can work as a filter.\n\n# Join df and df_bmi by Name and only keep matched rows\ndf_inner_joined &lt;- inner_join(df, bmi_df, by = \"Name\")\ndf_inner_joined\n\n    Name Age    City  BMI\n1 Evelyn  18  Moscow 20.2\n2 Olivia  32    Troy 32.1\n3   Liam  56   Viola 27.9\n4 Tamara  25 Pullman 21.6\n\n\nleft_join is used most often in working with All of Us data. This join keeps all the rows from the primary table (left table) and add any matched data from the right table.\n\ndf_left_joined &lt;- left_join(df, bmi_df, by = \"Name\")\ndf_left_joined\n\n     Name Age     City  BMI\n1    Josh  23   Moscow   NA\n2  Evelyn  18   Moscow 20.2\n3  Olivia  32     Troy 32.1\n4    Liam  56    Viola 27.9\n5  Adrian  15   Moscow   NA\n6  Tamara  25  Pullman 21.6\n7   Teddy  24 Lewiston   NA\n8 Allison  16   Moscow   NA\n\n\nNote how rows without a match from bmi_df have values NA for the BMI column. NA indicates missing values and must be handled carefully in data analysis. We will discuss NA more in the Missing Values section shortly.\nAs a side note, the join syntax in above code blocks can be modified using a pipe %&gt;%. For example, left_join() is often written this way:\n\ndf_left_joined &lt;- df %&gt;% left_join(bmi_df, by = \"Name\")\ndf_left_joined\n\n     Name Age     City  BMI\n1    Josh  23   Moscow   NA\n2  Evelyn  18   Moscow 20.2\n3  Olivia  32     Troy 32.1\n4    Liam  56    Viola 27.9\n5  Adrian  15   Moscow   NA\n6  Tamara  25  Pullman 21.6\n7   Teddy  24 Lewiston   NA\n8 Allison  16   Moscow   NA\n\n\n\n\n6.4 Mutate\nmutate() function is used to create or transform variables. For example, we will create a column to show overweight status based on BMI.\n\ndf_left_joined %&gt;% mutate(Overweight = BMI &gt; 25)\n\n     Name Age     City  BMI Overweight\n1    Josh  23   Moscow   NA         NA\n2  Evelyn  18   Moscow 20.2      FALSE\n3  Olivia  32     Troy 32.1       TRUE\n4    Liam  56    Viola 27.9       TRUE\n5  Adrian  15   Moscow   NA         NA\n6  Tamara  25  Pullman 21.6      FALSE\n7   Teddy  24 Lewiston   NA         NA\n8 Allison  16   Moscow   NA         NA\n\n\nOther use cases of mutate() include arithmetic calculation of some numeric values. For example, if we had a dataframe with a year-of-birth column (YOB) and no age column, we can use mutate() to compute current age like this: mutate(current_age = 2025 - YOB). Similarly, if we had columns Weight in kg and Height in cm, but no BMI, we could create BMI column by: mutate(BMI = Weight / (Height/100)^2).",
-    "crumbs": [
-      "Lessons",
-      "Session 2: R Programming and Data Wrangling"
-    ]
-  },
-  {
-    "objectID": "session-2.html#missing-values",
-    "href": "session-2.html#missing-values",
-    "title": "Introduction to R Programming and Data Wrangling",
-    "section": "7 Missing Values",
-    "text": "7 Missing Values\nIn a small dataframes like our toy example, NAs are easy to see. However, it is much harder to spot in a large dataset. This poses a problem because many statistical functions cannot deal with NAs automatically. NAs can also cause errors in unexpected ways. Therefore, researchers must always be vigilant about NAs in their data.\nAs an example, let’s try computing the average of BMI values.\n\nmean(df_left_joined$BMI)\n\n[1] NA\n\n\nWhat happened? Many functions including mean() returns “unknown” if any of the input values are unknown (i.e. missing values). In the case of mean(), we must tell R explicitly to ignore NAs by using the optional argument, na.rm = TRUE.\n\nmean(df_left_joined$BMI, na.rm = TRUE)\n\n[1] 25.45\n\n\nNAs are very common in electronic health records and they can also be introduced during joings as we saw earlier.\n\n\n\n\n\n\nWarning\n\n\n\nAlways check for NAs in your data before statistical analyses!\n\n\nThere are various ways to check for NAs. Here are some examples.\n\ncolSums(is.na(df_left_joined))  # Returns a count of NAs in every column\n\nName  Age City  BMI \n   0    0    0    4 \n\n\n\nsum(is.na(df_left_joined$BMI))  # Returns a sum of NA values in a specific column\n\n[1] 4\n\n\nSometimes you want to see the entire rows that contain NA.\n\ndf_left_joined %&gt;% filter(is.na(BMI))  # Show rows where BMI values are NAs\n\n     Name Age     City BMI\n1    Josh  23   Moscow  NA\n2  Adrian  15   Moscow  NA\n3   Teddy  24 Lewiston  NA\n4 Allison  16   Moscow  NA\n\n\nFor categorical variables, we can use count() to see value counts including NAs. count() is the same as table() but shows NAs by default unlike table() which does not count NAs by default. Below example will not return any NAs because our City column does not have any, but this is just to show you the syntax.\n\ndf_left_joined %&gt;% count(City)  # Show value counts of the column City, including possible NAs\n\n      City n\n1 Lewiston 1\n2   Moscow 4\n3  Pullman 1\n4     Troy 1\n5    Viola 1\n\n\nIf a column of interest turns out to have too many NAs, you may have to remove that variable from your analysis. If NAs are only few and if the variable is critical to your analysis, you might decide to drop the rows containing NAs.\n\ndf_left_joined %&gt;% drop_na(BMI)\n\n    Name Age    City  BMI\n1 Evelyn  18  Moscow 20.2\n2 Olivia  32    Troy 32.1\n3   Liam  56   Viola 27.9\n4 Tamara  25 Pullman 21.6\n\n\nIf the variable is critical and you want to keep all the rows, you can look into advanced statistical methods called “imputation” which fills in missing values.",
-    "crumbs": [
-      "Lessons",
-      "Session 2: R Programming and Data Wrangling"
-    ]
-  },
-  {
-    "objectID": "session-2.html#navigating-researcher-workbench-continued",
-    "href": "session-2.html#navigating-researcher-workbench-continued",
-    "title": "Introduction to R Programming and Data Wrangling",
-    "section": "8 Navigating Researcher Workbench Continued",
-    "text": "8 Navigating Researcher Workbench Continued\nDemonstration in class:\n\nChoosing and configuring an analysis app\n\nAoU Jupyter: This is what we want.\nR Analysis Environment for AoU: For those who prefer RStudio environment.\nJupyterLab Spark Cluster: This is for genomics.\nJupyterLab NVIDIA options: These are GPU-accelerated environment suitable for AI/ML, and very expensive.",
-    "crumbs": [
-      "Lessons",
-      "Session 2: R Programming and Data Wrangling"
-    ]
-  },
-  {
-    "objectID": "session-2.html#running-queries-and-working-with-queried-data",
-    "href": "session-2.html#running-queries-and-working-with-queried-data",
-    "title": "Introduction to R Programming and Data Wrangling",
-    "section": "9 Running Queries and Working with Queried Data",
-    "text": "9 Running Queries and Working with Queried Data\nDemonstration in class:\n\nContinue Data Explorer demo\n\n“View in hierarchy” issue\nSource code for conditions and mapping\n\nFile organization in the Bucket\nStrategies to keep Notebooks organized\nBrowsing and viewing files in the Workbench vs. GCP",
-    "crumbs": [
-      "Lessons",
-      "Session 2: R Programming and Data Wrangling"
-    ]
-  },
-  {
-    "objectID": "session-2.html#preparing-for-next-session",
-    "href": "session-2.html#preparing-for-next-session",
-    "title": "Introduction to R Programming and Data Wrangling",
-    "section": "10 Preparing for Next Session",
-    "text": "10 Preparing for Next Session\nCreate your own project workspace and at least one data snapshot using Data Explorer prior to Session 3. Follow the instruction here or the video posted in the Getting Started page.",
-    "crumbs": [
-      "Lessons",
-      "Session 2: R Programming and Data Wrangling"
-    ]
-  },
-  {
     "objectID": "session-1.html",
     "href": "session-1.html",
     "title": "Introduction to Cloud Computing and All of Us Workbench",
@@ -561,6 +333,284 @@
     "crumbs": [
       "Lessons",
       "Session 1: Intro to Cloud Computing and AoU Workbench"
+    ]
+  },
+  {
+    "objectID": "resources.html",
+    "href": "resources.html",
+    "title": "Additional Resources",
+    "section": "",
+    "text": "Support Hub\nAll of Us YouTube Channel",
+    "crumbs": [
+      "Additional Resources"
+    ]
+  },
+  {
+    "objectID": "resources.html#all-of-us-workbench",
+    "href": "resources.html#all-of-us-workbench",
+    "title": "Additional Resources",
+    "section": "",
+    "text": "Support Hub\nAll of Us YouTube Channel",
+    "crumbs": [
+      "Additional Resources"
+    ]
+  },
+  {
+    "objectID": "resources.html#course-supplemental-materials",
+    "href": "resources.html#course-supplemental-materials",
+    "title": "Additional Resources",
+    "section": "Course Supplemental Materials",
+    "text": "Course Supplemental Materials\n\nAnalysis Plan Template\nResearcher’s Guide to Using the Workbench\n\nThis guide is created by RTI International who partners with the All of Us Research Program in training researchers. Chapter 2 contains information about courses they offer and their “Amaze” platform for learning. But this is not required or expected for our workshop.\nThe information about workbench navigation and tools (Chapters 6-9) are outdated due to the recent roll-out of Workbench 2.0. However, the rest of the guide is still very helpful.",
+    "crumbs": [
+      "Additional Resources"
+    ]
+  },
+  {
+    "objectID": "resources.html#r-programming-and-statistics",
+    "href": "resources.html#r-programming-and-statistics",
+    "title": "Additional Resources",
+    "section": "R Programming and Statistics",
+    "text": "R Programming and Statistics\n\nR for Health Data Science\n\nR tutorials for medical statistics\n\nR Recipes\n\nQuickly find code snippets by tasks\n\nR Tutorials & Resources\n\nCollection of tutorials by University of Idaho Statistical Programs, CALS",
+    "crumbs": [
+      "Additional Resources"
+    ]
+  },
+  {
+    "objectID": "resources.html#useful-r-packages",
+    "href": "resources.html#useful-r-packages",
+    "title": "Additional Resources",
+    "section": "Useful R Packages",
+    "text": "Useful R Packages\n\nbroom\n\nUseful functions for displaying model components as a neat dataframe\n\ngtsummary\n\nConvenient package to create publication-ready tables to describe data and more\n\nMatchIt\n\nUseful package for creating matched datasets (can do exact matching or propensity score matching)\nCheck out this very approachable tutorial: Introduction to Propensity Score Matching with MatchIt\n\nsurvival package is widely used for survival analysis including Kaplan-Meier plots and Cox proportional hazards models. Here are a few tutorial pages you can check out:\n\nSurvival Analysis in R - Emily C. Zabor\nSurvival Analysis in R - The Miller Lab\nIntroduction to Survival Analysis in R - UCLA",
+    "crumbs": [
+      "Additional Resources"
+    ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "index.html#overview",
+    "href": "index.html#overview",
+    "title": "All of Us Workshop",
+    "section": "Overview",
+    "text": "Overview\nThis workshop is primarily intended for SHAMP students who are interested in conducting research projects using All of Us Research Program data but do not have programming experience. Participants will gain skills in basic R programming and familiarity with All of Us data and Workbench so that they can complete research projects independently.\nThe workshop is intentionally short, consisting of four 2-hr sessions (with a 1-hr info session), and participants are expected to spend time outside of workshop sessions to prepare ahead and practice after.",
+    "crumbs": [
+      "Workshop Information"
+    ]
+  },
+  {
+    "objectID": "index.html#prerequisites-and-expectations",
+    "href": "index.html#prerequisites-and-expectations",
+    "title": "All of Us Workshop",
+    "section": "Prerequisites and Expectations",
+    "text": "Prerequisites and Expectations\n\nComplete all the steps laid out in this page: Getting Started with All of Us Projects.\n\nNon-WWAMI students: Some of the instructions in step A may not be applicable. If you are not sure, contact us.\n\nThis is a hands-on workshop. Bring your own laptop.\nBasic statistics knowledge is expected. We will learn how to perform common statistical tasks in R but will not discuss the theory or interpretation of results in detail.",
+    "crumbs": [
+      "Workshop Information"
+    ]
+  },
+  {
+    "objectID": "index.html#workshop-registration",
+    "href": "index.html#workshop-registration",
+    "title": "All of Us Workshop",
+    "section": "Workshop Registration",
+    "text": "Workshop Registration\n\nWWAMI students:\n\nNo action needed if you have been in contact with IOURMR Research Core regarding your project already.\n\nStudents from other SHAMP programs or other academic units:\n\nEmail Yesol and Nick (Contact Us) and let us know your intent to participate.",
+    "crumbs": [
+      "Workshop Information"
+    ]
+  },
+  {
+    "objectID": "index.html#schedule-for-2026",
+    "href": "index.html#schedule-for-2026",
+    "title": "All of Us Workshop",
+    "section": "Schedule for 2026",
+    "text": "Schedule for 2026\n\n\n\n\n\n\n\n\nSession\nDate and Time\nTopics Covered\n\n\n\n\nSession 0\nMay 18, 11am-12pm\n• Orientation to the Workbench and Workshop\n\n\nSession 1\nMay 21, 10am-12pm\n• Introduction to cloud computing and Researcher Workbench• Super-brief introduction to relational database structures and queries• Selecting cohorts and building your dataset\n\n\nSession 2\nMay 22, 10am-12pm\n• Introduction to R• Working with dataframes in R• Obtaining query results and data wrangling\n\n\nSession 3\nMay 28, 10am-12pm\n• More data wrangling• Exploratory data analysis• Data visualization\n\n\nSession 4\nMay 29, 10am-12pm\n• Performing statistical tests• Fitting regression models\n\n\n\n\nLocation: IOURMR Conference Room (D.A. Huckabay Bldg, Rm 122)",
+    "crumbs": [
+      "Workshop Information"
+    ]
+  },
+  {
+    "objectID": "index.html#contact-us",
+    "href": "index.html#contact-us",
+    "title": "All of Us Workshop",
+    "section": "Contact Us",
+    "text": "Contact Us\n\n\n\nYesol Sapozhnikov, PhD, RN\nPostdoctoral Fellow\n\nWorkshop inquiries\nAll of Us data questions\n\nOffice: D.A. Huckabay Medical Education Bldg 122C\nEmail: yesols@uidaho.edu\n\n\n\n\n\nNicholas Coombs, PhD, MSTAT\nResearch Assistant Professor\n\nStudent-led project inquiries\nGeneral research questions\n\nOffice: D.A. Huckabay Medical Education Bldg 122B\nEmail: ncoombs@uidaho.edu",
+    "crumbs": [
+      "Workshop Information"
+    ]
+  },
+  {
+    "objectID": "session-0.html",
+    "href": "session-0.html",
+    "title": "Session Zero",
+    "section": "",
+    "text": "Who are we and what do we hope to gain from the workshop?\nWorkshop expectations - materials, accounts, etc",
+    "crumbs": [
+      "Session Zero"
+    ]
+  },
+  {
+    "objectID": "session-0.html#introduction",
+    "href": "session-0.html#introduction",
+    "title": "Session Zero",
+    "section": "",
+    "text": "Who are we and what do we hope to gain from the workshop?\nWorkshop expectations - materials, accounts, etc",
+    "crumbs": [
+      "Session Zero"
+    ]
+  },
+  {
+    "objectID": "session-0.html#resources",
+    "href": "session-0.html#resources",
+    "title": "Session Zero",
+    "section": "2 Resources",
+    "text": "2 Resources\nThese files are linked in the Additional Resources page\n\nAnalysis Plan\nResearcher’s Guide to Using the Workbench\n\nNote: the information about workbench navigation and tools are outdated due to the recent roll-out of Workbench 2.0",
+    "crumbs": [
+      "Session Zero"
+    ]
+  },
+  {
+    "objectID": "session-0.html#workbench-tips",
+    "href": "session-0.html#workbench-tips",
+    "title": "Session Zero",
+    "section": "3 Workbench Tips",
+    "text": "3 Workbench Tips\n\nData User Code of Conduct\n\nDo NOT upload data or files containing personally identifiable information (PII), protected health information (PHI), or identifiable private information (IPI)\nDo NOT take screenshots or attempt in any way to copy, download, or otherwise remove any participant-level data from the All of Us Workbench\nDo NOT publish or otherwise distribute any participant-level data from the All of Us Research Program database\nDo NOT publish or otherwise distribute any data or aggregate statistics corresponding to fewer than 20 participants\n\nRefer to All of Us Data and Statistics Dissemination Policy\n\n\nIf planning on publishing or presenting your result:\n\nPublication and Presentation Checklist",
+    "crumbs": [
+      "Session Zero"
+    ]
+  },
+  {
+    "objectID": "session-0.html#qa",
+    "href": "session-0.html#qa",
+    "title": "Session Zero",
+    "section": "4 Q&A",
+    "text": "4 Q&A",
+    "crumbs": [
+      "Session Zero"
+    ]
+  },
+  {
+    "objectID": "session-2.html",
+    "href": "session-2.html",
+    "title": "Introduction to R Programming and Data Wrangling",
+    "section": "",
+    "text": "Session 2 will focus on learning the basics of R programming. We will first work with small datasets to practice common R functions and syntax, followed by demonstration of running queries in the All of Us Workbench.\nAt the end of Session 2, learners will be able to:\n\nUnderstand different types of data types and structures in R.\nInspect and manipulate dataframes.\nFamiliarize with Data Explorer and app configurations in the Workbench.\n\nUnless indicated otherwise, we will practice R on Google Colab. When you start a new Colab notebook, it defaults to python. Change to R by clicking Runtime &gt; Change runtime type and select R from the dropdown menu. Click Save. Click Connect in the top right corner to start coding.",
+    "crumbs": [
+      "Lessons",
+      "Session 2: R Programming and Data Wrangling"
+    ]
+  },
+  {
+    "objectID": "session-2.html#learning-objectives",
+    "href": "session-2.html#learning-objectives",
+    "title": "Introduction to R Programming and Data Wrangling",
+    "section": "",
+    "text": "Session 2 will focus on learning the basics of R programming. We will first work with small datasets to practice common R functions and syntax, followed by demonstration of running queries in the All of Us Workbench.\nAt the end of Session 2, learners will be able to:\n\nUnderstand different types of data types and structures in R.\nInspect and manipulate dataframes.\nFamiliarize with Data Explorer and app configurations in the Workbench.\n\nUnless indicated otherwise, we will practice R on Google Colab. When you start a new Colab notebook, it defaults to python. Change to R by clicking Runtime &gt; Change runtime type and select R from the dropdown menu. Click Save. Click Connect in the top right corner to start coding.",
+    "crumbs": [
+      "Lessons",
+      "Session 2: R Programming and Data Wrangling"
+    ]
+  },
+  {
+    "objectID": "session-2.html#preliminaries",
+    "href": "session-2.html#preliminaries",
+    "title": "Introduction to R Programming and Data Wrangling",
+    "section": "2 Preliminaries",
+    "text": "2 Preliminaries\nConcepts:\n\nfile system: “directory”, “working directory”, “file path”\ninput and output\nfunctions and arguments\nvariables\nerrors vs. warning\n\nBest practice in programming:\n\nWhen naming files and directories, avoid spaces. Use underscores or dashes for readability. (e.g. my_important_file.csv)\nIf including dates in naming files, use a standard format such as YYYY-MM-DD or YYYYMMDD. (e.g. query_result_2026-05-21.csv)\nComment copiously: you think you will remember what you were doing but you won’t. Within a code cell, comment using #. Any lines beginning with # are ignored during code execution. Alternatively, utilize “markdown” cells.\nWrite reproducible code: keep a linear flow in a Notebook, and write it so that you have a clear “paper trail”. Anyone who runs your Notebook should be able to get the same result.\nFeel free to utilize AI to help you with coding but make sure you understand every line (That’s why you should still learn the basics. No “vibe coding” in this workshop and your research!)",
+    "crumbs": [
+      "Lessons",
+      "Session 2: R Programming and Data Wrangling"
+    ]
+  },
+  {
+    "objectID": "session-2.html#loading-libraries",
+    "href": "session-2.html#loading-libraries",
+    "title": "Introduction to R Programming and Data Wrangling",
+    "section": "3 Loading Libraries",
+    "text": "3 Loading Libraries\n“Libraries” or “packages” are collections of pre-written functions that provide convenience and efficiency in coding. Common R libraries we use for All of Us projects are:\n\ntidyverse: collection of packages (dplyr, readr, ggplot2,…) for file handling, working with dataframes, visualizations.\nbigrquery: facilitates the connection between R and Google BigQuery database - the type of database All of Us data are stored in.\nlubridate: for handling dates and times\n\nWe use library() function to load these packages.\n\n# Load packages\nlibrary(tidyverse)\nlibrary(lubridate)\n\nThese common packages are standard in cloud platforms. Occasionally, a package you want to use may not be available in the virtual machine. Attempting to load a package with library() when it does not exist will result in an error. Then, you need to first install it using install.packages() function.\n\n# Do not run this. This is just to show you the code for installing a package.\ninstall.packages(\"MatchIt\") #MatchIt is a package used for propensity score matching\nlibrary(\"MatchIt\")",
+    "crumbs": [
+      "Lessons",
+      "Session 2: R Programming and Data Wrangling"
+    ]
+  },
+  {
+    "objectID": "session-2.html#data-types",
+    "href": "session-2.html#data-types",
+    "title": "Introduction to R Programming and Data Wrangling",
+    "section": "4 Data Types",
+    "text": "4 Data Types\nThere are 5 data types you must be familiar with in programming with R. Knowing the data types of the values in your dataframe, for example, can be critical in performing computations or troubleshooting errors.\n\n4.1 Numeric\nNumeric data can be either double (dbl) for numbers with decimals such as weight or lab values, or integer (int) for whole numbers such as participant ID numbers.\n\n\n4.2 Character\nAlso known as string, character (chr) data types are non-numeric, text data. In All of Us data, condition names or drug names for example, are character types. Character values are enclosed in \" \". So if you have values like `“1”, “2”, “3”, they are character type even though they are numbers, and R will not be able to perform computations that require numeric data types.\n\n\n4.3 Factor\nFactor (fct) data types are used for categorical data. They often look just like characters which is a source of common confusion. However, under the hood, factors are stored as integers with associated “levels”. Some statistical functions may require factors as input.\n\n\n4.4 Logical\nLogicals are binary data with values TRUE and FALSE. While this type of data are rarely seen as values in a dataframe, they are an output of filtering or conditional operations. Interestingly, TRUE value equals 1 while FALSE equals 0. This property can be useful in checking data.\n\n\n4.5 Date\nDate data types represent calendar dates and times. In All of Us data, variables like condition_start_date fall into this category. While they might look like character strings (e.g., “2024-10-31”), R stores them numerically under the hood and is able to calculate things like age or the number of days between two medical visits.",
+    "crumbs": [
+      "Lessons",
+      "Session 2: R Programming and Data Wrangling"
+    ]
+  },
+  {
+    "objectID": "session-2.html#data-structures",
+    "href": "session-2.html#data-structures",
+    "title": "Introduction to R Programming and Data Wrangling",
+    "section": "5 Data Structures",
+    "text": "5 Data Structures\n\n5.1 Vector\nA vector is a sequence of data where all elements are of the same data type. We can create a vector using c().\n\n# Create character vectors\nnames &lt;- c(\"Josh\", \"Evelyn\", \"Olivia\", \"Liam\", \"Adrian\", \"Tamara\", \"Teddy\", \"Allison\")\ncities &lt;- c(\"Moscow\", \"Moscow\", \"Troy\", \"Viola\", \"Moscow\", \"Pullman\", \"Lewiston\", \"Moscow\")\n# Create a numeric vectors\nages &lt;- c(23, 18, 32, 56, 15, 25, 24, 16)\n\nUse print() to see the values.\n\nprint(names)\n\n[1] \"Josh\"    \"Evelyn\"  \"Olivia\"  \"Liam\"    \"Adrian\"  \"Tamara\"  \"Teddy\"  \n[8] \"Allison\"\n\n\nUse length() to see how many elements there are in a vector.\n\nlength(names)\n\n[1] 8\n\n\nYou can use indexing to access a specific element in a vector.\n\nnames[2]  # Access the second element in the names vector.\n\n[1] \"Evelyn\"\n\n\nFor numeric values, we can perform simple computations.\n\nmean(ages)  # Average of the elements in ages vector\n\n[1] 26.125\n\nsd(ages)  # Standard deviation \n\n[1] 13.28197\n\n\nOther common functions for numeric data include median(), min(), max().\n\n\n5.2 List\nLists look similar to vectors but they can contain mixed data types, even lists within a list. Lists are a very versatile object for programming purposes but we won’t go into it too much as they are not necessary for typical statistical analyses. I will just mention that we use double brackets ([[ ]]) to access a specific element in a list instead of single brackets as with vectors.\n\n\n5.3 Dataframe\nA dataframe is like a table in an Excel sheet. Each column is a vector. Therefore, values in a column must be of same data type but different columns can have different types. We will create a dataframe using the vectors we created earlier to see what it looks like.\n\n# Create a dataframe with existing vectors\ndf &lt;- data.frame(Name = names, Age = ages, City = cities)\n# Inspect\nprint(df)\n\n     Name Age     City\n1    Josh  23   Moscow\n2  Evelyn  18   Moscow\n3  Olivia  32     Troy\n4    Liam  56    Viola\n5  Adrian  15   Moscow\n6  Tamara  25  Pullman\n7   Teddy  24 Lewiston\n8 Allison  16   Moscow\n\n\nIn reality, you will rarely create a dataframe from scratch like this. Rather, you will often read a CSV file into a dataframe which we will learn later in this session. For now, we will use this small dataframe to learn a few essential skills in working with dataframes.",
+    "crumbs": [
+      "Lessons",
+      "Session 2: R Programming and Data Wrangling"
+    ]
+  },
+  {
+    "objectID": "session-2.html#dataframe-basics",
+    "href": "session-2.html#dataframe-basics",
+    "title": "Introduction to R Programming and Data Wrangling",
+    "section": "6 Dataframe Basics",
+    "text": "6 Dataframe Basics\n\n6.1 Inspect the dataframe\ndim() command to see the dimension. It will return the number of rows and number of columns.\n\ndim(df)\n\n[1] 8 3\n\n\nAlternatively, you can also use nrow() and ncol().\nstr() to see the structure. This is handy in inspecting data types and preview values of all columns.\n\nstr(df)\n\n'data.frame':   8 obs. of  3 variables:\n $ Name: chr  \"Josh\" \"Evelyn\" \"Olivia\" \"Liam\" ...\n $ Age : num  23 18 32 56 15 25 24 16\n $ City: chr  \"Moscow\" \"Moscow\" \"Troy\" \"Viola\" ...\n\n\nnames() to list column names.\n\nnames(df)\n\n[1] \"Name\" \"Age\"  \"City\"\n\n\nhead() or tail() to inspect the first few rows or the last few rows.\n\nhead(df)\n\n    Name Age    City\n1   Josh  23  Moscow\n2 Evelyn  18  Moscow\n3 Olivia  32    Troy\n4   Liam  56   Viola\n5 Adrian  15  Moscow\n6 Tamara  25 Pullman\n\n\nThe default is to show 6 rows but you can specify the number of rows inside the function. For example, head(df, 10) will show the first 10 rows.\ntable() is a quick way to see value counts in a column.\n\ntable(df$City)\n\n\nLewiston   Moscow  Pullman     Troy    Viola \n       1        4        1        1        1 \n\n\nunique() lists distinct, unique values.\n\nunique(df$City)\n\n[1] \"Moscow\"   \"Troy\"     \"Viola\"    \"Pullman\"  \"Lewiston\"\n\n\nThis can be combined with length() to show how many unique values in a vector (or a column).\n\nlength(unique(df$City))\n\n[1] 5\n\n\nI often use this combination to check for redundancies in a large dataframe. For example, let’s say I have a demographics dataframe with thousands of participants. I might run nrow(df_demographics) and then length(unique(df_demographics$person_id)). If the number of rows is larger than the number of unique individuals, then I know there are duplicates which needs further investigation.\n\n\n6.2 Subsetting\n$ signifies names in R. We can use $ to pull out values for a specific column.\n\ndf$Age   # Show all the values in Age column\n\n[1] 23 18 32 56 15 25 24 16\n\nhead(df$Age)  # Show the first few values in Age colun\n\n[1] 23 18 32 56 15 25\n\nmean(df$Age)  # Compute average age  \n\n[1] 26.125\n\n\nselect() function can also pull out columns.\n\ndf %&gt;% select(Name, Age)  # Subset just Name and Age columns\n\n     Name Age\n1    Josh  23\n2  Evelyn  18\n3  Olivia  32\n4    Liam  56\n5  Adrian  15\n6  Tamara  25\n7   Teddy  24\n8 Allison  16\n\n\n\n\n\n\n\n\nNotePipe Operator\n\n\n\nSymbols such as %&gt;% and |&gt; in R are called “pipes”. Pipes are used to string together multiple operations in sequence. In the above code block, we take the dataframe df and then apply select() function on it.\n\n\nfilter() function is used to subset rows based on some logical criteria.\n\ndf %&gt;% filter(Age &gt;= 21)  # Subset rows for ages 21 or older\n\n    Name Age     City\n1   Josh  23   Moscow\n2 Olivia  32     Troy\n3   Liam  56    Viola\n4 Tamara  25  Pullman\n5  Teddy  24 Lewiston\n\n\nEarlier, we briefly discussed the logical data type. When we use filter(), R evaluates each row - whether its Age value is 21 or greater - and creates a temporary vector of logical data, e.g., c(TRUE, FALSE, TRUE, TRUE, FALSE, TRUE, TRUE, FALSE). And then it outputs rows that correspond to TRUE.\nWe can filter by more than one criteria as well. We use the symbol | for OR and the symbol & for AND.\n\ndf %&gt;% filter(Age &gt;= 21 & City == \"Moscow\")  # Subset rows for ages 21 or older AND city is Moscow\n\n  Name Age   City\n1 Josh  23 Moscow\n\n\nWe can then save the resulting filtered dataframe by assigning a new variable.\n\ndf_filtered &lt;- df %&gt;% filter(Age &gt;= 21 & City == \"Moscow\")\nprint(df_filtered)\n\n  Name Age   City\n1 Josh  23 Moscow\n\n\n\n\n6.3 Join\nWorking with All of Us data frequently involves combining two dataframes. Common join types are left_join and inner_join. We’ll create a new dataframe to demonstrate these joins.\n\n# Create a BMI dataframe\nbmi_df &lt;- data.frame(Name = c(\"Evelyn\", \"Liam\", \"Olivia\", \"Tamara\"),\n                     BMI = c(20.2, 27.9, 32.1, 21.6))\nbmi_df\n\n    Name  BMI\n1 Evelyn 20.2\n2   Liam 27.9\n3 Olivia 32.1\n4 Tamara 21.6\n\n\ninner_join keeps only the rows where there is a match in both tables. So this type of join can work as a filter.\n\n# Join df and df_bmi by Name and only keep matched rows\ndf_inner_joined &lt;- inner_join(df, bmi_df, by = \"Name\")\ndf_inner_joined\n\n    Name Age    City  BMI\n1 Evelyn  18  Moscow 20.2\n2 Olivia  32    Troy 32.1\n3   Liam  56   Viola 27.9\n4 Tamara  25 Pullman 21.6\n\n\nleft_join is used most often in working with All of Us data. This join keeps all the rows from the primary table (left table) and add any matched data from the right table.\n\ndf_left_joined &lt;- left_join(df, bmi_df, by = \"Name\")\ndf_left_joined\n\n     Name Age     City  BMI\n1    Josh  23   Moscow   NA\n2  Evelyn  18   Moscow 20.2\n3  Olivia  32     Troy 32.1\n4    Liam  56    Viola 27.9\n5  Adrian  15   Moscow   NA\n6  Tamara  25  Pullman 21.6\n7   Teddy  24 Lewiston   NA\n8 Allison  16   Moscow   NA\n\n\nNote how rows without a match from bmi_df have values NA for the BMI column. NA indicates missing values and must be handled carefully in data analysis. We will discuss NA more in the Missing Values section shortly.\nAs a side note, the join syntax in above code blocks can be modified using a pipe %&gt;%. For example, left_join() is often written this way:\n\ndf_left_joined &lt;- df %&gt;% left_join(bmi_df, by = \"Name\")\ndf_left_joined\n\n     Name Age     City  BMI\n1    Josh  23   Moscow   NA\n2  Evelyn  18   Moscow 20.2\n3  Olivia  32     Troy 32.1\n4    Liam  56    Viola 27.9\n5  Adrian  15   Moscow   NA\n6  Tamara  25  Pullman 21.6\n7   Teddy  24 Lewiston   NA\n8 Allison  16   Moscow   NA\n\n\n\n\n6.4 Mutate\nmutate() function is used to create or transform variables. For example, we will create a column to show overweight status based on BMI.\n\ndf_left_joined %&gt;% mutate(Overweight = BMI &gt; 25)\n\n     Name Age     City  BMI Overweight\n1    Josh  23   Moscow   NA         NA\n2  Evelyn  18   Moscow 20.2      FALSE\n3  Olivia  32     Troy 32.1       TRUE\n4    Liam  56    Viola 27.9       TRUE\n5  Adrian  15   Moscow   NA         NA\n6  Tamara  25  Pullman 21.6      FALSE\n7   Teddy  24 Lewiston   NA         NA\n8 Allison  16   Moscow   NA         NA\n\n\nOther use cases of mutate() include arithmetic calculation of some numeric values. For example, if we had a dataframe with a year-of-birth column (YOB) and no age column, we can use mutate() to compute current age like this: mutate(current_age = 2025 - YOB). Similarly, if we had columns Weight in kg and Height in cm, but no BMI, we could create BMI column by: mutate(BMI = Weight / (Height/100)^2).",
+    "crumbs": [
+      "Lessons",
+      "Session 2: R Programming and Data Wrangling"
+    ]
+  },
+  {
+    "objectID": "session-2.html#missing-values",
+    "href": "session-2.html#missing-values",
+    "title": "Introduction to R Programming and Data Wrangling",
+    "section": "7 Missing Values",
+    "text": "7 Missing Values\nIn a small dataframes like our toy example, NAs are easy to see. However, it is much harder to spot in a large dataset. This poses a problem because many statistical functions cannot deal with NAs automatically. NAs can also cause errors in unexpected ways. Therefore, researchers must always be vigilant about NAs in their data.\nAs an example, let’s try computing the average of BMI values.\n\nmean(df_left_joined$BMI)\n\n[1] NA\n\n\nWhat happened? Many functions including mean() returns “unknown” if any of the input values are unknown (i.e. missing values). In the case of mean(), we must tell R explicitly to ignore NAs by using the optional argument, na.rm = TRUE.\n\nmean(df_left_joined$BMI, na.rm = TRUE)\n\n[1] 25.45\n\n\nNAs are very common in electronic health records and they can also be introduced during joings as we saw earlier.\n\n\n\n\n\n\nWarning\n\n\n\nAlways check for NAs in your data before statistical analyses!\n\n\nThere are various ways to check for NAs. Here are some examples.\n\ncolSums(is.na(df_left_joined))  # Returns a count of NAs in every column\n\nName  Age City  BMI \n   0    0    0    4 \n\n\n\nsum(is.na(df_left_joined$BMI))  # Returns a sum of NA values in a specific column\n\n[1] 4\n\n\nSometimes you want to see the entire rows that contain NA.\n\ndf_left_joined %&gt;% filter(is.na(BMI))  # Show rows where BMI values are NAs\n\n     Name Age     City BMI\n1    Josh  23   Moscow  NA\n2  Adrian  15   Moscow  NA\n3   Teddy  24 Lewiston  NA\n4 Allison  16   Moscow  NA\n\n\nFor categorical variables, we can use count() to see value counts including NAs. count() is the same as table() but shows NAs by default unlike table() which does not count NAs by default. Below example will not return any NAs because our City column does not have any, but this is just to show you the syntax.\n\ndf_left_joined %&gt;% count(City)  # Show value counts of the column City, including possible NAs\n\n      City n\n1 Lewiston 1\n2   Moscow 4\n3  Pullman 1\n4     Troy 1\n5    Viola 1\n\n\nIf a column of interest turns out to have too many NAs, you may have to remove that variable from your analysis. If NAs are only few and if the variable is critical to your analysis, you might decide to drop the rows containing NAs.\n\ndf_left_joined %&gt;% drop_na(BMI)\n\n    Name Age    City  BMI\n1 Evelyn  18  Moscow 20.2\n2 Olivia  32    Troy 32.1\n3   Liam  56   Viola 27.9\n4 Tamara  25 Pullman 21.6\n\n\nIf the variable is critical and you want to keep all the rows, you can look into advanced statistical methods called “imputation” which fills in missing values.",
+    "crumbs": [
+      "Lessons",
+      "Session 2: R Programming and Data Wrangling"
+    ]
+  },
+  {
+    "objectID": "session-2.html#navigating-researcher-workbench-continued",
+    "href": "session-2.html#navigating-researcher-workbench-continued",
+    "title": "Introduction to R Programming and Data Wrangling",
+    "section": "8 Navigating Researcher Workbench Continued",
+    "text": "8 Navigating Researcher Workbench Continued\nDemonstration in class:\n\nChoosing and configuring an analysis app\n\nAoU Jupyter: This is what we want.\nR Analysis Environment for AoU: For those who prefer RStudio environment.\nJupyterLab Spark Cluster: This is for genomics.\nJupyterLab NVIDIA options: These are GPU-accelerated environment suitable for AI/ML, and very expensive.",
+    "crumbs": [
+      "Lessons",
+      "Session 2: R Programming and Data Wrangling"
+    ]
+  },
+  {
+    "objectID": "session-2.html#running-queries-and-working-with-queried-data",
+    "href": "session-2.html#running-queries-and-working-with-queried-data",
+    "title": "Introduction to R Programming and Data Wrangling",
+    "section": "9 Running Queries and Working with Queried Data",
+    "text": "9 Running Queries and Working with Queried Data\nDemonstration in class:\n\nContinue Data Explorer demo\n\n“View in hierarchy” issue\nSource code for conditions and mapping\n\nFile organization in the Bucket\nStrategies to keep Notebooks organized\nBrowsing and viewing files in the Workbench vs. GCP",
+    "crumbs": [
+      "Lessons",
+      "Session 2: R Programming and Data Wrangling"
+    ]
+  },
+  {
+    "objectID": "session-2.html#preparing-for-next-session",
+    "href": "session-2.html#preparing-for-next-session",
+    "title": "Introduction to R Programming and Data Wrangling",
+    "section": "10 Preparing for Next Session",
+    "text": "10 Preparing for Next Session\nCreate your own project workspace and at least one data snapshot using Data Explorer prior to Session 3. Follow the instruction here or the video posted in the Getting Started page.",
+    "crumbs": [
+      "Lessons",
+      "Session 2: R Programming and Data Wrangling"
     ]
   },
   {

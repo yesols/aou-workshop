@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Other Notes – AoU Workshop</title>
+<title>Self-Paced R Tutorials – AoU Workshop</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -82,7 +82,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Other Notes</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./tutorials.html">Self-Paced R Tutorials</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -150,11 +150,17 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./session-4.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Session 4: Statistical Analysis</span></a>
+ <span class="menu-text">Session 4: Statistical Analysis and JupyterLab Tips</span></a>
   </div>
 </li>
       </ul>
   </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./tutorials.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Self-Paced R Tutorials</span></a>
+  </div>
+</li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./resources.html" class="sidebar-item-text sidebar-link">
@@ -171,11 +177,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#listing-objects" id="toc-listing-objects" class="nav-link active" data-scroll-target="#listing-objects"><span class="header-section-number">1</span> Listing Objects</a></li>
-  <li><a href="#more-operators" id="toc-more-operators" class="nav-link" data-scroll-target="#more-operators"><span class="header-section-number">2</span> More Operators</a>
-  <ul class="collapse">
-  <li><a href="#not" id="toc-not" class="nav-link" data-scroll-target="#not"><span class="header-section-number">2.1</span> NOT</a></li>
-  </ul></li>
+  <li><a href="#how-to-use-the-notebooks" id="toc-how-to-use-the-notebooks" class="nav-link active" data-scroll-target="#how-to-use-the-notebooks">How to Use the Notebooks</a></li>
+  <li><a href="#foundations" id="toc-foundations" class="nav-link" data-scroll-target="#foundations">Foundations</a></li>
+  <li><a href="#path-a-write-it-yourself" id="toc-path-a-write-it-yourself" class="nav-link" data-scroll-target="#path-a-write-it-yourself">Path A: Write It Yourself</a></li>
+  <li><a href="#path-b-ai-assisted" id="toc-path-b-ai-assisted" class="nav-link" data-scroll-target="#path-b-ai-assisted">Path B: AI-Assisted</a></li>
   </ul>
 </nav>
     </div>
@@ -184,7 +189,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Other Notes</h1>
+<h1 class="title">Self-Paced R Tutorials</h1>
 </div>
 
 
@@ -201,18 +206,127 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Here are some tidbits that didn’t make it into the session materials but might be useful.</p>
-<section id="listing-objects" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="listing-objects"><span class="header-section-number">1</span> Listing Objects</h2>
-<p><code>ls()</code> will print the names of all objects you currently have in your environment, such as dataframes and vectors. This can be helpful when you accumulate many objects and need to remind yourself the name of a dataframe you’re looking for.</p>
+<p>A self-paced introduction to R for students with no programming experience, using simulated data laid out like <em>All of Us</em> Research Program data. Each notebook opens in Google Colab with the R runtime already selected and takes roughly 20 to 40 minutes.</p>
+<p>Everyone starts with the Foundations, then follows one of two paths.</p>
+<section id="how-to-use-the-notebooks" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-use-the-notebooks">How to Use the Notebooks</h2>
+<ol type="1">
+<li>Click a notebook link below.</li>
+<li>Sign in with a Google account.</li>
+<li>Choose <strong>File &gt; Save a copy in Drive</strong> and work in your copy.</li>
+<li>Run the cells in order from top to bottom. Each notebook ends with solutions and a link to the next one.</li>
+</ol>
 </section>
-<section id="more-operators" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="more-operators"><span class="header-section-number">2</span> More Operators</h2>
-<section id="not" class="level3" data-number="2.1">
-<h3 data-number="2.1" class="anchored" data-anchor-id="not"><span class="header-section-number">2.1</span> NOT</h3>
+<section id="foundations" class="level2">
+<h2 class="anchored" data-anchor-id="foundations">Foundations</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Notebook</th>
+<th>Covers</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="https://colab.research.google.com/github/yesols/aou-workshop/blob/main/notebooks/F1_First_Steps.ipynb">F1: First Steps in R</a></td>
+<td>Running code, arithmetic, variables, functions, reading error messages</td>
+</tr>
+<tr class="even">
+<td><a href="https://colab.research.google.com/github/yesols/aou-workshop/blob/main/notebooks/F2_Vectors_and_Data_Types.ipynb">F2: Vectors and Data Types</a></td>
+<td>Vectors, numbers vs.&nbsp;text, TRUE/FALSE, dates, missing values</td>
+</tr>
+<tr class="odd">
+<td><a href="https://colab.research.google.com/github/yesols/aou-workshop/blob/main/notebooks/F3_Dataframes.ipynb">F3: Dataframes</a></td>
+<td>Building and inspecting a table; one row per person or many</td>
+</tr>
+<tr class="even">
+<td><a href="https://colab.research.google.com/github/yesols/aou-workshop/blob/main/notebooks/F4_Choosing_Rows_and_Columns.ipynb">F4: Choosing Rows and Columns</a></td>
+<td>Packages, <code>select()</code>, <code>filter()</code>, the pipe</td>
+</tr>
+<tr class="odd">
+<td><a href="https://colab.research.google.com/github/yesols/aou-workshop/blob/main/notebooks/F5_New_Columns_and_Data_Files.ipynb">F5: New Columns and Data Files</a></td>
+<td><code>mutate()</code>, <code>if_else()</code>, reading a CSV file, exploring a new dataset</td>
+</tr>
+<tr class="even">
+<td><a href="https://colab.research.google.com/github/yesols/aou-workshop/blob/main/notebooks/F6_Combining_Tables.ipynb">F6: Combining Tables</a></td>
+<td>Inner and left joins, missing values from joins, duplicated rows</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="path-a-write-it-yourself" class="level2">
+<h2 class="anchored" data-anchor-id="path-a-write-it-yourself">Path A: Write It Yourself</h2>
+<p>Students write the code.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Notebook</th>
+<th>Covers</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="https://colab.research.google.com/github/yesols/aou-workshop/blob/main/notebooks/A1_Cleaning_Real_Data.ipynb">A1: Cleaning Real Data</a></td>
+<td>Recoding categories with <code>if_else()</code> and <code>case_when()</code></td>
+</tr>
+<tr class="even">
+<td><a href="https://colab.research.google.com/github/yesols/aou-workshop/blob/main/notebooks/A2_One_Row_per_Person.ipynb">A2: One Row per Person</a></td>
+<td>Earliest record per person, merging three tables, long to wide</td>
+</tr>
+<tr class="odd">
+<td><a href="https://colab.research.google.com/github/yesols/aou-workshop/blob/main/notebooks/A3_Dates_and_New_Variables.ipynb">A3: Dates and New Variables</a></td>
+<td>Date logic, exposure before diagnosis, analysis variables, saving</td>
+</tr>
+<tr class="even">
+<td><a href="https://colab.research.google.com/github/yesols/aou-workshop/blob/main/notebooks/A4_Exploring_and_Plotting.ipynb">A4: Exploring and Plotting</a></td>
+<td>Group summaries, histogram, box plot, scatter plot</td>
+</tr>
+<tr class="odd">
+<td><a href="https://colab.research.google.com/github/yesols/aou-workshop/blob/main/notebooks/A5_Statistical_Tests.ipynb">A5: Statistical Tests</a></td>
+<td>t-test, ANOVA, chi-square, Fisher’s exact test</td>
+</tr>
+<tr class="even">
+<td><a href="https://colab.research.google.com/github/yesols/aou-workshop/blob/main/notebooks/A6_Regression.ipynb">A6: Regression</a></td>
+<td>Linear and logistic regression, odds ratios</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="path-b-ai-assisted" class="level2">
+<h2 class="anchored" data-anchor-id="path-b-ai-assisted">Path B: AI-Assisted</h2>
+<p>Students describe what they want to an AI chat assistant, then read and check the code it returns.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Notebook</th>
+<th>Covers</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="https://colab.research.google.com/github/yesols/aou-workshop/blob/main/notebooks/B1_First_Prompts.ipynb">B1: Your First Prompts</a></td>
+<td>The describe-generate-read-run-check loop; what may be shared with an AI tool</td>
+</tr>
+<tr class="even">
+<td><a href="https://colab.research.google.com/github/yesols/aou-workshop/blob/main/notebooks/B2_Building_a_Dataset_with_AI.ipynb">B2: Building a Dataset with AI</a></td>
+<td>Prompting for one row per person, merging, date logic; test cases</td>
+</tr>
+<tr class="odd">
+<td><a href="https://colab.research.google.com/github/yesols/aou-workshop/blob/main/notebooks/B3_Exploring_and_Plotting_with_AI.ipynb">B3: Exploring and Plotting with AI</a></td>
+<td>Summaries and plots by prompt; checking a plot against numbers</td>
+</tr>
+<tr class="even">
+<td><a href="https://colab.research.google.com/github/yesols/aou-workshop/blob/main/notebooks/B4_Catching_Mistakes.ipynb">B4: Catching Mistakes</a></td>
+<td>Debugging errors with AI; four mistakes that run without an error</td>
+</tr>
+<tr class="odd">
+<td><a href="https://colab.research.google.com/github/yesols/aou-workshop/blob/main/notebooks/B5_Statistics_with_AI.ipynb">B5: Statistics with AI</a></td>
+<td>Choosing the test, reading output, odds ratios, moving to the Workbench</td>
+</tr>
+</tbody>
+</table>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
