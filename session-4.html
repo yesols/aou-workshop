@@ -287,7 +287,7 @@ window.Quarto = {
 
 <section id="learning-objectives" class="level2" data-number="1">
 <h2 data-number="1" class="anchored" data-anchor-id="learning-objectives"><span class="header-section-number">1</span> Learning Objectives</h2>
-<p>In this last session, we will perform statistical tests and fit models that are common in medical research. Detailed discussions on statistics are beyond the scope of this workshop. If you want to learn more about these tests, check out links provided in <a href="./resources.html">Additional Resources</a>.</p>
+<p>In this last session, we will perform statistical tests and fit models that are common in medical research. Detailed discussions on statistics are beyond the scope of this workshop. If you want to learn more about these tests, check out links provided in <a href="./resources.html" target="_blank">Additional Resources</a>.</p>
 <p>At the end of Session 4, learners will be able to:</p>
 <ol type="1">
 <li>Perform t-test, ANOVA, chi-square tests in R.</li>
@@ -824,6 +824,11 @@ Smaller Heading
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
         }
       }
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {

@@ -216,8 +216,8 @@ ul.task-list li input[type="checkbox"] {
 <section id="course-supplemental-materials" class="level2">
 <h2 class="anchored" data-anchor-id="course-supplemental-materials">Course Supplemental Materials</h2>
 <ul>
-<li><a href="resources/analysis_plan_template.docx">Analysis Plan Template</a></li>
-<li><a href="resources/guide_legacy_wb.pdf">Researcher’s Guide to Using the Workbench</a>
+<li><a href="resources/analysis_plan_template.docx" target="_blank">Analysis Plan Template</a></li>
+<li><a href="resources/guide_legacy_wb.pdf" target="_blank">Researcher’s Guide to Using the Workbench</a>
 <ul>
 <li>This guide is created by RTI International who partners with the <em>All of Us</em> Research Program in training researchers. Chapter 2 contains information about courses they offer and their “Amaze” platform for learning. But this is not required or expected for our workshop.</li>
 <li>The information about workbench navigation and tools (Chapters 6-9) are outdated due to the recent roll-out of Workbench 2.0. However, the rest of the guide is still very helpful.</li>
@@ -356,6 +356,11 @@ ul.task-list li input[type="checkbox"] {
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
         }
       }
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {

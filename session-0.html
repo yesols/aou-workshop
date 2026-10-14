@@ -215,7 +215,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="resources" class="level2" data-number="2">
 <h2 data-number="2" class="anchored" data-anchor-id="resources"><span class="header-section-number">2</span> Resources</h2>
-<p>These files are linked in the <a href="./resources.html">Additional Resources</a> page</p>
+<p>These files are linked in the <a href="./resources.html" target="_blank">Additional Resources</a> page</p>
 <ul>
 <li>Analysis Plan</li>
 <li>Researcher’s Guide to Using the Workbench
@@ -337,6 +337,11 @@ ul.task-list li input[type="checkbox"] {
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
         }
       }
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
